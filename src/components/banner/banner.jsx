@@ -3,6 +3,7 @@ import './banner.scss'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules'
+
 import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
@@ -36,21 +37,11 @@ export default function Banner() {
             >
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
-
                         <div >
                             <img
                                 src={item.image}
                                 alt={`Slider ${item.id}`}
                             />
-                        </div>
-
-                        <div >
-                            <h1>Referência na Baixada Maranhense</h1>
-                            <p>Viva a experiência de uma estadia com conforto, qualidade e excelência em cada detalhe</p>
-
-                            <div>
-                                <span>Saiba mais</span>
-                            </div>
                         </div>
                     </SwiperSlide>
                 ))}
