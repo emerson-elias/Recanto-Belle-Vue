@@ -1,0 +1,13 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+  
+.banner_container{
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+}

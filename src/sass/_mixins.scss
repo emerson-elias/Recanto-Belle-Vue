@@ -1,0 +1,7 @@
+
+@mixin flexbox($position, $flex, $centralization, $align) {
+    position: $position;
+    display: $flex;
+    justify-content: $centralization;
+    align-items: $align;
+}
