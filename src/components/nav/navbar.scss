@@ -81,7 +81,7 @@ li{
                 border-radius: 50%;
                 padding: 0.2vmax;
                 cursor: pointer;
-                z-index: 9999;
+                z-index: 999;
 
                 span{
                     position: relative;
@@ -109,12 +109,10 @@ li{
                     &:nth-child(1) {
                         transform: rotate(45deg) translate(0.55vmax, 0.55vmax);
                         width: 60%;
-                    }
-            
+                    }     
                     &:nth-child(2) {
                         opacity: 0;
-                    }
-            
+                    }          
                     &:nth-child(3) {
                         transform: rotate(-45deg) translate(0.55vmax, -0.55vmax);
                         width: 60%;
@@ -125,20 +123,60 @@ li{
 
         .menu_drop{
             @include mixins.flexbox(absolute, flex, center, center);
+            flex-direction: column;
             top: 0;
             left: 0;
             width: 100vw;
             height: 100vh;
             transform: translateY(-100vh);
             background-color: var.$secondary_color;
-            transition: var.$smooth;
+            transition: var.$smooth_cubic;
             opacity: 0;
+            z-index: 99;
                    
             &.open {
                 transform: translateY(0vh);
-                transition: var.$smooth;
+                transition: var.$smooth_cubic;
                 opacity: 1;
-            }  
+            }
+            
+            ul{
+                @include mixins.flexbox(relative, flex, center, baseline);
+                flex-direction: column;
+                width: 90vw;  
+                height: 90vh;
+
+                li{
+                    position: relative;
+                    width: inherit;
+                    height: auto;
+                    font-size: 4vmax;
+                    margin: 1vh 0;
+                    font-family: var.$montserrat;
+                    font-weight: 600;
+                    color: var.$primary_color;
+                    transition: var.$smooth;       
+
+                    &:hover{
+                        padding: 0 2vw;
+                        transition: var.$smooth;
+                    }
+                }
+            }
+
+            .social{
+                @include mixins.flexbox(relative, flex, space-between, center);
+                width: 90vw;
+                height: auto;
+
+                span{
+                    color: var.$primary_color;
+                    text-transform: uppercase;
+                    font-size: 1vmax;
+                    font-family: var.$montserrat;
+                    cursor: pointer;
+                }
+            }
         }
     }
 }

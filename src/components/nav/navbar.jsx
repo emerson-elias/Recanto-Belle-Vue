@@ -39,15 +39,16 @@ export default function Navbar() {
                     <ul>
                         <li>home</li>
                         <li>sobre</li>
-                        <li>suites</li>
+                        <li>suítes</li>
                         <li>localização</li>
                         <li>contatos</li>
                     </ul>
 
                     <div className='social'>
+                        <span>© 2025 Recanto Belle Vue. By Emerson Elias</span>
                         <span>facebook</span>
-                        <span>whatsapp</span>
                         <span>instagram</span>
+                        <span>whatsapp</span>
                     </div>
                 </section>
             </nav>

@@ -8,8 +8,8 @@
     width: 3vw;
     height: 3vw;
     border-radius: 50%;
-    background-color: rgba(102, 51, 153, 0.139);
-    border: 0.2vw solid rgba(255, 0, 0, 0.251);
+    background-color: transparent;
+    border: 0.1vw solid var.$primary_color;
     pointer-events: none;
     transform: translate(-5em);
     z-index: 9999;
