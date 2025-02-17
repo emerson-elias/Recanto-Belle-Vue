@@ -1,2 +1,144 @@
 @use '/src/sass/components';
+@use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
 
+li{
+    list-style: none;
+    font-size: 1.2vmax;
+    text-transform: uppercase;
+    font-family: var.$montserrat;
+    color: var.$secondary_color;
+    letter-spacing: 1px;
+    font-weight: 400;
+    cursor: pointer;
+}
+
+.nav_container{
+    position: relative;
+    width: 100vw;
+    height: auto;
+
+    .navbar{
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100vw;
+        height: auto;
+        padding: 0 3vw;
+
+        .box_1{
+            @include mixins.flexbox(relative, flex, space-around, center);
+            width: 25vw;
+            height: auto;
+        }
+
+        .box_2{
+            @include mixins.flexbox(relative, flex, center, center);
+            flex-direction: column;
+            transform: translateY(20vh);
+            width: auto;
+            height: auto;
+
+            h1{
+                font-family: var.$new_icon;
+                font-size: 5vmax;
+                color: var.$secondary_color
+            }
+            span{
+                font-size: 1.2vmax;
+                text-transform: uppercase;
+                font-family: var.$montserrat;
+                color: var.$secondary_color;
+                letter-spacing: 1px;
+                font-weight: 500;
+            }
+            p{
+                margin-top: 1vh;
+                font-size: 0.9vmax;
+                text-transform: uppercase;
+                font-family: var.$montserrat;
+                color: var.$secondary_color;
+                letter-spacing: 1px;
+                font-weight: 200;
+            }
+        }
+
+        .box_3{
+            @include mixins.flexbox(relative, flex, space-around, center);
+            width: 25vw;
+            height: auto;
+
+            .min{
+                @include mixins.flexbox(relative, flex, space-around, center);
+                width: 15vw;
+                height: auto;
+            }
+
+            .btn_menu_drop{
+                @include mixins.flexbox(relative, flex, center, end);
+                flex-direction: column;
+                width: 4vmax;
+                height: 4vmax;
+                background-color: var.$secondary_color;
+                border-radius: 50%;
+                padding: 0.2vmax;
+                cursor: pointer;
+                z-index: 9999;
+
+                span{
+                    position: relative;
+                    width: 80%;
+                    height: 0.2vw;
+                    margin: 0.3vmax;
+                    transition: var.$smooth;
+                    border-radius: 10px;
+                    background-color: var.$primary_color;
+
+                    &:nth-child(1){
+                       width: 50%;
+                    }
+                    &:nth-child(3){
+                        width: 60%;
+                    }
+                }
+
+                &:hover span{
+                    width: 90%;
+                    transition: var.$smooth;
+                }
+
+                .open {
+                    &:nth-child(1) {
+                        transform: rotate(45deg) translate(0.55vmax, 0.55vmax);
+                        width: 60%;
+                    }
+            
+                    &:nth-child(2) {
+                        opacity: 0;
+                    }
+            
+                    &:nth-child(3) {
+                        transform: rotate(-45deg) translate(0.55vmax, -0.55vmax);
+                        width: 60%;
+                    }
+                }
+            }
+        }
+
+        .menu_drop{
+            @include mixins.flexbox(absolute, flex, center, center);
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            transform: translateY(-100vh);
+            background-color: var.$secondary_color;
+            transition: var.$smooth;
+            opacity: 0;
+                   
+            &.open {
+                transform: translateY(0vh);
+                transition: var.$smooth;
+                opacity: 1;
+            }  
+        }
+    }
+}

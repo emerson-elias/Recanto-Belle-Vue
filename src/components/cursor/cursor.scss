@@ -1,0 +1,20 @@
+@use '/src/sass/variables' as var;
+@use '/src/sass/responsive';
+
+#cursor {
+    position: fixed;
+    display: grid;
+    place-content: center;
+    width: 3vw;
+    height: 3vw;
+    border-radius: 50%;
+    background-color: rgba(102, 51, 153, 0.139);
+    border: 0.2vw solid rgba(255, 0, 0, 0.251);
+    pointer-events: none;
+    transform: translate(-5em);
+    z-index: 9999;
+
+    @include responsive.screen_tablet{
+        display: none;
+    }
+}

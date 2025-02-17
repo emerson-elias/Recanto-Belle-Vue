@@ -1,0 +1,31 @@
+/* Responsivo para dispositivos large: */
+
+@mixin screen_large{
+    @media screen and (max-width:1200px){
+       @content;
+    }
+}
+
+/* Responsivo para dispositivos Laptops: */
+
+@mixin screen_laptop{
+    @media screen and (max-width:998px){
+       @content;
+    }
+}
+
+/* Responsivo para dispositivos Tablets: */
+
+@mixin screen_tablet{
+    @media screen and (max-width:768px){
+       @content;
+    }
+}
+
+/* Responsivo para dispositivos Móveis: */
+
+@mixin screen_small{
+    @media screen and (max-width:600px){
+       @content;
+    }
+}
