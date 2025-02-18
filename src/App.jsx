@@ -11,7 +11,7 @@ function App() {
     <>
       <Cursor />
       <Navbar />
-      {/*<Banner />*/}
+      <Banner />
     </>
   )
 }

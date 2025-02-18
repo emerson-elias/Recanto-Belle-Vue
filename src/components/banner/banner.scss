@@ -3,11 +3,44 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
   
+  
 .banner_container{
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
     width: 100vw;
     height: 100vh;
     overflow: hidden;
+
+    .swiper-button-prev, .swiper-button-next{
+        opacity: 0;
+    }
+
+    .swiper-pagination-bullet {
+        background-color: var.$secondary_color;
+    }   
+    
+    .slide_item{
+        position: relative;
+        width: 100vw;
+        height: 100vh;
+       
+        &::after{
+            position: absolute;
+            content: '';
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: linear-gradient( #0000008f, #0000008b);
+            pointer-events: none;
+        }
+
+        img{
+            position: relative;
+            width: inherit;
+            height: inherit;
+            object-fit: cover;
+        }
+    } 
 }

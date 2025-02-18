@@ -11,11 +11,11 @@ import 'swiper/css/effect-fade'
 
 export default function Banner() {
     const data = [
-        { id: '1', image: '/assets/img/slader-1.jpeg' },
-        { id: '2', image: '/assets/img/slader-2.png' },
-        { id: '3', image: '/assets/img/slader-3.png' },
-        { id: '4', image: '/assets/img/slader-4.png' },
-        { id: '5', image: '/assets/img/slader-5.jpg' },
+        { id: '1', image: '/assets/img/slider-1.jpeg' },
+        { id: '2', image: '/assets/img/slider-2.png' },
+        { id: '3', image: '/assets/img/slider-3.png' },
+        { id: '4', image: '/assets/img/slider-4.png' },
+        { id: '5', image: '/assets/img/slider-5.jpg' },
     ]
 
     return (
@@ -23,24 +23,19 @@ export default function Banner() {
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"
-                fadeEffect={{
-                    crossFade: true,
-                }}
+                fadeEffect={{ crossFade: false }}
                 slidesPerView={1}
                 pagination={{ clickable: true }}
                 navigation
-                autoplay={{
-                    delay: 3000,
-                    disableOnInteraction: false,
-                }}
+                autoplay={{ delay: 3000, disableOnInteraction: false }}
                 loop
             >
                 {data.map((item) => (
                     <SwiperSlide key={item.id}>
-                        <div >
+                        <div className='slide_item'>
                             <img
                                 src={item.image}
-                                alt={`Slider ${item.id}`}
+                                alt={`Slide ${item.id} do banner`}
                             />
                         </div>
                     </SwiperSlide>
