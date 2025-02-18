@@ -2,7 +2,7 @@
 @use '/src/sass/mixins';
 @use '/src/sass/variables' as var;
 
-li{
+li {
     list-style: none;
     font-size: 1.2vmax;
     text-transform: uppercase;
@@ -13,36 +13,37 @@ li{
     cursor: pointer;
 }
 
-.nav_container{
+.nav_container {
     position: relative;
     width: 100vw;
     height: auto;
 
-    .navbar{
+    .navbar {
         @include mixins.flexbox(relative, flex, space-between, center);
         width: 100vw;
         height: auto;
         padding: 0 3vw;
 
-        .box_1{
+        .box_1 {
             @include mixins.flexbox(relative, flex, space-around, center);
             width: 25vw;
             height: auto;
         }
 
-        .box_2{
+        .box_2 {
             @include mixins.flexbox(relative, flex, center, center);
             flex-direction: column;
             transform: translateY(20vh);
             width: auto;
             height: auto;
 
-            h1{
+            h1 {
                 font-family: var.$new_icon;
                 font-size: 5vmax;
-                color: var.$secondary_color
+                color: var.$secondary_color;
             }
-            span{
+
+            span {
                 font-size: 1.2vmax;
                 text-transform: uppercase;
                 font-family: var.$montserrat;
@@ -50,7 +51,8 @@ li{
                 letter-spacing: 1px;
                 font-weight: 500;
             }
-            p{
+
+            p {
                 margin-top: 1vh;
                 font-size: 0.9vmax;
                 text-transform: uppercase;
@@ -61,18 +63,18 @@ li{
             }
         }
 
-        .box_3{
+        .box_3 {
             @include mixins.flexbox(relative, flex, space-around, center);
             width: 25vw;
             height: auto;
 
-            .min{
+            .min {
                 @include mixins.flexbox(relative, flex, space-around, center);
                 width: 15vw;
                 height: auto;
             }
 
-            .btn_menu_drop{
+            .btn_menu_drop {
                 @include mixins.flexbox(relative, flex, center, end);
                 flex-direction: column;
                 width: 4vmax;
@@ -83,7 +85,7 @@ li{
                 cursor: pointer;
                 z-index: 999;
 
-                span{
+                span {
                     position: relative;
                     width: 80%;
                     height: 0.2vw;
@@ -92,15 +94,16 @@ li{
                     border-radius: 10px;
                     background-color: var.$primary_color;
 
-                    &:nth-child(1){
-                       width: 50%;
+                    &:nth-child(1) {
+                        width: 50%;
                     }
-                    &:nth-child(3){
+
+                    &:nth-child(3) {
                         width: 60%;
                     }
                 }
 
-                &:hover span{
+                &:hover span {
                     width: 90%;
                     transition: var.$smooth;
                 }
@@ -109,10 +112,12 @@ li{
                     &:nth-child(1) {
                         transform: rotate(45deg) translate(0.55vmax, 0.55vmax);
                         width: 60%;
-                    }     
+                    }
+
                     &:nth-child(2) {
                         opacity: 0;
-                    }          
+                    }
+
                     &:nth-child(3) {
                         transform: rotate(-45deg) translate(0.55vmax, -0.55vmax);
                         width: 60%;
@@ -121,7 +126,7 @@ li{
             }
         }
 
-        .menu_drop{
+        .menu_drop {
             @include mixins.flexbox(absolute, flex, center, center);
             flex-direction: column;
             top: 0;
@@ -133,43 +138,80 @@ li{
             transition: var.$smooth_cubic;
             opacity: 0;
             z-index: 99;
-                   
+
             &.open {
                 transform: translateY(0vh);
                 transition: var.$smooth_cubic;
                 opacity: 1;
             }
-            
-            ul{
+
+            ul {
                 @include mixins.flexbox(relative, flex, center, baseline);
                 flex-direction: column;
-                width: 90vw;  
+                width: 90vw;
                 height: 90vh;
+                overflow: hidden;
 
-                li{
-                    position: relative;
+                .box_li {
+                    @include mixins.flexbox(relative, flex, space-between, center);
                     width: inherit;
                     height: auto;
-                    font-size: 4vmax;
-                    margin: 1vh 0;
-                    font-family: var.$montserrat;
-                    font-weight: 600;
-                    color: var.$primary_color;
-                    transition: var.$smooth;       
 
-                    &:hover{
-                        padding: 0 2vw;
+                    li {
+                        position: relative;
+                        width: inherit;
+                        height: auto;
+                        font-size: 4vmax;
+                        margin: 1vh 0;
+                        font-family: var.$montserrat;
+                        font-weight: 500;
+                        color: var.$primary_color;
                         transition: var.$smooth;
+
+                        &:hover {
+                            padding: 0 5vw;
+                            transition: var.$smooth;
+                        }
+
+                        &::after {
+                            position: absolute;
+                            content: '';
+                            top: 50%;
+                            left: -3%;
+                            transform: translate(-50%, -50%);
+                            background-color: var.$primary_color;
+                            border-radius: 50px;
+                            width: 5vmax;
+                            height: 0.8vmax;
+                            transition: var.$smooth;
+                        }
+
+                        &:hover::after {
+                            left: 2%;
+                            transition: var.$smooth;
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        top: -5vmax;
+                        left: 55%;
+                        width: 20%;
+                        height: auto;
+                        opacity: 0;
+                        transform: scale(0.5);
+                        pointer-events: none;
+                        border-radius: 1vmax;
                     }
                 }
             }
 
-            .social{
+            .social {
                 @include mixins.flexbox(relative, flex, space-between, center);
                 width: 90vw;
                 height: auto;
 
-                span{
+                span {
                     color: var.$primary_color;
                     text-transform: uppercase;
                     font-size: 1vmax;
