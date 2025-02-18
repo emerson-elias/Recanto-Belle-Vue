@@ -8,8 +8,8 @@
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw;
-    height: 100vh;
+    width: 100dvw;
+    height: 100dvh;
     overflow: hidden;
 
     .swiper-button-prev, .swiper-button-next{
@@ -23,7 +23,7 @@
     .slide_item{
         position: relative;
         width: 100vw;
-        height: 100vh;
+        height: 100dvh;
        
         &::after{
             position: absolute;
@@ -31,7 +31,7 @@
             top: 0;
             left: 0;
             width: 100vw;
-            height: 100vh;
+            height: 100dvh;
             background: linear-gradient( #0000008f, #0000008b);
             pointer-events: none;
         }
