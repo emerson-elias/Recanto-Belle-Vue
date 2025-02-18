@@ -73,7 +73,7 @@ export default function Navbar() {
 
                 <section className={`menu_drop ${isMenuOpen ? 'open' : ''}`}>
                     <ul>
-                        {['início', 'sobre', 'suítes', 'localização', 'contatos'].map((item, index) => (
+                        {['início', 'sobre', 'suítes', 'reservar', 'contatos'].map((item, index) => (
                             <div
                                 key={index}
                                 className='box_li'
