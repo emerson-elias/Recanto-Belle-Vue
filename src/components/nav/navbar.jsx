@@ -89,7 +89,7 @@ export default function Navbar() {
                 </div>
 
                 <div className='box_2'>
-                    <h1>B</h1>
+                    <h1>R</h1>
                     <span>Recanto Belle Vue</span>
                     <p>Requite e Beleza</p>
                 </div>

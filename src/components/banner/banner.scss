@@ -32,7 +32,7 @@
             left: 0;
             width: 100vw;
             height: 100dvh;
-            background: linear-gradient( #0000008f, #0000008b);
+            background: linear-gradient( var.$smoke, var.$smoke);
             pointer-events: none;
         }
 

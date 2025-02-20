@@ -10,7 +10,7 @@ li {
     font-family: var.$montserrat;
     color: var.$secondary_color;
     letter-spacing: 1px;
-    font-weight: 400;
+    font-weight: 500;
     cursor: pointer;
 }
 
@@ -94,7 +94,7 @@ li {
                 font-family: var.$montserrat;
                 color: var.$secondary_color;
                 letter-spacing: 1px;
-                font-weight: 200;
+                font-weight: 300;
 
                 @include responsive.screen_laptop() {
                     font-size: 15px;
