@@ -11,11 +11,12 @@ import 'swiper/css/effect-fade'
 
 export default function Banner() {
     const data = [
-        { id: '1', image: '/assets/img/slider-1.jpeg' },
-        { id: '2', image: '/assets/img/slider-2.png' },
-        { id: '3', image: '/assets/img/slider-3.png' },
-        { id: '4', image: '/assets/img/slider-4.png' },
-        { id: '5', image: '/assets/img/slider-5.jpg' },
+        { id: '1', image: '/assets/img/pexels-1.jpg' },
+        { id: '2', image: '/assets/img/pexels-2.jpg' },
+        { id: '3', image: '/assets/img/pexels-3.jpg' },
+        { id: '4', image: '/assets/img/pexels-4.jpg' },
+        { id: '5', image: '/assets/img/pexels-5.jpg' },
+        { id: '6', image: '/assets/img/pexels-6.jpg' },
     ]
 
     return (

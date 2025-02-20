@@ -1,27 +1,26 @@
-import { useState, useRef } from 'react'
+import { useState, useRef, useEffect } from 'react'
 import { gsap } from 'gsap'
 
 import './navbar.scss'
 
-import img1 from '/assets/img/pexels.jpg'
-import img2 from '/assets/img/pexels.jpg'
-import img3 from '/assets/img/pexels.jpg'
-import img4 from '/assets/img/pexels.jpg'
-import img5 from '/assets/img/pexels.jpg'
+import img1 from '/assets/img/inicio.jpg'
+import img2 from '/assets/img/sobre.jpg'
+import img3 from '/assets/img/suites.jpg'
+import img4 from '/assets/img/experiencias.jpg'
+import img5 from '/assets/img/contato.jpg'
 
 export default function Navbar() {
     const [isMenuOpen, setIsMenuOpen] = useState(false)
-
     const images = [img1, img2, img3, img4, img5]
-
     const imgRefs = useRef([])
+    const boxRefs = useRef([])
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen)
     }
 
     const handleMouseEnter = (index) => {
-        const imgElement = imgRefs.current[index];
+        const imgElement = imgRefs.current[index]
         if (imgElement) {
             gsap.to(imgElement, {
                 opacity: 1,
@@ -44,6 +43,43 @@ export default function Navbar() {
         }
     }
 
+    const handleMouseMove = (index, event) => {
+        const imgElement = imgRefs.current[index]
+        const boxElement = boxRefs.current[index]
+
+        if (imgElement && boxElement) {
+            const rect = boxElement.getBoundingClientRect()
+            const mouseX = event.clientX - rect.left
+            const mouseY = event.clientY - rect.top
+
+            const moveX = (mouseX - rect.width / 2) / 10
+            const moveY = (mouseY - rect.height / 2) / 10
+
+            gsap.to(imgElement, {
+                x: moveX,
+                y: moveY,
+                duration: 0.3,
+                ease: 'power2.out',
+            })
+        }
+    }
+
+    useEffect(() => {
+        boxRefs.current.forEach((box, index) => {
+            if (box) {
+                box.addEventListener('mousemove', (event) => handleMouseMove(index, event))
+            }
+        })
+
+        return () => {
+            boxRefs.current.forEach((box, index) => {
+                if (box) {
+                    box.removeEventListener('mousemove', (event) => handleMouseMove(index, event))
+                }
+            })
+        }
+    }, [])
+
     return (
         <section className='nav_container'>
             <nav className='navbar'>
@@ -53,7 +89,7 @@ export default function Navbar() {
                 </div>
 
                 <div className='box_2'>
-                    <h1>V</h1>
+                    <h1>B</h1>
                     <span>Recanto Belle Vue</span>
                     <p>Requite e Beleza</p>
                 </div>
@@ -73,10 +109,11 @@ export default function Navbar() {
 
                 <section className={`menu_drop ${isMenuOpen ? 'open' : ''}`}>
                     <ul>
-                        {['início', 'sobre', 'suítes', 'reservar', 'contatos'].map((item, index) => (
+                        {['início', 'sobre', 'suítes', 'experiências', 'contatos'].map((item, index) => (
                             <div
                                 key={index}
                                 className='box_li'
+                                ref={(el) => (boxRefs.current[index] = el)}
                                 onMouseEnter={() => handleMouseEnter(index)}
                                 onMouseLeave={() => handleMouseLeave(index)}
                             >
@@ -98,5 +135,5 @@ export default function Navbar() {
                 </section>
             </nav>
         </section>
-    )
+    );
 }
