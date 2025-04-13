@@ -1,0 +1,11 @@
+@use '/src/sass/components';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.bio_container{
+    position: relative;
+    width: 100vw;
+    height: 100vh;
+    background-color: var.$primary_color;
+}

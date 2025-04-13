@@ -1,7 +1,67 @@
+@use '../sass/responsive';
+@use '../sass/variables' as var;
 
 @mixin flexbox($position, $flex, $centralization, $align) {
     position: $position;
     display: $flex;
     justify-content: $centralization;
     align-items: $align;
+}
+
+@mixin btn_closer(){
+    flex-direction: column;
+    width: 4vmax;
+    height: 4vmax;
+    background-color: var.$secondary_color;
+    border-radius: 50%;
+    padding: 0.2vmax;
+    cursor: pointer;
+    z-index: 9999;
+
+    @include responsive.screen_laptop() {
+        width: 70px;
+        height: 70px;
+    }
+    @include responsive.screen_small() {
+        width: 60px;
+        height: 60px;
+        padding: 10px;
+    }
+
+    span {
+        position: relative;
+        width: 90%;
+        height: 0.2vw;
+        margin: 0.3vmax;
+        transition: var.$smooth;
+        border-radius: 10px;
+        background-color: var.$primary_color;
+
+        &:nth-child(1) {
+            width: 50%;
+        }
+        &:nth-child(3) {
+            width: 60%;
+        }
+        @include responsive.screen_laptop() {
+            height: 3px;
+        }
+    }
+    &:hover span {
+        width: 90%;
+        transition: var.$smooth;
+    }
+    .open {
+        &:nth-child(1) {
+            transform: rotate(45deg) translate(0.55vmax, 0.55vmax);
+            width: 60%;
+        }
+        &:nth-child(2) {
+            opacity: 0;
+        }
+        &:nth-child(3) {
+            transform: rotate(-45deg) translate(0.55vmax, -0.55vmax);
+            width: 60%;
+        }
+    }
 }

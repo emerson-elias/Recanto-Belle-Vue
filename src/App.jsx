@@ -4,14 +4,25 @@ import './global.scss'
 import Navbar from './components/nav/navbar'
 import Banner from './components/banner/banner'
 import Cursor from './components/cursor/cursor'
+import Bio from './components/bio/bio'
+import Bar from './components/nav/nav_none/bar'
+import Drop from './components/nav/menu_drop/drop'
 
 function App() {
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+
+  const openMenu = () => setIsMenuOpen(true)
+  const closeMenu = () => setIsMenuOpen(false)
+  const toggleMenu = () => setIsMenuOpen(prev => !prev)
 
   return (
     <>
       <Cursor />
-      <Navbar />
+      <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+      <Bar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
       <Banner />
+      <Bio />
+      <Drop isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
     </>
   )
 }

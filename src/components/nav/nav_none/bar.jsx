@@ -1,20 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
-import './navbar.scss'
+import './bar.scss'
 
-export default function Navbar({ toggleMenu, isMenuOpen }) {
+export default function Bar({ toggleMenu, isMenuOpen }) {
+    const [isVisible, setIsVisible] = useState(true)
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsVisible(window.scrollY <= 50)
+        }
+
+        window.addEventListener('scroll', handleScroll)
+        return () => window.removeEventListener('scroll', handleScroll)
+    }, [])
+
     return (
-        <section className='nav_container'>
-            <nav className='navbar'>
-                <div className='box_1'>             
+        <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
+            <nav className='bar'>
+                <div className='box_1'>
                     <li>início</li>
                     <li><i className="fa-solid fa-phone"></i> +55 11 94002-8922</li>
                 </div>
 
                 <div className='box_2'>
                     <h1>R</h1>
-                    <span>Recanto Belle Vue</span>
-                    <p>Requite e Beleza</p>
                 </div>
 
                 <div className='box_3'>

@@ -3,33 +3,45 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-li {
-    list-style: none;
-    font-size: 1.2vmax;
-    text-transform: uppercase;
-    font-family: var.$montserrat;
-    color: var.$secondary_color;
-    letter-spacing: 1px;
-    font-weight: 500;
-    cursor: pointer;
-}
 
-.nav_container {
-    position: relative;
+.bar_container {
+    position: fixed;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: auto;
-    z-index: 9;
+    transition: var.$smooth_opacity;
+    transform: translateY(-100%); 
+    opacity: 0;
+    z-index: 99;
 
-    .navbar {
+    &.hidden {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+    .bar {
         @include mixins.flexbox(relative, flex, space-between, center);
         width: 100vw;
-        height: 8vw;
+        height: 5vw;
         padding: 0 3vw;
+        background-color: var.$secondary_color;
 
         @include responsive.screen_laptop() {
-            height: auto;
+            height: 80px;
             padding: 20px;
             justify-content: center;
+        }
+
+        li {
+            list-style: none;
+            font-size: 1vmax;
+            text-transform: uppercase;
+            font-family: var.$montserrat;
+            color: var.$primary_color;
+            letter-spacing: 1px;
+            font-weight: 500;
+            cursor: pointer;
         }
 
         .box_1 {
@@ -44,65 +56,26 @@ li {
 
         .box_2 {
             @include mixins.flexbox(relative, flex, center, center);
-            flex-direction: column;
-            transform: translateY(10vmax);
             width: auto;
             height: auto;
 
             @include responsive.screen_laptop() {
-                position: absolute;
-                transform: translateY(15vmax);
+               
             }
 
             @include responsive.screen_small() {
-                transform: translateY(20vmax);
+                
             }
 
             h1 {
                 font-family: var.$new_icon;
-                font-size: 7vmax;
-                transform: translateX(-1.5vw) rotate(-10deg);
-                color: var.$secondary_color;
+                font-size: 2.5vmax;
+                transform: rotate(-10deg);
+                color: var.$primary_color;
                 font-weight: 400;
 
                 @include responsive.screen_laptop() {
-                    font-size: 80px;
-                }
-            }
-
-            span {
-                font-size: 1.4vmax;
-                text-transform: uppercase;
-                font-family: var.$montserrat;
-                color: var.$secondary_color;
-                letter-spacing: 1px;
-                font-weight: 500;
-                transform: scaleY(1.2);
-
-                @include responsive.screen_laptop() {
-                    font-size: 20px;
-                }
-
-                @include responsive.screen_small() {
-                    font-size: 15px;
-                }
-            }
-
-            p {
-                margin-top: 1vh;
-                font-size: 1.1vmax;
-                text-transform: uppercase;
-                font-family: var.$montserrat;
-                color: var.$secondary_color;
-                letter-spacing: 1px;
-                font-weight: 300;
-
-                @include responsive.screen_laptop() {
-                    font-size: 15px;
-                }
-
-                @include responsive.screen_small() {
-                    font-size: 12px;
+                    font-size: 40px;
                 }
             }
         }
@@ -131,6 +104,6 @@ li {
                 @include mixins.flexbox(relative, flex, center, end);
                 @include mixins.btn_closer();
             }
-        }       
+        }
     }
 }

@@ -1,0 +1,150 @@
+@use '/src/sass/components';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.menu_drop {
+    @include mixins.flexbox(absolute, flex, center, center);
+    flex-direction: column;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100dvh;
+    transform: translateY(-100vh);
+    background-color: var.$secondary_color;
+    transition: var.$smooth_cubic;
+    opacity: 0;
+    z-index: 999;
+
+    &.open {
+        opacity: 1;
+        transform: translateY(0vh);
+        visibility: visible;
+        pointer-events: auto;
+    }
+
+    &.closed {
+        opacity: 0;
+        transform: translateY(-100vh);
+        visibility: hidden;
+        pointer-events: none;
+    }
+
+    .btn_menu_drop {
+        @include mixins.flexbox(absolute, flex, center, center);
+        @include mixins.btn_closer();
+        top: 7%;
+        left: 90%;
+    }
+
+    ul {
+        @include mixins.flexbox(relative, flex, center, baseline);
+        flex-direction: column;
+        width: 90vw;
+        height: 90vh;
+        overflow: hidden;
+
+        @include responsive.screen_laptop() {
+            height: 80vh;
+            justify-content: normal;
+        }
+
+        @include responsive.screen_small() {
+            padding-top: 70px;
+        }
+
+        .box_li {
+            @include mixins.flexbox(relative, flex, space-between, center);
+            width: inherit;
+            height: auto;
+
+            li {
+                position: relative;
+                width: inherit;
+                height: auto;
+                font-size: 4vmax;
+                margin: 1vh 0;
+                font-family: var.$montserrat;
+                font-weight: 400;
+                color: var.$primary_color;
+                transition: var.$smooth;
+
+                @include responsive.screen_laptop() {
+                    margin: 8px 0;
+                }
+
+                @include responsive.screen_small() {
+                    font-size: 35px;
+                }
+
+                &:hover {
+                    padding: 0 5vw;
+                    transition: var.$smooth;
+                }
+
+                &::after {
+                    position: absolute;
+                    content: '';
+                    top: 50%;
+                    left: -3%;
+                    transform: translate(-50%, -50%);
+                    background-color: var.$primary_color;
+                    border-radius: 50px;
+                    width: 5vmax;
+                    height: 0.8vmax;
+                    transition: var.$smooth;
+
+                    @include responsive.screen_small() {
+                        display: none;
+                    }
+                }
+
+                &:hover::after {
+                    left: 2%;
+                    transition: var.$smooth;
+                }
+            }
+
+            img {
+                position: absolute;
+                top: -5vmax;
+                left: 55%;
+                width: 30%;
+                height: auto;
+                opacity: 0;
+                transform: scale(0.5);
+                pointer-events: none;
+                border-radius: 1vmax;
+
+                @include responsive.screen_laptop() {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    .social {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 90vw;
+        height: auto;
+
+        @include responsive.screen_laptop() {
+            justify-content: normal;
+            flex-direction: column;
+            align-items: baseline;
+        }
+
+        span {
+            color: var.$primary_color;
+            text-transform: uppercase;
+            font-size: 1vmax;
+            font-family: var.$montserrat;
+            cursor: pointer;
+
+            @include responsive.screen_laptop() {
+                font-size: 13px;
+                margin: 4px 0;
+            }
+        }
+    }
+}
