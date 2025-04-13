@@ -35,6 +35,13 @@
         @include mixins.btn_closer();
         top: 7%;
         left: 90%;
+
+        @include responsive.screen_laptop(){
+            top: 2%;
+        }
+        @include responsive.screen_small(){
+            left: 80%;
+        }
     }
 
     ul {

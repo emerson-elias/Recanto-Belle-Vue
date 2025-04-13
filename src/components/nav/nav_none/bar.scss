@@ -32,6 +32,9 @@
             padding: 20px;
             justify-content: center;
         }
+        @include responsive.screen_small() {
+            height: 60px;
+        }
 
         li {
             list-style: none;
@@ -75,7 +78,7 @@
                 font-weight: 400;
 
                 @include responsive.screen_laptop() {
-                    font-size: 40px;
+                    font-size: 35px;
                 }
             }
         }

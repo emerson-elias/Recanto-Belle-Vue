@@ -5,7 +5,7 @@
   
   
 .banner_container{
-    position: absolute;
+    @include mixins.flexbox(absolute, flex, center, center);
     top: 0;
     left: 0;
     width: 100dvw;
@@ -13,11 +13,14 @@
     overflow: hidden;
 
     .swiper-button-prev, .swiper-button-next{
-        position: fixed;
         top: 0;
         width: 45vw;
-        height: 100vh;
+        height: 100%;
         opacity: 0;
+
+        @include responsive.screen_small(){
+            display: none;
+        }
     }
 
     .swiper-pagination-bullet {

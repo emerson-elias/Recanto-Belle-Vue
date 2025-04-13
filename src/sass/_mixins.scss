@@ -54,14 +54,14 @@
     .open {
         &:nth-child(1) {
             transform: rotate(45deg) translate(0.55vmax, 0.55vmax);
-            width: 60%;
+            width: 80%;
         }
         &:nth-child(2) {
             opacity: 0;
         }
         &:nth-child(3) {
             transform: rotate(-45deg) translate(0.55vmax, -0.55vmax);
-            width: 60%;
+            width: 80%;
         }
     }
 }

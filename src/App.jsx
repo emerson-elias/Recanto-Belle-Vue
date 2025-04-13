@@ -11,7 +11,6 @@ import Drop from './components/nav/menu_drop/drop'
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const openMenu = () => setIsMenuOpen(true)
   const closeMenu = () => setIsMenuOpen(false)
   const toggleMenu = () => setIsMenuOpen(prev => !prev)
 
