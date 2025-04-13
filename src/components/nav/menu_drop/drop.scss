@@ -134,11 +134,12 @@
             align-items: baseline;
         }
 
-        span {
+        span, a {
             color: var.$primary_color;
             text-transform: uppercase;
             font-size: 1vmax;
             font-family: var.$montserrat;
+            text-decoration: none;
             cursor: pointer;
 
             @include responsive.screen_laptop() {

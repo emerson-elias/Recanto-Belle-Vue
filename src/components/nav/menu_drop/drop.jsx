@@ -121,7 +121,7 @@ export default function Drop({ isMenuOpen, closeMenu }) {
 
             <div className='social'>
                 <span>© 2025 Recanto Belle Vue</span>
-                <span>facebook / instagram</span>
+                <span><a href="https://www.instagram.com/emersoneliass_/" rel="noopener noreferrer">facebook / instagram</a></span>
                 <span>© By Emerson Elias</span>
             </div>
         </section>
