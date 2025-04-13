@@ -13,6 +13,10 @@
     overflow: hidden;
 
     .swiper-button-prev, .swiper-button-next{
+        position: fixed;
+        top: 0;
+        width: 45vw;
+        height: 100vh;
         opacity: 0;
     }
 
