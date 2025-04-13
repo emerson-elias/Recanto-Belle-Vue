@@ -14,6 +14,19 @@ export default function Drop({ isMenuOpen, closeMenu }) {
     const imgRefs = useRef([])
     const boxRefs = useRef([])
 
+    useEffect(() => {
+        if (isMenuOpen) {
+            document.body.style.overflow = 'hidden'
+        } else {
+            document.body.style.overflow = ''
+        }
+    
+        // Cleanup caso o componente seja desmontado com o menu ainda aberto
+        return () => {
+            document.body.style.overflow = ''
+        }
+    }, [isMenuOpen])
+
     const handleMouseEnter = (index) => {
         const imgElement = imgRefs.current[index]
         if (imgElement) {

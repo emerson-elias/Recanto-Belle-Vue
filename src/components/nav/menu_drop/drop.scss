@@ -4,7 +4,7 @@
 @use '/src/sass/variables' as var;
 
 .menu_drop {
-    @include mixins.flexbox(absolute, flex, center, center);
+    @include mixins.flexbox(fixed, flex, center, center);
     flex-direction: column;
     top: 0;
     left: 0;

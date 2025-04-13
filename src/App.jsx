@@ -19,10 +19,10 @@ function App() {
     <>
       <Cursor />
       <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+      <Drop isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
       <Bar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
       <Banner />
       <Bio />
-      <Drop isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
     </>
   )
 }
