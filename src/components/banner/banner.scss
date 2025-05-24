@@ -1,13 +1,10 @@
-@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
   
   
 .banner_container{
-    @include mixins.flexbox(absolute, flex, center, center);
-    top: 0;
-    left: 0;
+    @include mixins.flexbox(relative, flex, center, center);
     width: 100dvw;
     height: 100dvh;
     overflow: hidden;
@@ -48,6 +45,7 @@
             width: inherit;
             height: inherit;
             object-fit: cover;
+            pointer-events: none;
         }
     } 
 }

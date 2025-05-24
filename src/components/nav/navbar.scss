@@ -1,4 +1,3 @@
-@use '/src/sass/components';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
@@ -7,18 +6,20 @@ li {
     list-style: none;
     font-size: 1.2vmax;
     text-transform: uppercase;
-    font-family: var.$montserrat;
-    color: var.$secondary_color;
-    letter-spacing: 1px;
+    font-family: var.$font_dwo;
     font-weight: 500;
+    color: var.$secondary_color;
+    letter-spacing: 2px;
     cursor: pointer;
 }
 
 .nav_container {
-    position: relative;
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100vw;
     height: auto;
-    z-index: 9;
+    z-index: 10;
 
     .navbar {
         @include mixins.flexbox(relative, flex, space-between, center);
@@ -74,10 +75,10 @@ li {
             span {
                 font-size: 1.4vmax;
                 text-transform: uppercase;
-                font-family: var.$montserrat;
+                font-family: var.$font_dwo;
                 color: var.$secondary_color;
                 letter-spacing: 1px;
-                font-weight: 500;
+                font-weight: 400;
                 transform: scaleY(1.2);
 
                 @include responsive.screen_laptop() {
@@ -93,7 +94,7 @@ li {
                 margin-top: 1vh;
                 font-size: 1.1vmax;
                 text-transform: uppercase;
-                font-family: var.$montserrat;
+                font-family: var.$font_dwo;
                 color: var.$secondary_color;
                 letter-spacing: 1px;
                 font-weight: 300;
