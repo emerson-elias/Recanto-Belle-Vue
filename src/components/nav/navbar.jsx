@@ -12,7 +12,7 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
                 </div>
 
                 <div className='box_2'>
-                    <h1>R</h1>
+                    <h1>r</h1>
                     <span>Recanto Belle Vue</span>
                     <p>Requinte e Beleza</p>
                 </div>

@@ -23,7 +23,7 @@ export default function Bar({ toggleMenu, isMenuOpen }) {
                 </div>
 
                 <div className='box_2'>
-                    <h1>R</h1>
+                    <h1>r</h1>
                 </div>
 
                 <div className='box_3'>

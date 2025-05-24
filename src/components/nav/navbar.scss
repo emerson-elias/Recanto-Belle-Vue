@@ -45,7 +45,7 @@ li {
         .box_2 {
             @include mixins.flexbox(relative, flex, center, center);
             flex-direction: column;
-            transform: translateY(10vmax);
+            transform: translateY(7vmax);
             width: auto;
             height: auto;
 
@@ -60,11 +60,12 @@ li {
 
             h1 {
                 font-family: var.$new_icon;
-                font-size: 7vmax;
-                transform: translateX(-1.5vw) rotate(-10deg);
+                font-size: 12vmax;
+                
+                transform: translateY(2vw);
                 color: var.$secondary_color;
                 font-weight: 400;
-
+                
                 @include responsive.screen_laptop() {
                     font-size: 80px;
                 }
