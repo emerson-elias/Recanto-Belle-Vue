@@ -14,7 +14,7 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
                 <div className='box_2'>
                     <h1>R</h1>
                     <span>Recanto Belle Vue</span>
-                    <p>Requite e Beleza</p>
+                    <p>Requinte e Beleza</p>
                 </div>
 
                 <div className='box_3'>

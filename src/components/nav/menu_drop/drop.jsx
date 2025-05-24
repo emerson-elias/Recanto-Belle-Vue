@@ -2,7 +2,7 @@ import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
 import './drop.scss'
 
-import img1 from '/assets/img/inicio.jpg'
+import img1 from '/assets/img/pexels-1.jpg'
 import img2 from '/assets/img/sobre.jpg'
 import img3 from '/assets/img/suites.jpg'
 import img4 from '/assets/img/experiencias.jpg'
@@ -121,7 +121,7 @@ export default function Drop({ isMenuOpen, closeMenu }) {
 
             <div className='social'>
                 <span>© 2025 Recanto Belle Vue</span>
-                <span><a href="https://www.instagram.com/emersoneliass_/" rel="noopener noreferrer">facebook / instagram</a></span>
+                <span><a href="https://www.instagram.com/emersoneliass_/" target="_blank" rel="noopener noreferrer">facebook / instagram</a></span>
                 <span>© By Emerson Elias</span>
             </div>
         </section>
