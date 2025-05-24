@@ -1,51 +1,65 @@
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
-  
-  
-.banner_container{
+
+
+.banner_container {
     @include mixins.flexbox(relative, flex, center, center);
     width: 100dvw;
     height: 100dvh;
     overflow: hidden;
+/*
+    &::after {
+        content: '';
+        position: absolute;
+        top: 95%;
+        left: 0;
+        width: inherit;
+        height: 5vh;
+        transform: translateY(4px);
+        background: linear-gradient(to top, var.$secondary_color, #00000000);
+        pointer-events: none;
+        z-index: 1;
+    }*/
 
-    .swiper-button-prev, .swiper-button-next{
+    .swiper-button-prev,
+    .swiper-button-next {
         top: 0;
         width: 45vw;
         height: 100%;
         opacity: 0;
 
-        @include responsive.screen_small(){
+        @include responsive.screen_small() {
             display: none;
         }
     }
 
     .swiper-pagination-bullet {
         background-color: var.$secondary_color;
-    }   
-    
-    .slide_item{
+    }
+
+    .slide_item {
         position: relative;
         width: 100vw;
         height: 100dvh;
-       
-        &::after{
+
+        &::after {
             position: absolute;
             content: '';
             top: 0;
             left: 0;
             width: 100vw;
             height: 100dvh;
-            background: linear-gradient( var.$smoke, var.$smoke);
+            background: linear-gradient(var.$smoke, var.$smoke);
             pointer-events: none;
         }
 
-        img{
+        img {
             position: relative;
             width: inherit;
             height: inherit;
             object-fit: cover;
             pointer-events: none;
         }
-    } 
+    }
 }

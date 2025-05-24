@@ -1,0 +1,40 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.button_top {
+    position: fixed;    
+    right: 0;
+    bottom: 0;
+    opacity: 0;
+    margin-right: 30px;
+    margin-bottom: 10px;
+    background-color: transparent;
+    transition: var.$smooth;
+    z-index: 1;
+
+    @include responsive.screen_small{ 
+        margin-right: 15px;
+        margin-bottom: 20px;
+    } 
+    
+    a{
+        position: relative;     
+        width: auto;
+        height: auto;
+        display: grid;
+        place-content: center;
+        padding: 1vmax;
+        cursor: pointer;
+
+        i{
+            font-size: 2.3vmax;
+            color: var.$primary_color; 
+            pointer-events: none;
+
+            @include responsive.screen_laptop{
+                font-size: 30px;
+            }
+        }
+    }
+}
