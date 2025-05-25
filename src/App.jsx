@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 
 import './global.scss'
 import Navbar from './components/nav/navbar'
@@ -15,6 +15,12 @@ function App() {
 
   const closeMenu = () => setIsMenuOpen(false)
   const toggleMenu = () => setIsMenuOpen(prev => !prev)
+
+  useEffect(() => {
+    if (window.pageYOffset > 0) {
+      window.scrollTo(0, 0);
+    }
+  }, [])
 
   return (
     <>
