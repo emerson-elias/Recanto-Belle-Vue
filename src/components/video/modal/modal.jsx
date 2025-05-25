@@ -1,5 +1,4 @@
 import { useEffect, useRef } from 'react'
-
 import { useLoading } from '../../../loading/context/loadingContext'
 import styles from './modal.module.scss'
 
@@ -9,7 +8,6 @@ export default function VideoModal({ show, onClose, videoSrc }) {
 
     useEffect(() => {
         if (show) {
-        
             document.body.style.overflow = 'hidden'
             document.documentElement.style.overflow = 'hidden'
 
@@ -23,10 +21,15 @@ export default function VideoModal({ show, onClose, videoSrc }) {
             }
 
             return () => {
+                if (videoRef.current) {
+                    videoRef.current.pause()
+                    videoRef.current.currentTime = 0
+                }
+
                 document.body.style.overflow = ''
                 document.documentElement.style.overflow = ''
                 removeLoadingTask(taskId)
-            };
+            }
         }
     }, [show, videoSrc])
 
@@ -37,10 +40,18 @@ export default function VideoModal({ show, onClose, videoSrc }) {
             <div className={styles.modal_overlay} onClick={onClose}></div>
 
             <div className={styles.modal_content}>
-                <video src={videoSrc} controls autoPlay className={styles.full_video}></video>
+                <video
+                    ref={videoRef}
+                    src={videoSrc}
+                    controls
+                    autoPlay
+                    className={styles.full_video}
+                />
             </div>
 
-            <button className={styles.close_button} onClick={onClose}><i className="fa-solid fa-xmark"></i></button>
+            <button className={styles.close_button} onClick={onClose}>
+                <i className="fa-solid fa-xmark"></i>
+            </button>
         </section>
     )
 }

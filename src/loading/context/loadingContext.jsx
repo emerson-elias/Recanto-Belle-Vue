@@ -6,14 +6,14 @@ export const LoadingProvider = ({ children }) => {
     const [loadingTasks, setLoadingTasks] = useState(new Set())
 
     const addLoadingTask = (taskId) => {
-        setLoadingTasks((prev) => new Set(prev).add(taskId))
+        setLoadingTasks((prev) => new Set([...prev, taskId]))
     }
 
     const removeLoadingTask = (taskId) => {
         setLoadingTasks((prev) => {
             const newTasks = new Set(prev)
             newTasks.delete(taskId)
-            return newTasks
+            return new Set(newTasks) // força reatividade
         })
     }
 

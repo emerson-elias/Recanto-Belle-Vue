@@ -24,11 +24,12 @@ export default function Video() {
         return () => removeLoadingTask(taskId)
     }, [])
 
+    /* DEIXE AQUI SOMENTE PARA ESTILIZAR A TELA DE CARREGAMENTO 
     useEffect(() => {
         const taskId = 'dummyTask'
         addLoadingTask(taskId)
-        setTimeout(() => removeLoadingTask(taskId), 5000) // 5 segundos
-    }, [])
+        setTimeout(() => removeLoadingTask(taskId), 100000) // 5 segundos
+    }, [])*/
 
     return (
         <section className={styles.video_container}>

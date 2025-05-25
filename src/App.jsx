@@ -16,30 +16,30 @@ import { LoadingGlobal } from './loading/loadingGlobal'
 
 
 function App() {
-  const [isMenuOpen, setIsMenuOpen] = useState(false)
+    const [isMenuOpen, setIsMenuOpen] = useState(false)
 
-  const closeMenu = () => setIsMenuOpen(false)
-  const toggleMenu = () => setIsMenuOpen(prev => !prev)
+    const closeMenu = () => setIsMenuOpen(false)
+    const toggleMenu = () => setIsMenuOpen(prev => !prev)
 
-  useEffect(() => {
-    if (window.pageYOffset > 0) {
-      window.scrollTo(0, 0);
-    }
-  }, [])
+    useEffect(() => {
+        if (window.pageYOffset > 0) {
+            window.scrollTo(0, 0);
+        }
+    }, [])
 
-  return (
-    <LoadingProvider>
-      <LoadingGlobal />
-      <Cursor />
-      <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
-      <Drop isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
-      <Bar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
-      <Topo />
-      <Banner />
-      <Bio />
-      <Video />
-    </LoadingProvider>
-  )
+    return (
+        <LoadingProvider>
+            <LoadingGlobal />
+            <Cursor />
+            <Navbar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+            <Drop isMenuOpen={isMenuOpen} closeMenu={closeMenu} />
+            <Bar toggleMenu={toggleMenu} isMenuOpen={isMenuOpen} />
+            <Topo />
+            <Banner />
+            <Bio />
+            <Video />
+        </LoadingProvider>
+    )
 }
 
 export default App
