@@ -70,16 +70,18 @@ li {
                 @include responsive.screen_laptop() {
                     font-size: 80px;
                 }
+
+                @include responsive.screen_small() {
+                    font-size: 150px;
+                }
             }
 
             span {
-                font-size: 1.4vmax;
+                font-size: 2.5vmax;
                 text-transform: uppercase;
-                font-family: var.$font_dwo;
+                font-family: var.$font_one;
                 color: var.$secondary_color;
-                letter-spacing: 1px;
-                font-weight: 400;
-                transform: scaleY(1.2);
+                font-weight: 600;
 
                 @include responsive.screen_laptop() {
                     font-size: 20px;

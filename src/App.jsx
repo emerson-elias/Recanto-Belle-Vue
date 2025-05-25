@@ -8,6 +8,7 @@ import Bio from './components/bio/bio'
 import Bar from './components/nav/nav_none/bar'
 import Drop from './components/nav/menu_drop/drop'
 import Topo from './components/topo/topo'
+import Video from './components/video/video'
 
 function App() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
@@ -24,6 +25,7 @@ function App() {
       <Topo />
       <Banner />
       <Bio />
+      <Video />
     </>
   )
 }
