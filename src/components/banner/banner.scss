@@ -5,8 +5,8 @@
 
 .banner_container {
     @include mixins.flexbox(relative, flex, center, center);
-    width: 100dvw;
-    height: 100dvh;
+    max-width: 100dvw;
+    max-height: 100dvh;
     overflow: hidden;
 /*
     &::after {
