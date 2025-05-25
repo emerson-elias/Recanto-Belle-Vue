@@ -1,4 +1,5 @@
 import { useState } from 'react'
+import { Link, useLocation } from "react-router-dom"
 
 import './navbar.scss'
 
@@ -7,7 +8,7 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
         <section className='nav_container'>
             <nav className='navbar'>
                 <div className='box_1'>             
-                    <li>início</li>
+                    <Link to={"/about"}><li>início</li></Link>
                     <li><i className="fa-solid fa-phone"></i> +55 11 94002-8922</li>
                 </div>
 
@@ -19,8 +20,8 @@ export default function Navbar({ toggleMenu, isMenuOpen }) {
 
                 <div className='box_3'>
                     <div className='min'>
-                        <li>suítes</li>
-                        <li>Reservar</li>
+                        <Link><li>suítes</li></Link>  
+                        <Link><li>Reservar</li></Link>  
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

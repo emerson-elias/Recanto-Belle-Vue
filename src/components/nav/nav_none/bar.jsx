@@ -1,4 +1,5 @@
 import { useState, useEffect } from 'react'
+import { Link, useLocation } from "react-router-dom"
 
 import './bar.scss'
 
@@ -18,7 +19,7 @@ export default function Bar({ toggleMenu, isMenuOpen }) {
         <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
             <nav className='bar'>
                 <div className='box_1'>
-                    <li>início</li>
+                    <Link to={"/about"}><li>início</li></Link>
                     <li><i className="fa-solid fa-phone"></i> +55 11 94002-8922</li>
                 </div>
 
@@ -28,8 +29,8 @@ export default function Bar({ toggleMenu, isMenuOpen }) {
 
                 <div className='box_3'>
                     <div className='min'>
-                        <li>suítes</li>
-                        <li>Reservar</li>
+                        <Link><li>suítes</li></Link>  
+                        <Link><li>Reservar</li></Link> 
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

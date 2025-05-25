@@ -1,5 +1,7 @@
 import { gsap } from 'gsap'
 import { useEffect, useRef } from 'react'
+import { Link, useLocation } from "react-router-dom"
+
 import './drop.scss'
 
 import img1 from '/assets/img/pexels-1.jpg'
@@ -20,7 +22,6 @@ export default function Drop({ isMenuOpen, closeMenu }) {
         } else {
             document.body.style.overflow = ''
         }
-    
         // Cleanup caso o componente seja desmontado com o menu ainda aberto
         return () => {
             document.body.style.overflow = ''
@@ -101,22 +102,30 @@ export default function Drop({ isMenuOpen, closeMenu }) {
             </div>
 
             <ul>
-                {['início', 'sobre', 'suítes', 'experiências', 'contatos'].map((item, index) => (
-                    <div
-                        key={index}
-                        className='box_li'
-                        ref={(el) => (boxRefs.current[index] = el)}
-                        onMouseEnter={() => handleMouseEnter(index)}
-                        onMouseLeave={() => handleMouseLeave(index)}
-                    >
-                        <li>{item}</li>
-                        <img
-                            ref={(el) => (imgRefs.current[index] = el)}
-                            src={images[index]}
-                            alt={item}
-                        />
-                    </div>
-                ))}
+                {['início', 'sobre', 'suítes', 'experiências', 'contatos'].map((item, index) => {
+                    const paths = ['/', '/about', '', '', ''] // caminhos correspondentes, adicionar conforme o desenvolvimento
+
+                    return (
+                        <div
+                            key={index}
+                            className='box_li'
+                            ref={(el) => (boxRefs.current[index] = el)}
+                            onMouseEnter={() => handleMouseEnter(index)}
+                            onMouseLeave={() => handleMouseLeave(index)}
+                        >
+                            <li>
+                                <Link to={paths[index]}>
+                                    {item}
+                                </Link>
+                            </li>
+                            <img
+                                ref={(el) => (imgRefs.current[index] = el)}
+                                src={images[index]}
+                                alt={item}
+                            />
+                        </div>
+                    )
+                })}
             </ul>
 
             <div className='social'>

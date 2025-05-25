@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useLoading } from './context/loadingContext'
+import { useLoading } from './context/loadingContext.jsx'
 import styles from './loading.module.scss'
 
 export const LoadingGlobal = () => {
@@ -32,7 +32,7 @@ export const LoadingGlobal = () => {
             setHide(false)
         } else if (shouldRender) {
             setHide(true)
-            const timeout = setTimeout(() => setShouldRender(false), 800)
+            const timeout = setTimeout(() => setShouldRender(false), 2500)
             return () => clearTimeout(timeout)
         }
     }, [isLoading, shouldRender])

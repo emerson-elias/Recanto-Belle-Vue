@@ -35,10 +35,11 @@
         top: 7%;
         left: 90%;
 
-        @include responsive.screen_laptop(){
+        @include responsive.screen_laptop() {
             top: 2%;
         }
-        @include responsive.screen_small(){
+
+        @include responsive.screen_small() {
             left: 80%;
         }
     }
@@ -110,6 +111,10 @@
                     left: 2%;
                     transition: var.$smooth;
                 }
+
+                a {
+                    color: var.$primary_color;
+                }
             }
 
             img {
@@ -141,7 +146,8 @@
             align-items: baseline;
         }
 
-        span, a {
+        span,
+        a {
             color: var.$primary_color;
             text-transform: uppercase;
             font-size: 1vmax;
