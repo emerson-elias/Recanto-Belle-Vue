@@ -4,23 +4,30 @@ const LoadingContext = createContext()
 
 export const LoadingProvider = ({ children }) => {
     const [loadingTasks, setLoadingTasks] = useState(new Set())
+    const [forceOverflowHidden, setForceOverflowHidden] = useState(false)
 
     const addLoadingTask = (taskId) => {
-        setLoadingTasks((prev) => new Set([...prev, taskId]))
+        setLoadingTasks(prev => new Set(prev).add(taskId))
     }
 
     const removeLoadingTask = (taskId) => {
-        setLoadingTasks((prev) => {
+        setLoadingTasks(prev => {
             const newTasks = new Set(prev)
             newTasks.delete(taskId)
-            return new Set(newTasks) // força reatividade
+            return newTasks
         })
     }
 
     const isLoading = loadingTasks.size > 0
 
     return (
-        <LoadingContext.Provider value={{ isLoading, addLoadingTask, removeLoadingTask }}>
+        <LoadingContext.Provider value={{
+            isLoading,
+            addLoadingTask,
+            removeLoadingTask,
+            forceOverflowHidden,
+            setForceOverflowHidden
+        }}>
             {children}
         </LoadingContext.Provider>
     )

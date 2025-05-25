@@ -3,13 +3,12 @@ import { useLoading } from '../../../loading/context/loadingContext'
 import styles from './modal.module.scss'
 
 export default function VideoModal({ show, onClose, videoSrc }) {
-    const { addLoadingTask, removeLoadingTask } = useLoading()
+    const { addLoadingTask, removeLoadingTask, setForceOverflowHidden } = useLoading()
     const videoRef = useRef(null)
 
     useEffect(() => {
         if (show) {
-            document.body.style.overflow = 'hidden'
-            document.documentElement.style.overflow = 'hidden'
+            setForceOverflowHidden(true)
 
             const taskId = 'modalVideo'
             addLoadingTask(taskId)
@@ -21,13 +20,13 @@ export default function VideoModal({ show, onClose, videoSrc }) {
             }
 
             return () => {
+                setForceOverflowHidden(false)
+
                 if (videoRef.current) {
                     videoRef.current.pause()
                     videoRef.current.currentTime = 0
                 }
 
-                document.body.style.overflow = ''
-                document.documentElement.style.overflow = ''
                 removeLoadingTask(taskId)
             }
         }

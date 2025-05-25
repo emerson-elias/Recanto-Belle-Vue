@@ -20,12 +20,13 @@ function App() {
 
     const closeMenu = () => setIsMenuOpen(false)
     const toggleMenu = () => setIsMenuOpen(prev => !prev)
-
+/*
     useEffect(() => {
         if (window.pageYOffset > 0) {
             window.scrollTo(0, 0);
         }
     }, [])
+*/
 
     return (
         <LoadingProvider>
