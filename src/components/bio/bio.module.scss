@@ -22,9 +22,9 @@
         }
 
         @include responsive.screen_small() {
-            width: inherit;
-            font-size: 35px;
-            padding: 0 10px;
+            width: 90%;
+            font-size: 30px;
+            padding: 0 15px;
         }
     }
 

@@ -1,7 +1,7 @@
 import { useState } from 'react'
 
 import styles from './video.module.scss'
-import preview from '/assets/video/prev.mp4'
+import preview from '/assets/video/pev.mp4'
 import full from '/assets/video/full.mp4'
 
 import VideoModal from './modal/modal.jsx'
@@ -35,8 +35,8 @@ export default function Video() {
         <h1>Descubra:<br /> Recanto Belle Vue</h1>
 
         <span>Um mar de experiências, uma promessa de bem-estar, uma homenagem à calma.</span>
-        <p>Desperte com o som das ondas e uma vista incrível do oceano. No Recanto Belle Vue, você encontra conforto, charme e tranquilidade em um ambiente acolhedor, à beira-mar. Ideal para relaxar, curtir a natureza e viver momentos inesquecíveis.</p>
-        
+        <p>Desperte com o som das ondas e uma vista incrível do oceano. Na Recanto Belle Vue, você encontra conforto, charme e tranquilidade em um ambiente acolhedor. Ideal para relaxar, curtir a natureza e viver momentos inesquecíveis.</p>
+
         <div className={styles.box_detals}>
           <i>- Refúgio -</i>
           <i>- Encanto -</i>
