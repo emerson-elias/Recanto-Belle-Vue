@@ -1,3 +1,5 @@
+import { Link, useLocation } from "react-router-dom"
+
 import styles from './bio.module.scss'
 
 export default function Bio() {
@@ -11,7 +13,7 @@ export default function Bio() {
                 Aqui, o tempo desacelera e o bem-estar é prioridade.</p>
 
             <div className={styles.btn}>
-                <a><i className="fa-regular fa-gem"></i> Nos Conheça</a>
+                <Link to={"/about"}><i className="fa-regular fa-gem"></i> Nos Conheça</Link>
             </div>
 
         </section>

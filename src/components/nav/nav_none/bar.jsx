@@ -19,12 +19,12 @@ export default function Bar({ toggleMenu, isMenuOpen }) {
         <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
             <nav className='bar'>
                 <div className='box_1'>
-                    <Link to={"/about"}><li>início</li></Link>
+                    <Link to={"/home"}><li>início</li></Link>
                     <li><i className="fa-solid fa-phone"></i> +55 11 94002-8922</li>
                 </div>
 
                 <div className='box_2'>
-                    <h1>r</h1>
+                   <Link to={'/home'}><h1>r</h1></Link> 
                 </div>
 
                 <div className='box_3'>
