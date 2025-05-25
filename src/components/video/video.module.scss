@@ -54,6 +54,10 @@
             color: var.$secondary_color;
             z-index: 1;
             cursor: pointer;
+
+            @include responsive.screen_small() {
+                width: 80px;
+            }
         }
 
         .video_element {
@@ -152,7 +156,7 @@
                 }
 
                 @include responsive.screen_laptop() {
-                    font-size: 15px;
+                    font-size: 18px;
                 }
             }
         }

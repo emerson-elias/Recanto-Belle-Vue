@@ -1,0 +1,57 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.loading_container {
+    @include mixins.flexbox(fixed, flex, center, center);
+    flex-direction: column;
+    inset: 0;
+    width: 100vw;
+    height: 100vh;
+    background-color: var.$primary_color;
+    z-index: 1000;
+
+    h1 {
+     //   font-size: 15vmax;
+        color: red;
+    }
+
+    .hourglass {
+        animation: hourglass-container-spin 4s infinite;
+        height: 40px;
+        width: 40px;
+        position: relative;
+        background-color: rebeccapurple;
+
+        &::after,
+        &::before {
+            content: '';
+            position: absolute;
+            height: 40px;
+            width: 40px;
+            border-radius: 100%;
+            border: 4px solid olive;
+            background-size: 100% 300%;
+            animation-name: hourglass-spin;
+            animation-duration: 4s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+            background-image: linear-gradient(0deg,
+                    transparent,
+                    transparent 50%,
+                    #524560 50%,
+                    #524560);
+        }
+
+        &::after {
+            transform: translateY(-20px);
+        }
+
+        &::before {
+            animation-delay: -2s;
+            animation-direction: reverse;
+            transform: translateY(20px);
+        }
+    }
+}

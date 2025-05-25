@@ -1,25 +1,39 @@
-import { useEffect } from 'react'
+import { useEffect, useRef } from 'react'
 
+import { useLoading } from '../../../loading/context/loadingContext'
 import styles from './modal.module.scss'
 
 export default function VideoModal({ show, onClose, videoSrc }) {
+    const { addLoadingTask, removeLoadingTask } = useLoading()
+    const videoRef = useRef(null)
 
     useEffect(() => {
         if (show) {
+        
             document.body.style.overflow = 'hidden'
-        } else {
-            document.body.style.overflow = ''
-        }
+            document.documentElement.style.overflow = 'hidden'
 
-        return () => {
-            document.body.style.overflow = ''
+            const taskId = 'modalVideo'
+            addLoadingTask(taskId)
+
+            const video = videoRef.current
+            if (video) {
+                video.onloadeddata = () => removeLoadingTask(taskId)
+                video.onerror = () => removeLoadingTask(taskId)
+            }
+
+            return () => {
+                document.body.style.overflow = ''
+                document.documentElement.style.overflow = ''
+                removeLoadingTask(taskId)
+            };
         }
-    }, [show])
+    }, [show, videoSrc])
 
     if (!show) return null
 
     return (
-        <div className={`${styles.modal_container} ${show ? styles.show : ''}`}>
+        <section className={`${styles.modal_container} ${show ? styles.show : ''}`}>
             <div className={styles.modal_overlay} onClick={onClose}></div>
 
             <div className={styles.modal_content}>
@@ -27,6 +41,6 @@ export default function VideoModal({ show, onClose, videoSrc }) {
             </div>
 
             <button className={styles.close_button} onClick={onClose}><i className="fa-solid fa-xmark"></i></button>
-        </div>
+        </section>
     )
 }

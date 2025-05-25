@@ -1,11 +1,77 @@
+/*============================================================================*/
 
-@keyframes slideDown {
-  from {
-    transform: translateY(-30px);
-    opacity: 0;
-  }
-  to {
-    transform: translateY(0);
-    opacity: 1;
-  }
+@-webkit-keyframes hourglass-spin {
+
+    0%,
+    10% {
+        background-position: 0 90%;
+    }
+
+    40%,
+    60% {
+        background-position: 0 10%;
+    }
+
+    90%,
+    100% {
+        background-position: 0 -70%;
+    }
+}
+
+@keyframes hourglass-spin {
+
+    0%,
+    10% {
+        background-position: 0 90%;
+    }
+
+    40%,
+    60% {
+        background-position: 0 10%;
+    }
+
+    90%,
+    100% {
+        background-position: 0 -70%;
+    }
+}
+
+@-webkit-keyframes hourglass-container-spin {
+
+    0%,
+    40% {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    50%,
+    90% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
+}
+
+@keyframes hourglass-container-spin {
+
+    0%,
+    40% {
+        -webkit-transform: rotate(-180deg);
+        transform: rotate(-180deg);
+    }
+
+    50%,
+    90% {
+        -webkit-transform: rotate(0deg);
+        transform: rotate(0deg);
+    }
+
+    100% {
+        -webkit-transform: rotate(180deg);
+        transform: rotate(180deg);
+    }
 }
