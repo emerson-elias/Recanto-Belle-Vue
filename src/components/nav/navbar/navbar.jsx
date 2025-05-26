@@ -1,40 +1,23 @@
-import { useState, useEffect } from 'react'
 import { Link } from 'react-router-dom'
-
 import { useMenu } from '../../../context/menuContext'
 
-import './bar.scss'
+import './navbar.scss'
 
-export default function Bar() {
-    const { toggleMenu, isMenuOpen } = useMenu()
-    const [isVisible, setIsVisible] = useState(true)
-
-    useEffect(() => {
-        const handleScroll = () => {
-            setIsVisible(window.scrollY <= 50)
-        }
-
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
-    }, [])
+export default function Navbar() {
+    const { toggleMenu, isMenuOpen } = useMenu();
 
     return (
-
-        <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
-            <nav className='bar'>
+        <section className='nav_container'>
+            <nav className='navbar'>
                 <div className='box_1'>
                     <Link to={'/home'}><li>início</li></Link>
                     <li><i className='fa-solid fa-phone'></i> +55 11 94002-8922</li>
                 </div>
 
                 <div className='box_2'>
-                    <Link to={'/home'}><h1>r</h1></Link>
-                </div>
-
-                <div className='box_3'>
                     <div className='min'>
-                        <Link to={''}><li>suítes</li></Link>
-                        <Link to={''}><li>Reservar</li></Link>
+                        <Link to={'/suites'}><li>suítes</li></Link>
+                        <Link to={'/reservar'}><li>Reservar</li></Link>
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

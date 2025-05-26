@@ -1,13 +1,21 @@
-import { StrictMode } from 'react'
-import { createRoot } from 'react-dom/client'
+import React from 'react'
 
-import App from './App.jsx'
-import { LoadingProvider } from './loading/context/loadingContext.jsx' // ajuste o caminho se necessário
+import ReactDOM from 'react-dom/client'
+import { BrowserRouter } from 'react-router-dom'
 
-createRoot(document.getElementById('root')).render(
-  <StrictMode>
-    <LoadingProvider>
-      <App />
-    </LoadingProvider>
-  </StrictMode>
+import { MenuProvider } from './context/menuContext.jsx'
+import { LoadingProvider } from './context/loadingContext.jsx'
+
+import App from './App'
+
+ReactDOM.createRoot(document.getElementById('root')).render(
+    <React.StrictMode>
+        <BrowserRouter> {/* Único Router na aplicação */}
+            <LoadingProvider>
+                <MenuProvider>
+                    <App /> {/* App NÃO deve conter outro Router */}
+                </MenuProvider>
+            </LoadingProvider>
+        </BrowserRouter>
+    </React.StrictMode>
 )

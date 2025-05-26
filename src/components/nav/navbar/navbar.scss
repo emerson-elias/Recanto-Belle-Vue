@@ -1,0 +1,76 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+li {
+    list-style: none;
+    font-size: 1.2vmax;
+    text-transform: uppercase;
+    font-family: var.$font_dwo;
+    font-weight: 500;
+    color: var.$secondary_color;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+}
+
+.nav_container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: auto;
+    z-index: 10;
+
+    .navbar {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100vw;
+        height: 8vw;
+        padding: 0 3vw;
+
+        @include responsive.screen_laptop() {
+            height: auto;
+            padding: 20px;
+            justify-content: center;
+        }
+
+        .box_1 {
+            @include mixins.flexbox(relative, flex, space-around, center);
+            width: 25vw;
+            height: auto;
+
+            @include responsive.screen_laptop() {
+                display: none;
+            }
+        }
+
+        .box_2 {
+            @include mixins.flexbox(relative, flex, space-around, center);
+            width: 25vw;
+            height: auto;
+
+            @include responsive.screen_laptop() {
+                width: 100vw;
+                justify-content: end;
+            }
+
+            .min {
+                @include mixins.flexbox(relative, flex, space-around, center);
+                width: 15vw;
+                height: auto;
+
+                @include responsive.screen_laptop() {
+                    display: none;
+                }
+            }
+
+            .btn_menu_drop {
+                @include mixins.flexbox(relative, flex, center, end);
+                @include mixins.btn_closer();
+            }
+        }       
+    }
+}

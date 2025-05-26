@@ -1,6 +1,9 @@
 import { gsap } from 'gsap'
-import { useEffect, useRef } from 'react'
-import { Link, useLocation } from "react-router-dom"
+
+import { useEffect, useRef, useCallback } from 'react'
+import { Link } from 'react-router-dom'
+
+import { useMenu } from '../../../context/menuContext'
 
 import './drop.scss'
 
@@ -10,9 +13,9 @@ import img3 from '/assets/img/suites.jpg'
 import img4 from '/assets/img/experiencias.jpg'
 import img5 from '/assets/img/contato.jpg'
 
-export default function Drop({ isMenuOpen, closeMenu }) {
+export default function Drop() {
+    const { isMenuOpen, closeMenu } = useMenu()
     const images = [img1, img2, img3, img4, img5]
-
     const imgRefs = useRef([])
     const boxRefs = useRef([])
 
@@ -22,7 +25,6 @@ export default function Drop({ isMenuOpen, closeMenu }) {
         } else {
             document.body.style.overflow = ''
         }
-        // Cleanup caso o componente seja desmontado com o menu ainda aberto
         return () => {
             document.body.style.overflow = ''
         }
@@ -52,7 +54,7 @@ export default function Drop({ isMenuOpen, closeMenu }) {
         }
     }
 
-    const handleMouseMove = (index, event) => {
+    const memoizedHandleMouseMove = useCallback((index, event) => {
         const imgElement = imgRefs.current[index]
         const boxElement = boxRefs.current[index]
 
@@ -71,30 +73,30 @@ export default function Drop({ isMenuOpen, closeMenu }) {
                 ease: 'power2.out',
             })
         }
-    }
+    }, [])
 
-    useEffect(() => {
-        const handleMove = (event, index) => handleMouseMove(index, event)
+    useEffect(() => {      
+        const handlers = []
 
         boxRefs.current.forEach((box, index) => {
-            if (box) {
-                box.addEventListener('mousemove', (event) => handleMove(event, index))
+            if (box) {           
+                const handler = (event) => memoizedHandleMouseMove(index, event)
+                box.addEventListener('mousemove', handler)
+                handlers.push({ box, handler })
             }
         })
 
         return () => {
-            boxRefs.current.forEach((box, index) => {
+            handlers.forEach(({ box, handler }) => {
                 if (box) {
-                    box.removeEventListener('mousemove', (event) => handleMove(event, index))
+                    box.removeEventListener('mousemove', handler)
                 }
             })
         }
-    }, [])
+    }, [memoizedHandleMouseMove])
 
     return (
-        <section
-            className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}
-        >
+        <section className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}>
             <div className='btn_menu_drop' onClick={closeMenu}>
                 <span className={isMenuOpen ? 'open' : ''}></span>
                 <span className={isMenuOpen ? 'open' : ''}></span>
@@ -103,7 +105,7 @@ export default function Drop({ isMenuOpen, closeMenu }) {
 
             <ul>
                 {['início', 'sobre', 'suítes', 'experiências', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/about', '', '', ''] // caminhos correspondentes, adicionar conforme o desenvolvimento
+                    const paths = ['/', '/about', '', '', '']
 
                     return (
                         <div
@@ -113,11 +115,8 @@ export default function Drop({ isMenuOpen, closeMenu }) {
                             onMouseEnter={() => handleMouseEnter(index)}
                             onMouseLeave={() => handleMouseLeave(index)}
                         >
-                            <li>
-                                <Link to={paths[index]}>
-                                    {item}
-                                </Link>
-                            </li>
+                            <li><Link to={paths[index]} onClick={closeMenu}>{item}</Link></li>
+
                             <img
                                 ref={(el) => (imgRefs.current[index] = el)}
                                 src={images[index]}
@@ -130,7 +129,11 @@ export default function Drop({ isMenuOpen, closeMenu }) {
 
             <div className='social'>
                 <span>© 2025 Recanto Belle Vue</span>
-                <span><a href="https://www.instagram.com/emersoneliass_/" target="_blank" rel="noopener noreferrer">facebook / instagram</a></span>
+                <span>
+                    <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>
+                        facebook / instagram
+                    </a>
+                </span>
                 <span>© By Emerson Elias</span>
             </div>
         </section>

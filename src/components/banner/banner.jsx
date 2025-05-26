@@ -21,6 +21,13 @@ export default function Banner() {
 
     return (
         <section className='banner_container'>
+
+            <div className='box_banner'>
+                <h1>r</h1>
+                <span>Recanto Belle Vue</span>
+                <p>Requinte e Beleza</p>
+            </div>
+            
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
                 effect="fade"

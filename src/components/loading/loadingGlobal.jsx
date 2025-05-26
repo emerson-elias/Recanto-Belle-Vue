@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useLoading } from './context/loadingContext.jsx'
+import { useLoading } from '../../context/loadingContext'
 import styles from './loading.module.scss'
 
 export const LoadingGlobal = () => {
@@ -27,13 +27,24 @@ export const LoadingGlobal = () => {
     }, [isLoading, forceOverflowHidden])
 
     useEffect(() => {
+        let timeoutId
+
         if (isLoading) {
             setShouldRender(true)
             setHide(false)
-        } else if (shouldRender) {
-            setHide(true)
-            const timeout = setTimeout(() => setShouldRender(false), 2500)
-            return () => clearTimeout(timeout)
+        } else {
+            if (shouldRender) {
+                setHide(true)
+                timeoutId = setTimeout(() => {
+                    setShouldRender(false)
+                }, 2500)
+            }
+        }
+
+        return () => {
+            if (timeoutId) {
+                clearTimeout(timeoutId)
+            }
         }
     }, [isLoading, shouldRender])
 
