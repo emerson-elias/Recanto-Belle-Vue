@@ -12,6 +12,7 @@ import Banner from './components/banner/banner'
 import Bio from './components/bio/bio'
 import Topo from './components/topo/topo'
 import Video from './components/video/video'
+import About_Banner from './components/about/banner_about/about'
 
 
 function HomePage() {
@@ -30,6 +31,7 @@ function AboutPage() {
     return (
         <>
             <Cursor />
+            <About_Banner />
         </>
     )
 }
