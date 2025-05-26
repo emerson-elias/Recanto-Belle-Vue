@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { useLoading } from '../../context/loadingContext'
+import { useLoading } from '../../../context/loadingContext'
 import styles from './loading.module.scss'
 
 export const LoadingGlobal = () => {

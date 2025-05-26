@@ -1,6 +1,6 @@
 // components/Video/modal/modal.jsx
 import { useEffect, useRef } from 'react'
-import { useLoading } from '../../../context/loadingContext'
+import { useLoading } from '../../../../context/loadingContext'
 
 import styles from './modal.module.scss'
 

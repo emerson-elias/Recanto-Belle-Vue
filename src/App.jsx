@@ -2,16 +2,16 @@ import { Routes, Route } from 'react-router-dom'
 
 import './global.scss'
 
-import { LoadingGlobal } from './components/loading/loadingGlobal'
+import { LoadingGlobal } from './components/global/loading/loadingGlobal'
 
-import Navbar from './components/nav/navbar/navbar'
-import Bar from './components/nav/nav_none/bar'
-import Drop from './components/nav/menu_drop/drop'
-import Cursor from './components/cursor/cursor'
-import Banner from './components/banner/banner'
-import Bio from './components/bio/bio'
-import Topo from './components/topo/topo'
-import Video from './components/video/video'
+import Navbar from './components/global/nav/navbar/navbar'
+import Bar from './components/global/nav/nav_none/bar'
+import Drop from './components/global/nav/menu_drop/drop'
+import Cursor from './components/global/cursor/cursor'
+import Banner from './components/home/banner/banner'
+import Bio from './components/home/bio/bio'
+import Topo from './components/global/topo/topo'
+import Video from './components/home/video/video'
 import About_Banner from './components/about/banner_about/about'
 
 

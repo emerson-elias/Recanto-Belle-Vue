@@ -1,5 +1,5 @@
 import { Link } from 'react-router-dom'
-import { useMenu } from '../../../context/menuContext'
+import { useMenu } from '../../../../context/menuContext'
 
 import './navbar.scss'
 

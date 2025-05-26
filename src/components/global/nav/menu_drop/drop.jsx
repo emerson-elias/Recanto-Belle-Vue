@@ -3,7 +3,7 @@ import { gsap } from 'gsap'
 import { useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
 
-import { useMenu } from '../../../context/menuContext'
+import { useMenu } from '../../../../context/menuContext'
 
 import './drop.scss'
 
