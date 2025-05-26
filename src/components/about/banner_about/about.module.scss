@@ -7,7 +7,7 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 200vh;
     background-color: var.$primary_color;
 
     h1{

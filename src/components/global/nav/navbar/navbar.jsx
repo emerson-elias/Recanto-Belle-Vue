@@ -10,7 +10,7 @@ export default function Navbar() {
         <section className='nav_container'>
             <nav className='navbar'>
                 <div className='box_1'>
-                    <Link to={'/home'}><li>início</li></Link>
+                    <Link to={'/'}><li>início</li></Link>
                     <li><i className='fa-solid fa-phone'></i> +55 11 94002-8922</li>
                 </div>
 
