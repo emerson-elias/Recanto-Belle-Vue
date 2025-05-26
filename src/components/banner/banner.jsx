@@ -10,6 +10,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
 
 export default function Banner() {
+    
     const data = [
         { id: '1', image: '/assets/img/pexels-1.jpg' },
         { id: '2', image: '/assets/img/pexels-2.jpg' },

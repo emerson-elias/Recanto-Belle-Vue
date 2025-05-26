@@ -2,17 +2,17 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-
 .banner_container {
     @include mixins.flexbox(relative, flex, center, center);
-    max-width: 100dvw;
-    max-height: 100dvh;
+    width: 100vw;
+    height: 100vh;
     overflow: hidden;
 
     .box_banner {
         @include mixins.flexbox(absolute, flex, center, center);
         flex-direction: column;
         transform: translateY(-10vmax);
+        pointer-events: none;
         z-index: 2;
 
         @include responsive.screen_laptop() {
@@ -74,44 +74,56 @@
         }
     }
 
-    .swiper-button-prev,
-    .swiper-button-next {
-        top: 0;
-        width: 45vw;
+    .swiper {
+        width: 100%;
         height: 100%;
-        opacity: 0;
 
-        @include responsive.screen_small() {
+        .swiper-button-prev,
+        .swiper-button-next {
+            top: 2vw;
+            width: 45vw;
+            height: 100%;
+            pointer-events: all;
+            opacity: 0;
+            z-index: 10;
+
+            @include responsive.screen_small() {
+                display: none;
+            }
+        }
+
+        .swiper-button-prev::after,
+        .swiper-button-next::after{
             display: none;
         }
-    }
 
-    .swiper-pagination-bullet {
-        background-color: var.$secondary_color;
-    }
-
-    .slide_item {
-        position: relative;
-        width: 100vw;
-        height: 100dvh;
-
-        &::after {
-            position: absolute;
-            content: '';
-            top: 0;
-            left: 0;
-            width: 100vw;
-            height: 100dvh;
-            background: linear-gradient(var.$smoke, var.$smoke);
-            pointer-events: none;
+        .swiper-pagination-bullet {
+            background-color: var.$secondary_color;
         }
 
-        img {
+        .slide_item {
             position: relative;
-            width: inherit;
-            height: inherit;
-            object-fit: cover;
-            pointer-events: none;
+            width: 100vw;
+            height: 100dvh;
+
+            &::after {
+                position: absolute;
+                content: '';
+                top: 0;
+                left: 0;
+                width: 100vw;
+                height: 100dvh;
+                background: linear-gradient(var.$smoke, var.$smoke);
+                pointer-events: none;
+            }
+
+            img {
+                position: relative;
+                width: inherit;
+                height: inherit;
+                object-fit: cover;
+                pointer-events: none;
+            }
         }
     }
 }

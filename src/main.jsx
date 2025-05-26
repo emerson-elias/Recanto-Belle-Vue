@@ -10,10 +10,10 @@ import App from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
-        <BrowserRouter> {/* Único Router na aplicação */}
+        <BrowserRouter>
             <LoadingProvider>
                 <MenuProvider>
-                    <App /> {/* App NÃO deve conter outro Router */}
+                    <App />
                 </MenuProvider>
             </LoadingProvider>
         </BrowserRouter>
