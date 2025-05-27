@@ -8,13 +8,10 @@
     <link rel="shortcut icon" href="/assets/img/icon.png" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap"
-      rel="stylesheet"
-    />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Sora:wght@100..800&display=swap" rel="stylesheet"/>
   </head>
   <body>
-    <!-- 
+<!-- 
 
   #####   ####       ##              #####    #######  ##   ##
  ##   ##   ##       ####              ## ##    ##   #  ##   ##
@@ -33,35 +30,6 @@
 -->
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
-    <script
-      src="https://kit.fontawesome.com/091f30ca3a.js"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      function setViewportHeight() {
-        if (window.visualViewport) {
-          // Define a variável CSS com a altura real do viewport visível
-          document.documentElement.style.setProperty(
-            "--mobile-viewport-height",
-            `${window.visualViewport.height}px`
-          );
-        } else {
-          // Fallback para navegadores muito antigos ou onde visualViewport não está disponível
-          // Pode ser 100vh ou uma altura fixa, dependendo do que faz mais sentido
-          document.documentElement.style.setProperty(
-            "--mobile-viewport-height",
-            "100vh"
-          );
-        }
-      }
-
-      // Define a altura na carga inicial da página
-      setViewportHeight();
-
-      // Atualiza a altura sempre que o viewport visível mudar (quando as barras aparecem/desaparecem)
-      if (window.visualViewport) {
-        window.visualViewport.addEventListener("resize", setViewportHeight);
-      }
-    </script>
+    <script src="https://kit.fontawesome.com/091f30ca3a.js" crossorigin="anonymous"></script>
   </body>
 </html>

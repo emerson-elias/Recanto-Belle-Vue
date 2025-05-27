@@ -5,9 +5,9 @@
 .banner_container {
     @include mixins.flexbox(relative, flex, center, center);
     width: 100vw;
-    height: var(--mobile-viewport-height);
+    height: 100lvh;
+    user-select: none;
     overflow: hidden;
-
 
     .box_banner {
         @include mixins.flexbox(absolute, flex, center, center);
@@ -94,7 +94,7 @@
         }
 
         .swiper-button-prev::after,
-        .swiper-button-next::after {
+        .swiper-button-next::after{
             display: none;
         }
 
@@ -105,7 +105,7 @@
         .slide_item {
             position: relative;
             width: 100vw;
-            height: var(--mobile-viewport-height);
+            height: 100lvh;
 
             &::after {
                 position: absolute;
