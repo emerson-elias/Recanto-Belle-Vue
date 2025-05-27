@@ -16,6 +16,10 @@
     scrollbar-width: none;  
 }
 
+:root {
+    --mobile-viewport-height: 100vh; /* Fallback inicial */
+}
+
 body{
     background-color: var.$secondary_color;
 }

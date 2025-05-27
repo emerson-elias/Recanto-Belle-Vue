@@ -5,8 +5,7 @@
 .banner_container {
     @include mixins.flexbox(relative, flex, center, center);
     width: 100vw;
-    height: 100vh;
-    min-height: 100dvh;
+    height: var(--mobile-viewport-height);
     overflow: hidden;
 
 
@@ -106,7 +105,7 @@
         .slide_item {
             position: relative;
             width: 100vw;
-            height: 100dvh;
+            height: var(--mobile-viewport-height);
 
             &::after {
                 position: absolute;
