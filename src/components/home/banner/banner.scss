@@ -8,6 +8,10 @@
     height: 100vh;
     overflow: hidden;
 
+    @include responsive.screen_small() {
+        min-height: 100dvh;
+    }
+
     .box_banner {
         @include mixins.flexbox(absolute, flex, center, center);
         flex-direction: column;
@@ -93,7 +97,7 @@
         }
 
         .swiper-button-prev::after,
-        .swiper-button-next::after{
+        .swiper-button-next::after {
             display: none;
         }
 
