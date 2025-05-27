@@ -6,11 +6,9 @@
     @include mixins.flexbox(relative, flex, center, center);
     width: 100vw;
     height: 100vh;
+    min-height: 100dvh;
     overflow: hidden;
 
-    @include responsive.screen_small() {
-        min-height: 100dvh;
-    }
 
     .box_banner {
         @include mixins.flexbox(absolute, flex, center, center);
