@@ -87,3 +87,14 @@
         clip-path: inset(0 0 0 100%);
     }
 }
+
+/*==============================================================================================*/
+
+@keyframes girar_right {
+    from {
+        transform: rotate(0deg); /* rotação inicial */
+    }
+    to {
+        transform: rotate(-360deg); /* rotação final */
+    }
+}
