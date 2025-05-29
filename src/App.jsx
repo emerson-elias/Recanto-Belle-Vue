@@ -13,7 +13,7 @@ import Bio from './components/home/bio/bio'
 import Topo from './components/global/topo/topo'
 import Video from './components/home/video/video'
 import About_Banner from './components/about/banner_about/about'
-import Roons from './components/home/roons/roons'
+import Experince from './components/home/experince/experince'
 
 
 function HomePage() {
@@ -24,7 +24,7 @@ function HomePage() {
             <Banner />
             <Bio />
             <Video />
-            <Roons />
+            <Experince />
         </>
     )
 }

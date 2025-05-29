@@ -4,7 +4,7 @@ import { useLoading } from '../../../context/loadingContext.jsx'
 import styles from './video.module.scss'
 import VideoModal from './modal/modal.jsx'
 
-import preview from '/assets/video/pev.mp4' 
+import preview from '/assets/video/prev.mp4' 
 import full from '/assets/video/full.mp4'  
 
 export default function Video() {
