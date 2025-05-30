@@ -82,6 +82,11 @@
             width: 100%;
         }
 
+        @include responsive.screen_small() {
+            height: auto;
+            margin: 40px 0;
+        }
+
         h1 {
             width: 100%;
             margin-bottom: 5vmax;
