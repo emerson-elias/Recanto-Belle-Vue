@@ -74,7 +74,6 @@
         .btn_roons {
             @include mixins.flexbox(relative, flex, center, center);
             @include mixins.effect_btn();
-            border-radius: 50px;
             margin-top: 3vmax;
             border: 0.1vw solid var.$primary_color;
             cursor: pointer;
@@ -112,7 +111,7 @@
             font-size: 18px;
         }
 
-        .buttons {
+        .controls_swiper {
             position: absolute;
             top: 55%;
             left: -24vw;

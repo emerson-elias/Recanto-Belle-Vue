@@ -33,7 +33,7 @@ export default function Roons() {
             </div>
 
             <div className='swiper_container'>
-                <div className="buttons">
+                <div className="controls_swiper">
                     <button onClick={() => swiperRef.current?.slidePrev()}>
                         <svg
                             xmlns='http://www.w3.org/2000/svg'
@@ -72,7 +72,7 @@ export default function Roons() {
                     spaceBetween={50}
                     loop={true}
                     autoplay={{
-                        delay: 30000,
+                        delay: 3000,
                         disableOnInteraction: false
                     }}
                     modules={[Navigation, Autoplay]}
