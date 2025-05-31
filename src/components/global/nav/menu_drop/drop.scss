@@ -85,9 +85,8 @@
                     font-size: 35px;
                 }
 
-                &:hover {
-                    padding: 0 5vw;
-                    transition: var.$smooth;
+                a {
+                    color: var.$primary_color;
                 }
 
                 &::after {
@@ -107,13 +106,14 @@
                     }
                 }
 
-                &:hover::after {
-                    left: 2%;
+                &:hover {
+                    padding: 0 5vw;
                     transition: var.$smooth;
-                }
 
-                a {
-                    color: var.$primary_color;
+                    &::after {
+                        left: 2%;
+                        transition: var.$smooth;
+                    }
                 }
             }
 
