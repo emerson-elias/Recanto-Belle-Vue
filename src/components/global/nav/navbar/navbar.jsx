@@ -17,7 +17,7 @@ export default function Navbar() {
                 <div className='box_2'>
                     <div className='min'>
                         <Link to={'/suites'}><li>suítes</li></Link>
-                        <Link to={'/reservar'}><li>Reservar</li></Link>
+                        <Link to={'/'}><li>Serviços</li></Link>
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

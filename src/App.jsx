@@ -15,6 +15,7 @@ import Video from './components/home/video/video'
 import About_Banner from './components/about/banner_about/about'
 import Experince from './components/home/experince/experince'
 import Roons from './components/home/roons/roons'
+import Services from './components/home/services/services'
 
 
 function HomePage() {
@@ -26,6 +27,7 @@ function HomePage() {
             <Bio />
             <Video />
             <Roons />
+            <Services />
             <Experince />
         </>
     )

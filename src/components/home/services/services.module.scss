@@ -1,0 +1,9 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.services_container{
+    @include mixins.flexbox(relative, flex, center, center);
+    overflow: hidden;
+}

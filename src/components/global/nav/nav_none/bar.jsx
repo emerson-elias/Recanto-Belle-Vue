@@ -33,8 +33,8 @@ export default function Bar() {
 
                 <div className='box_3'>
                     <div className='min'>
-                        <Link to={''}><li>suítes</li></Link>
-                        <Link to={''}><li>Reservar</li></Link>
+                        <Link to={''}><li>Suítes</li></Link>
+                        <Link to={''}><li>Serviços</li></Link>
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>
