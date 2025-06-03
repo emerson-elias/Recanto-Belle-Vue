@@ -28,7 +28,7 @@ export default function Roons() {
                 <h1>Suítes</h1>
                 <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
                 <div className='btn_roons'>
-                    <Link>Saiba mais</Link>
+                    <Link>Visite a Essência</Link>
                 </div>
             </div>
 

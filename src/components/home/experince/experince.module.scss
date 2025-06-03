@@ -116,9 +116,10 @@
 
         .svg {
             position: relative;
+            user-select: none;
 
             @include responsive.screen_laptop {
-               display: none !important;
+                display: none !important;
             }
 
             &::after {
@@ -157,9 +158,10 @@
         position: relative;
         width: 55%;
         height: 100%;
+        user-select: none;
         overflow: hidden;
 
-        &::after{
+        &::after {
             content: '';
             position: absolute;
             inset: 0;
@@ -193,10 +195,6 @@
             z-index: 3;
             padding: 0 4vmax;
 
-            @include responsive.screen_small () {
-                display: none;
-            }
-
             p {
                 width: 50%;
                 text-align: end;
@@ -206,6 +204,11 @@
                 text-transform: uppercase;
                 font-weight: 400;
                 font-style: italic;
+
+                @include responsive.screen_small () {
+                    width: 90%;
+                    font-size: 12px;
+                }
             }
         }
     }

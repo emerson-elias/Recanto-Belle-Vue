@@ -6,8 +6,8 @@
 .roons_container {
     @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
-    height: 100vh;
-    margin: 20vmax 0;
+    height: 110vh;
+    margin: 20vmax 0 15vmax 0;
     overflow: hidden;
 
     @include responsive.screen_laptop() {
@@ -16,12 +16,16 @@
         margin-top: 5vmax;
     }
 
+    @include responsive.screen_small() {
+        margin-top: 100px;
+    }
+
     .infor {
         @include mixins.flexbox(relative, flex, normal, center);
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 0 0 0 10vmax;
+        padding: 4vmax 0 0 10vmax;
 
         @include responsive.screen_laptop () {
             padding: 0;
@@ -104,16 +108,20 @@
     .swiper_container {
         @include mixins.flexbox(relative, flex, center, center);
         width: 60vw;
-        height: 100%;
+        height: 110vh;
 
         @include responsive.screen_laptop () {
             width: 90%;
             font-size: 18px;
         }
 
+        @include responsive.screen_small () {
+            height: 100%;
+        }
+
         .controls_swiper {
             position: absolute;
-            top: 55%;
+            top: 65%;
             left: -24vw;
             z-index: 2;
 
@@ -124,6 +132,10 @@
                 top: 0;
                 left: 0;
                 pointer-events: none;
+            }
+
+            @include responsive.screen_small () {
+                display: none;
             }
 
             button {
@@ -151,11 +163,12 @@
 
             .card_box {
                 width: 100%;
-                height: 100vh;
+                height: 100%;
+                cursor: move;
                 overflow: hidden;
 
                 @include responsive.screen_small () {
-                    height: 600px;
+                    height: 770px;
                 }
 
                 span {
@@ -171,6 +184,11 @@
                     text-transform: uppercase;
                     color: var.$secondary_color;
                     z-index: 2;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 60px;
+                        padding: 0 15px;
+                    }
                 }
 
                 img {

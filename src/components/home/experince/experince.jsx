@@ -9,11 +9,11 @@ import experince_4 from '/assets/img/ondas-crescente.jpg'
 import experince_5 from '/assets/img/refugio-pescador.jpg'
 
 const experinceCategories = [
-    { name: 'Brisa do Mar', image: experince_1, description: 'A brisa atravessa as janelas trazendo o perfume do mar.' },
-    { name: 'Sol Nascente', image: experince_2, description: 'A magia dos primeiros raios dourados no horizonte.' },
-    { name: 'Areia Dourada', image: experince_3, description: 'Pés descalços tocam o chão com a mesma leveza que caminham pela areia.' },
-    { name: 'Ondas Crescente', image: experince_4, description: 'Cada detalhe remete ao movimento constante das marés.' },
-    { name: 'Refúgio do Pescador', image: experince_5, description: 'Um abrigo onde o tempo parece desacelerar.' },
+    { name: 'Brisa do Mar', image: experince_1, description: 'A brisa atravessa as janelas trazendo o perfume do mar' },
+    { name: 'Sol Nascente', image: experince_2, description: 'A magia dos primeiros raios dourados no horizonte' },
+    { name: 'Areia Dourada', image: experince_3, description: 'Pés descalços tocam o chão com a mesma leveza que caminham pela areia' },
+    { name: 'Ondas Crescente', image: experince_4, description: 'Cada detalhe remete ao movimento constante das marés' },
+    { name: 'Refúgio do Pescador', image: experince_5, description: 'Um abrigo onde o tempo parece desacelerar' },
 ]
 
 export default function Roons() {

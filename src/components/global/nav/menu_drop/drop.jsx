@@ -8,8 +8,8 @@ import { useMenu } from '../../../../context/menuContext'
 import './drop.scss'
 
 import img1 from '/assets/img/pexels-1.jpg'
-import img2 from '/assets/img/sobre.jpg'
-import img3 from '/assets/img/suites.jpg'
+import img2 from '/assets/img/suites.jpg'
+import img3 from '/assets/img/sobre.jpg'
 import img4 from '/assets/img/experiencias.jpg'
 import img5 from '/assets/img/contato.jpg'
 
@@ -104,8 +104,8 @@ export default function Drop() {
             </div>
 
             <ul>
-                {['início', 'sobre', 'suítes', 'experiências', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/about', '', '', '']
+                {['sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
+                    const paths = ['/about', '', '', '', '']
 
                     return (
                         <div
