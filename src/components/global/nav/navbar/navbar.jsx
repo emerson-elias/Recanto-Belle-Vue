@@ -16,7 +16,7 @@ export default function Navbar() {
 
                 <div className='box_2'>
                     <div className='min'>
-                        <Link to={'/suites'}><li>suítes</li></Link>
+                        <Link to={'/'}><li>suítes</li></Link>
                         <Link to={'/'}><li>Serviços</li></Link>
                     </div>
 

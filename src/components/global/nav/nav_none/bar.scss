@@ -22,8 +22,8 @@
 
     .bar {
         @include mixins.flexbox(relative, flex, space-between, center);
+        @include mixins.background(5vw);
         width: 100vw;
-        height: 5vw;
         padding: 0 3vw;
         background-color: var.$secondary_color;
 

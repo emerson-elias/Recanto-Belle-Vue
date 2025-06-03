@@ -1,6 +1,16 @@
 @use '../sass/responsive';
 @use '../sass/variables' as var;
 
+@mixin background($height) {
+    background: url('../assets/img/bg.webp') var.$secondary_color;
+    background-attachment: fixed;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100vw;
+    height: $height;
+}
+
 @mixin flexbox($position, $flex, $centralization, $align) {
     position: $position;
     display: $flex;
