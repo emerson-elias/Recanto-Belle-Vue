@@ -155,19 +155,12 @@
     }
 
     .box_2 {
+        @include mixins.smoke();
         position: relative;
         width: 55%;
         height: 100%;
         user-select: none;
         overflow: hidden;
-
-        &::after {
-            content: '';
-            position: absolute;
-            inset: 0;
-            background-color: var.$smoke;
-            pointer-events: none;
-        }
 
         @include responsive.screen_laptop {
             width: 90%;

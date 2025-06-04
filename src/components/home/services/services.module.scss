@@ -26,6 +26,7 @@
 
         .layerOne {
             @include mixins.flexbox(relative, flex, center, center);
+            @include mixins.smoke();
             width: 55vw;
             height: 100%;
             overflow: hidden;
@@ -85,15 +86,6 @@
                         cursor: pointer;
                     }
                 }
-            }
-
-            &::after {
-                content: '';
-                position: absolute;
-                inset: 0;
-                background-color: var.$smoke;
-                transition: var.$smooth;
-                pointer-events: none;
             }
 
             &:hover {
@@ -184,8 +176,8 @@
                     @include mixins.effect_btn();
                     margin-top: 3vmax;
                     border: 0.1vw solid var.$primary_color;
-                    cursor: pointer;
                     overflow: hidden;
+                    cursor: pointer;
 
                     a {
                         font-family: var.$font_dwo;

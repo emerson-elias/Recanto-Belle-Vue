@@ -103,20 +103,10 @@
         }
 
         .slide_item {
+            @include mixins.smoke();
             position: relative;
             width: 100vw;
             height: 100lvh;
-
-            &::after {
-                position: absolute;
-                content: '';
-                top: 0;
-                left: 0;
-                width: 100vw;
-                height: 100lvh;
-                background: linear-gradient(var.$smoke, var.$smoke);
-                pointer-events: none;
-            }
 
             img {
                 position: relative;

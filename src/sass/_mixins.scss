@@ -18,6 +18,17 @@
     align-items: $align;
 }
 
+@mixin smoke() {
+    &::after {
+        content: '';
+        position: absolute;
+        inset: 0;
+        background-color: var.$smoke;
+        transition: var.$smooth;
+        pointer-events: none;
+    }
+}
+
 @mixin btn_closer() {
     flex-direction: column;
     width: 4vmax;
