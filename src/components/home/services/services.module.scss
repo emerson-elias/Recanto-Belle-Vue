@@ -72,6 +72,19 @@
                     transition: var.$smooth;
                     object-fit: cover;
                 }
+
+                a {
+                    position: absolute;
+                    inset: 0;
+                    display: none;
+                    pointer-events: all;
+
+                    @include responsive.screen_small () {
+                        display: block;
+                        z-index: 3;
+                        cursor: pointer;
+                    }
+                }
             }
 
             &::after {

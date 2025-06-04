@@ -39,6 +39,7 @@ function ServiceCard({ image, logo, title, text, linkTo, reverseOrder }) {
                 <section className={styles.layerOne}>
                     <img src={image} alt={title} />
                     <div className={styles.logo}>
+                        <Link to={linkTo}></Link>
                         <img src={logo} alt={`Logo ${title}`} />
                     </div>
                 </section>
