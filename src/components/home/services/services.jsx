@@ -36,20 +36,22 @@ function ServiceCard({ image, logo, title, text, linkTo, reverseOrder }) {
         <>
             <div className={containerClasses}>
 
-                <figure className={styles.layerOne}>
+                <section className={styles.layerOne}>
                     <img src={image} alt={title} />
                     <div className={styles.logo}>
                         <img src={logo} alt={`Logo ${title}`} />
                     </div>
-                </figure>
+                </section>
 
-                <div className={styles.layerTwo}>
-                    <span>{title}</span>
-                    <p>{text}</p>
-                    <div className={styles.btn_services}>
-                        <Link to={linkTo}>Visite a Essência</Link>
+                <section className={styles.layerTwo}>
+                    <div className={styles.box}>
+                        <span>{title}</span>
+                        <p>{text}</p>
+                        <div className={styles.btn_services}>
+                            <Link to={linkTo}>Visite a Essência</Link>
+                        </div>
                     </div>
-                </div>
+                </section>
 
             </div>
         </>

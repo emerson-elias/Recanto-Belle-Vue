@@ -171,7 +171,7 @@
                     height: 770px;
                 }
 
-                span {
+                a {
                     position: absolute;
                     width: 100%;
                     top: 50%;
@@ -188,6 +188,10 @@
                     @include responsive.screen_laptop () {
                         font-size: 60px;
                         padding: 0 15px;
+                    }
+
+                    @include responsive.screen_laptop () {
+                        font-size: 80px;
                     }
                 }
 

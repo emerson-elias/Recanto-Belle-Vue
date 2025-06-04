@@ -81,7 +81,7 @@ export default function Roons() {
                     {cards.map((elements) => (
                         <SwiperSlide key={elements.id}>
                             <div className='card_box'>
-                                <span>{elements.categoria}</span>
+                                <Link>{elements.categoria}</Link>
                                 <img
                                     src={elements.image}
                                     alt={`Slide ${elements.id} do Card`}

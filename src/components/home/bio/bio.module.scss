@@ -6,7 +6,7 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
 
     @include responsive.screen_small() {
         height: auto;

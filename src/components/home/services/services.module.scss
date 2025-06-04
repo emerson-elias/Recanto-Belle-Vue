@@ -8,12 +8,11 @@
     flex-direction: column;
     width: 100vw;
     margin: 20vmax 0 0 0;
-    overflow: hidden;
 
     .service_item {
         @include mixins.flexbox(relative, flex, space-between, center);
         width: 100%;
-        height: 110vh;
+        height: 120vh;
         margin-bottom: 20vmax;
 
         @include responsive.screen_laptop () {
@@ -97,92 +96,102 @@
         }
 
         .layerTwo {
-            @include mixins.flexbox(relative, flex, normal, center);
-            flex-direction: column;
+            @include mixins.flexbox(relative, block, normal, normal);
             width: 45vw;
             height: 100%;
-            padding: 5vmax 0;
 
             @include responsive.screen_laptop () {
-                width: 90%;
-                height: auto;
-                padding: 0 0 100px 0;
-            }
-
-            @include responsive.screen_small () {
-                height: auto;
-                padding: 50px 0 100px 0;
-            }
-
-            span {
                 width: 100%;
-                padding: 0 10vmax;
-                font-size: 4vmax;
-                text-align: end;
-                font-weight: 600;
-                font-family: var.$font_one;
-                text-transform: uppercase;
-                color: var.$primary_color;
+                height: auto;
+                margin-bottom: 70px;
+            }
+
+            .box {
+                @include mixins.flexbox(sticky, flex, normal, center);
+                flex-direction: column;
+                top: 8vmax;
+                width: 100%;
 
                 @include responsive.screen_laptop () {
-                    font-size: 50px;
-                    text-align: start;
-                    padding: 0 0 0 50px;
+                    position: relative;
+                    top: 0;
+                    padding: 0 0 70px 0;
                 }
 
                 @include responsive.screen_small () {
-                    font-size: 40px;
-                    padding: 0 0 0 10px;
-                }
-            }
-
-            p {
-                width: 50%;
-                margin: 3vmax 0 2vmax 0;
-                font-size: 1.2vmax;
-                font-family: var.$font_dwo;
-                color: var.$black_gray;
-                font-weight: 400;
-                font-style: italic;
-                text-align: end;
-
-                @include responsive.screen_laptop () {
-                    width: 60%;
-                    font-size: 18px;
-                    text-align: start;
+                    padding: 50px 0 40px 0;
                 }
 
-                @include responsive.screen_small () {
-                    width: 90%;
-                    font-size: 15px;
-                }
-            }
-
-            .btn_services {
-                @include mixins.flexbox(relative, flex, center, center);
-                @include mixins.effect_btn();
-                margin-top: 3vmax;
-                border: 0.1vw solid var.$primary_color;
-                cursor: pointer;
-                overflow: hidden;
-
-                a {
-                    font-family: var.$font_dwo;
-                    font-size: 1.1vmax;
-                    font-weight: 500;
+                span {
+                    width: 100%;
+                    padding: 0 10vmax;
+                    font-size: 4vmax;
+                    text-align: end;
+                    font-weight: 600;
+                    font-family: var.$font_one;
                     text-transform: uppercase;
                     color: var.$primary_color;
-                    transition: var.$smooth;
-                    padding: 0.8vmax 1.5vmax;
-                    text-align: center;
-                    z-index: 1;
 
-                    @include responsive.screen_laptop() {
-                        font-size: 20px;
+                    @include responsive.screen_laptop () {
+                        font-size: 50px;
+                        text-align: start;
+                        padding: 0 0 0 50px;
                     }
 
-                    @include responsive.screen_small() {
+                    @include responsive.screen_small () {
+                        font-size: 40px;
+                        padding: 0 0 0 30px;
+                    }
+                }
+
+                p {
+                    width: 50%;
+                    margin: 3vmax 0 2vmax 0;
+                    font-size: 1.2vmax;
+                    font-family: var.$font_dwo;
+                    color: var.$black_gray;
+                    font-weight: 400;
+                    font-style: italic;
+                    text-align: end;
+
+                    @include responsive.screen_laptop () {
+                        width: 60%;
+                        font-size: 18px;
+                        text-align: start;
+                    }
+
+                    @include responsive.screen_small () {
+                        width: 80%;
                         font-size: 15px;
+                    }
+                }
+
+                .btn_services {
+                    @include mixins.flexbox(relative, flex, center, center);
+                    @include mixins.effect_btn();
+                    margin-top: 3vmax;
+                    border: 0.1vw solid var.$primary_color;
+                    cursor: pointer;
+                    overflow: hidden;
+
+                    a {
+                        font-family: var.$font_dwo;
+                        font-size: 1.1vmax;
+                        font-weight: 500;
+                        text-transform: uppercase;
+                        color: var.$primary_color;
+                        transition: var.$smooth;
+                        padding: 0.8vmax 1.5vmax;
+                        text-align: center;
+                        z-index: 1;
+
+                        @include responsive.screen_laptop() {
+                            font-size: 20px;
+                        }
+
+                        @include responsive.screen_small() {
+                            font-size: 15px;
+                        }
                     }
                 }
             }
@@ -208,7 +217,7 @@
 
             @include responsive.screen_small () {
                 font-size: 40px !important;
-                padding: 0 0 0 10px !important;
+                padding: 0 0 0 30px !important;
             }
         }
 
