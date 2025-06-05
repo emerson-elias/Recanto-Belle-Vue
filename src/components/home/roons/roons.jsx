@@ -41,6 +41,7 @@ export default function Roons() {
                             height='100'
                             viewBox='0 0 48 48'
                         >
+                            <circle cx='24' cy='24' r='21.5' fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='0.5' />
                             <path fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' d='M20.407 35L33.14 24L20.407 13' strokeWidth='1' />
                         </svg>
                     </button>
@@ -52,6 +53,7 @@ export default function Roons() {
                             height='100'
                             viewBox='0 0 48 48'
                         >
+                            <circle cx='24' cy='24' r='21.5' fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='0.5' />
                             <path fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' d='M20.407 35L33.14 24L20.407 13' strokeWidth='1' />
                         </svg>
                     </button>
