@@ -163,6 +163,12 @@
                         transform: scale(1.1);
                         transition: var.$smooth;
                     }
+
+                    circle {
+                        @include responsive.screen_laptop () {
+                            display: none;
+                        }
+                    }
                 }
             }
         }
@@ -193,15 +199,16 @@
                     font-weight: 400;
                     font-family: var.$font_one;
                     text-transform: uppercase;
+                    word-break: break-word;
                     color: var.$secondary_color;
                     z-index: 2;
 
                     @include responsive.screen_laptop () {
-                        font-size: 60px;
-                        padding: 0 15px;
+                        width: 70%;
+                        font-size: 50px;
                     }
 
-                    @include responsive.screen_laptop () {
+                    @include responsive.screen_small () {
                         font-size: 70px;
                     }
                 }

@@ -7,6 +7,7 @@
     @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
     height: 110lvh;
+    margin-bottom: 5vmax;
 
     @include responsive.screen_laptop {
         flex-direction: column;

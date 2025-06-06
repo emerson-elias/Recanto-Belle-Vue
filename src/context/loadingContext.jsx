@@ -1,35 +1,51 @@
-// contexts/LoadingContext.jsx
-import { createContext, useContext, useState } from 'react'
+import { createContext, useContext, useState, useCallback, useRef } from 'react'
 
 const LoadingContext = createContext()
 
 export function LoadingProvider({ children }) {
-    const [loadingTasks, setLoadingTasks] = useState(0)
-
-    const addLoadingTask = () => {
-        setLoadingTasks(prev => prev + 1)
-    }
-
-    const removeLoadingTask = () => {
-        setLoadingTasks(prev => Math.max(0, prev - 1))
-    }
-
-    // Você não tinha a prop forceOverflowHidden no seu contexto, adicionei.
-    // Ela é útil para casos onde você quer forçar o overflow hidden mesmo sem uma tarefa de loading ativa.
+    const [loadingTasks, setLoadingTasks] = useState(new Set())
     const [forceOverflowHidden, setForceOverflowHidden] = useState(false)
-    const setOverflowHidden = (value) => setForceOverflowHidden(value)
+    const scrollYRef = useRef(0)
 
+    const addLoadingTask = useCallback((taskId = Symbol()) => {
+        setLoadingTasks(prev => new Set(prev).add(taskId))
+    }, [])
 
-    const value = {
-        isLoading: loadingTasks > 0,
-        addLoadingTask,
-        removeLoadingTask,
-        setOverflowHidden, // Adicionei ao valor exportado
-        forceOverflowHidden // Adicionei ao valor exportado
-    }
+    const removeLoadingTask = useCallback((taskId) => {
+        setLoadingTasks(prev => {
+            const copy = new Set(prev)
+            copy.delete(taskId)
+            return copy
+        })
+    }, [])
+
+    const setOverflowHidden = useCallback((hidden) => {
+        if (hidden) {
+            scrollYRef.current = window.scrollY
+            document.body.style.cssText += `
+                position: fixed;
+                top: -${scrollYRef.current}px;
+                width: 100%;
+                overflow: hidden;
+            `
+        } else {
+            document.body.style.cssText = ''
+            window.scrollTo(0, scrollYRef.current)
+        }
+
+        setForceOverflowHidden(hidden)
+    }, [])
 
     return (
-        <LoadingContext.Provider value={value}>
+        <LoadingContext.Provider
+            value={{
+                isLoading: loadingTasks.size > 0,
+                addLoadingTask,
+                removeLoadingTask,
+                setOverflowHidden,
+                forceOverflowHidden,
+            }}
+        >
             {children}
         </LoadingContext.Provider>
     )
