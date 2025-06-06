@@ -22,10 +22,8 @@ export default function Wrapper() {
 
     const transitionDuration = 0.6
 
-  
     const videoOneLoadTaskId = useRef('wrapperVideoOneLoad')
     const videoTwoLoadTaskId = useRef('wrapperVideoTwoLoad')
-
 
     const isVideoOneTaskCompleted = useRef(false)
     const isVideoTwoTaskCompleted = useRef(false)
@@ -137,11 +135,6 @@ export default function Wrapper() {
                 muted
                 playsInline
                 className={styles.video_box}
-                style={{
-                    opacity: isPlayer1Active ? 1 : 0,
-                    zIndex: isPlayer1Active ? 2 : 1
-                }}
-       
                 onCanPlayThrough={() => handleVideoCanPlayThrough(player1Source)}
             >
                 <source src={player1Source} type='video/mp4' />
@@ -154,11 +147,6 @@ export default function Wrapper() {
                 muted
                 playsInline
                 className={styles.video_box}
-                style={{
-                    opacity: isPlayer1Active ? 0 : 1,
-                    zIndex: isPlayer1Active ? 1 : 2
-                }}
-
                 onCanPlayThrough={() => handleVideoCanPlayThrough(player2Source)}
             >
                 <source src={player2Source} type='video/mp4' />
