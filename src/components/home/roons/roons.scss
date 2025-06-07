@@ -199,7 +199,6 @@
                     font-weight: 400;
                     font-family: var.$font_one;
                     text-transform: uppercase;
-                    word-break: break-word;
                     color: var.$secondary_color;
                     z-index: 2;
 
@@ -209,6 +208,7 @@
                     }
 
                     @include responsive.screen_small () {
+                        width: 100%;
                         font-size: 70px;
                     }
                 }

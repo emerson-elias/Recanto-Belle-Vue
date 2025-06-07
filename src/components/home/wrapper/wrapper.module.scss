@@ -18,7 +18,6 @@
         object-fit: cover;
     }
 
-
     .layerOne {
         @include mixins.flexbox(relative, flex, space-between, center);
         flex-direction: column;
