@@ -16,8 +16,7 @@ import About_Banner from './components/about/banner_about/about'
 import Experince from './components/home/experince/experince'
 import Roons from './components/home/roons/roons'
 import Services from './components/home/services/services'
-import Wrapper from './components/home/wrapper/wrapper'
-
+import Reviews from './components/home/reviews/reviews'
 
 function HomePage() {
     return (
@@ -30,7 +29,7 @@ function HomePage() {
             <Roons />
             <Services />
             <Experince />
-            <Wrapper />
+            <Reviews />
         </>
     )
 }

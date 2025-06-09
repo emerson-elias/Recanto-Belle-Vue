@@ -1,0 +1,94 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.reviews_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+  //  height: 200vh;
+    margin: 20vmax 0;
+
+    .tittle_reviews {
+        @include mixins.flexbox(relative, flex, center, center);
+        flex-direction: column;
+
+        h1 {
+            font-size: 4vmax;
+            color: var.$primary_color;
+            text-align: center;
+            width: 60%;
+            font-family: var.$font_one;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop() {
+                font-size: 45px;
+                width: 70%;
+            }
+
+            @include responsive.screen_small() {
+                width: 90%;
+                font-size: 30px;
+                padding: 0 15px;
+            }
+        }
+
+        p {
+            margin: 7vh 0;
+            font-family: var.$font_dwo;
+            font-size: 1.3vmax;
+            font-weight: 300;
+            color: var.$black_gray;
+            width: 50%;
+            text-align: center;
+            line-height: 1.3;
+
+            @include responsive.screen_laptop() {
+                font-size: 20px;
+                width: 70%;
+            }
+
+            @include responsive.screen_small() {
+                font-size: 15px;
+            }
+        }
+    }
+
+    .swiper {
+        position: relative;
+        width: 30vmax;
+        height: 20vmax;
+
+        .swiper-slide {
+            @include mixins.flexbox(initial, flex, space-between, center); // 'initial' para não sobrescrever position
+            background: url('../assets/img/bg.webp') var.$secondary_color;
+            flex-direction: column;
+             
+
+            .logo_cliente {
+                position: relative;
+                width: 8vw;
+                height: 8vw;
+                border-radius: 50%;
+                border: 0.3vw solid var.$primary_color;
+                overflow: hidden;
+
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+
+            p {
+                padding: 0 10px;
+                text-align: center;
+            }
+
+            span {
+                text-align: center;
+            }
+        }
+    }
+}
