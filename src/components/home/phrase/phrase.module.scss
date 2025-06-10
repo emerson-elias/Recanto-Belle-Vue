@@ -3,11 +3,109 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-.phrase_container{
+.phrase_container {
     @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
     width: 100vw;
     height: 100vh;
+    margin: 10vmax 0;
     overflow: hidden;
 
-    background-color: var.$primary_color;
+    @include responsive.screen_small() {
+        margin: 0;
+    }
+
+    .text_linear {
+        position: absolute;
+        top: 70%;
+        width: 100vw;
+        height: inherit;
+        white-space: nowrap;
+        z-index: -1;
+
+        @include responsive.screen_small {
+            top: 80%;
+        }
+
+        span {
+            position: relative;
+            display: inline-block;
+            font-size: 20vmax;
+            color: transparent;
+            text-wrap: nowrap;
+            -webkit-text-stroke: 0.4vw var.$smoke_text_linear;
+            font-family: var.$font_one;
+            text-transform: uppercase;
+            animation: slider_linear 50s linear infinite;
+
+            @include responsive.screen_small {
+                -webkit-text-stroke: 1px var.$primary_color;
+            }
+        }
+    }
+
+    h1 {
+        font-size: 4vmax;
+        color: var.$primary_color;
+        text-align: center;
+        margin: 0 0 3vmax 0;
+        font-family: var.$font_one;
+        text-transform: uppercase;
+
+        @include responsive.screen_laptop() {
+            font-size: 45px;
+        }
+
+        @include responsive.screen_small() {
+            width: 70%;
+            font-size: 50px;
+        }
+    }
+
+    p {
+        font-size: 1.4vmax;
+        color: var.$black_gray;
+        text-align: center;
+        width: 50%;
+        font-family: var.$font_dwo;
+        font-weight: 400;
+
+        @include responsive.screen_laptop() {
+            font-size: 20px;
+            width: 80%;
+        }
+
+        @include responsive.screen_small() {
+            font-size: 16px;
+        }
+    }
+
+    .btn_phrase {
+        @include mixins.flexbox(relative, flex, center, center);
+        @include mixins.effect_btn();
+        border: 0.1vw solid var.$primary_color;
+        margin-top: 3vmax;
+        cursor: pointer;
+        overflow: hidden;
+
+        a {
+            font-family: var.$font_dwo;
+            font-size: 1.1vmax;
+            font-weight: 500;
+            text-transform: uppercase;
+            color: var.$primary_color;
+            transition: var.$smooth;
+            padding: 0.8vmax 1.5vmax;
+            text-align: center;
+            z-index: 1;
+
+            @include responsive.screen_laptop() {
+                font-size: 20px;
+            }
+
+            @include responsive.screen_small() {
+                font-size: 15px;
+            }
+        }
+    }
 }
