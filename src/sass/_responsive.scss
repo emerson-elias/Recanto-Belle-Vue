@@ -24,6 +24,12 @@
 
 /* Responsivo para dispositivos Móveis: */
 
+@mixin screen_small2{
+    @media screen and (max-width:699.8px){
+       @content;
+    }
+}
+
 @mixin screen_small{
     @media screen and (max-width:600px){
        @content;

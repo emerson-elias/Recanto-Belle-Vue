@@ -109,7 +109,7 @@ export default function App() {
                 spaceBetween={50}
                 loop={true}
                 autoplay={{
-                    delay: 5000,
+                    delay: 500000,
                     disableOnInteraction: false
                 }}
                 modules={[Navigation, Autoplay]}

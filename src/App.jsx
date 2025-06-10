@@ -17,6 +17,7 @@ import Experince from './components/home/experince/experince'
 import Roons from './components/home/roons/roons'
 import Services from './components/home/services/services'
 import Reviews from './components/home/reviews/reviews'
+import Phrase from './components/home/phrase/phrase'
 
 function HomePage() {
     return (
@@ -30,6 +31,7 @@ function HomePage() {
             <Services />
             <Experince />
             <Reviews />
+            <Phrase />
         </>
     )
 }

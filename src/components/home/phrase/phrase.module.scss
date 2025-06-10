@@ -1,0 +1,13 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.phrase_container{
+    @include mixins.flexbox(relative, flex, center, center);
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+
+    background-color: var.$primary_color;
+}
