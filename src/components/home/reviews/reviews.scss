@@ -4,90 +4,200 @@
 @use '/src/sass/variables' as var;
 
 .reviews_container {
-    @include mixins.flexbox(relative, flex, center, center);
-    flex-direction: column;
+    @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
-  //  height: 200vh;
+    height: 100vh;
     margin: 20vmax 0;
 
+    @include responsive.screen_laptop() {
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 100px 0;
+    }
+
     .tittle_reviews {
-        @include mixins.flexbox(relative, flex, center, center);
-        flex-direction: column;
+        position: relative;
+        width: 45vw;
+        height: 100%;
 
-        h1 {
-            font-size: 4vmax;
-            color: var.$primary_color;
-            text-align: center;
-            width: 60%;
-            font-family: var.$font_one;
-            text-transform: uppercase;
-
-            @include responsive.screen_laptop() {
-                font-size: 45px;
-                width: 70%;
-            }
-
-            @include responsive.screen_small() {
-                width: 90%;
-                font-size: 30px;
-                padding: 0 15px;
-            }
+        @include responsive.screen_laptop() {
+            width: 100%;
         }
 
-        p {
-            margin: 7vh 0;
-            font-family: var.$font_dwo;
-            font-size: 1.3vmax;
-            font-weight: 300;
-            color: var.$black_gray;
-            width: 50%;
-            text-align: center;
-            line-height: 1.3;
+        div {
+            @include mixins.flexbox(sticky, flex, end, end);
+            flex-direction: column;
+            padding: 0 7vmax;
+            top: 15%;
 
             @include responsive.screen_laptop() {
-                font-size: 20px;
-                width: 70%;
+                @include mixins.flexbox(relative, flex, center, center);
             }
 
             @include responsive.screen_small() {
-                font-size: 15px;
+                padding: 0;
+            }
+
+            h1 {
+                font-size: 4vmax;
+                color: var.$primary_color;
+                text-align: end;
+                font-family: var.$font_one;
+                text-transform: uppercase;
+
+                @include responsive.screen_laptop() {
+                    font-size: 45px;
+                    width: 100%;
+                    text-align: start;
+                }
+
+                @include responsive.screen_small() {
+                    width: 85%;
+                    font-size: 40px;
+                }
+            }
+
+            p {
+                margin: 7vh 0;
+                font-family: var.$font_dwo;
+                font-size: 1.3vmax;
+                font-weight: 300;
+                color: var.$black_gray;
+                width: 75%;
+                text-align: end;
+                line-height: 1.3;
+
+                @include responsive.screen_laptop() {
+                    font-size: 20px;
+                    width: 80%;
+                    text-align: start;
+                }
+
+                @include responsive.screen_small() {
+                    font-size: 16px;
+                }
             }
         }
     }
 
     .swiper {
-        position: relative;
-        width: 30vmax;
-        height: 20vmax;
+        width: 55vw;
+        height: 100%;
 
-        .swiper-slide {
-            @include mixins.flexbox(initial, flex, space-between, center); // 'initial' para não sobrescrever position
-            background: url('../assets/img/bg.webp') var.$secondary_color;
+        @include responsive.screen_laptop() {
+            width: 90%;
+            height: 80vh;
+        }
+
+        .cards_container {
+            @include mixins.flexbox(relative, flex, center, center);
             flex-direction: column;
-             
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
 
-            .logo_cliente {
-                position: relative;
-                width: 8vw;
-                height: 8vw;
-                border-radius: 50%;
-                border: 0.3vw solid var.$primary_color;
-                overflow: hidden;
+            .banner_reviews {
+                @include mixins.smoke();
+                width: 100%;
+                height: 100%;
 
                 img {
                     width: 100%;
                     height: 100%;
+                    vertical-align: top;
+                    opacity: 0.85;
                     object-fit: cover;
                 }
             }
 
-            p {
-                padding: 0 10px;
-                text-align: center;
-            }
+            figcaption {
+                @include mixins.flexbox(relative, flex, center, normal);
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                background-color: var.$primary_color;
+                color: var.$secondary_color;
+                padding: 2vmax;
 
-            span {
-                text-align: center;
+                @include responsive.screen_laptop() {
+                    padding: 30px;
+                }
+
+                &::before {
+                    position: absolute;
+                    content: '';
+                    bottom: 100%;
+                    left: 0;
+                    width: 0;
+                    height: 0;
+                    border-style: solid;
+                    border-width: 55px 0 0 400px;
+                    border-color: transparent transparent transparent var.$primary_color;
+                }
+
+                .profile {
+                    position: absolute;
+                    width: 7vmax;
+                    height: 7vmax;
+                    left: 1.5vmax;
+                    bottom: 95%;
+                    border-radius: 50%;
+                    border: 0.2vw solid var.$secondary_color;
+                    overflow: hidden;
+                    z-index: 1;
+
+                    @include responsive.screen_laptop() {
+                        width: 100px;
+                        height: 100px;
+                        left: 25px;
+                        border: 3px solid var.$secondary_color;
+                    }
+
+                    img {
+                        position: relative;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                    }
+                }
+
+                div,
+                .btn_reviews {
+                    font-size: 1.4vmax;
+                    font-family: var.$font_one;
+                    text-transform: uppercase;
+                    font-weight: 600;
+                    margin: 1.4vmax 0;
+
+                    @include responsive.screen_laptop() {
+                        font-size: 22px;
+                    }
+                }
+
+                span {
+                    font-size: 2vmax;
+                    word-spacing: 0.5vmax;
+
+                    @include responsive.screen_laptop() {
+                        font-size: 22px;
+                    }
+                }
+
+                p {
+                    height: 10vmax;
+                    font-size: 1.3vmax;
+                    font-family: var.$font_dwo;
+                    font-weight: 300;
+                    line-height: 1.8vmax;
+                    padding: 1vmax 0;
+
+                    @include responsive.screen_laptop() {
+                        font-size: 17px;
+                        height: 110px;
+                        padding: 25px 0;
+                        line-height: 17px;
+                    }
+                }
             }
         }
     }
