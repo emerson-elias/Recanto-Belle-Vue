@@ -15,7 +15,7 @@ export default function App() {
             img: '/assets/img/profile-1.jpg',
             reviews: 'A pousada é simplesmente encantadora! Tudo muito limpo, organizado e o atendimento foi impecável. Voltaremos com certeza!',
             name: 'Mariana Silva',
-            star: '☆ ☆ ☆ ☆ ⯫',
+            star: '☆ ☆ ☆ ☆ ☆',
             city: 'Belo Horizonte',
             word: 'Bem-cuidada',
         },
@@ -33,7 +33,7 @@ export default function App() {
             img: '/assets/img/profile-3.jpg',
             reviews: 'Ambiente acolhedor, funcionários atenciosos e ótima localização. Me senti em casa desde o primeiro momento.',
             name: 'Aline Rocha',
-            star: '☆ ☆ ☆ ☆ ⯫',
+            star: '☆ ☆ ☆ ☆ ☆',
             city: 'Recife',
             word: 'Aconchegante',
         },
@@ -51,7 +51,7 @@ export default function App() {
             img: '/assets/img/profile-5.jpg',
             reviews: 'Quartos super confortáveis e uma piscina maravilhosa! Fomos em família e todos adoraram.',
             name: 'Renata Oliveira',
-            star: '☆ ☆ ☆ ☆ ⯫',
+            star: '☆ ☆ ☆ ☆ ☆',
             city: 'Curitiba',
             word: 'Conforto total',
         },
@@ -78,7 +78,7 @@ export default function App() {
             img: '/assets/img/profile-8.jpg',
             reviews: 'Foi tudo além do esperado. A decoração é linda e cada canto tem um charme especial.',
             name: 'João Pedro Reis',
-            star: '☆ ☆ ☆ ☆ ⯫',
+            star: '☆ ☆ ☆ ☆ ☆',
             city: 'Vitória',
             word: 'Charmosa',
         },
@@ -87,7 +87,7 @@ export default function App() {
             img: '/assets/img/profile-9.jpg',
             reviews: 'Sabe aquele lugar que te abraça? Essa pousada é assim. Já estamos planejando a próxima viagem.',
             name: 'Lívia Martins',
-            star: '☆ ☆ ☆ ☆ ⯫',
+            star: '☆ ☆ ☆ ☆ ☆',
             city: 'Porto Alegre',
             word: 'Acolhedora',
         },
@@ -109,7 +109,7 @@ export default function App() {
                 spaceBetween={50}
                 loop={true}
                 autoplay={{
-                    delay: 500000,
+                    delay: 3000,
                     disableOnInteraction: false
                 }}
                 modules={[Navigation, Autoplay]}
@@ -118,7 +118,7 @@ export default function App() {
                 {cards.map((elements) => (
                     <SwiperSlide key={elements.id}>
                         <figure className="cards_container">
-                            
+
                             <div className='banner_reviews'>
                                 <img src={elements.img} alt="" />
                             </div>

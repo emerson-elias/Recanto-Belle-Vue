@@ -2,7 +2,7 @@
 @use '../sass/variables' as var;
 
 @mixin background($height) {
-    background: url('../assets/img/bg.webp') var.$secondary_color;
+    background: url('/assets/img/bg.webp') var.$secondary_color;
     background-attachment: fixed;
     background-position: center center;
     background-repeat: no-repeat;
