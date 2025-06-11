@@ -18,12 +18,11 @@ import Roons from './components/home/roons/roons'
 import Services from './components/home/services/services'
 import Reviews from './components/home/reviews/reviews'
 import Phrase from './components/home/phrase/phrase'
+import Footer from './components/global/footer/footer'
 
 function HomePage() {
     return (
         <>
-            <Cursor />
-            <Topo />
             <Banner />
             <Bio />
             <Video />
@@ -39,7 +38,6 @@ function HomePage() {
 function AboutPage() {
     return (
         <>
-            <Cursor />
             <About_Banner />
         </>
     )
@@ -48,10 +46,13 @@ function AboutPage() {
 function App() {
     return (
         <>
+            <Cursor />
             <Navbar />
             <Bar />
             <Drop />
+            <Topo />
             <LoadingGlobal />
+            <Footer />
 
             <Routes>
                 <Route path='/' element={<HomePage />} />

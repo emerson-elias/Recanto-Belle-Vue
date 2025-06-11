@@ -7,15 +7,16 @@ import { useMenu } from '../../../../context/menuContext'
 
 import './drop.scss'
 
-import img1 from '/assets/img/pexels-1.jpg'
-import img2 from '/assets/img/villa-real.jpg'
-import img3 from '/assets/img/banner_service_room.jpg'
-import img4 from '/assets/img/ondas-crescente.jpg'
-import img5 from '/assets/img/contato.jpg'
+import img1 from '/assets/img/brisa-do-mar.jpg'
+import img2 from '/assets/img/pexels-1.jpg'
+import img3 from '/assets/img/villa-real.jpg'
+import img4 from '/assets/img/banner_service_room.jpg'
+import img5 from '/assets/img/ondas-crescente.jpg'
+import img6 from '/assets/img/contato.jpg'
 
 export default function Drop() {
     const { isMenuOpen, closeMenu } = useMenu()
-    const images = [img1, img2, img3, img4, img5]
+    const images = [img1, img2, img3, img4, img5, img6]
     const imgRefs = useRef([])
     const boxRefs = useRef([])
 
@@ -104,8 +105,8 @@ export default function Drop() {
             </div>
 
             <ul>
-                {['sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
-                    const paths = ['/about', '', '', '', '']
+                {['início','sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
+                    const paths = ['/', '/about', '', '', '']
 
                     return (
                         <div
