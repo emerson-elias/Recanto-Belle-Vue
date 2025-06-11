@@ -21,23 +21,29 @@
         width: 100vw;
         height: 100%;
         white-space: nowrap;
-        z-index: -1;
         overflow: hidden;
+        z-index: -1;
 
         span {
             position: relative;
             top: 60%;
             display: inline-block;
-            font-size: 20vmax;
+            font-size: 15vmax;
             color: transparent;
             text-wrap: nowrap;
-            -webkit-text-stroke: 0.4vw var.$smoke_text_linear;
+            -webkit-text-stroke: 0.2vmax var.$smoke_text_linear;
             font-family: var.$font_one;
             text-transform: uppercase;
             animation: slider_linear 50s linear infinite;
 
+            @include responsive.screen_laptop {
+                top: 70%;
+                font-size: 200px;
+            }
+
             @include responsive.screen_small {
                 top: 80%;
+                font-size: 130px;
             }
         }
     }
@@ -83,8 +89,8 @@
         @include mixins.effect_btn();
         border: 0.1vw solid var.$primary_color;
         margin-top: 3vmax;
-        cursor: pointer;
         overflow: hidden;
+        cursor: pointer;
 
         a {
             font-family: var.$font_dwo;

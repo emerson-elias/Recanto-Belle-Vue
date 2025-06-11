@@ -6,8 +6,8 @@ export default function Phrase() {
         <section className={styles.phrase_container}>
 
             <section className={styles.text_linear}>
-                <span> - Recanto Belle Vue </span>
-                <span> - Recanto Belle Vue </span>
+                <span>☆ Recanto Belle Vue</span>
+                <span>☆ Recanto Belle Vue</span>
             </section>
 
             <h1>Seu refúgio está aqui</h1>
