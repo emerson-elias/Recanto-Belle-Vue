@@ -9,26 +9,23 @@
     width: 100vw;
     height: 100vh;
     margin: 10vmax 0;
-    overflow: hidden;
 
     @include responsive.screen_small() {
         margin: 0;
+        height: 70vh;
     }
 
     .text_linear {
         position: absolute;
-        top: 70%;
+        inset: 0;
         width: 100vw;
-        height: inherit;
+        height: 100%;
         white-space: nowrap;
         z-index: -1;
 
-        @include responsive.screen_small {
-            top: 80%;
-        }
-
         span {
             position: relative;
+            top: 60%;
             display: inline-block;
             font-size: 20vmax;
             color: transparent;
@@ -39,7 +36,7 @@
             animation: slider_linear 50s linear infinite;
 
             @include responsive.screen_small {
-                -webkit-text-stroke: 1px var.$primary_color;
+                top: 80%;
             }
         }
     }
