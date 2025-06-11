@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
-import styles from './experince.module.scss'
+import styles from './experience.module.scss'
 
 import experince_1 from '/assets/img/brisa-do-mar.jpg'
 import experince_2 from '/assets/img/sol-nascente.jpg'
