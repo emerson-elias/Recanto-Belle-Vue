@@ -23,6 +23,7 @@ import Reviews from './components/home/reviews/reviews'
 import Phrase from './components/home/phrase/phrase'
 
 import About_Banner from './components/about/banner_about/about'
+import Serv from './components/home/services/serv'
 
 function HomePage() {
     return (
@@ -31,7 +32,7 @@ function HomePage() {
             <Bio />
             <Video />
             <Roons />
-            <Services />
+            <Serv />
             <Experience />
             <Reviews />
             <Phrase />
