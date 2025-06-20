@@ -62,14 +62,12 @@ export default function Video() {
 
     return (
         <section className={styles.video_container}>
-            <div className={styles.box_video}>
+            <div className={styles.box_video}  onClick={() => setShowModal(true)}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
                     width='512'
                     height='512'
                     viewBox='0 0 48 48'
-                    onClick={() => setShowModal(true)}
-                    style={{ cursor: 'pointer' }}
                 >
                     <circle
                         cx='24'

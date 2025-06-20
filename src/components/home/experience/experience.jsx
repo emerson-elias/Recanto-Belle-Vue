@@ -2,18 +2,32 @@ import React, { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './experience.module.scss'
 
-import experince_1 from '/assets/img/brisa-do-mar.jpg'
-import experince_2 from '/assets/img/sol-nascente.jpg'
-import experince_3 from '/assets/img/areia-dourada.jpg'
-import experince_4 from '/assets/img/ondas-crescente.jpg'
-import experince_5 from '/assets/img/refugio-pescador.jpg'
-
 const experinceCategories = [
-    { name: 'Brisa do Mar', image: experince_1, description: 'A brisa atravessa as janelas trazendo o perfume do mar' },
-    { name: 'Sol Nascente', image: experince_2, description: 'A magia dos primeiros raios dourados no horizonte' },
-    { name: 'Areia Dourada', image: experince_3, description: 'Pés descalços tocam o chão com a mesma leveza que caminham pela areia' },
-    { name: 'Ondas Crescente', image: experince_4, description: 'Cada detalhe remete ao movimento constante das marés' },
-    { name: 'Refúgio do Pescador', image: experince_5, description: 'Um abrigo onde o tempo parece desacelerar' },
+    {
+        name: 'Brisa do Mar',
+        image: '/assets/img/brisa-do-mar.jpg',
+        description: 'A brisa atravessa as janelas trazendo o perfume do mar'
+    },
+    {
+        name: 'Sol Nascente',
+        image: '/assets/img/sol-nascente.jpg',
+        description: 'A magia dos primeiros raios dourados no horizonte'
+    },
+    {
+        name: 'Areia Dourada',
+        image: '/assets/img/areia-dourada.jpg',
+        description: 'Pés descalços tocam o chão com a mesma leveza que caminham pela areia'
+    },
+    {
+        name: 'Ondas Crescente',
+        image: '/assets/img/ondas-crescente.jpg',
+        description: 'Cada detalhe remete ao movimento constante das marés'
+    },
+    {
+        name: 'Refúgio do Pescador',
+        image: '/assets/img/refugio-pescador.jpg',
+        description: 'Um abrigo onde o tempo parece desacelerar'
+    },
 ]
 
 export default function Roons() {
@@ -28,15 +42,16 @@ export default function Roons() {
         if (imageRef.current && descriptionRef.current) {
             animationTimelineRef.current = gsap.timeline({ paused: true })
 
-            gsap.fromTo([imageRef.current, descriptionRef.current], 
-                { 
-                    opacity: 0, 
-                    y: 20 
-                },{ opacity: 1, 
-                    y: 0, 
-                    duration: 0.8, 
-                    ease: 'power2.out' 
-                }
+            gsap.fromTo([imageRef.current, descriptionRef.current],
+                {
+                    opacity: 0,
+                    y: 20
+                }, {
+                opacity: 1,
+                y: 0,
+                duration: 0.8,
+                ease: 'power2.out'
+            }
             )
         }
 
@@ -69,14 +84,15 @@ export default function Roons() {
         })
 
         animationTimelineRef.current.fromTo([imageRef.current, descriptionRef.current],
-            { 
-                opacity: 0, 
-                y: 20 
-            },{ 
-                opacity: 1, 
-                y: 0, 
-                duration: 0.5, 
-                ease: 'power2.out' 
+            {
+                opacity: 0,
+                y: 20
+            }, 
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                ease: 'power2.out'
             }
         )
     }
@@ -99,6 +115,7 @@ export default function Roons() {
                     ))}
                 </div>
 
+                {/*
                 <div className={styles.svg}>
                     <svg width="240" height="240" viewBox="0 0 320 320">
                         <defs>
@@ -110,7 +127,7 @@ export default function Roons() {
                             </textPath>
                         </text>
                     </svg>
-                </div>
+                </div> */}
             </div>
 
             <div className={styles.box_2}>

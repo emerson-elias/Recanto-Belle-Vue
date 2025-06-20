@@ -32,9 +32,9 @@ function HomePage() {
             <Bio />
             <Video />
             <Roons />
-            <Serv />
-            <Experience />
             <Reviews />
+            <Experience />
+
             <Phrase />
         </>
     )

@@ -23,6 +23,7 @@
         width: 50%;
         height: 100%;
         overflow: hidden;
+        cursor: pointer;
 
         @include responsive.screen_laptop() {
             width: 90%;
@@ -48,12 +49,12 @@
         svg {
             position: absolute;
             width: 10vw;
+            height: auto;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
             color: var.$secondary_color;
             z-index: 1;
-            cursor: pointer;
 
             @include responsive.screen_small() {
                 width: 80px;
