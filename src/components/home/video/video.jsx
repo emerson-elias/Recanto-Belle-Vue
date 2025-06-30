@@ -111,9 +111,9 @@ export default function Video() {
                     Ideal para relaxar, curtir a natureza e viver momentos inesquecíveis.
                 </p>
                 <div className={styles.box_detals}>
-                    <i>- Refúgio -</i>
-                    <i>- Encanto -</i>
-                    <i>- Requinte -</i>
+                    <i>Refúgio</i>
+                    <i>Encanto</i>
+                    <i>Requinte</i>
                 </div>
             </div>
 

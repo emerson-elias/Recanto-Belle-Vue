@@ -14,7 +14,6 @@
     }
 
     h1 {
-        font-size: 4vmax;
         color: var.$primary_color;
         text-align: center;
         width: 60%;
@@ -22,13 +21,11 @@
         text-transform: uppercase;
 
         @include responsive.screen_laptop() {
-            font-size: 45px;
             width: 70%;
         }
 
         @include responsive.screen_small() {
             width: 90%;
-            font-size: 30px;
             padding: 0 15px;
         }
     }
@@ -36,7 +33,6 @@
     p {
         margin: 7vh 0;
         font-family: var.$font_dwo;
-        font-size: 1.3vmax;
         font-weight: 300;
         color: var.$black_gray;
         width: 50%;
@@ -44,12 +40,7 @@
         line-height: 1.3;
 
         @include responsive.screen_laptop() {
-            font-size: 20px;
             width: 70%;
-        }
-
-        @include responsive.screen_small() {
-            font-size: 15px;
         }
     }
 

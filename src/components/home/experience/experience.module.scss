@@ -23,11 +23,11 @@
     }
 
     .box_1 {
-        @include mixins.flexbox(relative, flex, baseline, stretch);
+        @include mixins.flexbox(relative, flex, baseline, normal);
         flex-direction: column;
-        width: 45%;
+        width: 40vw;
         height: inherit;
-        padding: 0 2vmax 0 10vmax;
+        padding-left: 5.5vmax;
 
         @include responsive.screen_laptop {
             width: 90%;
@@ -39,24 +39,14 @@
             position: relative;
             width: initial;
             margin: 6vmax 0 0 0;
-            font-size: 4vmax;
             font-family: var.$font_one;
             text-transform: uppercase;
             color: var.$primary_color;
-
-            @include responsive.screen_laptop () {
-                font-size: 50px;
-            }
-
-            @include responsive.screen_small () {
-                font-size: 40px;
-            }
         }
 
         p {
             width: 70%;
-            margin: 3vmax 0 3vmax 2vmax;
-            font-size: 1.2vmax;
+            margin: 2.5vmax 0;
             font-family: var.$font_dwo;
             color: var.$black_gray;
             font-weight: 400;
@@ -65,11 +55,6 @@
             @include responsive.screen_laptop () {
                 margin: 40px 0 60px 0;
                 width: 100%;
-                font-size: 18px;
-            }
-
-            @include responsive.screen_small () {
-                font-size: 15px;
             }
         }
 
@@ -162,7 +147,7 @@
     .box_2 {
         @include mixins.smoke();
         position: relative;
-        width: 55%;
+        width: 60vw;
         height: 100%;
         user-select: none;
         overflow: hidden;
@@ -197,7 +182,6 @@
             p {
                 width: 50%;
                 text-align: end;
-                font-size: 1.3vmax;
                 font-family: var.$font_dwo;
                 color: var.$secondary_color;
                 text-transform: uppercase;
@@ -206,7 +190,6 @@
 
                 @include responsive.screen_small () {
                     width: 90%;
-                    font-size: 12px;
                 }
             }
         }

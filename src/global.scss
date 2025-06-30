@@ -39,10 +39,10 @@ p {
     font-size: 1.2vmax;
 
     @include responsive.screen_laptop () {
-        font-size: 18px;
+        font-size: 20px;
     }
 
     @include responsive.screen_small () {
-        font-size: 15px;
+        font-size: 17px;
     }
 }

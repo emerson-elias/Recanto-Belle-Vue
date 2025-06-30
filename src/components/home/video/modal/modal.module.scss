@@ -3,7 +3,6 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-
 .modal_container {
     @include mixins.flexbox(fixed, flex, center, center);
     inset: 0;

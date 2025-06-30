@@ -121,14 +121,11 @@
 
             button {
                 color: var.$black_gray;
-                //   padding: 10px 15px;
                 background-color: transparent;
                 margin: 0 2vmax;
                 cursor: pointer;
                 border: none;
                 pointer-events: all;
-
-                background-color: rgba(255, 0, 0, 0);
 
                 &:nth-child(1) {
                     transform: rotateY(180deg);

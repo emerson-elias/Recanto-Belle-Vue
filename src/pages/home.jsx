@@ -4,7 +4,7 @@ import Video from '../components/home/video/video'
 import Roons from '../components/home/roons/roons'
 import Experience from '../components/home/experience/experience'
 
-export default function Home() {
+function Home() {
     return (
         <>
             <Banner />
@@ -15,3 +15,5 @@ export default function Home() {
         </>
     )
 }
+
+export default Home
