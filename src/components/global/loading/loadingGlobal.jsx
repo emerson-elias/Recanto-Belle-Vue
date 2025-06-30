@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react'
 import { useLoading } from '../../../context/loadingContext'
-import styles from './loading.module.scss'
+
+import styles from './loadingGlobal.module.scss'
 
 export const LoadingGlobal = () => {
     const { isLoading, forceOverflowHidden } = useLoading()

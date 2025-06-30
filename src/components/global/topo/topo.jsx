@@ -2,7 +2,6 @@ import { useEffect, useRef } from 'react'
 import styles from './topo.module.scss'
 
 export default function Topo() {
-
     const topoRef = useRef(null)
 
     useEffect(() => {
@@ -34,9 +33,7 @@ export default function Topo() {
 
     return (
         <section className={styles.button_top} title="Volte ao topo" ref={topoRef}>
-            <a>
-                <i className="fa-solid fa-caret-up"></i>
-            </a>
+            <a><i className="fa-solid fa-caret-up"></i></a>
         </section>
     )
 }

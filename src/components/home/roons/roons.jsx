@@ -10,41 +10,41 @@ import 'swiper/css/navigation'
 
 import './roons.scss'
 
+const cards = [
+    {
+        id: '1',
+        image: '/assets/img/royale.jpg',
+        categoria: 'Royale'
+    },
+    {
+        id: '2',
+        image: '/assets/img/villa-real.jpg',
+        categoria: 'Villa Real'
+    },
+    {
+        id: '3',
+        image: '/assets/img/brisa.jpg',
+        categoria: 'Brisa do Mar'
+    },
+    {
+        id: '4',
+        image: '/assets/img/terraço-dourado.jpg',
+        categoria: 'Terraço Dourado'
+    },
+    {
+        id: '5',
+        image: '/assets/img/aurora.jpg',
+        categoria: 'Aurora'
+    },
+    {
+        id: '6',
+        image: '/assets/img/monte-sereno.jpg',
+        categoria: 'Monte Sereno'
+    },
+]
+
 export default function Roons() {
     const swiperRef = useRef(null)
-
-    const cards = [
-        {
-            id: '1',
-            image: '/assets/img/royale.jpg',
-            categoria: 'Royale'
-        },
-        {
-            id: '2',
-            image: '/assets/img/villa-real.jpg',
-            categoria: 'Villa Real'
-        },
-        {
-            id: '3',
-            image: '/assets/img/brisa.jpg',
-            categoria: 'Brisa do Mar'
-        },
-        {
-            id: '4',
-            image: '/assets/img/terraço-dourado.jpg',
-            categoria: 'Terraço Dourado'
-        },
-        {
-            id: '5',
-            image: '/assets/img/aurora.jpg',
-            categoria: 'Aurora'
-        },
-        {
-            id: '6',
-            image: '/assets/img/monte-sereno.jpg',
-            categoria: 'Monte Sereno'
-        },
-    ]
 
     return (
         <section className='roons_container'>
