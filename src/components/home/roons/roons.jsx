@@ -14,51 +14,74 @@ export default function Roons() {
     const swiperRef = useRef(null)
 
     const cards = [
-        { id: '1', image: '/assets/img/royale.jpg', categoria: 'Royale' },
-        { id: '2', image: '/assets/img/villa-real.jpg', categoria: 'Villa Real' },
-        { id: '3', image: '/assets/img/brisa.jpg', categoria: 'Brisa do Mar' },
-        { id: '4', image: '/assets/img/terraço-dourado.jpg', categoria: 'Terraço Dourado' },
-        { id: '5', image: '/assets/img/aurora.jpg', categoria: 'Aurora' },
-        { id: '6', image: '/assets/img/monte-sereno.jpg', categoria: 'Monte Sereno' },
+        {
+            id: '1',
+            image: '/assets/img/royale.jpg',
+            categoria: 'Royale'
+        },
+        {
+            id: '2',
+            image: '/assets/img/villa-real.jpg',
+            categoria: 'Villa Real'
+        },
+        {
+            id: '3',
+            image: '/assets/img/brisa.jpg',
+            categoria: 'Brisa do Mar'
+        },
+        {
+            id: '4',
+            image: '/assets/img/terraço-dourado.jpg',
+            categoria: 'Terraço Dourado'
+        },
+        {
+            id: '5',
+            image: '/assets/img/aurora.jpg',
+            categoria: 'Aurora'
+        },
+        {
+            id: '6',
+            image: '/assets/img/monte-sereno.jpg',
+            categoria: 'Monte Sereno'
+        },
     ]
 
     return (
         <section className='roons_container'>
             <div className='infor'>
-                <h1>Suítes</h1>
+                <h1>Escolha seu conforto</h1>
                 <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
                 <div className='btn_roons'>
                     <Link>Visite a Essência</Link>
                 </div>
-            </div>
 
-            <div className='swiper_container'>
                 <div className="controls_swiper">
                     <button onClick={() => swiperRef.current?.slidePrev()}>
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
+
+                        <svg xmlns="http://www.w3.org/2000/svg"
                             width='100'
                             height='100'
                             viewBox='0 0 48 48'
                         >
-                            <circle cx='24' cy='24' r='21.5' fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='0.5' />
-                            <path fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' d='M20.407 35L33.14 24L20.407 13' strokeWidth='1' />
+                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
                         </svg>
+
                     </button>
 
                     <button onClick={() => swiperRef.current?.slideNext()}>
-                        <svg
-                            xmlns='http://www.w3.org/2000/svg'
+                        <svg xmlns="http://www.w3.org/2000/svg"
                             width='100'
                             height='100'
                             viewBox='0 0 48 48'
                         >
-                            <circle cx='24' cy='24' r='21.5' fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' strokeWidth='0.5' />
-                            <path fill='none' stroke='currentColor' strokeLinecap='round' strokeLinejoin='round' d='M20.407 35L33.14 24L20.407 13' strokeWidth='1' />
+                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
                         </svg>
                     </button>
                 </div>
 
+            </div>
+
+            <div className='swiper_container'>
                 <Swiper
                     onSwiper={(swiper) => (swiperRef.current = swiper)}
                     slidesPerView={2}

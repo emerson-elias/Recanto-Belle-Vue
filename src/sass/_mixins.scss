@@ -119,3 +119,17 @@
         }
     }
 }
+
+@mixin letter_large($left, $content){
+    &::after{
+        position: absolute;
+        content: $content;
+        top: 60%;
+        left: $left;
+        color: var.$text_large;
+        font-size: 20vmax;
+        pointer-events: none;
+        font-family: var.$font_one;
+        z-index: -2;
+    }
+}

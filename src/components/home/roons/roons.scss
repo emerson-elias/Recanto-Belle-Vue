@@ -5,6 +5,7 @@
 
 .roons_container {
     @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.letter_large(1%, 'suites');
     width: 100vw;
     height: 110vh;
     margin: 20vmax 0 15vmax 0;
@@ -21,13 +22,14 @@
     }
 
     .infor {
-        @include mixins.flexbox(relative, flex, normal, center);
+        @include mixins.flexbox(relative, flex, center, normal);
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 4vmax 0 0 10vmax;
+        padding-left: 5.5vmax;
 
         @include responsive.screen_laptop () {
+            align-items: center;
             padding: 0;
             margin-bottom: 10vmax;
         }
@@ -40,25 +42,21 @@
         h1 {
             width: inherit;
             margin: 2vmax 0 3vmax 0;
-            font-size: 4vmax;
             font-family: var.$font_one;
             text-transform: uppercase;
             color: var.$primary_color;
 
             @include responsive.screen_laptop () {
-                font-size: 50px;
                 padding-left: 100px;
             }
 
             @include responsive.screen_small () {
-                font-size: 40px;
                 padding-left: 30px;
             }
         }
 
         p {
             width: 70%;
-            font-size: 1.2vmax;
             font-family: var.$font_dwo;
             color: var.$black_gray;
             font-weight: 400;
@@ -66,22 +64,29 @@
 
             @include responsive.screen_laptop () {
                 width: 60%;
-                font-size: 18px;
             }
 
             @include responsive.screen_small () {
                 width: 80%;
-                font-size: 15px;
             }
         }
 
         .btn_roons {
             @include mixins.flexbox(relative, flex, center, center);
             @include mixins.effect_btn();
+            width: 15vw;
             margin-top: 3vmax;
             border: 0.1vw solid var.$primary_color;
             cursor: pointer;
             overflow: hidden;
+
+            @include responsive.screen_laptop() {
+                width: auto;
+            }
+
+            @include responsive.screen_small() {
+                margin: 50px 0 0 0;
+            }
 
             a {
                 font-family: var.$font_dwo;
@@ -103,51 +108,30 @@
                 }
             }
         }
-    }
-
-    .swiper_container {
-        @include mixins.flexbox(relative, flex, center, center);
-        width: 60vw;
-        height: 110vh;
-
-        @include responsive.screen_laptop () {
-            width: 90%;
-            font-size: 18px;
-        }
-
-        @include responsive.screen_small () {
-            height: 100%;
-        }
 
         .controls_swiper {
-            position: absolute;
-            top: 65%;
-            left: -23.5vw;
+            @include mixins.flexbox(relative, flex, center, center);
+            margin-top: 7vmax;
             z-index: 2;
 
             @include responsive.screen_laptop () {
-                @include mixins.flexbox(absolute, flex, space-between, center);
-                width: 100%;
-                height: 100%;
-                top: 0;
-                left: 0;
-                pointer-events: none;
-            }
-
-            @include responsive.screen_small () {
                 display: none;
+                pointer-events: none;
             }
 
             button {
                 color: var.$black_gray;
-                padding: 10px 15px;
+                //   padding: 10px 15px;
+                background-color: transparent;
+                margin: 0 2vmax;
                 cursor: pointer;
                 border: none;
-                background-color: transparent;
                 pointer-events: all;
 
+                background-color: rgba(255, 0, 0, 0);
+
                 &:nth-child(1) {
-                    transform: rotate(-180deg);
+                    transform: rotateY(180deg);
                 }
 
                 @include responsive.screen_laptop () {
@@ -163,14 +147,23 @@
                         transform: scale(1.1);
                         transition: var.$smooth;
                     }
-
-                    circle {
-                        @include responsive.screen_laptop () {
-                            display: none;
-                        }
-                    }
                 }
             }
+        }
+    }
+
+    .swiper_container {
+        @include mixins.flexbox(relative, flex, center, center);
+        width: 60vw;
+        height: 110vh;
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+            font-size: 18px;
+        }
+
+        @include responsive.screen_small () {
+            height: 100%;
         }
 
         .swiper {
@@ -224,7 +217,7 @@
                     img {
                         transform: scale(1.1);
                         transition: var.$smooth;
-                        filter: blur(10px);
+                        filter: blur(5px);
                     }
                 }
             }

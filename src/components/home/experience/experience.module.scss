@@ -5,9 +5,11 @@
 
 .experince_container {
     @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.letter_large(1%, 'experiências');
     width: 100vw;
     height: 110lvh;
     margin-top: 20vmax;
+    overflow: hidden;
 
     @include responsive.screen_laptop {
         flex-direction: column;
@@ -164,6 +166,7 @@
         height: 100%;
         user-select: none;
         overflow: hidden;
+        background-color: var.$secondary_color;
 
         @include responsive.screen_laptop {
             width: 90%;
