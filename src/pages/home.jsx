@@ -4,6 +4,7 @@ import Video from '../components/home/video/video'
 import Roons from '../components/home/roons/roons'
 import Experience from '../components/home/experience/experience'
 import Services from '../components/home/services/services'
+import Reviews from '../components/home/reviews/reviews'
 
 function Home() {
     return (
@@ -14,6 +15,7 @@ function Home() {
             <Roons />
             <Services />
             <Experience />
+            <Reviews />
         </>
     )
 }

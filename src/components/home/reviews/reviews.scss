@@ -1,0 +1,171 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.reviews_container {
+    @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.letter_large(2%, 'reviwes', 70%);
+    width: 100vw;
+    height: 110vh;
+    margin: 10vmax 0;
+    overflow: hidden;
+
+    @include responsive.screen_laptop() {
+        flex-direction: column;
+        padding: 0 5vmax;
+    }
+
+    @include responsive.screen_laptop () {
+        height: auto;
+    }
+
+    .boxOne {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        @include mixins.background(auto);
+        flex-direction: column;
+        width: 25vw;
+        transform: translateX(12.5vmax);
+        background-color: var.$secondary_color;
+        z-index: 9;
+
+        @include responsive.screen_large() {
+            width: 30vw;
+        }
+
+        @include responsive.screen_laptop() {
+            transform: none;
+            width: 90%;
+            align-items: baseline;
+        }
+
+        @include responsive.screen_small () {
+            width: 100%;
+            margin: 20px 0;
+        }
+
+        h1 {
+            text-align: center;
+            font-family: var.$font_one;
+            color: var.$primary_color;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop() {
+                text-align: start;
+            }
+        }
+
+        button {
+            color: var.$black_gray;
+            background-color: transparent;
+            margin: 3vmax 2vmax;
+            cursor: pointer;
+            border: none;
+            pointer-events: all;
+
+            &:nth-child(1) {
+                transform: rotateY(180deg);
+            }
+
+            @include responsive.screen_laptop () {
+                display: none;
+                pointer-events: none;
+            }
+
+            svg {
+                transition: var.$smooth;
+
+                &:hover {
+                    color: var.$primary_color;
+                    transform: scale(1.1);
+                    transition: var.$smooth;
+                }
+            }
+        }
+    }
+
+    .boxTwo {
+        width: 75vw;
+        height: 100%;
+
+        @include responsive.screen_large() {
+            width: 70vw;
+        }
+
+        @include responsive.screen_laptop () {
+            width: 100%;
+            height: 70vh;
+        }
+
+        @include responsive.screen_small () {
+            height: auto;
+        }
+
+        .swiper-button-prev,
+        .swiper-button-next {
+            display: none;
+            pointer-events: none;
+        }
+
+        .swiper {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            border-left: 0.1vw solid var.$primary_color;
+
+            @include responsive.screen_laptop () {
+                border: none;
+            }
+
+            .swiper-slide {
+                width: 90%;
+                padding: 15vmax;
+                user-select: none;
+
+                @include responsive.screen_laptop () {
+                    padding: 50px;
+                    height: 500px;
+                }
+
+                @include responsive.screen_small () {
+                    height: 600px;
+                    padding: 10px;
+                }
+
+                h2 {
+                    font-size: 4vmax;
+                    width: inherit;
+                    font-family: var.$font_one;
+                    text-transform: capitalize;
+                    color: var.$black_gray;
+
+                    @include responsive.screen_small () {
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    font-style: italic;
+                    line-height: 1.5;
+                    letter-spacing: 1px;
+                    margin: 2vmax 0;
+                    font-family: var.$font_dwo;
+                }
+
+                h3 {
+                    width: 100%;
+                    text-align: end;
+                    font-size: 1.5vmax;
+                    margin-top: 5vmax;
+                    font-family: var.$font_one;
+                    text-transform: uppercase;
+                    color: var.$black_gray;
+
+                    @include responsive.screen_small () {
+                        font-size: 20px;
+                    }
+                }
+            }
+        }
+    }
+}
