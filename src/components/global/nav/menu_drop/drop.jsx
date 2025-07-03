@@ -10,7 +10,7 @@ import './drop.scss'
 import img1 from '/assets/img/brisa-do-mar.jpg'
 import img2 from '/assets/img/pexels-1.jpg'
 import img3 from '/assets/img/villa-real.jpg'
-import img4 from '/assets/img/banner_service_room.jpg'
+import img4 from '/assets/img/services.jpg'
 import img5 from '/assets/img/ondas-crescente.jpg'
 import img6 from '/assets/img/contato.jpg'
 
@@ -31,8 +31,9 @@ export default function Drop() {
         }
     }, [isMenuOpen])
 
-    const handleMouseEnter = (index) => {
+    const mouseEnter = (index) => {
         const imgElement = imgRefs.current[index]
+
         if (imgElement) {
             gsap.to(imgElement, {
                 opacity: 1,
@@ -43,8 +44,9 @@ export default function Drop() {
         }
     }
 
-    const handleMouseLeave = (index) => {
+    const mouseLeave = (index) => {
         const imgElement = imgRefs.current[index]
+        
         if (imgElement) {
             gsap.to(imgElement, {
                 opacity: 0,
@@ -55,7 +57,7 @@ export default function Drop() {
         }
     }
 
-    const memoizedHandleMouseMove = useCallback((index, event) => {
+    const mouseMove = useCallback((index, event) => {
         const imgElement = imgRefs.current[index]
         const boxElement = boxRefs.current[index]
 
@@ -76,12 +78,12 @@ export default function Drop() {
         }
     }, [])
 
-    useEffect(() => {      
+    useEffect(() => {
         const handlers = []
 
         boxRefs.current.forEach((box, index) => {
-            if (box) {           
-                const handler = (event) => memoizedHandleMouseMove(index, event)
+            if (box) {
+                const handler = (event) => mouseMove(index, event)
                 box.addEventListener('mousemove', handler)
                 handlers.push({ box, handler })
             }
@@ -94,7 +96,7 @@ export default function Drop() {
                 }
             })
         }
-    }, [memoizedHandleMouseMove])
+    }, [mouseMove])
 
     return (
         <section className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}>
@@ -105,7 +107,7 @@ export default function Drop() {
             </div>
 
             <ul>
-                {['início','sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
+                {['início', 'sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
                     const paths = ['/', '/sobre', '', '', '']
 
                     return (
@@ -113,30 +115,25 @@ export default function Drop() {
                             key={index}
                             className='box_li'
                             ref={(el) => (boxRefs.current[index] = el)}
-                            onMouseEnter={() => handleMouseEnter(index)}
-                            onMouseLeave={() => handleMouseLeave(index)}
+                            onMouseEnter={() => mouseEnter(index)}
+                            onMouseLeave={() => mouseLeave(index)}
                         >
                             <li><Link to={paths[index]} onClick={closeMenu}>{item}</Link></li>
 
-                            <img
-                                ref={(el) => (imgRefs.current[index] = el)}
-                                src={images[index]}
-                                alt={item}
-                            />
+                            <section ref={(el) => (imgRefs.current[index] = el)}>
+                                <img src={images[index]} alt={item} />
+                            </section>
                         </div>
                     )
                 })}
             </ul>
 
             <div className='social'>
-                <span>© 2025 Recanto Belle Vue</span>
-                <span>
-                    <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>
-                        facebook / instagram
-                    </a>
-                </span>
-                <span>© By Emerson Elias</span>
+                <a>&copy; 2025 Recanto Belle Vue</a>  
+                <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>facebook / instagram</a>
+                <a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'>&copy; By Emerson Elias</a>
             </div>
+
         </section>
     )
 }
