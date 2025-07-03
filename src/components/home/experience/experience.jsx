@@ -1,4 +1,4 @@
-import React, { useState, useEffect, useRef } from 'react'
+import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './experience.module.scss'
 
@@ -63,7 +63,7 @@ export default function Roons() {
         }
     }, [])
 
-    const handleMouseEnter = (newImageSrc, newDescription) => {
+    const mouseEnter = (newImageSrc, newDescription) => {
         if (newImageSrc === currentImage) return
 
         if (animationTimelineRef.current) {
@@ -108,7 +108,7 @@ export default function Roons() {
                     {experinceCategories.map((experince, index) => (
                         <span
                             key={index}
-                            onMouseEnter={() => handleMouseEnter(experince.image, experince.description)}
+                            onMouseEnter={() => mouseEnter(experince.image, experince.description)}
                         >
                             {experince.name}
                         </span>

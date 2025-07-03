@@ -95,6 +95,27 @@
 }
 
 @mixin effect_btn () {
+
+    a {
+        font-family: var.$font_dwo;
+        font-size: 1.1vmax;
+        font-weight: 500;
+        text-transform: uppercase;
+        color: var.$primary_color;
+        transition: var.$smooth;
+        padding: 0.8vmax 1.5vmax;
+        text-align: center;
+        z-index: 1;
+
+        @include responsive.screen_laptop() {
+            font-size: 20px;
+        }
+
+        @include responsive.screen_small() {
+            font-size: 15px;
+        }
+    }
+
     &::after {
         content: "";
         position: absolute;
@@ -120,14 +141,14 @@
     }
 }
 
-@mixin letter_large($left, $content){
-    &::after{
+@mixin letter_large($left, $content, $top) {
+    &::after {
         position: absolute;
         content: $content;
-        top: 60%;
+        top: $top;
         left: $left;
         color: var.$text_large;
-        font-size: 20vmax;
+        font-size: 15vmax;
         pointer-events: none;
         font-family: var.$font_one;
         z-index: -2;
