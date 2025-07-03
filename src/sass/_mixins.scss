@@ -147,7 +147,8 @@
         content: $content;
         top: $top;
         left: $left;
-        color: var.$text_large;
+        color: var.$primary_color;
+        opacity: .08;
         font-size: 15vmax;
         pointer-events: none;
         font-family: var.$font_one;
