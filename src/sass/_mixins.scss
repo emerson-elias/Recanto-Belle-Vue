@@ -153,6 +153,7 @@
         pointer-events: none;
         font-family: var.$font_one;
         text-transform: capitalize;
+        border-bottom: 0.1vw solid var.$primary_color;
         z-index: -2;
     }
 }

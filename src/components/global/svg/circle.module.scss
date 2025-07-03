@@ -1,0 +1,35 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.svg {
+    position: absolute;
+    top: 38%;
+    margin: 10vmax;
+    user-select: none;
+
+    @include responsive.screen_laptop {
+        display: none !important;
+    }
+
+    svg {
+        animation: girar_right 30s linear infinite;
+        will-change: transform;
+        color: var.$primary_color;
+        pointer-events: none;
+
+        textPath {
+            font-size: 2.1vmax;
+            font-weight: bold;
+            text-transform: uppercase;
+            word-spacing: 7px;
+            opacity: .37;
+            font-family: var.$font_one;
+
+            @include responsive.screen_large {
+                font-size: 25px;
+            }
+        }
+    }
+}

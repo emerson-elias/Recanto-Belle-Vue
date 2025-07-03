@@ -5,6 +5,7 @@ import styles from './services.module.scss'
 import adega from '/assets/img/beer.jpg'
 import buffet from '/assets/img/buffet.jpg'
 import services from '/assets/img/services.jpg'
+import Circle from '../../global/svg/circle'
 
 const service = [
     {
@@ -54,6 +55,8 @@ function Services() {
                     <div className={styles.boxTwo}>
                         <img src={img} alt={alt} />
                     </div>
+
+                    {/* <Circle name={title}/> */}
                 </div>
             ))}
 

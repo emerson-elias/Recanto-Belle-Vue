@@ -114,28 +114,10 @@ export default function Roons() {
                         </span>
                     ))}
                 </div>
-
-                {/*
-                <div className={styles.svg}>
-                    <svg width="240" height="240" viewBox="0 0 320 320">
-                        <defs>
-                            <path id="circlePath" d="M 160, 160 m -140, 0 a 140,140 0 1,0 280,0 a 140,140 0 1,0 -280,0" />
-                        </defs>
-                        <text fill="currentColor">
-                            <textPath href="#circlePath" startOffset="0">
-                                ㅤRecanto Belle Vue º Recanto Belle Vue º Recanto Belle Vue º  Recanto Belle Vue
-                            </textPath>
-                        </text>
-                    </svg>
-                </div> */}
             </div>
 
             <div className={styles.box_2}>
-                <img
-                    ref={imageRef}
-                    src={currentImage}
-                    alt="Quartos"
-                />
+                <img ref={imageRef} src={currentImage} alt="Quartos" />
                 <div ref={descriptionRef} className={styles.description}>
                     <p>{currentDescription}</p>
                 </div>
