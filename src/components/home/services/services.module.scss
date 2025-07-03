@@ -15,6 +15,10 @@
         @include mixins.flexbox(relative, flex, space-between, center);
         height: 120vh;
 
+        @include responsive.screen_laptop () {
+            height: auto;
+        }
+
         .boxOne {
             flex-direction: column;
             width: 60%;
@@ -80,6 +84,8 @@
 
             @include responsive.screen_laptop () {
                 width: 90%;
+                height: 90vh;
+                margin: 50px 0;
             }
 
             img {
