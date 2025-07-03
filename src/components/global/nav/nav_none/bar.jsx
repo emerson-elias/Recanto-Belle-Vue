@@ -19,7 +19,6 @@ export default function Bar() {
     }, [])
 
     return (
-
         <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
             <nav className='bar'>
                 <div className='box_1'>
