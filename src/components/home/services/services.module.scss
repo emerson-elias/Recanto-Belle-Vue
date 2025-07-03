@@ -80,6 +80,7 @@
             position: relative;
             width: 40%;
             height: 120vh;
+            user-select: none;
             overflow: hidden;
 
             @include responsive.screen_laptop () {
@@ -93,15 +94,30 @@
                 height: 100%;
                 object-fit: cover;
             }
+
+            h1 {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                width: 90%;
+                font-size: 6vmax;
+                text-align: center;
+                font-weight: 400;
+                font-family: var.$font_one;
+                text-transform: uppercase;
+                color: var.$secondary_color;
+                transform: translate(-50%, -50%);
+                z-index: 1;
+            }
         }
     }
 
     .layerOne {
-        @include mixins.letter_large(45%, 'adega', 50%);
+        @include mixins.letter_large(45%, 'aprecie', 50%);
     }
 
     .layerThere {
-        @include mixins.letter_large(45%, 'serviços', 50%);
+        @include mixins.letter_large(45%, 'desfrute', 50%);
     }
 
     .layerOne,
@@ -146,7 +162,7 @@
     }
 
     .layerTwo {
-        @include mixins.letter_large(20%, 'buffet', 50%);
+        @include mixins.letter_large(10%, 'saboreie', 50%);
         flex-direction: row;
 
         @include responsive.screen_laptop () {
