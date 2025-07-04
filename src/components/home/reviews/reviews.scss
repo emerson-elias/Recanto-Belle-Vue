@@ -21,7 +21,7 @@
     }
 
     .boxOne {
-        @include mixins.flexbox(relative, flex, space-between, center);
+        @include mixins.flexbox(relative, flex, center, center);
         @include mixins.background(auto);
         flex-direction: column;
         width: 25vw;
@@ -46,6 +46,7 @@
 
         h1 {
             text-align: center;
+            padding-top: 5vmax;
             font-family: var.$font_one;
             color: var.$primary_color;
             text-transform: uppercase;
@@ -55,36 +56,42 @@
             }
         }
 
-        button {
-            color: var.$black_gray;
-            background-color: transparent;
-            margin: 3vmax 2vmax;
-            cursor: pointer;
-            border: none;
-            pointer-events: all;
-
-            &:nth-child(1) {
-                transform: rotateY(180deg);
-            }
+        .controls_swiper {
+            @include mixins.flexbox(relative, flex, space-around, center);
+            width: 100%;
+            margin: 1vmax 2vmax;
+            padding: 0 2vmax;
 
             @include responsive.screen_laptop () {
                 display: none;
                 pointer-events: none;
             }
 
-            svg {
-                transition: var.$smooth;
+            button {
+                color: var.$black_gray;
+                background-color: transparent;
+                border: none;
+                cursor: pointer;
 
-                &:hover {
-                    color: var.$primary_color;
-                    transform: scale(1.1);
+                &:nth-child(1) {
+                    transform: rotateY(180deg);
+                }
+
+                svg {
                     transition: var.$smooth;
+
+                    &:hover {
+                        color: var.$primary_color;
+                        transform: scale(1.1);
+                        transition: var.$smooth;
+                    }
                 }
             }
         }
     }
 
     .boxTwo {
+        position: relative;
         width: 75vw;
         height: 100%;
 
