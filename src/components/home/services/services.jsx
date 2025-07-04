@@ -60,7 +60,6 @@ function Services() {
                         <h1>{name}</h1>
                         <img src={img} alt={alt} />
                     </div>
-
                     {/* <Circle name={title}/> */}
                 </div>
             ))}

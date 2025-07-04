@@ -7,6 +7,5 @@
     @include mixins.flexbox(relative, flex, center, center);
     width: 100vw;
     height: 100vh;
-    background-color: var.$primary_color;
     overflow: hidden;
 }

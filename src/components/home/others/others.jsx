@@ -1,5 +1,5 @@
 import { useEffect, useRef } from 'react'
-import { useLoading } from '../../../context/loadingContext' // ajuste o caminho se necessário
+import { useLoading } from '../../../context/loadingContext'
 
 import styles from './others.module.scss'
 import video from '/assets/video/screen.mp4'

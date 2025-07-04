@@ -18,7 +18,7 @@
         z-index: 2;
 
         @include responsive.screen_laptop() {
-           width: 80%;
+            width: 80%;
         }
 
         span {
