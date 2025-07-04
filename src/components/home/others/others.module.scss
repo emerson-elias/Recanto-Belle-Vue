@@ -1,4 +1,3 @@
-@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
@@ -8,22 +7,39 @@
     @include mixins.smoke();
     width: 100vw;
     height: 110vh;
+    user-select: none;
 
-    .boxOne{
+    .boxOne {
         position: absolute;
         top: 50%;
         left: 50%;
+        width: 60%;
         transform: translate(-50%, -50%);
         z-index: 2;
 
-        span{
+        @include responsive.screen_laptop() {
+           width: 80%;
+        }
+
+        span {
             display: block;
+            width: 100%;
             text-align: center;
-            font-weight: 600;
-            font-family: var.$font_one;
+            font-weight: 200;
+            font-style: italic;
+            font-family: var.$font_dwo;
             text-transform: uppercase;
-            font-size: 5vmax;
+            font-size: 4vmax;
             color: var.$secondary_color;
+
+            @include responsive.screen_laptop() {
+                font-size: 50px;
+            }
+
+            @include responsive.screen_laptop () {
+                font-size: 40px;
+                margin: 7px 0;
+            }
         }
     }
 

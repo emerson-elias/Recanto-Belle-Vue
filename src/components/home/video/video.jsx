@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { useLoading } from '../../../context/loadingContext.jsx'
+
 import styles from './video.module.scss'
 import VideoModal from './modal/modal.jsx'
 
@@ -24,7 +25,7 @@ export default function Video() {
             addLoadingTask(TASK_ID)
         }
 
-        const handleLoadedData = () => {
+        const loadedData = () => {
             if (!videoHasLoaded) {
                 videoHasLoaded = true
                 if (!hasTaskBeenRemoved) {
@@ -34,25 +35,25 @@ export default function Video() {
             }
         }
 
-        const handleError = () => {
+        const error = () => {
             if (!videoHasLoaded && !hasTaskBeenRemoved) {
                 removeLoadingTask(TASK_ID)
                 hasTaskBeenRemoved = true
             }
         }
 
-        videoElement.addEventListener('loadeddata', handleLoadedData)
-        videoElement.addEventListener('error', handleError)
+        videoElement.addEventListener('loadeddata', loadedData)
+        videoElement.addEventListener('error', error)
 
         if (videoElement.readyState >= 2) {
-            handleLoadedData()
+            loadedData()
         } else if (videoElement.networkState === videoElement.NETWORK_EMPTY) {
             videoElement.load()
         }
 
         return () => {
-            videoElement.removeEventListener('loadeddata', handleLoadedData)
-            videoElement.removeEventListener('error', handleError)
+            videoElement.removeEventListener('loadeddata', loadedData)
+            videoElement.removeEventListener('error', error)
 
             if (!hasTaskBeenRemoved && !videoHasLoaded) {
                 removeLoadingTask(TASK_ID)

@@ -18,6 +18,7 @@
 
     @include responsive.screen_laptop () {
         height: auto;
+        margin: 0;
     }
 
     .boxOne {

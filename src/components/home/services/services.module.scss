@@ -23,7 +23,7 @@
             flex-direction: column;
             width: 60%;
             height: 100%;
-            padding: 5vmax 10vmax;
+            padding: 8vmax 10vmax;
 
             @include responsive.screen_laptop () {
                 width: 100%;

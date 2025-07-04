@@ -1,5 +1,6 @@
 import { useEffect, useRef } from 'react'
 import { useLoading } from '../../../../context/loadingContext'
+
 import styles from './modal.module.scss'
 
 export default function VideoModal({ show, onClose, videoSrc }) {
