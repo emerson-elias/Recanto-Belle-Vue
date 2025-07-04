@@ -1,0 +1,36 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.others_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    @include mixins.smoke();
+    width: 100vw;
+    height: 110vh;
+
+    .boxOne{
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+
+        span{
+            display: block;
+            text-align: center;
+            font-weight: 600;
+            font-family: var.$font_one;
+            text-transform: uppercase;
+            font-size: 5vmax;
+            color: var.$secondary_color;
+        }
+    }
+
+    .videoBox {
+        position: relative;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+}

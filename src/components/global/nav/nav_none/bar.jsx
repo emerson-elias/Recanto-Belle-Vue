@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { useMenu } from '../../../../context/menuContext'
 
@@ -18,6 +18,17 @@ export default function Bar() {
         return () => window.removeEventListener('scroll', handleScroll)
     }, [])
 
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.hash) {
+            const el = document.querySelector(location.hash)
+            if (el) {
+                el.scrollIntoView({ behavior: 'auto' })
+            }
+        }
+    }, [location])
+
     return (
         <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
             <nav className='bar'>
@@ -33,7 +44,7 @@ export default function Bar() {
                 <div className='box_3'>
                     <div className='min'>
                         <Link to={''}><li>Suítes</li></Link>
-                        <Link to={''}><li>Contatos</li></Link>
+                        <Link to={'/#contatos'}><li>Contatos</li></Link>
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

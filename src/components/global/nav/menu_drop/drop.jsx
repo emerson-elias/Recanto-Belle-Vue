@@ -1,7 +1,7 @@
 import { gsap } from 'gsap'
 
 import { useEffect, useRef, useCallback } from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useLocation } from 'react-router-dom'
 
 import { useMenu } from '../../../../context/menuContext'
 
@@ -46,7 +46,7 @@ export default function Drop() {
 
     const mouseLeave = (index) => {
         const imgElement = imgRefs.current[index]
-        
+
         if (imgElement) {
             gsap.to(imgElement, {
                 opacity: 0,
@@ -98,6 +98,17 @@ export default function Drop() {
         }
     }, [mouseMove])
 
+    const location = useLocation()
+
+    useEffect(() => {
+        if (location.hash) {
+            const el = document.querySelector(location.hash)
+            if (el) {
+                el.scrollIntoView()
+            }
+        }
+    }, [location])
+
     return (
         <section className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}>
             <div className='btn_menu_drop' onClick={closeMenu}>
@@ -108,7 +119,7 @@ export default function Drop() {
 
             <ul>
                 {['início', 'sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/sobre', '', '', '']
+                    const paths = ['/', '/sobre', '', '', '', '/#contatos']
 
                     return (
                         <div
@@ -129,7 +140,7 @@ export default function Drop() {
             </ul>
 
             <div className='social'>
-                <a>&copy; 2025 Recanto Belle Vue</a>  
+                <a>&copy; 2025 Recanto Belle Vue</a>
                 <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>facebook / instagram</a>
                 <a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'>&copy; By Emerson Elias</a>
             </div>

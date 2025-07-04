@@ -5,6 +5,7 @@ import Roons from '../components/home/roons/roons'
 import Experience from '../components/home/experience/experience'
 import Services from '../components/home/services/services'
 import Reviews from '../components/home/reviews/reviews'
+import Others from '../components/home/others/others'
 
 function Home() {
     return (
@@ -16,6 +17,7 @@ function Home() {
             <Services />
             <Experience />
             <Reviews />
+            <Others />
         </>
     )
 }

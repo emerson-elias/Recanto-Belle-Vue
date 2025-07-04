@@ -8,6 +8,7 @@ import Bar from '../components/global/nav/nav_none/bar'
 import Drop from '../components/global/nav/menu_drop/drop'
 import Cursor from '../components/global/cursor/cursor'
 import Topo from '../components/global/topo/topo'
+import Footer from '../components/global/footer/footer'
 
 export default function MainLayout() {
     const location = useLocation()
@@ -31,6 +32,7 @@ export default function MainLayout() {
             <Topo />
             <LoadingGlobal />
             <Outlet />
+            <Footer />
         </>
     )
 }
