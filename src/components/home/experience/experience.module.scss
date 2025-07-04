@@ -5,7 +5,7 @@
 
 .experince_container {
     @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(1%, 'experiências', 60%);
+    @include mixins.letter_large(1%, 'refúgio', 60%);
     width: 100vw;
     height: 110lvh;
     margin-top: 15vmax;

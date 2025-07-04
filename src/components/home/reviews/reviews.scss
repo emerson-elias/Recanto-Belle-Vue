@@ -132,6 +132,22 @@
                     padding: 10px;
                 }
 
+                span {
+                    position: absolute;
+                    top: 25%;
+                    left: 80%;
+                    text-align: center;
+                    font-size: 3vmax;
+                    font-weight: 400;
+                    color: var.$black_gray;
+                    font-family: var.$font_one;
+                    z-index: 1;
+
+                    @include responsive.screen_laptop () {
+                        display: none;
+                    }
+                }
+
                 h2 {
                     font-size: 4vmax;
                     width: inherit;

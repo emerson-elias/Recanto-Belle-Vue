@@ -11,7 +11,7 @@ export default function Bar() {
 
     useEffect(() => {
         const handleScroll = () => {
-            setIsVisible(window.scrollY <= 200)
+            setIsVisible(window.scrollY <= 250)
         }
 
         window.addEventListener('scroll', handleScroll)
