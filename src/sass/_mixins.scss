@@ -148,12 +148,11 @@
         top: $top;
         left: $left;
         color: var.$primary_color;
-        opacity: .04;
+        opacity: .07;
         font-size: 15vmax;
         pointer-events: none;
         font-family: var.$font_one;
         text-transform: capitalize;
-        border-bottom: 0.1vw solid var.$primary_color;
         z-index: -2;
     }
 }

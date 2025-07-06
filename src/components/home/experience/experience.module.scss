@@ -5,7 +5,7 @@
 
 .experince_container {
     @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(1%, 'refúgio', 60%);
+    @include mixins.letter_large(1%, 'refúgio', 68%);
     width: 100vw;
     height: 110vh;
     margin-top: 15vmax;
@@ -51,6 +51,7 @@
             color: var.$black_gray;
             font-weight: 400;
             font-style: italic;
+            line-height: 1.5;
 
             @include responsive.screen_laptop () {
                 margin: 40px 0 60px 0;

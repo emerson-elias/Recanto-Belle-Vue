@@ -61,6 +61,7 @@
             color: var.$black_gray;
             font-weight: 400;
             font-style: italic;
+            line-height: 1.5;
 
             @include responsive.screen_laptop () {
                 width: 60%;
