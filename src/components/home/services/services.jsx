@@ -6,15 +6,17 @@ import adega from '/assets/img/beer.jpg'
 import buffet from '/assets/img/buffet.jpg'
 import services from '/assets/img/services.jpg'
 
-import Circle from '../../global/svg/circle'
+import Circle from '../../global/svg/circle' /* AINDA PENSANDO ONDE IREI USAR ESSE SVG */
+
+import Button from '../../global/button/button'
 
 const service = [
     {
         id: 1,
         layer: 'layerOne',
-        title: 'adega: Valle dos Vinhos',
+        title: 'adega vinhedo: Valle dos Vinhos',
         description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
-        btnClass: 'btn',
+        link: ' ',
         img: adega,
         alt: 'BANNER ADEGA',
     },
@@ -23,7 +25,7 @@ const service = [
         layer: 'layerTwo',
         title: 'buffet: La Vue Gastronomia',
         description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
-        btnClass: 'btn',
+        link: ' ',
         img: buffet,
         alt: 'BANNER BUFFET',
     },
@@ -32,7 +34,7 @@ const service = [
         layer: 'layerThere',
         title: 'serviço de quarto: Refúgio à Mesa',
         description: 'Do atendimento personalizado às atividades de lazer, nossa pousada oferece serviços que transformam sua estadia em momentos inesquecíveis.',
-        btnClass: 'btn',
+        link: ' ',
         img: services,
         alt: 'BANNER SERVIÇOS',
     }
@@ -42,16 +44,14 @@ function Services() {
     return (
         <section className={styles.services_container}>
 
-            {service.map(({ id, layer, title, description, btnClass, img, alt }) => (
+            {service.map(({ id, layer, title, description, link, img, alt }) => (
 
                 <div key={id} className={styles[layer]}>
                     <div className={styles.boxOne}>
                         <h1>{title}</h1>
                         <p>{description}</p>
 
-                        <div className={styles[btnClass]}>
-                            <Link>Visite a Essência</Link>
-                        </div>
+                        <Button link={link} />
                     </div>
 
                     <div className={styles.boxTwo}>

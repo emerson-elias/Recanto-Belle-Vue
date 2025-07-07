@@ -1,0 +1,67 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.bio_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    height: 100vh;
+    margin: 5vmax 0;
+
+    @include responsive.screen_small() {
+        height: auto;
+        margin: 130px 0;
+    }
+
+    .title {
+        @include mixins.flexbox(relative, flex, center, center);
+        flex-direction: column;
+        width: 70%;
+        padding: 0 3vmax;
+        border-left: 0.1vw solid var.$primary_color;
+
+        @include responsive.screen_laptop() {
+            width: 70%;
+        }
+
+        @include responsive.screen_small() {
+            width: 90%;
+        }
+
+        h1 {
+            width: 100%;
+            color: var.$primary_color;
+            text-align: start;
+            font-family: var.$font_one;
+            text-transform: uppercase;
+            word-spacing: 1vmax;
+        }
+
+        h2 {
+            width: 70%;
+            margin: 2vmax 0;
+            opacity: 0.5;
+            text-align: start;
+            color: var.$primary_color;
+            font-weight: 300;
+            line-height: 1.1;
+            font-family: var.$font_dwo;
+        }
+    }
+
+    p {
+        margin: 1vmax 0 3vmax 0;
+        font-family: var.$font_dwo;
+        font-weight: 400;
+        color: var.$black_gray;
+        width: 45%;
+        text-align: start;
+        line-height: 1.5;
+        font-style: italic;
+
+        @include responsive.screen_laptop() {
+            width: 80%;
+        }
+    }
+}

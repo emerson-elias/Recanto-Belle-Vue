@@ -27,7 +27,7 @@
         flex-direction: column;
         width: 40vw;
         height: inherit;
-        padding-left: 5.5vmax;
+        padding: 3vmax 0 0 5.5vmax;
 
         @include responsive.screen_laptop {
             width: 90%;
@@ -65,7 +65,7 @@
 
             span {
                 position: relative;
-                margin: 0.6vmax 0;
+                margin: 0.5vmax 0;
                 padding: 0.5vmax 0;
                 font-size: 1.3vmax;
                 font-family: var.$font_dwo;

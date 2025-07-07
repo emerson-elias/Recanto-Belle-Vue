@@ -56,24 +56,6 @@
                     width: 80%;
                 }
             }
-
-            .btn {
-                @include mixins.flexbox(relative, flex, center, center);
-                @include mixins.effect_btn();
-                width: 15vw;
-                margin-top: 3vmax;
-                border: 0.1vw solid var.$primary_color;
-                cursor: pointer;
-                overflow: hidden;
-
-                @include responsive.screen_laptop() {
-                    width: auto;
-                }
-
-                @include responsive.screen_small() {
-                    margin: 50px 0 0 0;
-                }
-            }
         }
 
         .boxTwo {

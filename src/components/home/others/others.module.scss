@@ -6,7 +6,7 @@
     @include mixins.flexbox(relative, flex, center, center);
     @include mixins.smoke();
     width: 100vw;
-    height: 115vh;
+    height: 110vh;
     user-select: none;
 
     .boxOne {
