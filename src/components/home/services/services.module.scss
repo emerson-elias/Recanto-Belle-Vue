@@ -138,7 +138,7 @@
                 }
 
                 @include responsive.screen_small() {
-                    padding-left: 30px;
+                    padding: 0 30px;
                 }
             }
 
@@ -179,7 +179,7 @@
                 }
 
                 @include responsive.screen_small() {
-                    padding-left: 30px;
+                    padding: 0 30px;
                 }
             }
 

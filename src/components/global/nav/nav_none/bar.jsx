@@ -8,17 +8,34 @@ import './bar.scss'
 export default function Bar() {
     const { toggleMenu, isMenuOpen } = useMenu()
     const [isVisible, setIsVisible] = useState(true)
+    const location = useLocation()
+    const [hasScrolled, setHasScrolled] = useState(false)
 
     useEffect(() => {
-        const handleScroll = () => {
-            setIsVisible(window.scrollY <= 300)
+        let lastScrollY = window.scrollY
+
+        const scroll = () => {
+            setHasScrolled(true)
+
+            const currentScrollY = window.scrollY
+
+            if (currentScrollY === 0) {
+                setIsVisible(false)
+                return
+            }
+
+            if (currentScrollY > lastScrollY) {
+                setIsVisible(false)
+            } else {
+                setIsVisible(true)
+            }
+
+            lastScrollY = currentScrollY
         }
 
-        window.addEventListener('scroll', handleScroll)
-        return () => window.removeEventListener('scroll', handleScroll)
+        window.addEventListener('scroll', scroll)
+        return () => window.removeEventListener('scroll', scroll)
     }, [])
-
-    const location = useLocation()
 
     useEffect(() => {
         if (location.hash) {
@@ -30,7 +47,7 @@ export default function Bar() {
     }, [location])
 
     return (
-        <section className={`bar_container ${!isVisible ? 'hidden' : ''}`}>
+        <section className={`bar_container ${hasScrolled && isVisible ? 'visible' : ''}`}>
             <nav className='bar'>
                 <div className='box_1'>
                     <Link to={'/'}><li>início</li></Link>
