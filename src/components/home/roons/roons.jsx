@@ -9,6 +9,7 @@ import 'swiper/css/pagination'
 import 'swiper/css/navigation'
 
 import './roons.scss'
+
 import Button from '../../global/button/button'
 
 const cards = [
@@ -53,7 +54,7 @@ export default function Roons() {
                 <h1>Escolha seu conforto</h1>
                 <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
                 
-                <Button link={''}/>
+                <Button link={''} icon="fa-regular fa-chess-rook"/>
 
                 <div className="controls_swiper">
                     <button onClick={() => swiperRef.current?.slidePrev()}>

@@ -40,6 +40,8 @@ export default function Banner() {
     return (
         <section className='banner_container'>
 
+            <i></i> {/* TAG USADA PARA FAZER O ÍCONE DE ANIMAÇÃO DO BANNER */}
+
             <div className='box_banner'>
                 <h1>r</h1>
                 <span>Recanto Belle Vue</span>

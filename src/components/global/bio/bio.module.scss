@@ -6,7 +6,7 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    height: 110vh;
     margin: 5vmax 0;
 
     @include responsive.screen_small() {
@@ -22,7 +22,7 @@
         border-left: 0.1vw solid var.$primary_color;
 
         @include responsive.screen_laptop() {
-            width: 70%;
+            width: 80%;
         }
 
         @include responsive.screen_small() {
@@ -62,6 +62,7 @@
 
         @include responsive.screen_laptop() {
             width: 80%;
+            margin: 50px 0 70px 0;
         }
     }
 }

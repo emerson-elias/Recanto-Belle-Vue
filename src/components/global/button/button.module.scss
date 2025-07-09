@@ -5,7 +5,7 @@
 .button {
     @include mixins.flexbox(relative, flex, center, center);
     border: 0.1vw solid var.$primary_color;
-    width: 16vw;
+    width: 16vmax;
     height: auto;
     cursor: pointer;
     overflow: hidden;
@@ -25,7 +25,7 @@
         text-transform: uppercase;
         color: var.$primary_color;
         transition: var.$smooth;
-        padding: 0.8vmax 0;
+        padding: 1vmax 0;
         text-align: center;
         z-index: 1;
 
@@ -60,5 +60,9 @@
         a {
             color: var.$secondary_color;
         }
+    }
+
+    i{
+        margin: 0 0.5vmax;
     }
 }

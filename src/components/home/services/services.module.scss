@@ -31,10 +31,11 @@
 
             @include responsive.screen_small () {
                 padding: 0;
+                margin-bottom: 50px;
             }
 
             h1 {
-                margin: 2vmax 0 3vmax 0;
+                margin-top: 2vmax;
                 font-family: var.$font_one;
                 text-transform: uppercase;
                 color: var.$primary_color;
@@ -42,6 +43,7 @@
 
             p {
                 width: 80%;
+                margin: 2vmax 0 3vmax 0;
                 font-family: var.$font_dwo;
                 color: var.$black_gray;
                 font-weight: 400;
@@ -50,10 +52,12 @@
 
                 @include responsive.screen_laptop () {
                     width: 60%;
+                    margin: 50px 0 70px 0;
                 }
 
                 @include responsive.screen_small () {
                     width: 80%;
+                    margin: 50px 0;
                 }
             }
         }

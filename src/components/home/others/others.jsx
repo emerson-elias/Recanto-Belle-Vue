@@ -41,7 +41,7 @@ function Others() {
             <div className={styles.boxOne}>
                 <span>❝ Deixe o peso cair,</span>
                 <span>abrace o instante como ele é.</span>
-                <span>Respire, você estará onde precisa...❞</span>
+                <span>Respire, você estará onde precisa❞</span>
             </div>
 
             <video

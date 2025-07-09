@@ -1,3 +1,4 @@
+@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
@@ -8,6 +9,48 @@
     height: 100lvh;
     user-select: none;
     overflow: hidden;
+
+    i {
+        position: absolute;
+        top: 95%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 1.5vmax;
+        height: 3vmax;
+        border-radius: 5vmax;
+        border: 0.15vmax solid var.$secondary_color;
+        opacity: 0.9;
+        will-change: transform;
+        pointer-events: none;
+        z-index: 2;
+
+        @include responsive.screen_laptop() {
+            width: 18px;
+            height: 40px;
+        }
+
+        @include responsive.screen_small() {
+            display: none;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            top: 25%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 0.8vmax;
+            height: 0.8vmax;
+            border-radius: 50%;
+            background-color: var.$secondary_color;
+            animation: botton 3s linear infinite;
+
+            @include responsive.screen_laptop() {
+                width: 10px;
+                height: 10px;
+            }
+        }
+    }
 
     .box_banner {
         @include mixins.flexbox(absolute, flex, center, center);
@@ -94,12 +137,17 @@
         }
 
         .swiper-button-prev::after,
-        .swiper-button-next::after{
+        .swiper-button-next::after {
             display: none;
         }
 
         .swiper-pagination-bullet {
-            background-color: var.$secondary_color;
+            display: none;
+
+            @include responsive.screen_small() {
+                display: inline-block;
+                background-color: var.$secondary_color;
+            }
         }
 
         .slide_item {

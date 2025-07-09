@@ -92,23 +92,43 @@
 
 @keyframes girar_right {
     from {
-        transform: rotate(0deg); /* rotação inicial */
+        transform: rotate(0deg);
+        /* rotação inicial */
     }
+
     to {
-        transform: rotate(-360deg); /* rotação final */
+        transform: rotate(-360deg);
+        /* rotação final */
     }
 }
 
 /* SLIDE DOS TEXTOS LINEARES */
 
 @keyframes slider_linear {
-  0% {
-    transform: translateX(0%);
-  }
+    0% {
+        transform: translateX(0%);
+    }
 
-  100% {
-    transform: translateX(-100%);
-  }
+    100% {
+        transform: translateX(-100%);
+    }
 }
 
 /*==============================================================================================*/
+
+@keyframes botton {
+    0% {
+        top: 25%;
+        opacity: 1;
+    }
+
+    50%{
+        top: 75%;
+        opacity: 0.5;
+    }
+
+    100% {
+        top: 25%;
+        opacity: 1;
+    }
+}
