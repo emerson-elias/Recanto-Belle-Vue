@@ -3,9 +3,159 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-.footer_container{
-    @include mixins.flexbox(relative, flex, center, center);
+.footer_container {
+    @include mixins.flexbox(relative, flex, space-between, baseline);
+    flex-direction: column;
     width: 100vw;
-    height: 100vh;
+    padding: 0 2vw;
+    background-color: var.$primary_color;
     overflow: hidden;
+
+    @include responsive.screen_laptop() {}
+
+    .title {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
+
+        .logo {
+            @include mixins.flexbox(relative, flex, center, center);
+            flex-direction: column;
+
+            i {
+                font-family: var.$new_icon;
+                font-size: 5vmax;
+                color: var.$secondary_color;
+                font-weight: 400;
+                font-style: normal;
+
+                @include responsive.screen_laptop() {
+                    font-size: 60px;
+                }
+            }
+
+            span {
+                font-family: var.$font_one;
+                font-size: 2vmax;
+                color: var.$secondary_color;
+                font-weight: 400;
+                text-transform: uppercase;
+            }
+        }
+
+        .line {
+            width: 38%;
+            height: 0.1vmax;
+            opacity: 0.5;
+            background-color: var.$secondary_color;
+        }
+
+    }
+
+    .box {
+        @include mixins.flexbox(relative, flex, center, baseline);
+
+        width: 100%;
+        height: auto;
+        margin: 4vmax 0;
+
+        background-color: rgba(102, 51, 153, 0);
+
+        @include responsive.screen_laptop() {
+            justify-content: space-between;
+            flex-wrap: wrap;
+        }
+
+        .layerOne,
+        .layerTwo,
+        .layerThere,
+        .layerFour {
+            width: 25%;
+            height: 100%;
+            margin: 0 1vmax;
+
+            background-color: rgba(188, 143, 143, 0);
+
+            @include responsive.screen_laptop() {
+                width: 40%;
+                margin: 20px 0;
+            }
+
+            @include responsive.screen_small() {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            h2 {
+                font-family: var.$font_one;
+                font-size: 2.5vmax;
+                margin: 2vmax 0;
+                color: var.$secondary_color;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            span,
+            a {
+                display: block;
+                font-size: 1.1vmax;
+                font-family: var.$font_dwo;
+                font-weight: 400;
+                color: var.$secondary_color;
+                line-height: 1.5;
+                margin: 1vmax 0;
+            }
+        }
+
+        .layerOne {
+
+            .small {
+                @include mixins.flexbox(relative, flex, center, center);
+                flex-direction: column;
+                width: 15vw;
+                height: 15vw;
+                border: 0.1vw solid var.$secondary_color;
+                overflow: hidden;
+
+                i,
+                p {
+                    text-align: center;
+                    font-style: normal;
+                    font-family: var.$font_one;
+                    text-transform: uppercase;
+                    color: var.$secondary_color;
+                }
+
+                i {
+                    display: block;
+                    font-size: 3.1vmax;
+                }
+
+                p {
+                    font-size: 1.8vmax;
+                }
+            }
+        }
+    }
+
+    .rodape {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
+        padding: 1vmax 0;
+        border-top: 0.1vw solid var.$secondary_color;
+
+        a {
+            font-size: 0.9vmax;
+            font-family: var.$font_dwo;
+            font-weight: 400;
+            color: var.$secondary_color;
+            line-height: 1.5;
+            letter-spacing: 1px;
+            text-transform: uppercase;
+            text-decoration: none;
+            cursor: pointer;
+
+
+            background-color: rgba(188, 143, 143, 0);
+        }
+    }
 }
