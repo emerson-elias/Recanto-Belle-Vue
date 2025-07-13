@@ -24,7 +24,7 @@ export default function Navbar() {
             <nav className='navbar'>
                 <div className='box_1'>
                     <Link to={'/'}><li>início</li></Link>
-                    <li><i className='fa-solid fa-phone'></i> +55 11 94002-8922</li>
+                    <li><i className='fa-solid fa-phone'></i> +55 98 98823-9695</li>
                 </div>
 
                 <div className='box_2'>

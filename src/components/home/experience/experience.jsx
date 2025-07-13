@@ -71,23 +71,17 @@ export default function Roons() {
             animationTimelineRef.current = null
         }
 
-        animationTimelineRef.current = gsap.timeline()
-        animationTimelineRef.current.to([imageRef.current, descriptionRef.current], {
-            opacity: 0,
-            y: -20,
-            duration: 0.1,
-            ease: 'power2.in',
-            onComplete: () => {
-                setCurrentImage(newImageSrc)
-                setCurrentDescription(newDescription)
-            },
-        })
+        setCurrentImage(newImageSrc)
+        setCurrentDescription(newDescription)
 
-        animationTimelineRef.current.fromTo([imageRef.current, descriptionRef.current],
+        animationTimelineRef.current = gsap.timeline()
+
+        animationTimelineRef.current.fromTo(
+            [imageRef.current, descriptionRef.current],
             {
                 opacity: 0,
                 y: 20
-            }, 
+            },
             {
                 opacity: 1,
                 y: 0,
