@@ -7,15 +7,23 @@
     @include mixins.flexbox(relative, flex, space-between, baseline);
     flex-direction: column;
     width: 100vw;
+    height: 100vh;
     padding: 0 2vw;
     background-color: var.$primary_color;
     overflow: hidden;
 
-    @include responsive.screen_laptop() {}
+    @include responsive.screen_laptop() {
+        height: auto;
+    }
 
     .title {
         @include mixins.flexbox(relative, flex, space-between, center);
         width: 100%;
+
+        @include responsive.screen_laptop () {
+            justify-content: center;
+            padding-top: 20px;
+        }
 
         .logo {
             @include mixins.flexbox(relative, flex, center, center);
@@ -29,7 +37,7 @@
                 font-style: normal;
 
                 @include responsive.screen_laptop() {
-                    font-size: 60px;
+                    font-size: 70px;
                 }
             }
 
@@ -38,8 +46,13 @@
                 font-size: 2vmax;
                 color: var.$secondary_color;
                 font-weight: 400;
+                text-wrap: nowrap;
                 text-transform: uppercase;
                 cursor: pointer;
+
+                @include responsive.screen_laptop () {
+                    display: none;
+                }
             }
         }
 
@@ -48,42 +61,35 @@
             height: 0.1vmax;
             opacity: 0.5;
             background-color: var.$secondary_color;
-        }
 
+            @include responsive.screen_laptop () {
+                display: none;
+            }
+        }
     }
 
     .box {
-        @include mixins.flexbox(relative, flex, center, baseline);
-
+        @include mixins.flexbox(relative, flex, space-between, baseline);
         width: 100%;
-        height: auto;
-        margin: 4vmax 0;
-
-        background-color: rgba(102, 51, 153, 0);
+        margin-bottom: 5vmax;
 
         @include responsive.screen_laptop() {
-            justify-content: space-between;
-            flex-wrap: wrap;
+            flex-direction: column;
+            padding: 0 0 60px 0;
+            margin: 0;
         }
 
         .layerOne,
         .layerTwo,
         .layerThere,
         .layerFour {
-            width: 25%;
             height: 100%;
             margin: 0 1vmax;
 
-            background-color: rgba(188, 143, 143, 0);
-
             @include responsive.screen_laptop() {
-                width: 40%;
-                margin: 20px 0;
-            }
-
-            @include responsive.screen_small() {
                 width: 100%;
                 margin: 20px 0;
+                padding: 0 20px;
             }
 
             h2 {
@@ -93,6 +99,10 @@
                 color: var.$secondary_color;
                 font-weight: 600;
                 text-transform: uppercase;
+
+                @include responsive.screen_laptop () {
+                    font-size: 40px;
+                }
             }
 
             span,
@@ -105,18 +115,36 @@
                 line-height: 1.5;
                 margin: 1vmax 0;
                 cursor: pointer;
+
+                @include responsive.screen_laptop () {
+                    font-size: 17px;
+                }
+
+                @include responsive.screen_small () {
+                    font-size: 15px;
+                    margin: 10px 0;
+                }
             }
         }
 
         .layerOne {
 
+            @include responsive.screen_laptop () {
+                display: none;
+            }
+
             .small {
                 @include mixins.flexbox(relative, flex, center, center);
                 flex-direction: column;
-                width: 15vw;
-                height: 15vw;
+                width: 12vw;
+                height: 12vw;
                 border: 0.1vw solid var.$secondary_color;
                 overflow: hidden;
+
+                @include responsive.screen_laptop () {
+                    width: 185px;
+                    height: 185px;
+                }
 
                 i,
                 p {
@@ -129,11 +157,81 @@
 
                 i {
                     display: block;
-                    font-size: 3.1vmax;
+                    font-size: 2.5vmax;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 40px;
+                    }
                 }
 
                 p {
-                    font-size: 1.8vmax;
+                    font-size: 1.7vmax;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 28px;
+                    }
+                }
+            }
+
+            span {
+                font-style: italic;
+                margin: 1.5vmax 0 0 0;
+            }
+        }
+
+        .layerFour {
+
+            p {
+                width: 25vw;
+                font-family: var.$font_dwo;
+                color: var.$secondary_color;
+                font-weight: 400;
+                line-height: 1.5;
+
+                @include responsive.screen_laptop () {
+                    width: 90%;
+                    font-size: 17px;
+                }
+
+                @include responsive.screen_laptop () {
+                    margin: 30px 0;
+                }
+            }
+
+            .social {
+                @include mixins.flexbox(relative, flex, start, center);
+                margin-top: 2vmax;
+
+                a {
+                    @include mixins.flexbox(relative, flex, center, center);
+                    margin: 0 1vmax 0 0;
+                    width: 3vmax;
+                    height: 3vmax;
+                    border: 0.1vw solid var.$secondary_color;
+                    transition: var.$smooth;
+
+                    @include responsive.screen_laptop () {
+                        width: 60px;
+                        height: 60px;
+                    }
+
+                    i {
+                        font-size: 1.5vmax;
+                        color: var.$secondary_color;
+                        transition: var.$smooth;
+
+                        @include responsive.screen_laptop () {
+                            font-size: 20px;
+                        }
+                    }
+
+                    &:hover {
+                        background-color: var.$secondary_color;
+
+                        i {
+                            color: var.$primary_color;
+                        }
+                    }
                 }
             }
         }
@@ -144,6 +242,12 @@
         width: 100%;
         padding: 1vmax 0;
         border-top: 0.1vw solid var.$secondary_color;
+
+        @include responsive.screen_laptop() {
+            flex-direction: column-reverse;
+            align-items: baseline;
+            padding: 20px 0 10px 0;
+        }
 
         a {
             font-size: 0.9vmax;
@@ -156,8 +260,15 @@
             text-decoration: none;
             cursor: pointer;
 
+            @include responsive.screen_laptop() {
+                font-size: 15px;
+                margin: 12px 0;
+            }
 
-            background-color: rgba(188, 143, 143, 0);
+            @include responsive.screen_small() {
+                font-size: 12px;
+                width: 70%;
+            }
         }
     }
 }

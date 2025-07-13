@@ -32,18 +32,6 @@ h1{
     }
 }
 
-h2 {
-    font-size: 3.5vmax;
-
-    @include responsive.screen_laptop () {
-        font-size: 40px;
-    }
-
-    @include responsive.screen_small () {
-        font-size: 35px;
-    }
-}
-
 p {
     font-size: 1.2vmax;
 

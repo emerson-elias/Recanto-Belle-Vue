@@ -14,7 +14,7 @@ const service = [
     {
         id: 1,
         layer: 'layerOne',
-        title: 'adega vinhedo: Valle dos Vinhos',
+        title: "tinto & branco: adega do valle",
         description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
         link: ' ',
         icon: 'fa-solid fa-wine-bottle',
