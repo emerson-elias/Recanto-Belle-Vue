@@ -8,28 +8,39 @@ export default function Topo() {
     useEffect(() => {
         const topo = topoRef.current
 
-        const handleScroll = () => {
-            if (window.scrollY > 200) {
+        const scroll = () => {
+            const scrollY = window.scrollY
+            const scrollHeight = document.documentElement.scrollHeight
+            const windowHeight = window.innerHeight
+
+            const distanceToBottom = scrollHeight - (scrollY + windowHeight)
+
+            if (scrollY > 200) {
                 topo.style.opacity = '1'
                 topo.style.pointerEvents = 'auto'
             } else {
                 topo.style.opacity = '0'
                 topo.style.pointerEvents = 'none'
             }
+
+            if (distanceToBottom <= windowHeight) {
+                topo.classList.add(styles.colorBottom)
+            } else {
+                topo.classList.remove(styles.colorBottom)
+            }
         }
 
-        const handleClick = () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' })
+        const click = () => {
+            window.scrollTo({ top: 0, behavior: 'auto' })
         }
 
-        window.addEventListener("scroll", handleScroll)
-        topo.addEventListener('click', handleClick)
+        window.addEventListener("scroll", scroll)
+        topo.addEventListener('click', click)
 
         return () => {
-            window.removeEventListener("scroll", handleScroll)
-            topo.removeEventListener('click', handleClick)
+            window.removeEventListener("scroll", scroll)
+            topo.removeEventListener('click', click)
         }
-
     }, [])
 
     return (

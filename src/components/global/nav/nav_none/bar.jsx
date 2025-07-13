@@ -46,12 +46,17 @@ export default function Bar() {
         }
     }, [location])
 
+    const Call = () => {
+        const phoneNumber = '+5598988555038'
+        window.open(`tel:${phoneNumber}`, '_self')
+    }
+
     return (
         <section className={`bar_container ${hasScrolled && isVisible ? 'visible' : ''}`}>
             <nav className='bar'>
                 <div className='box_1'>
                     <Link to={'/'}><li>início</li></Link>
-                    <li><i className='fa-solid fa-phone'></i> +55 11 94002-8922</li>
+                    <li onClick={Call}><i className='fa-solid fa-phone'></i> +55 98 98823-9695</li>
                 </div>
 
                 <div className='box_2'>

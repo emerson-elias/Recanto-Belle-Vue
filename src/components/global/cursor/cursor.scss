@@ -14,7 +14,11 @@
     transform: translate(-5em);
     z-index: 9999;
 
-    @include responsive.screen_tablet{
+    @include responsive.screen_tablet {
         display: none;
+    }
+
+    &.colorBottom {
+        border: 0.1vw solid var.$secondary_color;
     }
 }

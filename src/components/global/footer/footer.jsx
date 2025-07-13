@@ -4,6 +4,12 @@ import { Link } from 'react-router-dom'
 import styles from './footer.module.scss'
 
 function Footer() {
+
+    const Call = () => {
+        const phoneNumber = '+5598988239695'
+        window.open(`tel:${phoneNumber}`, '_self')
+    }
+
     return (
         <section id='contatos' className={styles.footer_container}>
 
@@ -36,8 +42,8 @@ function Footer() {
 
                 <div className={styles.layerTwo}>
                     <h2>contatos</h2>
-                    <span>+11 94002-8922</span>
-                    <span>emersonees707@gmail.com</span>
+                    <a onClick={Call}>+55 98 98823-9695</a>
+                    <a>emersonees707@gmail.com</a>
                     <span>seja social</span>
 
                     <div className={styles.social}>

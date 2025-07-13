@@ -19,12 +19,17 @@ export default function Navbar() {
         }
     }, [location])
 
+    const Call = () => {
+        const phoneNumber = '+5598988239695'
+        window.open(`tel:${phoneNumber}`, '_self')
+    }
+
     return (
         <section className='nav_container'>
             <nav className='navbar'>
                 <div className='box_1'>
                     <Link to={'/'}><li>início</li></Link>
-                    <li><i className='fa-solid fa-phone'></i> +55 98 98823-9695</li>
+                    <li onClick={Call}><i className='fa-solid fa-phone'></i> +55 98 98823-9695</li>
                 </div>
 
                 <div className='box_2'>

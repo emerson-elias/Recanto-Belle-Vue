@@ -12,11 +12,11 @@
 
     i {
         position: absolute;
-        top: 95%;
+        top: 97%;
         left: 50%;
         transform: translate(-50%, -50%);
-        width: 1.5vmax;
-        height: 3vmax;
+        width: 1vmax;
+        height: 2vmax;
         border-radius: 5vmax;
         border: 0.15vmax solid var.$secondary_color;
         opacity: 0.9;
@@ -39,8 +39,8 @@
             top: 25%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 0.8vmax;
-            height: 0.8vmax;
+            width: 0.5vmax;
+            height: 0.5vmax;
             border-radius: 50%;
             background-color: var.$secondary_color;
             animation: botton 3s linear infinite;
