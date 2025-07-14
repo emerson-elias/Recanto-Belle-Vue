@@ -54,7 +54,7 @@ export default function Roons() {
                 <h1>Escolha seu conforto</h1>
                 <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
                 
-                <Button link={''} icon="fa-regular fa-chess-rook"/>
+                <Button link={''} icon={'fa-regular fa-chess-rook'} name={'Visite a essência'}/>
 
                 <div className="controls_swiper">
                     <button onClick={() => swiperRef.current?.slidePrev()}>

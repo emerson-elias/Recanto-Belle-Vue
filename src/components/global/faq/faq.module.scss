@@ -7,13 +7,26 @@
     @include mixins.flexbox(relative, flex, space-evenly, center);
     width: 100vw;
     height: 120vh;
+    margin: 15vmax 0;
     overflow: hidden;
+
+    @include responsive.screen_laptop () {
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 40px 0 100px 0;
+    }
 
     .boxOne {
         @include mixins.smoke();
         position: relative;
         width: 40vw;
         height: 100%;
+        user-select: none;
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+            height: 80vh;
+        }
 
         img {
             width: 100%;
@@ -24,51 +37,70 @@
     }
 
     .boxTwo {
-        @include mixins.flexbox(relative, flex, space-between, center);
+        @include mixins.flexbox(relative, flex, center, end);
         flex-direction: column;
         width: 40vw;
         padding: 5vmax;
 
-        background-color: rebeccapurple;
-
+        @include responsive.screen_laptop () {
+            width: 90%;
+            padding: 0;
+            align-items: center;
+            margin-bottom: 70px;
+        }
 
         h1 {
+            width: 100%;
+            text-wrap: nowrap;
             font-family: var.$font_one;
-            font-size: 2.5vmax;
-            margin: 2vmax 0;
+            text-align: end;
             color: var.$primary_color;
-            font-weight: 600;
             text-transform: uppercase;
 
             @include responsive.screen_laptop () {
-               
+                text-align: start;
+                text-wrap: normal;
             }
         }
 
-        h2 {
+        span {
+            width: 100%;
             font-family: var.$font_one;
-            font-size: 2.5vmax;
-            margin: 2vmax 0;
+            font-size: 1.5vmax;
+            margin: 1.2vmax 0 0 0;
+            text-align: end;
             color: var.$black_gray;
             font-weight: 600;
+            word-spacing: 2px;
             text-transform: uppercase;
 
             @include responsive.screen_laptop () {
-             
+                text-align: start;
+                font-size: 25px;
+            }
+
+            @include responsive.screen_small() {
+                font-size: 20px;
             }
         }
 
         p {
-
+            text-align: end;
             font-family: var.$font_dwo;
             color: var.$black_gray;
             font-weight: 400;
             line-height: 1.5;
+            margin: 2vmax 0 3vmax 0;
 
-            @include responsive.screen_laptop () {}
+            @include responsive.screen_laptop () {
+                margin: 50px 0 70px 0;
+                text-align: start;
+                width: 80%;
+            }
 
-            @include responsive.screen_laptop () {}
+            @include responsive.screen_small () {
+                margin: 50px 0;
+            }
         }
-
     }
 }

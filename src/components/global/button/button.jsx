@@ -2,10 +2,10 @@ import { Link } from "react-router-dom"
 
 import styles from './button.module.scss'
 
-function Button({ link , icon}) {
+function Button({ link, icon, name}) {
     return (
         <section className={styles.button}>
-            <Link to={link}><i className={icon}></i> Visite a essência</Link>
+            <Link to={link}><i className={icon}></i> {name}</Link>
         </section>
     )
 }

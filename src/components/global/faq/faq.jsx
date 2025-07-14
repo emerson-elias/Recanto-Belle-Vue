@@ -11,11 +11,11 @@ function FAQ({ picture, text, title, subTitle }) {
             </div>
 
             <div className={styles.boxTwo}>
-                <h2>{subTitle}</h2>
                 <h1>{title}</h1>
+                <span>{subTitle}</span>
                 <p>{text}</p>
 
-                <Button link={' '} icon={' '} />
+                <Button link={' '} icon={'fa-regular fa-circle-question'} name={' Tire suas Dúvidas '}/>
             </div>
 
         </section>

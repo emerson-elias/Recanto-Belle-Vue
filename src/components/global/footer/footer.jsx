@@ -51,7 +51,7 @@ function Footer() {
                 </div>
 
                 <div className={styles.layerTwo}>
-                    <h2>contata-me</h2>
+                    <h2>contate-me</h2>
 
                     <a onClick={redirectToWhatsApp}><i className="fa-brands fa-whatsapp"></i> +55 98 98823-9695</a>
                     <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'> <i className="fa-brands fa-instagram"></i> emersoneliass_</a>

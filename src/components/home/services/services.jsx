@@ -20,6 +20,7 @@ const service = [
         icon: 'fa-solid fa-wine-bottle',
         img: adega,
         alt: 'BANNER ADEGA',
+        btnName: 'Visite a essência'
     },
     {
         id: 2,
@@ -30,6 +31,7 @@ const service = [
         icon: 'fa-solid fa-utensils',
         img: buffet,
         alt: 'BANNER BUFFET',
+        btnName: 'Visite a essência'
     },
     {
         id: 3,
@@ -40,6 +42,7 @@ const service = [
         icon: "fa-solid fa-bell-concierge",
         img: services,
         alt: 'BANNER SERVIÇOS',
+        btnName: 'Visite a essência'
     }
 ]
 
@@ -47,7 +50,7 @@ function Services() {
     return (
         <section className={styles.services_container}>
 
-            {service.map(({ id, layer, title, description, link, icon, img, alt }) => (
+            {service.map(({ id, layer, title, description, link, icon, img, alt, btnName }) => (
 
                 <div key={id} className={styles[layer]}>
                     <div className={styles.boxOne}>
@@ -55,7 +58,7 @@ function Services() {
                             <h1>{title}</h1>
                             <p>{description}</p>
 
-                            <Button link={link} icon={icon} />
+                            <Button link={link} icon={icon} name={btnName} />
                         </div>
                     </div>
 
