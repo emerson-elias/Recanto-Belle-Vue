@@ -172,11 +172,6 @@
                     }
                 }
             }
-
-            span {
-                font-style: italic;
-                margin: 1.5vmax 0 0 0;
-            }
         }
 
         .layerFour {
@@ -246,7 +241,7 @@
         @include responsive.screen_laptop() {
             flex-direction: column-reverse;
             align-items: baseline;
-            padding: 20px 0 10px 0;
+            padding: 20px 20px 10px 20px;
         }
 
         a {

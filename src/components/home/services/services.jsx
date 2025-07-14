@@ -51,10 +51,12 @@ function Services() {
 
                 <div key={id} className={styles[layer]}>
                     <div className={styles.boxOne}>
-                        <h1>{title}</h1>
-                        <p>{description}</p>
+                        <div className={styles.context}>
+                            <h1>{title}</h1>
+                            <p>{description}</p>
 
-                        <Button link={link} icon={icon} />
+                            <Button link={link} icon={icon} />
+                        </div>
                     </div>
 
                     <div className={styles.boxTwo}>

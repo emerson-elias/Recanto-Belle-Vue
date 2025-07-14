@@ -93,7 +93,7 @@ export default function Roons() {
 
     return (
         <section className={styles.experince_container}>
-            <div className={styles.box_1}>
+            <div className={styles.boxOne}>
                 <h1>Experiências</h1>
 
                 <p>Cada detalhe te convida ao descanso, à contemplação e à conexão com a natureza.</p>
@@ -110,7 +110,7 @@ export default function Roons() {
                 </div>
             </div>
 
-            <div className={styles.box_2}>
+            <div className={styles.boxTwo}>
                 <img ref={imageRef} src={currentImage} alt="Quartos" />
                 <div ref={descriptionRef} className={styles.description}>
                     <p>{currentDescription}</p>

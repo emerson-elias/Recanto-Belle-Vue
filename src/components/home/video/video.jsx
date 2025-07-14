@@ -63,6 +63,7 @@ export default function Video() {
 
     return (
         <section className={styles.video_container}>
+
             <div className={styles.box_video}  onClick={() => setShowModal(true)}>
                 <svg
                     xmlns='http://www.w3.org/2000/svg'
@@ -95,7 +96,6 @@ export default function Video() {
                     loop
                     muted
                     playsInline
-                    className={styles.video_element}
                     ref={previewVideoRef}
                 >
                     <source src={preview} type='video/mp4' />

@@ -19,19 +19,19 @@
             height: auto;
         }
 
+        @include responsive.screen_small () {
+            margin-bottom: 50px;
+        }
+
         .boxOne {
-            flex-direction: column;
-            width: 60%;
+            @include mixins.flexbox(relative, flex, center, center);
+            width: 60vw;
             height: 100%;
-            padding: 8vmax 10vmax;
 
-            @include responsive.screen_laptop () {
-                width: 100%;
-            }
-
-            @include responsive.screen_small () {
-                padding: 0;
-                margin-bottom: 50px;
+            .context {
+                flex-direction: column;
+                width: 70%;
+                margin-bottom: 10vmax;
             }
 
             h1 {
@@ -42,7 +42,6 @@
             }
 
             p {
-                width: 80%;
                 margin: 2vmax 0 3vmax 0;
                 font-family: var.$font_dwo;
                 color: var.$black_gray;
@@ -51,12 +50,10 @@
                 line-height: 1.5;
 
                 @include responsive.screen_laptop () {
-                    width: 60%;
                     margin: 50px 0 70px 0;
                 }
 
                 @include responsive.screen_small () {
-                    width: 80%;
                     margin: 50px 0;
                 }
             }
@@ -65,7 +62,7 @@
         .boxTwo {
             @include mixins.smoke();
             position: relative;
-            width: 40%;
+            width: 40vw;
             height: 120vh;
             user-select: none;
             overflow: hidden;
@@ -88,50 +85,50 @@
         }
     }
 
-    .layerOne {
-        @include mixins.letter_large(45%, 'aprecie', 55%);
-    }
-
-    .layerThere {
-        @include mixins.letter_large(45%, 'desfrute', 58%);
-    }
-
     .layerOne,
     .layerThere {
+        @include mixins.letter_large(45%, 'aprecie', 55%);
         flex-direction: row-reverse;
 
         @include responsive.screen_laptop () {
+            width: 100%;
             flex-direction: column;
         }
 
         .boxOne {
-            @include mixins.flexbox(relative, flex, normal, end);
-
             @include responsive.screen_laptop () {
-                align-items: center;
-                justify-content: center;
+                width: 100%;
             }
 
-            h1,
-            p {
-                text-align: end;
-            }
+            .context {
+                @include mixins.flexbox(relative, flex, space-between, end);
 
-            h1 {
                 @include responsive.screen_laptop () {
                     width: 100%;
-                    text-align: start;
+                    align-items: center;
+                    margin: 70px 0;
                 }
 
-                @include responsive.screen_small() {
-                    padding: 0 30px;
-                }
-            }
+                h1 {
+                    text-align: end;
 
-            p {
-                @include responsive.screen_laptop () {
-                    text-align: start;
-                    width: 80%;
+                    @include responsive.screen_laptop() {
+                        width: 90%;
+                        text-align: start;
+                    }
+
+                    @include responsive.screen_small() {
+                        width: 85%;
+                    }
+                }
+
+                p {
+                    text-align: end;
+
+                    @include responsive.screen_laptop () {
+                        width: 80%;
+                        text-align: start;
+                    }
                 }
             }
         }
@@ -142,37 +139,38 @@
         flex-direction: row;
 
         @include responsive.screen_laptop () {
+            width: 100%;
             flex-direction: column;
         }
 
         .boxOne {
-            @include mixins.flexbox(relative, flex, normal, baseline);
-
             @include responsive.screen_laptop () {
-                align-items: center;
-                justify-content: center;
+                width: 100%;
             }
 
-            h1,
-            p {
-                text-align: start;
-            }
+            .context {
+                @include mixins.flexbox(relative, flex, space-between, start);
 
-            h1 {
                 @include responsive.screen_laptop () {
                     width: 100%;
-                    text-align: start;
+                    align-items: center;
+                    margin: 70px 0;
                 }
 
-                @include responsive.screen_small() {
-                    padding: 0 30px;
-                }
-            }
+                h1 {
+                    @include responsive.screen_laptop() {
+                        width: 90%;
+                    }
 
-            p {
-                @include responsive.screen_laptop () {
-                    text-align: start;
-                    width: 80%;
+                    @include responsive.screen_small() {
+                        width: 85%;
+                    }
+                }
+
+                p {
+                    @include responsive.screen_laptop () {
+                        width: 80%;
+                    }
                 }
             }
         }

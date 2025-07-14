@@ -46,11 +46,11 @@
             color: var.$primary_color;
 
             @include responsive.screen_laptop () {
-                padding-left: 100px;
+                width: 90%;
             }
 
             @include responsive.screen_small () {
-                padding-left: 30px;
+                width: 85%;
             }
         }
 
@@ -64,7 +64,7 @@
             line-height: 1.5;
 
             @include responsive.screen_laptop () {
-                width: 60%;
+                width: 80%;
                 margin: 50px 0 70px 0;
             }
 
