@@ -120,16 +120,12 @@
 
         @include responsive.screen_laptop () {
             width: 90%;
-            height: auto;
+            height: 80vh;
         }
 
         .swiper {
             width: 100%;
             height: 100%;
-
-            @include responsive.screen_small () {
-                height: 80vh;
-            }
 
             .card_box {
                 @include mixins.smoke();

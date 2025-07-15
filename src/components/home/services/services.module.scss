@@ -19,10 +19,6 @@
             height: auto;
         }
 
-        @include responsive.screen_small () {
-            margin-bottom: 50px;
-        }
-
         .boxOne {
             @include mixins.flexbox(relative, flex, center, center);
             width: 60vw;

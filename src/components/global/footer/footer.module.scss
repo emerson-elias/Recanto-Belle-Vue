@@ -214,6 +214,7 @@
                         font-size: 1.5vmax;
                         color: var.$secondary_color;
                         transition: var.$smooth;
+                        pointer-events: none;
 
                         @include responsive.screen_laptop () {
                             font-size: 20px;

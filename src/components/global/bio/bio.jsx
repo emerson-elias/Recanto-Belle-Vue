@@ -13,7 +13,7 @@ function Bio({ title, caption, text }) {
 
             <p>{text}</p>
 
-            <Button link={'/sobre'} icon={'fa-solid fa-gem'} name={'Nos Conheça'}/>
+            <Button link={'/sobre'} icon={'fa-solid fa-gem'} name={'Visite a essência'}/>
 
         </section>
     )

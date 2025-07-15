@@ -11,7 +11,7 @@
     overflow: hidden;
 
     @include responsive.screen_laptop() {
-        width: 250px;
+        width: 230px;
     }
 
     @include responsive.screen_small() {
@@ -30,10 +30,6 @@
         z-index: 1;
 
         @include responsive.screen_laptop() {
-            font-size: 20px;
-        }
-
-        @include responsive.screen_small() {
             font-size: 15px;
         }
     }
@@ -48,6 +44,7 @@
         z-index: -1;
         background: var.$primary_color;
         transition: var.$smooth;
+        pointer-events: none;
     }
 
     &:hover {

@@ -1,0 +1,154 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.summary_container {
+    @include mixins.flexbox(relative, flex, space-evenly, center);
+    @include mixins.letter_large(1%, 'Dúvidas', 70%);
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 120vh;
+    margin: 0 0 5vmax 0;
+    overflow: hidden;
+
+    @include responsive.screen_laptop () {
+        flex-direction: column;
+        height: auto;
+        margin: 150px 0;
+    }
+
+    @include responsive.screen_small() {
+        @include mixins.letter_large(1%, 'Dúvidas', 100%);
+        overflow: visible;
+    }
+
+    .boxOne {
+        @include mixins.flexbox(relative, flex, center, end);
+        flex-direction: column;
+        width: 40vw;
+        padding: 5vmax;
+
+        background-color: rgba(0, 128, 0, 0);
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+            padding: 0;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            width: 100%;
+            font-family: var.$font_one;
+            text-align: end;
+            color: var.$primary_color;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop () {
+                text-align: start;
+                text-wrap: normal;
+            }
+
+            @include responsive.screen_small () {
+                width: 90%;
+            }
+
+        }
+
+        p {
+            text-align: end;
+            font-family: var.$font_dwo;
+            color: var.$black_gray;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.5;
+            margin: 2vmax 0 3vmax 0;
+
+            @include responsive.screen_laptop () {
+                margin: 50px 0 70px 0;
+                text-align: start;
+                width: 80%;
+            }
+
+            @include responsive.screen_small () {
+                margin: 50px 0;
+            }
+        }
+    }
+
+    .boxTwo {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        flex-direction: column;
+        width: 40vw;
+
+
+        background-color: rgba(255, 192, 203, 0);
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+        }
+
+        @include responsive.screen_small () {
+            width: 85%;
+        }
+
+        details {
+            position: relative;
+            background-color: rgba(10, 5, 82, 0);
+            width: 100%;
+            // height: 7vmax;
+            margin: 1vmax 0;
+            padding: 0 0 1.5vmax 0;
+            border-bottom: 0.1vw solid var.$black_gray;
+
+            @include responsive.screen_laptop () {
+                margin: 20px;
+            }
+
+            summary {
+                font-family: var.$font_dwo;
+                font-size: 1.2vmax;
+                padding: 1vmax 0 0 0.5vmax;
+                // margin: 1.2vmax 0 0 0;
+                //text-align: end;
+                list-style: none;
+                color: var.$black_gray;
+                font-weight: 500;
+                word-spacing: 2px;
+                text-transform: uppercase;
+                cursor: pointer;
+
+                background-color: rgba(102, 51, 153, 0);
+
+                @include responsive.screen_laptop () {
+                    font-size: 18px;
+                    padding: 0 40px 0 0;
+                    line-height: 1.5;
+                }
+
+                &::after {
+                    content: '╋';
+                    position: absolute;
+                    left: 95%;
+                    transition: transform 0.3s ease;
+                }
+            }
+
+            &[open] summary::after {
+                transform: rotate(45deg);
+            }
+
+            p {
+                background-color: rgba(255, 217, 0, 0);
+                padding: 1.5vmax 0;
+
+                font-family: var.$font_dwo;
+                color: var.$black_gray;
+                font-weight: 400;
+                font-style: italic;
+                line-height: 1.5;
+            }
+        }
+    }
+}
