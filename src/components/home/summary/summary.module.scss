@@ -23,6 +23,21 @@
         overflow: visible;
     }
 
+    &::before {
+        content: '';
+        position: absolute;
+        top: 15%;
+        left: 0;
+        width: 25%;
+        height: 0.1vw;
+        background-color: var.$primary_color;
+        pointer-events: none;
+
+        @include responsive.screen_laptop () {
+            display: none;
+        }
+    }
+
     .boxOne {
         @include mixins.flexbox(relative, flex, center, end);
         flex-direction: column;
