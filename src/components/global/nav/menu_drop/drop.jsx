@@ -1,7 +1,7 @@
 import { gsap } from 'gsap'
 
 import { useEffect, useRef, useCallback } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { useMenu } from '../../../../context/menuContext'
 
@@ -98,17 +98,6 @@ export default function Drop() {
         }
     }, [mouseMove])
 
-    const location = useLocation()
-
-    useEffect(() => {
-        if (location.hash) {
-            const el = document.querySelector(location.hash)
-            if (el) {
-                el.scrollIntoView()
-            }
-        }
-    }, [location])
-
     return (
         <section className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}>
             <div className='btn_menu_drop' onClick={closeMenu}>
@@ -119,7 +108,7 @@ export default function Drop() {
 
             <ul>
                 {['início', 'sobre', 'suítes', 'serviços', 'dúvidas', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/sobre', '', '', '/duvidas', '/#contatos']
+                    const paths = ['/', '/sobre', '', '', '/duvidas', '/contatos']
 
                     return (
                         <div

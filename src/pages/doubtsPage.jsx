@@ -11,8 +11,21 @@ const picture = '/assets/img/faq_banner.jpg'
 function DoubtsPage() {
     return (
         <>
-            <Banners picture={picture} letter={'d'} title={'tire suas dúvidas'} subTitle={'estamos aqui para ajudar'}/>
-            <Bio title={title} caption={caption} text={text} />
+            <Banners
+                picture={picture}
+                letter={'d'}
+                title={'tire suas dúvidas'}
+                subTitle={'estamos aqui para ajudar'}
+            />
+            <Bio
+                title={title}
+                caption={caption}
+                text={text}
+                link={' '}
+                icon={'fa-regular fa-bookmark'}
+                name={' Reserve agora '} 
+            />
+
             <Doubts />
         </>
     )

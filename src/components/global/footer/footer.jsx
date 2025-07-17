@@ -57,7 +57,7 @@ function Footer() {
                     <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'> <i className="fa-brands fa-instagram"></i> emersoneliass_</a>
                     <a onClick={Call}><i className="fa-solid fa-phone"></i> +55 94 99117-1807</a>
                     <a onClick={EmailClick}><i className="fa-solid fa-envelope"></i> emersonees707@gmail.com</a>
-                    <a><i className="fa-solid fa-location-dot"></i> Marabá - PA</a>
+                    <a href='https://www.google.com/maps?q=Marabá,+PA' target='_blank' rel='noopener noreferrer'><i className="fa-solid fa-location-dot"></i> Marabá - PA</a>
                 </div>
 
                 <div className={styles.layerThere}>

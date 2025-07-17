@@ -2,7 +2,7 @@
 import Button from '../button/button'
 import styles from './bio.module.scss'
 
-function Bio({ title, caption, text }) {
+function Bio({ title, caption, text, link, icon, name}) {
     return (
         <section className={styles.bio_container}>
 
@@ -13,7 +13,7 @@ function Bio({ title, caption, text }) {
 
             <p>{text}</p>
 
-            <Button link={'/sobre'} icon={'fa-solid fa-gem'} name={'Visite a essência'}/>
+            <Button link={link} icon={icon} name={name}/>
 
         </section>
     )

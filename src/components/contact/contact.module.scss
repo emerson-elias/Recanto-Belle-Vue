@@ -1,0 +1,95 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.contact_container {
+    @include mixins.flexbox(relative, flex, space-evenly, center);
+    @include mixins.letter_large(1%, 'socialize', 74%);
+    flex-direction: row-reverse;
+    width: 100vw;
+    height: 120vh;
+    margin: 0 0 15vmax 0;
+    overflow: hidden;
+
+    @include responsive.screen_laptop () {
+        flex-direction: column-reverse;
+        height: auto;
+    }
+
+    .boxOne {
+        @include mixins.smoke();
+        position: relative;
+        width: 40vw;
+        height: 100%;
+        user-select: none;
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+            height: 80vh;
+        }
+
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+    }
+
+    .boxTwo {
+        @include mixins.flexbox(relative, flex, center, start);
+        flex-direction: column;
+        width: 40vw;
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+            margin-bottom: 70px;
+        }
+
+        @include responsive.screen_small () {
+            width: 85%;
+            margin: 80px 0;
+        }
+
+        .layer {
+            margin: 1vmax 0;
+
+            @include responsive.screen_laptop () {
+                margin: 20px 0;
+            }
+
+            h1 {
+                width: 100%;
+                font-size: 3vmax;
+                font-family: var.$font_one;
+                color: var.$primary_color;
+                text-transform: uppercase;
+
+                @include responsive.screen_laptop () {
+                    font-size: 35px;
+                }
+
+                @include responsive.screen_small () {
+                    font-size: 25px;
+                }
+            }
+
+            a {
+                width: 100%;
+                font-family: var.$font_one;
+                font-size: 1.5vmax;
+                margin: 1.2vmax 0 0 0;
+                color: var.$black_gray;
+                font-weight: 600;
+                word-spacing: 2px;
+                text-transform: uppercase;
+                text-decoration: none;
+                cursor: pointer;
+
+                @include responsive.screen_laptop () {
+                    font-size: 20px;
+                }
+            }
+        }
+    }
+}

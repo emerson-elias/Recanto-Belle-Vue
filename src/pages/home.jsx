@@ -16,7 +16,16 @@ function Home() {
     return (
         <>
             <Carousel />
-            <Bio title={title} caption={caption} text={text} />
+            
+            <Bio
+                title={title}
+                caption={caption}
+                text={text}
+                link={'/sobre'}
+                icon={'fa-regular fa-gem'}
+                name={' visite a essência '}
+            />
+
             <Video />
             <Roons />
             <Services />

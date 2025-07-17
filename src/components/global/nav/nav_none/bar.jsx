@@ -1,5 +1,5 @@
 import { useState, useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { useMenu } from '../../../../context/menuContext'
 
@@ -8,7 +8,6 @@ import './bar.scss'
 export default function Bar() {
     const { toggleMenu, isMenuOpen } = useMenu()
     const [isVisible, setIsVisible] = useState(true)
-    const location = useLocation()
     const [hasScrolled, setHasScrolled] = useState(false)
 
     useEffect(() => {
@@ -37,15 +36,6 @@ export default function Bar() {
         return () => window.removeEventListener('scroll', scroll)
     }, [])
 
-    useEffect(() => {
-        if (location.hash) {
-            const el = document.querySelector(location.hash)
-            if (el) {
-                el.scrollIntoView({ behavior: 'auto' })
-            }
-        }
-    }, [location])
-
     const Call = () => {
         const phoneNumber = '+5598988555038'
         window.open(`tel:${phoneNumber}`, '_self')
@@ -66,7 +56,7 @@ export default function Bar() {
                 <div className='box_3'>
                     <div className='min'>
                         <Link to={''}><li>Suítes</li></Link>
-                        <Link to={'/#contatos'}><li>Contatos</li></Link>
+                        <Link to={'/contatos'}><li>Contatos</li></Link>
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

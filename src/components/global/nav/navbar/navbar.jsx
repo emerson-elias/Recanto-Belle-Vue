@@ -1,5 +1,5 @@
 import { useEffect } from 'react'
-import { Link, useLocation } from 'react-router-dom'
+import { Link } from 'react-router-dom'
 
 import { useMenu } from '../../../../context/menuContext'
 
@@ -7,17 +7,6 @@ import './navbar.scss'
 
 export default function Navbar() {
     const { toggleMenu, isMenuOpen } = useMenu()
-
-    const location = useLocation()
-
-    useEffect(() => {
-        if (location.hash) {
-            const el = document.querySelector(location.hash)
-            if (el) {
-                el.scrollIntoView({ behavior: 'auto' })
-            }
-        }
-    }, [location])
 
     const Call = () => {
         const phoneNumber = '+5598988239695'
@@ -35,7 +24,7 @@ export default function Navbar() {
                 <div className='box_2'>
                     <div className='min'>
                         <Link to={'/'}><li>Suítes</li></Link>
-                        <Link to={'/#contatos'}><li>Contatos</li></Link>
+                        <Link to={'/contatos'}><li>Contatos</li></Link>
                     </div>
 
                     <div className='btn_menu_drop' onClick={toggleMenu}>

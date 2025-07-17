@@ -104,6 +104,7 @@
         opacity: .07;
         font-size: 15vmax;
         pointer-events: none;
+        user-select: none;
         font-family: var.$font_one;
         text-transform: capitalize;
         z-index: -2;
