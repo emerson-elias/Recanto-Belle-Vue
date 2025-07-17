@@ -5,7 +5,6 @@ import Roons from '../components/home/roons/roons'
 import Experience from '../components/home/experience/experience'
 import Services from '../components/home/services/services'
 import Reviews from '../components/home/reviews/reviews'
-import Others from '../components/home/others/others'
 import Summary from '../components/home/summary/summary'
 import Differences from '../components/home/differences/differences'
 
@@ -24,7 +23,6 @@ function Home() {
             <Experience />
             <Reviews />
             <Differences />
-          {/*  <Others /> */}
             <Summary />
         </>
     )
