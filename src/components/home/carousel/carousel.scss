@@ -50,6 +50,11 @@
             border-radius: 0.2vmax;
             overflow: hidden;
             z-index: 10;
+
+            @include responsive.screen_small() {
+                width: 120px;
+                height: 4px;
+            }
         }
 
         .swiper-pagination-progressbar-fill {

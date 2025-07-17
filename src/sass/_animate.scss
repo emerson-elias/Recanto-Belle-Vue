@@ -116,19 +116,38 @@
 
 /*==============================================================================================*/
 
-@keyframes botton {
+/* ANIMAÇÃO DO BANNERS */
+
+@keyframes pan-y {
     0% {
-        top: 25%;
-        opacity: 1;
+        background-position: top;
+        background-size: cover 110%
     }
 
-    50%{
-        top: 75%;
-        opacity: 0.5;
+    50% {
+        background-position: bottom;
+        background-size: cover 100%
     }
 
     100% {
-        top: 25%;
-        opacity: 1;
+        background-position: top;
+        background-size: cover 110%
+    }
+}
+
+@keyframes pan-x {
+    0% {
+        background-position: left;
+        background-size: 110% cover
+    }
+
+    50% {
+        background-position: right;
+        background-size: 100% cover
+    }
+
+    100% {
+        background-position: left;
+        background-size: 110% cover
     }
 }

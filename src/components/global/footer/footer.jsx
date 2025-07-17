@@ -54,18 +54,18 @@ function Footer() {
                     <h2>contate-me</h2>
 
                     <a onClick={redirectToWhatsApp}><i className="fa-brands fa-whatsapp"></i> +55 98 98823-9695</a>
-                    <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'> <i className="fa-brands fa-instagram"></i> emersoneliass_</a>
                     <a onClick={Call}><i className="fa-solid fa-phone"></i> +55 94 99117-1807</a>
-                    <a onClick={EmailClick}><i className="fa-solid fa-envelope"></i> emersonees707@gmail.com</a>
+                    <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'> <i className="fa-brands fa-instagram"></i> emersoneliass_</a>
                     <a href='https://www.google.com/maps?q=Marabá,+PA' target='_blank' rel='noopener noreferrer'><i className="fa-solid fa-location-dot"></i> Marabá - PA</a>
+                    <a onClick={EmailClick}><i className="fa-solid fa-envelope"></i> emersonees707@gmail.com</a>
                 </div>
 
                 <div className={styles.layerThere}>
                     <h2>Informações</h2>
                     <Link to={'/sobre'} > Sobre</Link>
-                    <Link to={' '} > Suítes</Link>
+                    <Link to={'/quartos'} > Suítes</Link>
                     <Link to={' '} > Serviços</Link>
-                    <Link to={'/duvidas'} > FAQ</Link>
+                    <Link to={'/duvidas'} > Dúvidas</Link>
                     <Link to={' '} > Experiências</Link>
                 </div>
 

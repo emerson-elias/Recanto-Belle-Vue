@@ -4,9 +4,9 @@ import styles from './banners.module.scss'
 
 function Banners ({ picture, letter, title, subTitle }){
     return(
-        <section className={styles.banners_container}>
+        <section className={styles.banners_container}
+          style={{ backgroundImage: `url(${picture})` }}>
             <Logo letter={letter} title={title} subTitle={subTitle}/>
-            <img src={picture} alt="BANNER" />
         </section>
     )
 }

@@ -1,3 +1,4 @@
+@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
@@ -9,12 +10,10 @@
     height: 100lvh;
     user-select: none;
     overflow: hidden;
+    animation: pan-x 120s both infinite;
+    will-change: transform;
 
-    img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-        user-select: none;
-        pointer-events: none;
+    @include responsive.screen_laptop () {
+        animation: pan-y 120s both infinite;
     }
 }
