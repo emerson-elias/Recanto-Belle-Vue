@@ -1,4 +1,4 @@
-import './banner.scss'
+import './carousel.scss'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay, Pagination, Navigation, EffectFade } from 'swiper/modules'
@@ -7,6 +7,8 @@ import 'swiper/css'
 import 'swiper/css/navigation'
 import 'swiper/css/pagination'
 import 'swiper/css/effect-fade'
+
+import Logo from '../../global/logo/logo'
 
 const carrousel = [
     {
@@ -35,18 +37,14 @@ const carrousel = [
     },
 ]
 
-export default function Banner() {
+function Carousel() {
 
     return (
         <section className='banner_container'>
 
             <i></i> {/* TAG USADA PARA FAZER O ÍCONE DE ANIMAÇÃO DO BANNER */}
 
-            <div className='box_banner'>
-                <h1>r</h1>
-                <span>Recanto Belle Vue</span>
-                <p>Requinte e Beleza</p>
-            </div>
+            <Logo letter={'r'} title={'Recanto Belle Vue'} subTitle={'Requinte e Beleza'}/>
 
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
@@ -72,3 +70,5 @@ export default function Banner() {
         </section>
     )
 }
+
+export default Carousel

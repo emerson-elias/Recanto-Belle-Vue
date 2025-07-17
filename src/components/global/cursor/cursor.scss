@@ -1,18 +1,20 @@
 @use '/src/sass/variables' as var;
 @use '/src/sass/responsive';
 
-#cursor {
+.cursor {
     position: fixed;
-    display: grid;
-    place-content: center;
+    top: 0;
+    left: 0;
     width: 3vw;
     height: 3vw;
     border-radius: 50%;
     background-color: transparent;
     border: 0.1vw solid var.$primary_color;
     pointer-events: none;
-    transform: translate(-5em);
+    user-select: none;
     z-index: 9999;
+    display: grid;
+    place-content: center;
 
     @include responsive.screen_tablet {
         display: none;

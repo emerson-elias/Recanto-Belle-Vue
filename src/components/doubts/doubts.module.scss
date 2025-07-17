@@ -7,7 +7,7 @@
     @include mixins.flexbox(relative, flex, space-evenly, center);
     width: 100vw;
     height: 120vh;
-    margin: 15vmax 0;
+    margin-bottom: 15vmax;
     overflow: hidden;
 
     @include responsive.screen_laptop () {
@@ -40,7 +40,6 @@
         @include mixins.flexbox(relative, flex, center, end);
         flex-direction: column;
         width: 40vw;
-        padding: 5vmax;
 
         @include responsive.screen_laptop () {
             width: 90%;
@@ -51,7 +50,6 @@
 
         h1 {
             width: 100%;
-            text-wrap: nowrap;
             font-family: var.$font_one;
             text-align: end;
             color: var.$primary_color;

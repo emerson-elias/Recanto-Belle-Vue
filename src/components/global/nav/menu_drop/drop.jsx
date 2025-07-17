@@ -11,7 +11,7 @@ import img1 from '/assets/img/brisa-do-mar.jpg'
 import img2 from '/assets/img/pexels-1.jpg'
 import img3 from '/assets/img/villa-real.jpg'
 import img4 from '/assets/img/services.jpg'
-import img5 from '/assets/img/ondas-crescente.jpg'
+import img5 from '/assets/img/faq_banner.jpg'
 import img6 from '/assets/img/contato.jpg'
 
 export default function Drop() {
@@ -118,8 +118,8 @@ export default function Drop() {
             </div>
 
             <ul>
-                {['início', 'sobre', 'suítes', 'serviços', 'experiências', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/sobre', '', '', '', '/#contatos']
+                {['início', 'sobre', 'suítes', 'serviços', 'dúvidas', 'contatos'].map((item, index) => {
+                    const paths = ['/', '/sobre', '', '', '/duvidas', '/#contatos']
 
                     return (
                         <div

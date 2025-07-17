@@ -32,7 +32,7 @@ function Summary() {
                 <p>Sabemos que algumas dúvidas podem surgir, e estamos aqui para esclarecê-las da melhor forma possível.
                     Nesta seção, respondemos às perguntas mais comuns para que você se sinta seguro e bem informado.
                 </p>
-                <Button link={' '} icon={'fa-regular fa-circle-question'} name={' Tire suas Dúvidas '} />
+                <Button link={'/duvidas'} icon={'fa-regular fa-circle-question'} name={' Tire suas Dúvidas '} />
             </div>
 
             <div className={styles.boxTwo}>

@@ -1,0 +1,70 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.logo_container {
+    @include mixins.flexbox(absolute, flex, center, center);
+    flex-direction: column;
+    transform: translateY(-10vmax);
+    pointer-events: none;
+    z-index: 2;
+
+    @include responsive.screen_laptop() {
+        transform: translateY(-15vmax);
+    }
+
+    @include responsive.screen_small() {
+        transform: translateY(-20vmax);
+    }
+
+    h1 {
+        font-family: var.$new_icon;
+        font-size: 12vmax;
+        transform: translateY(2vw);
+        color: var.$secondary_color;
+        font-weight: 400;
+        text-transform: lowercase;
+
+        @include responsive.screen_laptop() {
+            font-size: 130px;
+        }
+
+        @include responsive.screen_small() {
+            font-size: 150px;
+        }
+    }
+
+    span {
+        font-size: 2.5vmax;
+        text-transform: uppercase;
+        font-family: var.$font_one;
+        color: var.$secondary_color;
+        font-weight: 600;
+
+        @include responsive.screen_laptop() {
+            font-size: 35px;
+        }
+
+        @include responsive.screen_small() {
+            font-size: 27px;
+        }
+    }
+
+    p {
+        margin-top: 1vh;
+        font-size: 1.1vmax;
+        text-transform: uppercase;
+        font-family: var.$font_dwo;
+        color: var.$secondary_color;
+        letter-spacing: 1px;
+        font-weight: 300;
+
+        @include responsive.screen_laptop() {
+            font-size: 18px;
+        }
+
+        @include responsive.screen_small() {
+            font-size: 15px;
+        }
+    }
+}

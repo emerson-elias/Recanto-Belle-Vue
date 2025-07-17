@@ -76,8 +76,6 @@ export default function Cursor() {
     }, [])
 
     return (
-        <section id='cursor' ref={cursorRef}>
-            <span></span>
-        </section>
+        <section className="cursor" ref={cursorRef}></section>
     )
 }
