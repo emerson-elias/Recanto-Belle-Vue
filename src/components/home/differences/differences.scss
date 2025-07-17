@@ -3,11 +3,11 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-.faq_container {
-    @include mixins.flexbox(relative, flex, space-evenly, center);
+.differences_container {
+    @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.letter_large(60%, 'única', 60%);
     width: 100vw;
     height: 120vh;
-    margin-bottom: 15vmax;
     overflow: hidden;
 
     @include responsive.screen_laptop () {
@@ -16,44 +16,69 @@
         margin: 40px 0 100px 0;
     }
 
-    @include responsive.screen_small () {
-        margin: 40px 0 70px 0;
-    }
-
     .boxOne {
-        @include mixins.smoke();
         position: relative;
-        width: 40vw;
+        width: 60vw;
         height: 100%;
         user-select: none;
 
-        @include responsive.screen_laptop () {
+        @include responsive.screen_laptop() {
             width: 90%;
             height: 80vh;
         }
 
-        img {
+        .swiper {
             width: 100%;
             height: 100%;
-            object-fit: cover;
-            pointer-events: none;
+
+            .swiper-slide {
+                @include mixins.smoke();
+
+                .slide_img {
+                    transition: transform 0.8s ease, opacity 0.8s ease;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    pointer-events: none;
+                }
+
+                .slide_caption {
+                    position: absolute;
+                    top: 15%;
+                    left: 0;
+                    padding: 0 3vmax;
+                    font-family: var.$font_dwo;
+                    color: var.$secondary_color;
+                    text-transform: uppercase;
+                    z-index: 2;
+                }
+            }
+
+            .swiper-slide-active .slide_img {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .swiper-slide-prev .slide_img,
+            .swiper-slide-next .slide_img {
+                opacity: 0.5;
+                transform: scale(0.95);
+            }
         }
     }
 
     .boxTwo {
         @include mixins.flexbox(relative, flex, center, end);
         flex-direction: column;
-        width: 40vw;
+        width: 50vw;
+        padding: 7vmax;
+        margin-bottom: 10vmax;
 
         @include responsive.screen_laptop () {
             width: 90%;
             padding: 0;
             align-items: center;
             margin-bottom: 70px;
-        }
-
-        @include responsive.screen_small () {
-            margin: 80px 0;
         }
 
         h1 {

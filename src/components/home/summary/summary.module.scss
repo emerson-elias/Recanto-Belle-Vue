@@ -6,7 +6,6 @@
 .summary_container {
     @include mixins.flexbox(relative, flex, space-evenly, center);
     @include mixins.letter_large(1%, 'Dúvidas', 70%);
-    flex-direction: row-reverse;
     width: 100vw;
     height: 120vh;
     margin: 0 0 5vmax 0;
@@ -39,14 +38,12 @@
     }
 
     .boxOne {
-        @include mixins.flexbox(relative, flex, center, end);
+        @include mixins.flexbox(relative, flex, center, start);
         flex-direction: column;
         width: 40vw;
-        padding: 5vmax;
 
         @include responsive.screen_laptop () {
             width: 90%;
-            padding: 0;
             align-items: center;
             margin-bottom: 70px;
         }
@@ -54,22 +51,15 @@
         h1 {
             width: 100%;
             font-family: var.$font_one;
-            text-align: end;
             color: var.$primary_color;
             text-transform: uppercase;
-
-            @include responsive.screen_laptop () {
-                text-align: start;
-            }
 
             @include responsive.screen_small () {
                 width: 90%;
             }
-
         }
 
         p {
-            text-align: end;
             font-family: var.$font_dwo;
             color: var.$black_gray;
             font-weight: 400;
@@ -79,7 +69,6 @@
 
             @include responsive.screen_laptop () {
                 margin: 50px 0 70px 0;
-                text-align: start;
                 width: 80%;
             }
 
