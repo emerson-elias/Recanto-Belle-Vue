@@ -5,44 +5,35 @@
 
 .suites_cards {
     @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.letter_large(2%, 'Outras', 60%);
     width: 100vw;
     height: 100vh;
+    margin-bottom: 15vmax;
+    overflow: hidden;
 
-    background-color: rgba(188, 143, 143, 0);
+    @include responsive.screen_laptop () {
+        flex-direction: column;
+        height: auto;
+    }
 
     .cards_title {
         @include mixins.flexbox(relative, flex, center, start);
         flex-direction: column;
-        width: 30vw;
+        width: 40vw;
         height: 100%;
-        padding: 5vmax 0 0 5.5vmax;
-
-        background-color: rgba(102, 51, 153, 0);
+        padding: 0 0 8vmax 5vmax;
 
         @include responsive.screen_laptop () {
             align-items: center;
-            padding: 0;
-            margin-bottom: 10vmax;
-        }
-
-        @include responsive.screen_small () {
-            height: auto;
-            margin-bottom: 100px;
+            width: 90%;
+            padding: 0 0 8vmax 0;
         }
 
         h1 {
-            //   width: inherit;
+            width: 100%;
             font-family: var.$font_one;
             text-transform: uppercase;
             color: var.$primary_color;
-
-            @include responsive.screen_laptop () {
-                width: 90%;
-            }
-
-            @include responsive.screen_small () {
-                width: 85%;
-            }
         }
 
         p {
@@ -56,7 +47,7 @@
 
             @include responsive.screen_laptop () {
                 width: 80%;
-                margin: 50px 0 70px 0;
+                margin: 50px 0 10px 0;
             }
 
             @include responsive.screen_small () {
@@ -70,21 +61,19 @@
         width: 60vw;
         height: 80vh;
 
-
-        background-color: rgba(255, 217, 0, 0);
+        @include responsive.screen_laptop () {
+            width: 90%;
+        }
 
         .swiper {
             width: 100%;
             height: 100%;
-
-            background-color: rgba(102, 51, 153, 0);
 
             .card {
                 @include mixins.flexbox(relative, flex, center, center);
                 @include mixins.smoke();
                 width: 100%;
                 height: 100%;
-                background-color: rgba(255, 0, 0, 0);
                 cursor: pointer;
                 overflow: hidden;
 
@@ -94,7 +83,7 @@
                     text-transform: uppercase;
                     font-weight: 500;
                     color: var.$secondary_color;
-                    z-index: 1;
+                    z-index: 2;
                 }
 
                 img {

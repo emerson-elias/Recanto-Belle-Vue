@@ -3,14 +3,14 @@ import styles from './gallery.module.scss'
 
 import img from '/assets/img/villa-real.jpg'
 
-export default function Gallery() {
+function Gallery() {
 
     return (
         <section className={styles.gallery_container}>
 
             <div className={styles.title_gallery}>
                 <h1>Galeria</h1>
-                <p>Explore os momentos, ambientes e experiências que tornam nossa pousada inesquecível.</p>
+                <p>Explore os momentos, ambientes e experiências que tornam nosso resort inesquecível.</p>
                 <span>Belle Vue</span>
             </div>
 
@@ -27,3 +27,5 @@ export default function Gallery() {
         </section>
     )
 }
+
+export default Gallery

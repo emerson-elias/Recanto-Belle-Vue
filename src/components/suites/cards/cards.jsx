@@ -11,16 +11,16 @@ import './cards.scss'
 function Cards({ suites, onSelect }) {
     const navigate = useNavigate()
 
-    const handleSelect = (suite) => {
+    const select = (suite) => {
         onSelect(suite)
         navigate(`/suites/${suite.id}`)
     }
-    
+
     return (
         <section className='suites_cards'>
             <div className='cards_title'>
-                <h1>Outras Suítes</h1>
-                <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
+                <h1>Para todos:<br /> estilos de requinte</h1>
+                <p>Nossas suítes combinam conforto e sofisticação para todos os gostos. Escolha a sua e desfrute de um merecido descanso.</p>
             </div>
 
             <div className='boxSwiper'>
@@ -40,10 +40,10 @@ function Cards({ suites, onSelect }) {
                     modules={[Navigation, Autoplay]}
                 >
                     {suites.map((suite) => (
-                        <SwiperSlide key={suite.id}>
-                            <div className='card' onClick={() => handleSelect(suite)}>
-                                <img src={suite.image} alt={suite.title} />
+                        <SwiperSlide key={suite.id} onClick={() => select(suite)}>
+                            <div className='card' >
                                 <h1>{suite.title}</h1>
+                                <img src={suite.image} alt={suite.title} />
                             </div>
                         </SwiperSlide>
                     ))}

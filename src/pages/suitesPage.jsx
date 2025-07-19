@@ -6,6 +6,7 @@ import Banners from '../components/global/banners/banners'
 import Bio from '../components/global/bio/bio'
 import Cards from '../components/suites/cards/cards'
 import Suites from '../components/suites/suites'
+import Gallery from '../components/suites/gallery/gallery'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -35,6 +36,7 @@ function SuitesPage() {
                 name={'Reserve agora'}
             />
             <Suites suite={activeSuite} />
+            <Gallery />
             <Cards suites={suites} onSelect={setActiveSuite} />
         </>
     )
