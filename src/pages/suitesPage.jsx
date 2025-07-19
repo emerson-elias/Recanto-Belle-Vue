@@ -22,7 +22,7 @@ function SuitesPage() {
         <>
             <Banners
                 picture={activeSuite.banner}
-                letter={'r'}
+                letter={activeSuite.letter}
                 title={activeSuite.categoria}
                 subTitle={activeSuite.bannerSubtitle}
             />
