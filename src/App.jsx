@@ -17,7 +17,8 @@ function AppRoutes() {
                 <Route path="/sobre" element={<AboutPage />} />
                 <Route path="/duvidas" element={<DoubtsPage />} />
                 <Route path="/contatos" element={<ContactPage />} />
-                <Route path="/suites" element={<SuitesPage />} />     
+                <Route path="/suites" element={<SuitesPage />} />  {/* ROTA PADRÃO PARA PODER SER USADO COM ANCORA */}
+                <Route path="/suites/:id" element={<SuitesPage />} />
             </Route>
         </Routes>
     )

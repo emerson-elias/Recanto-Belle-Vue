@@ -1,10 +1,22 @@
 import { useEffect, useRef } from 'react'
+import { useLocation } from 'react-router-dom'
+
 import { gsap } from 'gsap'
 
 import './cursor.scss'
 
-export default function Cursor() {
+function Cursor() {
+    const location = useLocation()
     const cursorRef = useRef(null)
+
+    useEffect(() => {
+        // Sempre que a rota mudar, resetar escala do cursor
+        gsap.to(cursorRef.current, {
+            scale: 1,
+            duration: 0.2,
+            ease: 'power2.out'
+        })
+    }, [location])
 
     useEffect(() => {
         const cursor = cursorRef.current
@@ -79,3 +91,5 @@ export default function Cursor() {
         <section className="cursor" ref={cursorRef}></section>
     )
 }
+
+export default Cursor

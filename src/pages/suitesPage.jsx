@@ -1,42 +1,43 @@
-import { useState } from 'react'
+import { useParams } from 'react-router-dom'
+import { useState, useEffect } from 'react'
 import { suites } from '../components/suites/data/data'
 
 import Banners from '../components/global/banners/banners'
 import Bio from '../components/global/bio/bio'
-
 import Cards from '../components/suites/cards/cards'
 import Suites from '../components/suites/suites'
 
-const picture = '/assets/img/royale.jpg'
-const title = 'Reserve seu conforto'
-const caption = 'Garanta sua estadia com conforto e praticidade'
-const text = 'Escolha o quarto ideal para sua experiência à beira-mar. Pensamos em cada detalhe para oferecer o máximo de conforto, praticidade e tranquilidade durante sua hospedagem. Faça sua reserva agora e viva momentos inesquecíveis em nosso resort.'
+function SuitesPage() {
+    const { id } = useParams()
+    const [activeSuite, setActiveSuite] = useState(null)
 
-function suitesPage() {
+    useEffect(() => {
+        const found = suites.find(suite => suite.id === id)
+        setActiveSuite(found || suites[0])
+    }, [id])
 
-    const [activeSuite, setActiveSuite] = useState(suites[0])
+    if (!activeSuite) return null
 
     return (
         <>
             <Banners
-                picture={picture}
+                picture={activeSuite.banner}
                 letter={'r'}
-                title={'Suítes'}
-                subTitle={'Escolha seu conforto'}
+                title={activeSuite.categoria}
+                subTitle={activeSuite.bannerSubtitle}
             />
             <Bio
-                title={title}
-                caption={caption}
-                text={text}
+                title={activeSuite.bioTitle}
+                caption={activeSuite.bioCaption}
+                text={activeSuite.bioText}
                 link={'#'}
                 icon={'fa-regular fa-chess-rook'}
                 name={'Reserve agora'}
             />
-
             <Suites suite={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />
         </>
     )
 }
 
-export default suitesPage
+export default SuitesPage

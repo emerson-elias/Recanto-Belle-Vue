@@ -1,6 +1,7 @@
 export const suites = [
 
     {
+        // INFORMAÇÕES PARA ROONS.JSX
         id: 'Royale',
         title: 'Suíte Royale',
         subTitle: 'Acomoda até 5 pessoas | 25m² | Vista frontal para o mar com varanda privativa',
@@ -18,11 +19,21 @@ export const suites = [
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
             { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
-        ]
+        ],
+
+        // INFORMAÇÕES PARA BANNER.JSX
+        banner: '/assets/img/royale.jpg',
+        bannerSubtitle: 'Conforto e sofisticação',
+
+        // INFORMAÇÕES PARA BIO.JSX
+        bioTitle: 'Viva o luxo da Suíte Royale',
+        bioCaption: 'Uma experiência premium à beira-mar',
+        bioText: 'Com vista frontal para o oceano, varanda exclusiva e serviços de alto padrão, a Suíte Royale proporciona uma estadia memorável com todo o requinte que você merece.',
     },
 
     {
-        id: 'Villa Real',
+        // INFORMAÇÕES PARA ROONS.JSX
+        id: 'Villa-Real',
         title: 'Suíte Villa Real',
         subTitle: 'Acomoda até 4 pessoas | 22m² | Vista para o jardim e varanda com vista lateral do mar',
         image: '/assets/img/villa-real.jpg',
@@ -39,11 +50,21 @@ export const suites = [
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
             { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
-        ]
+        ],
+
+        // INFORMAÇÕES PARA BANNER.JSX
+        banner: '/assets/img/villa-real.jpg',
+        bannerSubtitle: 'Inspirada em villas',
+
+        // INFORMAÇÕES PARA BIO.JSX
+        bioTitle: 'Encante-se com a Villa Real',
+        bioCaption: 'Charme mediterrâneo e conforto contemporâneo',
+        bioText: 'Perfeita para momentos de descanso, a Suíte Villa Real oferece um ambiente espaçoso com vista para o jardim tropical e inspiração clássica para sua estadia.',
     },
 
     {
-        id: 'Brisa do Mar',
+        // INFORMAÇÕES PARA ROONS.JSX
+        id: 'Brisa-do-Mar',
         title: 'Suíte Brisa do Mar',
         subTitle: 'Ideal para casais | 20m² | Ventilação natural e vista lateral do mar',
         image: '/assets/img/brisa.jpg',
@@ -60,11 +81,21 @@ export const suites = [
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
             { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
-        ]
+        ],
+
+        // INFORMAÇÕES PARA BANNER.JSX
+        banner: '/assets/img/brisa.jpg',
+        bannerSubtitle: 'Conforto à beira-mar',
+
+        // INFORMAÇÕES PARA BIO.JSX
+        bioTitle: 'Sinta a brisa do litoral',
+        bioCaption: 'Um refúgio romântico com toque natural',
+        bioText: 'Com ventilação cruzada e atmosfera leve, a Suíte Brisa do Mar é ideal para casais que buscam tranquilidade, conexão com a natureza e conforto à beira-mar.',
     },
 
     {
-        id: 'Terraço Dourado',
+        // INFORMAÇÕES PARA ROONS.JSX
+        id: 'Terraço-Dourado',
         title: 'Suíte Terraço Dourado',
         subTitle: 'Ideal para casais | 23m² | Varanda ensolarada com vista parcial para o mar',
         image: '/assets/img/terraço-dourado.jpg',
@@ -81,10 +112,20 @@ export const suites = [
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
             { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
-        ]
+        ],
+
+        // INFORMAÇÕES PARA BANNER.JSX
+        banner: '/assets/img/terraço-dourado.jpg',
+        bannerSubtitle: 'Vista privilegiada',
+
+        // INFORMAÇÕES PARA BIO.JSX
+        bioTitle: 'Aprecie o sol da manhã',
+        bioCaption: 'Vista ensolarada e momentos inesquecíveis',
+        bioText: 'A Suíte Terraço Dourado encanta com sua ampla varanda e iluminação natural, sendo perfeita para relaxar com estilo e sofisticação.',
     },
 
     {
+        // INFORMAÇÕES PARA ROONS.JSX
         id: 'Aurora',
         title: 'Suíte Aurora',
         subTitle: 'Ideal para duas pessoas | 18m² | Ambiente minimalista com vista para o jardim',
@@ -102,11 +143,21 @@ export const suites = [
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
             { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
-        ]
+        ],
+
+        // INFORMAÇÕES PARA BANNER.JSX
+        banner: '/assets/img/aurora.jpg',
+        bannerSubtitle: 'Noites Estreladas',
+
+        // INFORMAÇÕES PARA BIO.JSX
+        bioTitle: 'Desperte com leveza na Aurora',
+        bioCaption: 'A beleza do nascer do sol em cada detalhe',
+        bioText: 'Com decoração clean e atmosfera tranquila, a Suíte Aurora oferece um espaço acolhedor para quem busca paz e conforto em meio à natureza.',
     },
 
     {
-        id: 'Monte Sereno',
+        // INFORMAÇÕES PARA ROONS.JSX
+        id: 'Monte-Sereno',
         title: 'Suíte Monte Sereno',
         subTitle: 'Ideal para casais | 21m² | Vista para o jardim com varanda tranquila',
         image: '/assets/img/monte-sereno.jpg',
@@ -123,6 +174,15 @@ export const suites = [
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
             { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
-        ]
+        ],
+
+        // INFORMAÇÕES PARA BANNER.JSX
+        banner: '/assets/img/monte-sereno.jpg',
+        bannerSubtitle: 'Vitas dos Montes',
+
+        // INFORMAÇÕES PARA BIO.JSX
+        bioTitle: 'Encontre paz no Monte Sereno',
+        bioCaption: 'Tranquilidade e charme em meio ao verde',
+        bioText: 'Com varanda voltada para o jardim e estilo rústico-chique, a Suíte Monte Sereno proporciona aconchego e desconexão com a rotina em um cenário encantador.',
     }
 ]

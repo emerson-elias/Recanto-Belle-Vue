@@ -1,31 +1,14 @@
-import { useRef, useEffect } from 'react'
 import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
-
-import gsap from 'gsap'
 
 import './suites.scss'
 
 function Suites({ suite }) {
     if (!suite) return null
 
-    const containerRef = useRef()
-
-    useEffect(() => {
-        const ctx = gsap.context(() => {
-            gsap.fromTo(
-                containerRef.current,
-                { opacity: 0, y: 50 },
-                { opacity: 1, y: 0, duration: 0.8, ease: 'power3.out' }
-            )
-        }, containerRef)
-
-        return () => ctx.revert()
-    }, [suite])
-
     return (
-        <section className='suites_container' ref={containerRef}>
+        <section className='suites_container'>
 
             <div className='boxOne'>
                 <Swiper

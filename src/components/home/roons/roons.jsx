@@ -14,32 +14,32 @@ import Button from '../../global/button/button'
 
 const cards = [
     {
-        id: '1',
+        id: 'Royale',
         image: '/assets/img/royale.jpg',
         categoria: 'Royale'
     },
     {
-        id: '2',
+        id: 'Villa-Real',
         image: '/assets/img/villa-real.jpg',
         categoria: 'Villa Real'
     },
     {
-        id: '3',
+        id: 'Brisa-do-Mar',
         image: '/assets/img/brisa.jpg',
         categoria: 'Brisa do Mar'
     },
     {
-        id: '4',
+        id: 'Terraço-Dourado',
         image: '/assets/img/terraço-dourado.jpg',
         categoria: 'Terraço Dourado'
     },
     {
-        id: '5',
+        id:'Aurora',
         image: '/assets/img/aurora.jpg',
         categoria: 'Aurora'
     },
     {
-        id: '6',
+        id: 'Monte-Sereno',
         image: '/assets/img/monte-sereno.jpg',
         categoria: 'Monte Sereno'
     },
@@ -53,8 +53,8 @@ export default function Roons() {
             <div className='infor'>
                 <h1>Escolha seu conforto</h1>
                 <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
-                
-                <Button link={'/suites'} icon={'fa-regular fa-chess-rook'} name={'Visite a essência'}/>
+
+                <Button link={'/suites'} icon={'fa-regular fa-chess-rook'} name={'Visite a essência'} />
 
                 <div className="controls_swiper">
                     <button onClick={() => swiperRef.current?.slidePrev()}>
@@ -107,7 +107,9 @@ export default function Roons() {
                     {cards.map((elements) => (
                         <SwiperSlide key={elements.id}>
                             <div className='card_box'>
-                                <Link to={'/suites'}>{elements.categoria}</Link>
+                                <Link to={`/suites/${elements.categoria}`}>
+                                    {elements.categoria}
+                                </Link>
                                 <img
                                     src={elements.image}
                                     alt={`Slide ${elements.id} do Card`}
