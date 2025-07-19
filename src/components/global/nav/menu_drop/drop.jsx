@@ -12,7 +12,7 @@ import img2 from '/assets/img/pexels-1.jpg'
 import img3 from '/assets/img/royale.jpg'
 import img4 from '/assets/img/services.jpg'
 import img5 from '/assets/img/faq_banner.jpg'
-import img6 from '/assets/img/contato.jpg'
+import img6 from '/assets/img/pexels-6.jpg'
 
 export default function Drop() {
     const { isMenuOpen, closeMenu } = useMenu()

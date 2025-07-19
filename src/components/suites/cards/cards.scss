@@ -83,6 +83,8 @@
                     text-transform: uppercase;
                     font-weight: 500;
                     color: var.$secondary_color;
+                    user-select: none;
+                    pointer-events: none;
                     z-index: 2;
                 }
 
