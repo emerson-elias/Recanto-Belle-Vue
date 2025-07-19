@@ -14,6 +14,6 @@
     will-change: transform;
 
     @include responsive.screen_laptop () {
-        animation: pan-y 120s both infinite;
+        animation: pan-x 240s both infinite;
     }
 }

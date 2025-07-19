@@ -89,7 +89,7 @@
             @include responsive.screen_laptop() {
                 width: 100%;
                 margin: 20px 0;
-                padding: 0 20px;
+                padding: 0 10px;
             }
 
             h2 {
@@ -242,7 +242,7 @@
         @include responsive.screen_laptop() {
             flex-direction: column-reverse;
             align-items: baseline;
-            padding: 20px 20px 10px 20px;
+            padding: 20px 10px 10px 10px;
         }
 
         a {

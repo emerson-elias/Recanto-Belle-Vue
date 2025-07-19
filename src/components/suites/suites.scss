@@ -1,0 +1,263 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.suites_container {
+    @include mixins.flexbox(relative, flex, space-evenly, center);
+    width: 100vw;
+    height: 120vh;
+    margin-bottom: 15vmax;
+
+    @include responsive.screen_laptop () {
+        flex-direction: column-reverse;
+        height: auto;
+        margin: 40px 0 100px 0;
+    }
+
+    @include responsive.screen_small() {
+         margin: 100px 0;
+    }
+
+    .boxOne {
+        position: relative;
+        width: 40vw;
+        height: 100%;
+        user-select: none;
+
+        @include responsive.screen_laptop() {
+            width: 90%;
+            height: 80vh;
+        }
+
+        .swiper {
+            width: 100%;
+            height: 100%;
+
+            .swiper-slide {
+                @include mixins.smoke();
+
+                .slide_img {
+                    transition: transform 0.8s ease, opacity 0.8s ease;
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                    pointer-events: none;
+                }
+
+                .slide_caption {
+                    position: absolute;
+                    top: 15%;
+                    left: 0;
+                    padding: 0 3vmax;
+                    font-family: var.$font_dwo;
+                    color: var.$secondary_color;
+                    text-transform: uppercase;
+                    z-index: 2;
+                }
+            }
+
+            .swiper-slide-active .slide_img {
+                opacity: 1;
+                transform: scale(1);
+            }
+
+            .swiper-slide-prev .slide_img,
+            .swiper-slide-next .slide_img {
+                opacity: 0.5;
+                transform: scale(0.95);
+            }
+        }
+    }
+
+    .boxTwo {
+        @include mixins.flexbox(relative, flex, center, end);
+        flex-direction: column;
+        width: 40vw;
+        padding-top: 5vmax;
+
+        @include responsive.screen_laptop () {
+            width: 90%;
+            padding: 0;
+            align-items: center;
+            margin-bottom: 70px;
+        }
+
+        h1 {
+            width: 100%;
+            font-family: var.$font_one;
+            text-align: end;
+            color: var.$primary_color;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop () {
+                text-align: start;
+                text-wrap: normal;
+            }
+        }
+
+        span {
+            width: 80%;
+            font-family: var.$font_one;
+            font-size: 1.5vmax;
+            margin: 1.2vmax 0 0 0;
+            text-align: end;
+            color: var.$black_gray;
+            font-weight: 600;
+            word-spacing: 2px;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop () {
+                text-align: start;
+                font-size: 25px;
+            }
+
+            @include responsive.screen_small() {
+                font-size: 20px;
+                margin: 20px 0;
+            }
+        }
+
+        p {
+            text-align: end;
+            font-family: var.$font_dwo;
+            color: var.$black_gray;
+            font-weight: 400;
+            line-height: 1.5;
+            margin: 2vmax 0 3vmax 0;
+
+            @include responsive.screen_laptop () {
+                margin: 50px 0 70px 0;
+                text-align: start;
+                width: 80%;
+            }
+
+            @include responsive.screen_small () {
+                margin: 50px 0;
+            }
+        }
+
+        .icons {
+            @include mixins.flexbox(relative, flex, space-between, center);
+            flex-wrap: wrap;
+            width: 100%;
+            height: auto;
+            user-select: none;
+
+            @include responsive.screen_laptop () {
+                justify-content: space-evenly;
+            }
+
+            @include responsive.screen_small() {
+                justify-content: center;
+            }
+
+            .icon-item {
+                @include mixins.flexbox(relative, flex, space-evenly, center);
+                flex-direction: column;
+                width: 10vmax;
+                height: 6vmax;
+                border: 0.1vw solid var.$black_gray;
+
+                &:nth-child(1) {
+                    border-left: none;
+                    border-top: none;
+                }
+
+                &:nth-child(2) {
+                    border-top: none;
+                    border-left: none;
+                }
+
+                &:nth-child(3) {
+                    border-top: none;
+                    border-left: none;
+                }
+
+                &:nth-child(4) {
+                    border-top: none;
+                    border-left: none;
+                    border-right: none;
+                }
+
+                &:nth-child(5) {
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: none;
+                }
+
+                &:nth-child(6) {
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: none;
+                }
+
+                &:nth-child(7) {
+                    border-top: none;
+                    border-left: none;
+                    border-bottom: none;
+                }
+
+                &:nth-child(8) {
+                    border: none;
+                }
+
+                .icon-img {
+                    width: 1.8vmax;
+
+                    @include responsive.screen_laptop () {
+                        width: 40px;
+                    }
+
+                    @include responsive.screen_small() {
+                        width: 30px;
+                    }
+                }
+
+                @include responsive.screen_laptop () {
+                    width: 200px;
+                    height: 120px;        
+                    border: none;
+                }
+
+                @include responsive.screen_small() {
+                    width: 150px;
+                }
+
+                .icon-name {
+                    font-family: var.$font_dwo;
+                    font-size: 0.7vmax;
+                    color: var.$black_gray;
+                    font-weight: 500;
+                    font-style: normal;
+                    text-align: center;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 10px;
+                    }
+                }
+            }
+        }
+
+        strong {
+            width: 100%;
+            font-family: var.$font_one;
+            font-size: 1.5vmax;
+            margin: 3vmax 0 0 0;
+            text-align: end;
+            color: var.$black_gray;
+            font-weight: 600;
+            word-spacing: 2px;
+            text-transform: uppercase;
+
+            @include responsive.screen_laptop () {
+                font-size: 25px;
+            }
+
+            @include responsive.screen_small() {
+                width: 85%;
+                font-size: 20px;
+            }
+        }
+    }
+}

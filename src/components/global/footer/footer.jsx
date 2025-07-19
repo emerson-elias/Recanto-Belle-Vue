@@ -63,7 +63,7 @@ function Footer() {
                 <div className={styles.layerThere}>
                     <h2>Informações</h2>
                     <Link to={'/sobre'} > Sobre</Link>
-                    <Link to={'/quartos'} > Suítes</Link>
+                    <Link to={'/suites'} > Suítes</Link>
                     <Link to={' '} > Serviços</Link>
                     <Link to={'/duvidas'} > Dúvidas</Link>
                     <Link to={' '} > Experiências</Link>

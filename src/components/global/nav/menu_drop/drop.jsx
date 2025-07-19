@@ -108,7 +108,7 @@ export default function Drop() {
 
             <ul>
                 {['início', 'sobre', 'suítes', 'serviços', 'dúvidas', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/sobre', '/quartos', '', '/duvidas', '/contatos']
+                    const paths = ['/', '/sobre', '/suites', '', '/duvidas', '/contatos']
 
                     return (
                         <div

@@ -1,4 +1,4 @@
-import img from '/assets/img/trilha.jpg'
+import img from '/assets/img/cont.jpg'
 import styles from './contact.module.scss'
 
 const contact = [

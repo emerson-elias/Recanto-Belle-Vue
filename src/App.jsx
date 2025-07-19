@@ -7,7 +7,7 @@ import AboutPage from './pages/aboutPage'
 import MainLayout from './layout/layout'
 import DoubtsPage from './pages/doubtsPage'
 import ContactPage from './pages/contactPage'
-import RoonsPage from './pages/roonsPage'
+import SuitesPage from './pages/suitesPage'
 
 function AppRoutes() {
     return (
@@ -17,7 +17,7 @@ function AppRoutes() {
                 <Route path="/sobre" element={<AboutPage />} />
                 <Route path="/duvidas" element={<DoubtsPage />} />
                 <Route path="/contatos" element={<ContactPage />} />
-                <Route path="/quartos" element={<RoonsPage />} />
+                <Route path="/suites" element={<SuitesPage />} />     
             </Route>
         </Routes>
     )

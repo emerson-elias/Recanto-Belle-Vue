@@ -55,7 +55,7 @@ export default function Bar() {
 
                 <div className='box_3'>
                     <div className='min'>
-                        <Link to={'/quartos'}><li>Suítes</li></Link>
+                        <Link to={'/suites'}><li>Suítes</li></Link>
                         <Link to={'/contatos'}><li>Contatos</li></Link>
                     </div>
 
