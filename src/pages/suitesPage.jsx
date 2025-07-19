@@ -35,8 +35,9 @@ function SuitesPage() {
                 icon={'fa-regular fa-chess-rook'}
                 name={'Reserve agora'}
             />
+            
             <Suites suite={activeSuite} />
-            <Gallery />
+            <Gallery suite={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />
         </>
     )

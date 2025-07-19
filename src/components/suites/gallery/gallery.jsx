@@ -1,29 +1,33 @@
+import { useNavigate } from 'react-router-dom'
 
 import styles from './gallery.module.scss'
 
-import img from '/assets/img/villa-real.jpg'
+// Gallery.jsx
+function Gallery({ suite }) {
+    const navigate = useNavigate()
 
-function Gallery() {
+    const select = () => {
+        onSelect && onSelect(suite)
+        navigate(`/suites/${suite.id}`)
+    }
 
     return (
         <section className={styles.gallery_container}>
-
             <div className={styles.title_gallery}>
-                <h1>Galeria</h1>
+                <h1>Galeria {suite.categoria}</h1>
                 <p>Explore os momentos, ambientes e experiências que tornam nosso resort inesquecível.</p>
-                <span>Belle Vue</span>
             </div>
 
             <div className={styles.box_gallery}>
-                <div className={`${styles.item} ${styles.destaque}`}>
-                    <img src={img} alt="destaque" />
-                </div>
-                <div className={styles.item}><img src={img} alt="img2" /></div>
-                <div className={styles.item}><img src={img} alt="img3" /></div>
-                <div className={styles.item}><img src={img} alt="img4" /></div>
-                <div className={styles.item}><img src={img} alt="img5" /></div>
+                {suite?.gallery?.map((img, index) => (
+                    <div key={index}
+                        className={`${styles.item} ${index === 0 ? styles.destaque : ''}`}
+                        onClick={select}
+                    >
+                        <img src={img} alt={`${suite.title} ${index + 1}`} />
+                    </div>
+                ))}
             </div>
-
         </section>
     )
 }

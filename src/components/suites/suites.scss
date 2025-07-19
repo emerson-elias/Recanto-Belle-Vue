@@ -4,10 +4,11 @@
 @use '/src/sass/variables' as var;
 
 .suites_container {
-    @include mixins.flexbox(relative, flex, space-evenly, center);
+    @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
     height: 120vh;
-    margin-bottom: 15vmax;
+    padding: 0 5vw;
+    margin: 0 0 12vmax 0;
 
     @include responsive.screen_laptop () {
         flex-direction: column-reverse;
