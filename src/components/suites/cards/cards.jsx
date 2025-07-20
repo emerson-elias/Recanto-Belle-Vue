@@ -42,7 +42,7 @@ function Cards({ suites, onSelect }) {
                     {suites.map((suite) => (
                         <SwiperSlide key={suite.id} onClick={() => select(suite)}>
                             <div className='card' >
-                                <h1>{suite.title}</h1>
+                                <h1>{suite.categoria}</h1>
                                 <img src={suite.image} alt={suite.title} />
                             </div>
                         </SwiperSlide>

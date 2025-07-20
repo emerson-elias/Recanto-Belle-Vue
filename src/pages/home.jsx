@@ -7,6 +7,7 @@ import Services from '../components/home/services/services'
 import Reviews from '../components/home/reviews/reviews'
 import Summary from '../components/home/summary/summary'
 import Differences from '../components/home/differences/differences'
+import Others from '../components/home/others/others'
 
 const title = 'Sejam bem vindos'
 const caption = 'Conforto refinado, experiência inesquecível'
@@ -33,6 +34,7 @@ function Home() {
             <Reviews />
             <Differences />
             <Summary />
+          {/*  <Others /> */}
         </>
     )
 }
