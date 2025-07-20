@@ -4,6 +4,8 @@ import 'swiper/css'
 
 import './suites.scss'
 
+import Button from '../global/button/button'
+
 function Suites({ suite }) {
     if (!suite) return null
 
@@ -47,7 +49,7 @@ function Suites({ suite }) {
                     ))}
                 </ul>
 
-                <strong>{suite.price}</strong>
+                <Button link={''} icon={' '} name={suite.price}/>
             </div>
 
         </section>
