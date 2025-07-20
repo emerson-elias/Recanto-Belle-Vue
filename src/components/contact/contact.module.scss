@@ -73,6 +73,10 @@
                     font-size: 20px;
                 }
 
+                @include responsive.screen_small () {
+                    font-size: 22px;
+                }
+
                 h1 {
                     width: 100%;
                     font-size: 3vmax;
@@ -85,7 +89,7 @@
                     }
 
                     @include responsive.screen_small () {
-                        font-size: 25px;
+                        font-size: 30px;
                     }
                 }
             }

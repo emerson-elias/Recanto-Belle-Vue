@@ -7,6 +7,7 @@ import Bio from '../components/global/bio/bio'
 import Cards from '../components/suites/cards/cards'
 import Suites from '../components/suites/suites'
 import Gallery from '../components/suites/gallery/gallery'
+import Footer from '../components/global/footer/footer'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -39,6 +40,7 @@ function SuitesPage() {
             <Suites suite={activeSuite} />
             <Gallery suite={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />
+            <Footer picture={activeSuite.banner} />
         </>
     )
 }

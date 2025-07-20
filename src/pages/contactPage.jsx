@@ -2,6 +2,7 @@
 import Contact from '../components/contact/contact'
 import Banners from '../components/global/banners/banners'
 import Bio from '../components/global/bio/bio'
+import Footer from '../components/global/footer/footer'
 
 const title = 'Gostou?'
 const caption = 'Vamos trabalhar juntos e criar experiências'
@@ -28,6 +29,7 @@ function contactPage() {
             />
 
             <Contact />
+            <Footer picture={picture}/>
         </>
     )
 }

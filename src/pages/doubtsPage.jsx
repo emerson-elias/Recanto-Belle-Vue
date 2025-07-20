@@ -1,6 +1,7 @@
 import Doubts from '../components/doubts/doubts'
 import Banners from '../components/global/banners/banners'
 import Bio from '../components/global/bio/bio'
+import Footer from '../components/global/footer/footer'
 
 const title = 'Perguntas Frequentes'
 const caption = 'Ficou com alguma dúvida? Não se preocupe'
@@ -27,6 +28,7 @@ function DoubtsPage() {
             />
 
             <Doubts />
+            <Footer picture={picture} />
         </>
     )
 }

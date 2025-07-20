@@ -49,7 +49,7 @@ function Contact() {
             window.open(mailtoLink, '_self')
         },
         4: () => {
-            window.open('https://emerson-elias.vercel.app/', '_blank')
+            window.open('https://github.com/emerson-elias', '_blank')
         },
         5: () => {
             window.open('https://www.linkedin.com/in/emerson-elias-9b2894228/', '_blank')

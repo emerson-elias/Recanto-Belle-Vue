@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import styles from './footer.module.scss'
 
-function Footer() {
+function Footer({ picture }) {
 
     const Call = () => {
         const phoneNumber = '+5598988239695'
@@ -25,7 +25,7 @@ function Footer() {
     }
 
     return (
-        <footer id='contatos' className={styles.footer_container}>
+        <footer id='contatos' className={styles.footer_container} style={{ backgroundImage: `url(${picture})` }}>
             <div className={styles.layer}>
                 <div className={styles.box}>
 
