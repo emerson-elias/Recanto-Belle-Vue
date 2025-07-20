@@ -19,8 +19,4 @@
     @include responsive.screen_tablet {
         display: none;
     }
-
-    &.colorBottom {
-        border: 0.1vw solid var.$secondary_color;
-    }
 }

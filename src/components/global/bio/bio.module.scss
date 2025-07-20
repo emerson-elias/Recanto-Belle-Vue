@@ -19,7 +19,7 @@
         flex-direction: column;
         width: 70%;
         padding: 0 3vmax;
-        border-left: 0.1vw solid var.$primary_color;
+        border-left: 0.1vw solid var.$bar;
 
         @include responsive.screen_laptop() {
             width: 80%;

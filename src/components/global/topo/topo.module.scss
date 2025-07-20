@@ -18,13 +18,6 @@
         margin-bottom: 20px;
     }
 
-    &.colorBottom {
-        i{
-            color: var.$secondary_color;
-            transition: var.$smooth;
-        }
-    }
-
     a {
         position: relative;
         width: auto;

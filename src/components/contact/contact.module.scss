@@ -58,24 +58,7 @@
                 margin: 20px 0;
             }
 
-            h1 {
-                width: 100%;
-                font-size: 3vmax;
-                font-family: var.$font_one;
-                color: var.$primary_color;
-                text-transform: uppercase;
-
-                @include responsive.screen_laptop () {
-                    font-size: 35px;
-                }
-
-                @include responsive.screen_small () {
-                    font-size: 25px;
-                }
-            }
-
             a {
-                width: 100%;
                 font-family: var.$font_one;
                 font-size: 1.5vmax;
                 margin: 1.2vmax 0 0 0;
@@ -88,6 +71,22 @@
 
                 @include responsive.screen_laptop () {
                     font-size: 20px;
+                }
+
+                h1 {
+                    width: 100%;
+                    font-size: 3vmax;
+                    font-family: var.$font_one;
+                    color: var.$primary_color;
+                    text-transform: uppercase;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 35px;
+                    }
+
+                    @include responsive.screen_small () {
+                        font-size: 25px;
+                    }
                 }
             }
         }

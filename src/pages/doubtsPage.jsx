@@ -21,7 +21,7 @@ function DoubtsPage() {
                 title={title}
                 caption={caption}
                 text={text}
-                link={' '}
+                link={'/suites'}
                 icon={'fa-regular fa-bookmark'}
                 name={' Reserve agora '} 
             />

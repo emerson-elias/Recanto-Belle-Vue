@@ -10,10 +10,6 @@ export default function Topo() {
 
         const scroll = () => {
             const scrollY = window.scrollY
-            const scrollHeight = document.documentElement.scrollHeight
-            const windowHeight = window.innerHeight
-
-            const distanceToBottom = scrollHeight - (scrollY + windowHeight)
 
             if (scrollY > 200) {
                 topo.style.opacity = '1'
@@ -21,12 +17,6 @@ export default function Topo() {
             } else {
                 topo.style.opacity = '0'
                 topo.style.pointerEvents = 'none'
-            }
-
-            if (distanceToBottom <= windowHeight) {
-                topo.classList.add(styles.colorBottom)
-            } else {
-                topo.classList.remove(styles.colorBottom)
             }
         }
 

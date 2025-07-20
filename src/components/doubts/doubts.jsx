@@ -70,7 +70,7 @@ function Doubts() {
                         <span>{elements.subTitle}</span>
                         <p>{elements.text}</p>
 
-                        <Button link={' '} icon={'fa-regular fa-bookmark'} name={' Reserve agora '} />
+                        <Button link={'/suites'} icon={'fa-regular fa-bookmark'} name={' Reserve agora '} />
                     </div>
 
                 </section>

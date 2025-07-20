@@ -63,30 +63,6 @@ function Cursor() {
         }
     }, [])
 
-    useEffect(() => {
-        const cursor = cursorRef.current
-
-        const scroll = () => {
-            const scrollY = window.scrollY
-            const scrollHeight = document.documentElement.scrollHeight
-            const windowHeight = window.innerHeight
-
-            const distanceToBottom = scrollHeight - (scrollY + windowHeight)
-
-            if (distanceToBottom <= windowHeight / 2) {
-                cursor.classList.add('colorBottom')
-            } else {
-                cursor.classList.remove('colorBottom')
-            }
-        }
-
-        window.addEventListener('scroll', scroll)
-
-        return () => {
-            window.removeEventListener('scroll', scroll)
-        }
-    }, [])
-
     return (
         <section className="cursor" ref={cursorRef}></section>
     )

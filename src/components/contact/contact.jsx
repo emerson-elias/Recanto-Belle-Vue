@@ -9,8 +9,8 @@ const contact = [
     },
     {
         id: 2,
-        title: 'Telefone',
-        contact: '+55 (94) 99117-1807',
+        title: 'Portifólio',
+        contact: 'Emerson Moraes',
     },
     {
         id: 3,
@@ -19,13 +19,13 @@ const contact = [
     },
     {
         id: 4,
-        title: 'Instagram',
-        contact: 'emersoneliass_',
+        title: 'git hub',
+        contact: 'Emerson-Elias',
     },
     {
         id: 5,
-        title: 'Localização',
-        contact: 'Marabá - PA',
+        title: 'linkedin',
+        contact: 'Emerson-Elias',
     },
 ]
 
@@ -39,8 +39,7 @@ function Contact() {
             window.open(whatsappUrl, '_blank')
         },
         2: () => {
-            const phoneNumber = '+5594991171807'
-            window.open(`tel:${phoneNumber}`, '_self')
+            window.open('https://emerson-elias.vercel.app/', '_blank')
         },
         3: () => {
             const email = 'emersonees707@gmail.com'
@@ -50,10 +49,10 @@ function Contact() {
             window.open(mailtoLink, '_self')
         },
         4: () => {
-            window.open('https://www.instagram.com/emersoneliass_', '_blank')
+            window.open('https://emerson-elias.vercel.app/', '_blank')
         },
         5: () => {
-            window.open('https://www.google.com/maps?q=Marabá,+PA', '_blank')
+            window.open('https://www.linkedin.com/in/emerson-elias-9b2894228/', '_blank')
         }
     }
 
@@ -66,11 +65,12 @@ function Contact() {
             <div className={styles.boxTwo}>
                 {contact.map((el) => (
                     <div key={el.id} className={styles.layer}>
-                        <h1>{el.title}</h1>
+
                         <a onClick={(e) => {
                             e.preventDefault()
                             if (mapId[el.id]) mapId[el.id]()
                         }}>
+                            <h1>{el.title}</h1>
                             {el.contact}
                         </a>
                     </div>

@@ -29,7 +29,7 @@
         left: 0;
         width: 25%;
         height: 0.1vw;
-        background-color: var.$primary_color;
+        background-color: var.$bar;
         pointer-events: none;
 
         @include responsive.screen_laptop () {
@@ -96,7 +96,7 @@
             width: 100%;
             margin: 1vmax 0;
             padding: 0 0 1.5vmax 0;
-            border-bottom: 0.1vw solid var.$black_gray;
+            border-bottom: 0.1vw solid var.$bar;
 
             @include responsive.screen_laptop () {
                 margin: 20px;
