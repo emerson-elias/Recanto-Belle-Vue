@@ -17,6 +17,10 @@
         margin: 150px 0;
     }
 
+    @include responsive.screen_small () {
+        margin:50px 0 170px 0;
+    }
+
     @include responsive.screen_small() {
         @include mixins.letter_large(1%, 'Dúvidas', 100%);
         overflow: visible;

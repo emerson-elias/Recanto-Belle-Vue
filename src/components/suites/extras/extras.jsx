@@ -1,14 +1,16 @@
 
+import Title from '../../global/title/title'
 import styles from './extras.module.scss'
 
 function Extras({ suites }) {
 
     return (
         <section className={styles.extras_container}>
-            <div className={styles.title}>
-                <h1>Destaques {suites.categoria}</h1>
-                <p>Descubra os destaques desta acomodação que descobrimos para você.</p>
-            </div>
+
+            <Title
+                title={`Destaques ${suites.categoria}`}
+                text={'Descubra os destaques desta acomodação que descobrimos para você.'}
+            />
 
             <div className={styles.box}>
                 <div className={styles.boxOne}

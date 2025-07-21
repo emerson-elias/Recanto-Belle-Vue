@@ -46,12 +46,8 @@
             line-height: 1.5;
 
             @include responsive.screen_laptop () {
-                width: 80%;
+                width: 90%;
                 margin: 50px 0 10px 0;
-            }
-
-            @include responsive.screen_small () {
-                width: 80%;
             }
         }
     }

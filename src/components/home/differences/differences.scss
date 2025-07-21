@@ -4,133 +4,119 @@
 @use '/src/sass/variables' as var;
 
 .differences_container {
-    @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(60%, 'única', 60%);
+    @include mixins.flexbox(relative, flex, center, center);
+    @include mixins.letter_large(50%, 'único', 65%);
+    flex-direction: column;
     width: 100vw;
-    height: 120vh;
+    padding: 0 5vw;
     overflow: hidden;
 
-    @include responsive.screen_laptop () {
-        flex-direction: column-reverse;
-        height: auto;
-        margin: 40px 0 100px 0;
-    }
-
-    .boxOne {
-        position: relative;
-        width: 60vw;
-        height: 100%;
-        user-select: none;
-
-        @include responsive.screen_laptop() {
-            width: 90%;
-            height: 80vh;
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-
-            .swiper-slide {
-                @include mixins.smoke();
-
-                .slide_img {
-                    transition: transform 0.8s ease, opacity 0.8s ease;
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    pointer-events: none;
-                }
-
-                .slide_caption {
-                    position: absolute;
-                    top: 15%;
-                    left: 0;
-                    padding: 0 3vmax;
-                    font-family: var.$font_dwo;
-                    color: var.$secondary_color;
-                    text-transform: uppercase;
-                    z-index: 2;
-                }
-            }
-
-            .swiper-slide-active .slide_img {
-                opacity: 1;
-                transform: scale(1);
-            }
-
-            .swiper-slide-prev .slide_img,
-            .swiper-slide-next .slide_img {
-                opacity: 0.5;
-                transform: scale(0.95);
-            }
-        }
-    }
-
-    .boxTwo {
-        @include mixins.flexbox(relative, flex, center, end);
-        flex-direction: column;
-        width: 50vw;
-        padding: 7vmax;
-        margin-bottom: 10vmax;
+    .box {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
+        height: 120vh;
 
         @include responsive.screen_laptop () {
-            width: 90%;
-            padding: 0;
-            align-items: center;
-            margin-bottom: 70px;
+            flex-direction: column-reverse;
+            height: auto;
+            margin: 70px 0 100px 0;
         }
 
-        h1 {
-            width: 100%;
-            font-family: var.$font_one;
-            text-align: end;
-            color: var.$primary_color;
-            text-transform: uppercase;
+        .boxOne {
+            position: relative;
+            width: 40vw;
+            height: 100%;
+            user-select: none;
 
-            @include responsive.screen_laptop () {
-                text-align: start;
-                text-wrap: normal;
+            @include responsive.screen_laptop() {
+                width: 100%;
+                height: 80vh;
+            }
+
+            .swiper {
+                width: 100%;
+                height: 100%;
+
+                .swiper-slide {
+                    @include mixins.smoke();
+
+                    .slide_img {
+                        transition: transform 0.8s ease, opacity 0.8s ease;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        pointer-events: none;
+                    }
+
+                    .slide_caption {
+                        position: absolute;
+                        top: 15%;
+                        left: 0;
+                        padding: 0 3vmax;
+                        font-family: var.$font_dwo;
+                        color: var.$secondary_color;
+                        text-transform: uppercase;
+                        z-index: 2;
+                    }
+                }
+
+                .swiper-slide-active .slide_img {
+                    opacity: 1;
+                    transform: scale(1);
+                }
+
+                .swiper-slide-prev .slide_img,
+                .swiper-slide-next .slide_img {
+                    opacity: 0.5;
+                    transform: scale(0.95);
+                }
             }
         }
 
-        span {
-            width: 100%;
-            font-family: var.$font_one;
-            font-size: 1.5vmax;
-            margin: 1.2vmax 0 0 0;
-            text-align: end;
-            color: var.$black_gray;
-            font-weight: 600;
-            word-spacing: 2px;
-            text-transform: uppercase;
+        .boxTwo {
+            @include mixins.flexbox(relative, flex, center, end);
+            flex-direction: column;
+            width: 40vw;
+            padding: 0 2vmax 0 0;
+            margin-bottom: 10vmax;
 
             @include responsive.screen_laptop () {
-                text-align: start;
-                font-size: 25px;
+                width: 100%;
+                padding: 0;
+                align-items: center;
+                margin-bottom: 70px;
             }
 
-            @include responsive.screen_small() {
-                font-size: 20px;
-            }
-        }
+            h1 {
+                width: 100%;
+                font-family: var.$font_one;
+                text-align: end;
+                color: var.$primary_color;
+                text-transform: uppercase;
 
-        p {
-            text-align: end;
-            font-family: var.$font_dwo;
-            color: var.$black_gray;
-            font-weight: 400;
-            line-height: 1.5;
-            margin: 2vmax 0 3vmax 0;
-
-            @include responsive.screen_laptop () {
-                margin: 50px 0 70px 0;
-                text-align: start;
-                width: 80%;
+                @include responsive.screen_laptop () {
+                    text-align: start;
+                    text-wrap: normal;
+                }
             }
 
-            @include responsive.screen_small () {
-                margin: 50px 0;
+            p {
+                text-align: end;
+                font-family: var.$font_dwo;
+                color: var.$black_gray;
+                font-weight: 400;
+                line-height: 1.5;
+                margin: 2vmax 0 3vmax 0;
+
+                @include responsive.screen_laptop () {
+                    margin: 50px 0 70px 0;
+                    text-align: start;
+                    width: 90%;
+                }
+
+                @include responsive.screen_small () {
+                    margin: 50px 0;
+                }
             }
         }
     }

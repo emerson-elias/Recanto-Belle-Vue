@@ -9,8 +9,10 @@
     width: 100vw;
     height: 120vh;
     padding: 0 5vw;
-    margin: 0 0 15vmax 0;
+    //  margin: 0 0 15vmax 0;
     overflow: hidden;
+
+
 
     @include responsive.screen_laptop () {
         flex-direction: column-reverse;
@@ -42,6 +44,8 @@
         @include mixins.flexbox(relative, flex, center, start);
         flex-direction: column;
         width: 40vw;
+
+        background-color: rosybrown;
 
         @include responsive.screen_laptop () {
             width: 90%;

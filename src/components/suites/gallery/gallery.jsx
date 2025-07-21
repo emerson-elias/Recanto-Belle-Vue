@@ -1,6 +1,7 @@
 import { useNavigate } from 'react-router-dom'
 
 import styles from './gallery.module.scss'
+import Title from '../../global/title/title'
 
 // Gallery.jsx
 function Gallery({ suite }) {
@@ -13,10 +14,10 @@ function Gallery({ suite }) {
 
     return (
         <section className={styles.gallery_container}>
-            <div className={styles.title_gallery}>
-                <h1>Galeria {suite.categoria}</h1>
-                <p>Explore os momentos, ambientes e experiências que tornam nosso resort inesquecível.</p>
-            </div>
+            <Title
+                title={`Galleria ${suite.categoria}`}
+                text={'Explore os momentos, ambientes e experiências que tornam nosso resort inesquecível.'}
+            />
 
             <div className={styles.box_gallery}>
                 {suite?.gallery?.map((img, index) => (

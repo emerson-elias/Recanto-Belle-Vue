@@ -3,16 +3,14 @@
 @use '/src/sass/variables' as var;
 
 .video_container {
-    @include mixins.flexbox(relative, flex, space-evenly, center);
+    @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
     height: 115vh;
+    padding: 0 5vw;
 
     @include responsive.screen_laptop() {
         flex-direction: column;
         height: auto;
-    }
-
-    @include responsive.screen_small() {
         padding: 0;
     }
 

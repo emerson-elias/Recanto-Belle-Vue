@@ -4,33 +4,41 @@
 @use '/src/sass/variables' as var;
 
 .services_container {
-    @include mixins.flexbox(relative, flex, center, center);
+    @include mixins.flexbox(relative, flex, space-evenly, center);
     flex-direction: column;
     width: 100vw;
+    padding: 0 5vw;
     overflow: hidden;
 
     .layerOne,
     .layerTwo,
     .layerThere {
         @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
         height: 120vh;
+        margin-bottom: 10vmax;
 
         @include responsive.screen_laptop () {
             height: auto;
         }
 
+        @include responsive.screen_small () {
+            margin: 0;
+        }
+
         .boxOne {
-            @include mixins.flexbox(relative, flex, center, center);
-            width: 60vw;
+            @include mixins.flexbox(relative, flex, space-between, center);
+            width: 45%;
             height: 100%;
 
             .context {
                 flex-direction: column;
-                width: 70%;
+                width: 95%;
                 margin-bottom: 10vmax;
             }
 
             h1 {
+                width: 100%;
                 margin-top: 2vmax;
                 font-family: var.$font_one;
                 text-transform: uppercase;
@@ -56,34 +64,33 @@
         }
 
         .boxTwo {
+            @include mixins.flexbox(relative, flex, center, center);
             @include mixins.smoke();
-            position: relative;
-            width: 40vw;
+            width: 45%;
             height: 120vh;
             user-select: none;
             overflow: hidden;
+            animation: pan-y 120s both infinite;
+            will-change: transform;
 
             @include responsive.screen_laptop () {
-                width: 90%;
-                height: 90vh;
-                margin: 50px 0;
-            }
-
-            @include responsive.screen_small () {
-                height: 80vh;
-            }
-
-            img {
                 width: 100%;
-                height: 100%;
-                object-fit: cover;
+                height: 80vh;
+                animation: pan-y 240s both infinite;
             }
         }
     }
 
+    .layerOne {
+        @include mixins.letter_large(50%, 'aprecie', 65%);
+    }
+
+    .layerThere {
+        @include mixins.letter_large(50%, 'Desfrute', 65%);
+    }
+
     .layerOne,
     .layerThere {
-        @include mixins.letter_large(45%, 'aprecie', 55%);
         flex-direction: row-reverse;
 
         @include responsive.screen_laptop () {
@@ -109,12 +116,7 @@
                     text-align: end;
 
                     @include responsive.screen_laptop() {
-                        width: 90%;
                         text-align: start;
-                    }
-
-                    @include responsive.screen_small() {
-                        width: 85%;
                     }
                 }
 
@@ -122,7 +124,7 @@
                     text-align: end;
 
                     @include responsive.screen_laptop () {
-                        width: 80%;
+                        width: 90%;
                         text-align: start;
                     }
                 }
@@ -131,7 +133,7 @@
     }
 
     .layerTwo {
-        @include mixins.letter_large(3%, 'saboreie', 60%);
+        @include mixins.letter_large(0, 'saboreie', 65%);
         flex-direction: row;
 
         @include responsive.screen_laptop () {
@@ -153,19 +155,9 @@
                     margin: 70px 0;
                 }
 
-                h1 {
-                    @include responsive.screen_laptop() {
-                        width: 90%;
-                    }
-
-                    @include responsive.screen_small() {
-                        width: 85%;
-                    }
-                }
-
                 p {
                     @include responsive.screen_laptop () {
-                        width: 80%;
+                        width: 90%;
                     }
                 }
             }

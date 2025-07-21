@@ -2,9 +2,10 @@ import { Swiper, SwiperSlide } from 'swiper/react'
 import { Autoplay } from 'swiper/modules'
 import 'swiper/css'
 
-import Button from '../../global/button/button'
-
 import './differences.scss'
+
+import Button from '../../global/button/button'
+import Title from '../../global/title/title'
 
 const slides = [
     {
@@ -41,28 +42,38 @@ function Differences() {
     return (
         <section className='differences_container'>
 
-            <div className='boxOne'>
-                <Swiper
-                    direction='vertical'
-                    modules={[Autoplay]}
-                    autoplay={{ delay: 2500, disableOnInteraction: false }}
-                    loop={true}
-                    slidesPerView={1}
-                    spaceBetween={0}
-                >
-                    {slides.map((slide, index) => (
-                        <SwiperSlide key={index}>
-                            <img src={slide.src} alt={`Slide ${index + 1}`} className='slide_img' />
-                            <p className='slide_caption'>{slide.description}</p>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+            <Title
+                title={'Diferênciais únicos'}
+                text={'Em nosso resort temos o carinho e atenção para deixar tudo o mais inesquecível.'}
+                row={'row'}
+            />
 
-            <div className='boxTwo'>
-                <h1>Diferenciais:<br /> Permita-se relaxar</h1>
-                <p>O resort oferece mais do que hospedagem: entrega lazer, conforto e experiências completas para sua família e seu pet. Gastronomia variada, atividades para todas as idades e contato direto com a natureza.</p>
-                <Button link={'/suites'} icon={'fa-regular fa-bookmark'} name={' Reserve agora '} />
+            <div className='box'>
+
+                <div className='boxOne'>
+                    <Swiper
+                        direction='vertical'
+                        modules={[Autoplay]}
+                        autoplay={{ delay: 2500, disableOnInteraction: false }}
+                        loop={true}
+                        slidesPerView={1}
+                        spaceBetween={0}
+                    >
+                        {slides.map((slide, index) => (
+                            <SwiperSlide key={index}>
+                                <img src={slide.src} alt={`Slide ${index + 1}`} className='slide_img' />
+                                <p className='slide_caption'>{slide.description}</p>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
+
+                <div className='boxTwo'>
+                    <h1>Aventure-se:<br /> Permita-se relaxar</h1>
+                    <p>O resort oferece mais do que hospedagem: entrega lazer, conforto e experiências completas para sua família e seu pet. Gastronomia variada, atividades para todas as idades e contato direto com a natureza.</p>
+                    <Button link={'/suites'} icon={'fa-regular fa-bookmark'} name={' Reserve agora '} />
+                </div>
+
             </div>
 
         </section>

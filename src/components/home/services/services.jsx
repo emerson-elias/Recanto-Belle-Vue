@@ -1,14 +1,10 @@
-import { Link } from 'react-router-dom'
 
 import styles from './services.module.scss'
-
-import adega from '/assets/img/beer.jpg'
-import buffet from '/assets/img/buffet.jpg'
-import services from '/assets/img/services.jpg'
 
 import Circle from '../../global/svg/circle' /* AINDA PENSANDO ONDE IREI USAR ESSE SVG */
 
 import Button from '../../global/button/button'
+import Title from '../../global/title/title'
 
 const service = [
     {
@@ -18,7 +14,7 @@ const service = [
         description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
         link: ' ',
         icon: 'fa-solid fa-wine-bottle',
-        img: adega,
+        img:  '/assets/img/beer.jpg',
         alt: 'BANNER ADEGA',
         btnName: 'Visite a essência'
     },
@@ -29,7 +25,7 @@ const service = [
         description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
         link: ' ',
         icon: 'fa-solid fa-utensils',
-        img: buffet,
+        img: '/assets/img/buffet.jpg',
         alt: 'BANNER BUFFET',
         btnName: 'Visite a essência'
     },
@@ -40,7 +36,7 @@ const service = [
         description: 'Do atendimento personalizado às atividades de lazer, nossa pousada oferece serviços que transformam sua estadia em momentos inesquecíveis.',
         link: ' ',
         icon: "fa-solid fa-bell-concierge",
-        img: services,
+        img: '/assets/img/services.jpg',
         alt: 'BANNER SERVIÇOS',
         btnName: 'Visite a essência'
     }
@@ -50,7 +46,13 @@ function Services() {
     return (
         <section className={styles.services_container}>
 
-            {service.map(({ id, layer, title, description, link, icon, img, alt, btnName }) => (
+            <Title
+                title={'Serviços Oferecidos'}
+                text={'Oferecemos serviços exclusivos para tornar sua experiência inesquecível'}
+                row={'row'}
+            />
+
+            {service.map(({ id, layer, title, description, link, icon, img, btnName }) => (
 
                 <div key={id} className={styles[layer]}>
                     <div className={styles.boxOne}>
@@ -62,9 +64,7 @@ function Services() {
                         </div>
                     </div>
 
-                    <div className={styles.boxTwo}>
-                        <img src={img} alt={alt} />
-                    </div>
+                    <div className={styles.boxTwo} style={{ backgroundImage: `url(${img})` }} ></div>
                     {/* <Circle name={title}/> */}
                 </div>
             ))}

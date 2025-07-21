@@ -8,7 +8,7 @@
     @include mixins.letter_large(1%, 'refúgio', 68%);
     width: 100vw;
     height: 115vh;
-    margin-top: 15vmax;
+    margin-top: 5vmax;
     overflow: hidden;
 
     @include responsive.screen_laptop {
@@ -93,6 +93,10 @@
                     font-size: 20px;
                 }
 
+                @include responsive.screen_small () {
+                    margin: 10px 0;
+                }
+
                 &::after {
                     content: '';
                     position: absolute;
@@ -134,7 +138,7 @@
         }
 
         @include responsive.screen_small () {
-            width: 100%;
+            width: 90%;
             height: 500px;
         }
 
