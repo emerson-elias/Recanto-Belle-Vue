@@ -3,17 +3,19 @@
 @use '/src/sass/variables' as var;
 
 .contact_container {
-    @include mixins.flexbox(relative, flex, space-evenly, center);
+    @include mixins.flexbox(relative, flex, space-between, center);
     @include mixins.letter_large(1%, 'socialize', 74%);
     flex-direction: row-reverse;
     width: 100vw;
     height: 120vh;
+    padding: 0 5vw;
     margin: 0 0 15vmax 0;
     overflow: hidden;
 
     @include responsive.screen_laptop () {
         flex-direction: column-reverse;
         height: auto;
+        padding: 0;
     }
 
     .boxOne {

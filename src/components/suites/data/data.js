@@ -5,7 +5,6 @@ export const suites = [
         id: 'Royale',
         title: 'Suíte Royale',
         subTitle: 'Acomoda até 5 pessoas | 25m² | Vista frontal para o mar com varanda privativa',
-        image: '/assets/img/royale.jpg',
         gallery: [
             '/assets/img/royale-1.jpg',
             '/assets/img/royale-2.jpg',
@@ -36,6 +35,26 @@ export const suites = [
         bioTitle: 'Viva o luxo da Suíte Royale',
         bioCaption: 'Uma experiência premium à beira-mar',
         bioText: 'Com vista frontal para o oceano, varanda exclusiva e serviços de alto padrão, a Suíte Royale proporciona uma estadia memorável com todo o requinte que você merece.',
+
+        //INFORMAÇÕES PARA EXTRAS
+        emphasis: [
+            {
+                title: 'Banheira panorâmica com vista privativa',
+                text: 'A suíte conta com um amplo banheiro com banheira posicionada em frente a uma janela de vidro, oferecendo uma vista deslumbrante do mar para momentos únicos de relaxamento.'
+            },
+            {
+                title: 'Varanda exclusiva frente mar',
+                text: 'Relaxe ao som das ondas na sua varanda particular com vista direta para o oceano, perfeita para cafés da manhã ou noites estreladas.'
+            },
+            {
+                title: 'Espaço ideal para famílias',
+                text: 'Com capacidade para até cinco pessoas, a Suíte Royale garante conforto e privacidade em ambientes amplos e bem distribuídos.'
+            },
+            {
+                title: 'Design sofisticado',
+                text: 'Ambientes planejados com decoração moderna e elegante para uma estadia luxuosa em todos os detalhes.'
+            }
+        ]
     },
 
     {
@@ -43,7 +62,6 @@ export const suites = [
         id: 'Villa-Real',
         title: 'Suíte Villa Real',
         subTitle: 'Acomoda até 4 pessoas | 22m² | Vista para o jardim e varanda com vista lateral do mar',
-        image: '/assets/img/villa-real.jpg',
         gallery: [
             '/assets/img/villa-1.jpg',
             '/assets/img/villa-2.jpg',
@@ -74,6 +92,26 @@ export const suites = [
         bioTitle: 'Encante-se com a Villa Real',
         bioCaption: 'Charme mediterrâneo e conforto contemporâneo',
         bioText: 'Perfeita para momentos de descanso, a Suíte Villa Real oferece um ambiente espaçoso com vista para o jardim tropical e inspiração clássica para sua estadia.',
+
+        //INFORMAÇÕES PARA EXTRAS
+        emphasis: [
+            {
+                title: 'Estilo mediterrâneo acolhedor',
+                text: 'Inspirada nas vilas europeias, a suíte oferece charme clássico aliado ao conforto contemporâneo.'
+            },
+            {
+                title: 'Vista para o jardim com pôr do sol',
+                text: 'A varanda permite contemplar o entardecer em meio à natureza tropical da região.'
+            },
+            {
+                title: 'Ambiente espaçoso e funcional',
+                text: 'Ideal para famílias ou grupos menores que buscam um refúgio tranquilo e confortável.'
+            },
+            {
+                title: 'Detalhes que encantam',
+                text: 'Do mobiliário à iluminação, cada detalhe foi pensado para criar uma atmosfera acolhedora e charmosa.'
+            }
+        ]
     },
 
     {
@@ -81,7 +119,6 @@ export const suites = [
         id: 'Brisa-do-Mar',
         title: 'Suíte Brisa do Mar',
         subTitle: 'Ideal para casais | 20m² | Ventilação natural e vista lateral do mar',
-        image: '/assets/img/brisa.jpg',
         gallery: ['/assets/img/brisa.jpg', '/assets/img/brisa-1.jpg', '/assets/img/brisa-2.jpg', '/assets/img/brisa-3.jpg', '/assets/img/brisa-4.jpg'],
         categoria: 'Brisa do Mar',
         description: 'A Suíte Brisa do Mar é ideal para casais em busca de um refúgio romântico. Com ventilação natural e vista para o litoral, proporciona uma atmosfera leve, acolhedora e conectada com a natureza ao som das ondas do mar.',
@@ -105,6 +142,26 @@ export const suites = [
         bioTitle: 'Sinta a brisa do litoral',
         bioCaption: 'Um refúgio romântico com toque natural',
         bioText: 'Com ventilação cruzada e atmosfera leve, a Suíte Brisa do Mar é ideal para casais que buscam tranquilidade, conexão com a natureza e conforto à beira-mar.',
+
+        //INFORMAÇÕES PARA EXTRAS
+        emphasis: [
+            {
+                title: 'Ventilação natural e brisa constante',
+                text: 'A arquitetura da suíte favorece a circulação do ar e o frescor do litoral, sem abrir mão do conforto.'
+            },
+            {
+                title: 'Ambiente romântico à beira-mar',
+                text: 'O cenário ideal para casais que desejam aproveitar momentos tranquilos e especiais.'
+            },
+            {
+                title: 'Conexão com a natureza',
+                text: 'Desfrute da vista lateral do mar e da proximidade com a praia em um ambiente leve e sereno.'
+            },
+            {
+                title: 'Decoração com elementos naturais',
+                text: 'A madeira, os tecidos leves e os tons claros criam uma atmosfera suave e harmoniosa.'
+            }
+        ]
     },
 
     {
@@ -112,7 +169,6 @@ export const suites = [
         id: 'Terraço-Dourado',
         title: 'Suíte Terraço Dourado',
         subTitle: 'Ideal para casais | 23m² | Varanda ensolarada com vista parcial para o mar',
-        image: '/assets/img/terraço-dourado.jpg',
         gallery: [
             '/assets/img/terraço-1.jpg',
             '/assets/img/terraço-2.jpg',
@@ -142,6 +198,26 @@ export const suites = [
         bioTitle: 'Aprecie o sol da manhã',
         bioCaption: 'Vista ensolarada e momentos inesquecíveis',
         bioText: 'A Suíte Terraço Dourado encanta com sua ampla varanda e iluminação natural, sendo perfeita para relaxar com estilo e sofisticação.',
+
+        //INFORMAÇÕES PARA EXTRAS
+        emphasis: [
+            {
+                title: 'Varanda ensolarada e espaçosa',
+                text: 'A suíte oferece um terraço ideal para apreciar a luz natural e relaxar em qualquer momento do dia.'
+            },
+            {
+                title: 'Vista parcial para o mar',
+                text: 'Desfrute de uma vista encantadora com o brilho do sol refletido nas águas do oceano.'
+            },
+            {
+                title: 'Toques de elegância em cada canto',
+                text: 'Design moderno com atenção aos detalhes para uma estadia sofisticada e confortável.'
+            },
+            {
+                title: 'Ideal para casais',
+                text: 'Espaço pensado para duas pessoas que buscam tranquilidade e charme em um ambiente exclusivo.'
+            }
+        ]
     },
 
     {
@@ -149,7 +225,6 @@ export const suites = [
         id: 'Aurora',
         title: 'Suíte Aurora',
         subTitle: 'Ideal para duas pessoas | 18m² | Ambiente minimalista com vista para o jardim',
-        image: '/assets/img/aurora.jpg',
         gallery: [
             '/assets/img/aurora-1.jpg',
             '/assets/img/aurora-2.jpg',
@@ -179,6 +254,26 @@ export const suites = [
         bioTitle: 'Desperte com leveza na Aurora',
         bioCaption: 'A beleza do nascer do sol em cada detalhe',
         bioText: 'Com decoração clean e atmosfera tranquila, a Suíte Aurora oferece um espaço acolhedor para quem busca paz e conforto em meio à natureza.',
+
+        //INFORMAÇÕES PARA EXTRAS
+        emphasis: [
+            {
+                title: 'Decoração inspirada no nascer do sol',
+                text: 'Tons suaves e iluminação natural proporcionam um ambiente de paz e renovação.'
+            },
+            {
+                title: 'Ambiente minimalista e funcional',
+                text: 'Perfeito para quem valoriza simplicidade, equilíbrio e conforto.'
+            },
+            {
+                title: 'Vista relaxante para o jardim',
+                text: 'Acorde com o som dos pássaros e aprecie o verde ao redor desde a sua varanda.'
+            },
+            {
+                title: 'Ideal para relaxar e desconectar',
+                text: 'A atmosfera tranquila convida ao descanso e ao bem-estar em meio à natureza.'
+            }
+        ]
     },
 
     {
@@ -186,7 +281,6 @@ export const suites = [
         id: 'Monte-Sereno',
         title: 'Suíte Monte Sereno',
         subTitle: 'Ideal para casais | 21m² | Vista para o jardim com varanda tranquila',
-        image: '/assets/img/monte-sereno.jpg',
         gallery: [
             '/assets/img/monte-1.jpg',
             '/assets/img/monte-2.jpg',
@@ -216,5 +310,25 @@ export const suites = [
         bioTitle: 'Encontre paz no Monte Sereno',
         bioCaption: 'Tranquilidade e charme em meio ao verde',
         bioText: 'Com varanda voltada para o jardim e estilo rústico-chique, a Suíte Monte Sereno proporciona aconchego e desconexão com a rotina em um cenário encantador.',
+
+        //INFORMAÇÕES PARA EXTRAS
+        emphasis: [
+            {
+                title: 'Estilo rústico-chique acolhedor',
+                text: 'Combinando madeira, tecidos naturais e luz suave, a suíte oferece um verdadeiro refúgio no campo.'
+            },
+            {
+                title: 'Varanda com vista para o jardim',
+                text: 'Aprecie a tranquilidade e a beleza do verde em um espaço projetado para desacelerar.'
+            },
+            {
+                title: 'Conexão com a natureza',
+                text: 'Ideal para casais que desejam um momento de desconexão e reconexão com o essencial.'
+            },
+            {
+                title: 'Ambiente silencioso e privativo',
+                text: 'Desfrute da serenidade em um espaço que convida à contemplação e ao descanso pleno.'
+            }
+        ]
     }
 ]

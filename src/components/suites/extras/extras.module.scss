@@ -1,0 +1,139 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.extras_container {
+    @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.letter_large(1%, 'beneficios', 74%);
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5vw;
+    margin: 12vmax 0;
+    overflow: hidden;
+
+    .title {
+        @include mixins.flexbox(relative, flex, start, start);
+        flex-direction: column;
+        width: 100%;
+
+        @include responsive.screen_small() {
+            justify-content: center;
+            align-items: center;
+        }
+
+        h1 {
+            width: 100%;
+            color: var.$primary_color;
+            font-family: var.$font_one;
+            text-transform: uppercase;
+        }
+
+        p {
+            width: 50%;
+            margin-top: 2vmax;
+            font-family: var.$font_dwo;
+            font-weight: 300;
+            color: var.$black_gray;
+            line-height: 1.3;
+
+            @include responsive.screen_laptop() {
+                width: 70%;
+            }
+
+            @include responsive.screen_small() {
+                width: 80%;
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .box {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        flex-direction: row-reverse;
+        width: 100%;
+        height: 100%;
+
+        @include responsive.screen_laptop() {
+            flex-direction: column-reverse
+        }
+
+        .boxOne {
+            @include mixins.flexbox(relative, flex, center, center);
+            @include mixins.smoke();
+            width: 45%;
+            height: 120vh;
+            user-select: none;
+            overflow: hidden;
+            animation: pan-y 120s both infinite;
+            will-change: transform;
+
+            @include responsive.screen_laptop () {
+                width: 100%;
+                height: 80vh;
+                animation: pan-y 240s both infinite;
+            }
+        }
+
+        .boxTwo {
+            @include mixins.flexbox(relative, flex, space-evenly, center);
+            flex-wrap: wrap;
+            width: 50%;
+            margin-bottom: 2vmax;
+
+            @include responsive.screen_laptop() {
+                width: 95%;
+                align-items: start;
+                margin: 50px 0;
+            }
+
+            @include responsive.screen_small() {
+                flex-direction: column;
+            }
+
+            .layer {
+                width: 20vw;
+                height: 16vw;
+                margin: 1vmax;
+
+                @include responsive.screen_laptop() {
+                    width: 45%;
+                    height: auto;
+                    margin: 20px 0;
+                }
+
+                @include responsive.screen_small() {
+                    width: 100%;
+                }
+
+                h2 {
+                    margin-bottom: 1vmax;
+                    font-size: 2.2vmax;
+                    color: var.$primary_color;
+                    font-family: var.$font_one;
+                    word-spacing: 2px;
+                    text-transform: uppercase;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 25px;
+                    }
+
+                    @include responsive.screen_small() {
+                        width: 100%;
+                    }
+                }
+
+                p {
+                    font-family: var.$font_dwo;
+                    color: var.$black_gray;
+                    font-weight: 400;
+                    line-height: 1.5;
+
+                    @include responsive.screen_small() {
+                       margin-top: 15px;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -43,7 +43,7 @@ function Cards({ suites, onSelect }) {
                         <SwiperSlide key={suite.id} onClick={() => select(suite)}>
                             <div className='card' >
                                 <h1>{suite.categoria}</h1>
-                                <img src={suite.image} alt={suite.title} />
+                                <img src={suite.banner} alt={suite.title} />
                             </div>
                         </SwiperSlide>
                     ))}

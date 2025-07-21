@@ -8,6 +8,7 @@ import Cards from '../components/suites/cards/cards'
 import Suites from '../components/suites/suites'
 import Gallery from '../components/suites/gallery/gallery'
 import Footer from '../components/global/footer/footer'
+import Extras from '../components/suites/extras/extras'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -18,7 +19,7 @@ function SuitesPage() {
         setActiveSuite(found || suites[0])
     }, [id])
 
-    if (!activeSuite) return null
+    if (!activeSuite) return
 
     return (
         <>
@@ -36,9 +37,10 @@ function SuitesPage() {
                 icon={'fa-regular fa-chess-rook'}
                 name={'Reserve agora'}
             />
-            
+
             <Suites suite={activeSuite} />
             <Gallery suite={activeSuite} />
+            <Extras suites={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />
             <Footer picture={activeSuite.banner} />
         </>
