@@ -62,7 +62,7 @@ function Differences() {
             <div className='boxTwo'>
                 <h1>Diferenciais:<br /> Permita-se relaxar</h1>
                 <p>O resort oferece mais do que hospedagem: entrega lazer, conforto e experiências completas para sua família e seu pet. Gastronomia variada, atividades para todas as idades e contato direto com a natureza.</p>
-                <Button link={'#'} icon={'fa-regular fa-bookmark'} name={' Reserve agora '} />
+                <Button link={'/suites'} icon={'fa-regular fa-bookmark'} name={' Reserve agora '} />
             </div>
 
         </section>
