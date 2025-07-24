@@ -1,6 +1,7 @@
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import styles from './experience.module.scss'
+import Title from '../../global/title/title'
 
 const experinceCategories = [
     {
@@ -93,29 +94,39 @@ export default function Roons() {
 
     return (
         <section className={styles.experince_container}>
-            <div className={styles.boxOne}>
-                <h1>Experiências</h1>
 
-                <p>Cada detalhe te convida ao descanso, à contemplação e à conexão com a natureza.</p>
+            <Title
+                title={'Experiências infinitas'}
+                text={'Presencie a essência de um lugar que jamais você irá esquecer'}
+                row={''}
+            />
 
-                <div className={styles.cat_experince}>
-                    {experinceCategories.map((experince, index) => (
-                        <span
-                            key={index}
-                            onMouseEnter={() => mouseEnter(experince.image, experince.description)}
-                        >
-                            {experince.name}
-                        </span>
-                    ))}
+            <div className={styles.box}>
+                <div className={styles.boxOne}>
+                    <h1>Vivêncie</h1>
+
+                    <p>Cada detalhe te convida ao descanso, à contemplação e à conexão com a natureza.</p>
+
+                    <div className={styles.cat_experince}>
+                        {experinceCategories.map((experince, index) => (
+                            <span
+                                key={index}
+                                onMouseEnter={() => mouseEnter(experince.image, experince.description)}
+                            >
+                                {experince.name}
+                            </span>
+                        ))}
+                    </div>
+                </div>
+
+                <div className={styles.boxTwo}>
+                    <img ref={imageRef} src={currentImage} alt="Quartos" />
+                    <div ref={descriptionRef} className={styles.description}>
+                        <p>{currentDescription}</p>
+                    </div>
                 </div>
             </div>
 
-            <div className={styles.boxTwo}>
-                <img ref={imageRef} src={currentImage} alt="Quartos" />
-                <div ref={descriptionRef} className={styles.description}>
-                    <p>{currentDescription}</p>
-                </div>
-            </div>
         </section>
     )
 }

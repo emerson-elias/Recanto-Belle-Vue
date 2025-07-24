@@ -4,9 +4,10 @@
 @use '/src/sass/variables' as var;
 
 .faq_container {
-    @include mixins.flexbox(relative, flex, space-evenly, center);
+    @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
     height: 120vh;
+    padding: 0 5vw;
     margin-bottom: 15vmax;
     overflow: hidden;
 
@@ -37,6 +38,7 @@
             height: 100%;
             object-fit: cover;
             pointer-events: none;
+            border-radius: 1vmax;
         }
     }
 

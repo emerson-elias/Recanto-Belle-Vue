@@ -7,13 +7,13 @@
     @include mixins.flexbox(relative, flex, space-between, center);
     @include mixins.letter_large(2%, 'Outras', 60%);
     width: 100vw;
-    height: 100vh;
+    padding: 0 5vw;
     margin-bottom: 15vmax;
     overflow: hidden;
 
     @include responsive.screen_laptop () {
         flex-direction: column;
-        height: auto;
+        padding: 0;
     }
 
     .cards_title {
@@ -21,7 +21,6 @@
         flex-direction: column;
         width: 40vw;
         height: 100%;
-        padding: 0 0 8vmax 5vmax;
 
         @include responsive.screen_laptop () {
             align-items: center;
@@ -55,7 +54,11 @@
     .boxSwiper {
         position: relative;
         width: 60vw;
-        height: 80vh;
+        height: 110vh;
+
+        @include responsive.screen_laptop () {
+            height: 80vh;
+        }
 
         @include responsive.screen_laptop () {
             width: 90%;
@@ -64,6 +67,7 @@
         .swiper {
             width: 100%;
             height: 100%;
+            border-radius: 1vmax;
 
             .card {
                 @include mixins.flexbox(relative, flex, center, center);
@@ -71,6 +75,7 @@
                 width: 100%;
                 height: 100%;
                 cursor: pointer;
+                border-radius: 1vmax;
                 overflow: hidden;
 
                 h1 {

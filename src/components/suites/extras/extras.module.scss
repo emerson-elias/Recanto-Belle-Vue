@@ -29,6 +29,7 @@
             height: 120vh;
             user-select: none;
             overflow: hidden;
+            border-radius: 1vmax;
             animation: pan-y 120s both infinite;
             will-change: transform;
 
@@ -40,7 +41,7 @@
         }
 
         .boxTwo {
-            @include mixins.flexbox(relative, flex, space-evenly, start);
+            @include mixins.flexbox(relative, flex, space-between, start);
             flex-wrap: wrap;
             width: 50%;
             margin-bottom: 5vmax;
@@ -56,7 +57,7 @@
 
             .layer {
                 width: 20vw;
-                margin: 1vmax;
+                margin: 1vmax 1vmax 4vmax 0;
 
                 @include responsive.screen_laptop() {
                     width: 45%;
@@ -91,7 +92,7 @@
                     line-height: 1.5;
 
                     @include responsive.screen_small() {
-                       margin-top: 15px;
+                        margin-top: 15px;
                     }
                 }
             }

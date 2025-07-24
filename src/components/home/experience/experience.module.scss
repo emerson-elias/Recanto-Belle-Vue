@@ -4,170 +4,179 @@
 @use '/src/sass/variables' as var;
 
 .experince_container {
-    @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(1%, 'refúgio', 68%);
+    @include mixins.flexbox(relative, flex, center, center);
+    @include mixins.letter_large(1%, 'refúgio', 75%);
+    flex-direction: column;
     width: 100vw;
-    height: 115vh;
+    height: auto;
+    padding: 0 5vmax;
     margin-top: 5vmax;
     overflow: hidden;
 
     @include responsive.screen_laptop {
-        flex-direction: column;
-        height: auto;
         margin: 50px 0;
     }
-
-    .boxOne {
-        @include mixins.flexbox(relative, flex, center, center);
-        flex-direction: column;
-        width: 40vw;
-        height: 100%;
-        padding: 0 0 7vmax 0;
-
-        @include responsive.screen_laptop {
-            width: 100%;
-            height: auto;
-        }
-
-        @include responsive.screen_small {
-            padding: 0;
-        }
-
-        h1 {
-            width: 75%;
-            margin: 6vmax 0 0 0;
-            font-family: var.$font_one;
-            text-transform: uppercase;
-            color: var.$primary_color;
-
-            @include responsive.screen_laptop () {
-                width: 90%;
-            }
-        }
-
-        p {
-            width: 75%;
-            margin: 2.5vmax 0;
-            font-family: var.$font_dwo;
-            color: var.$black_gray;
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.5;
-
-            @include responsive.screen_laptop () {
-                width: 80%;
-                margin: 50px 0 70px 0;
-            }
-
-            @include responsive.screen_small () {
-                margin: 50px 0;
-            }
-        }
-
-        .cat_experince {
-            @include mixins.flexbox(relative, flex, space-around, stretch);
-            flex-direction: column;
-            width: 75%;
-
-            @include responsive.screen_laptop () {
-                width: 80%;
-            }
-
-            @include responsive.screen_small () {
-                margin-top: 20px;
-            }
-
-            span {
-                position: relative;
-                margin: 0.5vmax 0;
-                padding: 0.5vmax 0;
-                font-size: 1.3vmax;
-                font-family: var.$font_dwo;
-                color: var.$black_gray;
-                transition: var.$smooth;
-                text-transform: uppercase;
-                font-weight: 400;
-                cursor: pointer;
-
-                @include responsive.screen_laptop () {
-                    font-size: 20px;
-                }
-
-                @include responsive.screen_small () {
-                    margin: 10px 0;
-                }
-
-                &::after {
-                    content: '';
-                    position: absolute;
-                    top: 80%;
-                    left: 0;
-                    width: 0;
-                    height: 0.2vw;
-                    background-color: var.$primary_color;
-                    transition: var.$smooth;
-                    pointer-events: none;
-                    z-index: -1;
-                }
-
-                &:hover::after {
-                    width: 95%;
-                    transition: var.$smooth;
-                }
-
-                &:hover {
-                    font-weight: bold;
-                    transition: var.$smooth;
-                }
-            }
-        }
+    
+    @include responsive.screen_small {
+        padding: 0 20px;
     }
 
-    .boxTwo {
-        @include mixins.smoke();
-        position: relative;
-        width: 60vw;
-        height: 100%;
-        background-color: var.$secondary_color;
-        user-select: none;
-        overflow: hidden;
+    .box {
+        @include mixins.flexbox(relative, flex, space-between, center);
 
         @include responsive.screen_laptop {
-            width: 90%;
-            margin: 70px 0;
+            flex-direction: column;
         }
 
-        @include responsive.screen_small () {
-            width: 90%;
-            height: 500px;
-        }
-
-        img {
-            position: relative;
-            width: 100%;
+        .boxOne {
+            @include mixins.flexbox(relative, flex, center, start);
+            flex-direction: column;
+            width: 35vw;
             height: 100%;
-            object-fit: cover;
-        }
+            padding-bottom: 5vmax;
 
-        .description {
-            @include mixins.flexbox(absolute, flex, end, end);
-            top: 13%;
-            left: 0;
-            width: 100%;
-            z-index: 3;
-            padding: 0 4vmax;
+            @include responsive.screen_laptop {
+                width: 100%;
+                height: auto;
+            }
+
+            @include responsive.screen_small {
+                padding: 0;
+            }
+
+            h1 {
+                width: 75%;
+                margin: 6vmax 0 0 0;
+                font-family: var.$font_one;
+                text-transform: uppercase;
+                color: var.$primary_color;
+
+                @include responsive.screen_laptop () {
+                    width: 90%;
+                }
+            }
 
             p {
-                width: 50%;
-                text-align: end;
+                width: 75%;
+                margin: 2.5vmax 0;
                 font-family: var.$font_dwo;
-                color: var.$secondary_color;
-                text-transform: uppercase;
+                color: var.$black_gray;
                 font-weight: 400;
                 font-style: italic;
+                line-height: 1.5;
+
+                @include responsive.screen_laptop () {
+                    width: 80%;
+                    margin: 50px 0 70px 0;
+                }
 
                 @include responsive.screen_small () {
-                    width: 90%;
+                    margin: 50px 0;
+                }
+            }
+
+            .cat_experince {
+                @include mixins.flexbox(relative, flex, space-around, stretch);
+                flex-direction: column;
+                width: 75%;
+
+                @include responsive.screen_laptop () {
+                    width: 80%;
+                }
+
+                @include responsive.screen_small () {
+                    margin-top: 20px;
+                }
+
+                span {
+                    position: relative;
+                    margin: 0.5vmax 0;
+                    padding: 0.5vmax 0;
+                    font-size: 1.3vmax;
+                    font-family: var.$font_dwo;
+                    color: var.$black_gray;
+                    transition: var.$smooth;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    cursor: pointer;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 20px;
+                        margin: 10px 0;
+                    }
+
+                    &::after {
+                        content: '';
+                        position: absolute;
+                        top: 80%;
+                        left: 0;
+                        width: 0;
+                        height: 0.2vw;
+                        background-color: var.$primary_color;
+                        transition: var.$smooth;
+                        pointer-events: none;
+                        z-index: -1;
+                    }
+
+                    &:hover::after {
+                        width: 95%;
+                        transition: var.$smooth;
+                    }
+
+                    &:hover {
+                        font-weight: bold;
+                        transition: var.$smooth;
+                    }
+                }
+            }
+        }
+
+        .boxTwo {
+            @include mixins.smoke();
+            position: relative;
+            width: 55vw;
+            height: 115vh;
+            border-radius: 1vmax;
+            background-color: var.$secondary_color;
+            user-select: none;
+            overflow: hidden;
+
+            @include responsive.screen_laptop {
+                width: 100%;
+                margin: 70px 0;
+            }
+
+            @include responsive.screen_small () {
+                height: 500px;
+            }
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+
+            .description {
+                @include mixins.flexbox(absolute, flex, end, end);
+                top: 13%;
+                left: 0;
+                width: 100%;
+                z-index: 3;
+                padding: 0 4vmax;
+
+                p {
+                    width: 50%;
+                    text-align: end;
+                    font-family: var.$font_dwo;
+                    color: var.$secondary_color;
+                    text-transform: uppercase;
+                    font-weight: 400;
+                    font-style: italic;
+
+                    @include responsive.screen_small () {
+                        width: 90%;
+                    }
                 }
             }
         }
