@@ -47,7 +47,7 @@ function Footer({ picture }) {
                         <div className={styles.row}>
 
                             <div className={styles.midia}>
-                                <a>Contate</a>
+                                <a>Contate-me</a>
                                 <a onClick={redirectToWhatsApp}>WhatsApp</a>
                                 <a onClick={Call}>Telefone</a>
                                 <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>Instagram</a>
