@@ -304,7 +304,7 @@ export const suites = [
 
         // INFORMAÇÕES PARA BANNER.JSX
         banner: '/assets/img/monte-sereno.jpg',
-        bannerSubtitle: 'Vitas dos Montes',
+        bannerSubtitle: 'Vistas dos Montes',
         letter: 'm',
         // INFORMAÇÕES PARA BIO.JSX
         bioTitle: 'Encontre paz no Monte Sereno',

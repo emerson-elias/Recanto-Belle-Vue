@@ -43,7 +43,7 @@
             @include mixins.flexbox(relative, flex, space-evenly, start);
             flex-wrap: wrap;
             width: 50%;
-            margin-bottom: 2vmax;
+            margin-bottom: 5vmax;
 
             @include responsive.screen_laptop() {
                 width: 95%;

@@ -8,12 +8,14 @@
     @include mixins.letter_large(1%, 'suites', 70%);
     width: 100vw;
     height: 115vh;
-    margin: 20vmax 0 12vmax 0;
+    padding: 0 5vmax;
+    margin: 15vmax 0 12vmax 0;
     overflow: hidden;
 
     @include responsive.screen_laptop() {
         flex-direction: column;
         height: auto;
+        padding: 0;
         margin-top: 5vmax;
     }
 
@@ -26,7 +28,7 @@
         flex-direction: column;
         width: 100%;
         height: 100%;
-        padding: 5vmax 0 0 5.5vmax;
+        padding: 5vmax 0 0 0;
 
         @include responsive.screen_laptop () {
             align-items: center;
@@ -115,7 +117,7 @@
 
     .swiper_container {
         @include mixins.flexbox(relative, flex, center, center);
-        width: 60vw;
+        width: 58vw;
         height: 110vh;
 
         @include responsive.screen_laptop () {
@@ -126,11 +128,13 @@
         .swiper {
             width: 100%;
             height: 100%;
+            border-radius: 1vmax;
 
             .card_box {
                 @include mixins.smoke();
                 width: 100%;
                 height: 100%;
+                border-radius: 1vmax;
                 overflow: hidden;
 
                 a {

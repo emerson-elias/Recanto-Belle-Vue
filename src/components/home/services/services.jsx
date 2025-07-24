@@ -1,43 +1,46 @@
-
 import styles from './services.module.scss'
 
-import Circle from '../../global/svg/circle' /* AINDA PENSANDO ONDE IREI USAR ESSE SVG */
-
-import Button from '../../global/button/button'
 import Title from '../../global/title/title'
+import ServicesCard from './container/servicesCard'
 
 const service = [
     {
         id: 1,
         layer: 'layerOne',
-        title: "tinto & branco: adega do valle",
+        title: 'adega do valle',
+        subTitle: 'tinto & branco',
+        text: 'Vinhos selecionados para momentos especiais.',
         description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
-        link: ' ',
+        link: '',
         icon: 'fa-solid fa-wine-bottle',
-        img:  '/assets/img/beer.jpg',
-        alt: 'BANNER ADEGA',
+        videoOne: '/assets/video/vinho.mp4',
+        videoTwo: '/assets/video/vinhoTwo.mp4',
         btnName: 'Visite a essência'
     },
     {
         id: 2,
         layer: 'layerTwo',
-        title: 'buffet: La Vue Gastronomia',
+        title: 'La Vue Gastronomia',
+        subTitle: 'Restaurante self-service',
+        text: 'Sabor, variedade e aconchego em cada refeição.',
         description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
-        link: ' ',
+        link: '',
         icon: 'fa-solid fa-utensils',
-        img: '/assets/img/buffet.jpg',
-        alt: 'BANNER BUFFET',
+        videoOne: '/assets/video/buffet.mp4',
+        videoTwo: '/assets/video/buffetTwo.mp4',
         btnName: 'Visite a essência'
     },
     {
         id: 3,
         layer: 'layerThere',
-        title: 'serviço de quarto: Refúgio à Mesa',
+        title: 'Refúgio à Mesa',
+        subTitle: 'Serviço de quarto',
+        text: 'Conforto e sabor direto até você.',
         description: 'Do atendimento personalizado às atividades de lazer, nossa pousada oferece serviços que transformam sua estadia em momentos inesquecíveis.',
-        link: ' ',
-        icon: "fa-solid fa-bell-concierge",
-        img: '/assets/img/services.jpg',
-        alt: 'BANNER SERVIÇOS',
+        link: '',
+        icon: 'fa-solid fa-bell-concierge',
+        videoOne: '/assets/video/service.mp4',
+        videoTwo: '/assets/video/serviceTwo.mp4',
         btnName: 'Visite a essência'
     }
 ]
@@ -45,30 +48,40 @@ const service = [
 function Services() {
     return (
         <section className={styles.services_container}>
-
-            <Title
-                title={'Serviços Oferecidos'}
-                text={'Oferecemos serviços exclusivos para tornar sua experiência inesquecível'}
-                row={'row'}
-            />
-
-            {service.map(({ id, layer, title, description, link, icon, img, btnName }) => (
-
+            {service.map(({ id,
+                layer,
+                title,
+                subTitle,
+                text,
+                description,
+                link,
+                icon,
+                btnName,
+                videoOne,
+                videoTwo
+            }) => (
                 <div key={id} className={styles[layer]}>
-                    <div className={styles.boxOne}>
-                        <div className={styles.context}>
-                            <h1>{title}</h1>
-                            <p>{description}</p>
 
-                            <Button link={link} icon={icon} name={btnName} />
-                        </div>
+                    <Title
+                        title={subTitle}
+                        text={text}
+                        row={layer === 'layerTwo' ? '' : 'row'}
+                    />
+
+                    <div className={styles.context}>
+                        <ServicesCard
+                            title={title}
+                            description={description}
+                            link={link}
+                            icon={icon}
+                            btnName={btnName}
+                            videoOne={videoOne}
+                            videoTwo={videoTwo}
+                            row={layer === 'layerTwo' ? 'row_reverse' : ''}
+                        />
                     </div>
-
-                    <div className={styles.boxTwo} style={{ backgroundImage: `url(${img})` }} ></div>
-                    {/* <Circle name={title}/> */}
                 </div>
             ))}
-
         </section>
     )
 }

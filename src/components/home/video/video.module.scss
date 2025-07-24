@@ -19,6 +19,7 @@
         @include mixins.smoke();
         width: 40vw;
         height: 100%;
+        border-radius: 1vmax;
         overflow: hidden;
         cursor: pointer;
 
