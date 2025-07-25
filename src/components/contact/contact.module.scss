@@ -23,7 +23,9 @@
         position: relative;
         width: 40vw;
         height: 100%;
+        border-radius: 1vmax;
         user-select: none;
+        overflow: hidden;
 
         @include responsive.screen_laptop () {
             width: 90%;
@@ -35,7 +37,6 @@
             height: 100%;
             object-fit: cover;
             pointer-events: none;
-            border-radius: 1vmax;
         }
     }
 

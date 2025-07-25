@@ -103,7 +103,7 @@ export default function Roons() {
 
             <div className={styles.box}>
                 <div className={styles.boxOne}>
-                    <h1>Vivêncie</h1>
+                    <h1>Vivencie</h1>
 
                     <p>Cada detalhe te convida ao descanso, à contemplação e à conexão com a natureza.</p>
 

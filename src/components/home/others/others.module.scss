@@ -4,9 +4,10 @@
 
 .others_container {
     @include mixins.flexbox(relative, flex, center, center);
-    @include mixins.smoke();
     width: 100vw;
-    height: 110vh;
+    height: 90vh;
+    padding: 0 5vw;
+    margin:  0 0 12vmax 0;
     user-select: none;
 
     .boxOne {
@@ -16,6 +17,7 @@
         width: 60%;
         transform: translate(-50%, -50%);
         z-index: 2;
+        display: none;
 
         @include responsive.screen_laptop() {
             width: 80%;
@@ -44,9 +46,12 @@
     }
 
     .videoBox {
+        @include mixins.smoke();
         position: relative;
         width: 100%;
         height: 100%;
         object-fit: cover;
+        pointer-events: none;
+        border-radius: 1vmax;
     }
 }

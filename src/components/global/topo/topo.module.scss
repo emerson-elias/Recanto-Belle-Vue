@@ -11,11 +11,17 @@
     margin-bottom: 10px;
     background-color: transparent;
     transition: var.$smooth;
+    pointer-events: none;
     z-index: 1;
 
     @include responsive.screen_small {
         margin-right: 15px;
         margin-bottom: 20px;
+    }
+
+    &.visible {
+        opacity: 1;
+        pointer-events: auto;
     }
 
     a {

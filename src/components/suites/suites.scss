@@ -38,6 +38,8 @@
 
             .swiper-slide {
                 @include mixins.smoke();
+                border-radius: 1vmax;
+                overflow: hidden;
 
                 .slide_img {
                     transition: transform 0.8s ease, opacity 0.8s ease;
@@ -45,7 +47,6 @@
                     height: 100%;
                     object-fit: cover;
                     pointer-events: none;
-                    border-radius: 1vmax;
                 }
 
                 .slide_caption {

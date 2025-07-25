@@ -70,6 +70,7 @@ a{
             .btn_menu_drop {
                 @include mixins.flexbox(relative, flex, center, end);
                 @include mixins.btn_closer();
+                border: none;
             }
         }       
     }

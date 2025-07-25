@@ -128,42 +128,44 @@
         .swiper {
             width: 100%;
             height: 100%;
-            border-radius: 1vmax;
 
-            .card_box {
+            .swiper-slide {
                 @include mixins.smoke();
-                width: 100%;
-                height: 100%;
                 border-radius: 1vmax;
                 overflow: hidden;
 
-                a {
-                    @include mixins.flexbox(absolute, flex, center, center);
+                .card_box {
                     width: 100%;
                     height: 100%;
-                    font-size: 4vmax;
-                    text-align: center;
-                    font-weight: 400;
-                    font-family: var.$font_one;
-                    text-transform: uppercase;
-                    color: var.$secondary_color;
-                    z-index: 2;
 
-                    @include responsive.screen_laptop () {
-                        font-size: 50px;
+                    a {
+                        @include mixins.flexbox(absolute, flex, center, center);
+                        width: 100%;
+                        height: 100%;
+                        font-size: 4vmax;
+                        text-align: center;
+                        font-weight: 400;
+                        font-family: var.$font_one;
+                        text-transform: uppercase;
+                        color: var.$secondary_color;
+                        z-index: 2;
+
+                        @include responsive.screen_laptop () {
+                            font-size: 50px;
+                        }
+
+                        @include responsive.screen_small () {
+                            font-size: 75px;
+                        }
                     }
 
-                    @include responsive.screen_small () {
-                        font-size: 75px;
+                    img {
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        user-select: none;
+                        pointer-events: none;
                     }
-                }
-
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                    user-select: none;
-                    pointer-events: none;
                 }
             }
         }

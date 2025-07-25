@@ -33,6 +33,7 @@
         @include mixins.btn_closer();
         top: 7%;
         left: 90%;
+        border: none;
 
         @include responsive.screen_laptop() {
             top: 2%;

@@ -91,7 +91,9 @@
         @include mixins.smoke();
         width: 40vw;
         height: 120vh;
+        border-radius: 1vmax;
         user-select: none;
+        overflow: hidden;
 
         @include responsive.screen_laptop () {
             width: 100%;
@@ -108,7 +110,6 @@
             height: 100%;
             object-fit: cover;
             pointer-events: none;
-            border-radius: 1vmax;
         }
     }
 }

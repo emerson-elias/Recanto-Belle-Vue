@@ -1,10 +1,7 @@
-import { gsap } from 'gsap'
-
 import { useEffect, useRef, useCallback } from 'react'
 import { Link } from 'react-router-dom'
-
+import { gsap } from 'gsap'
 import { useMenu } from '../../../../context/menuContext'
-
 import './drop.scss'
 
 import img1 from '/assets/img/brisa-do-mar.jpg'
@@ -21,6 +18,7 @@ export default function Drop() {
     const boxRefs = useRef([])
 
     useEffect(() => {
+        const target = document.querySelector('.menu_drop')
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden'
         } else {
@@ -32,8 +30,8 @@ export default function Drop() {
     }, [isMenuOpen])
 
     const mouseEnter = (index) => {
+        if (!isMenuOpen) return
         const imgElement = imgRefs.current[index]
-
         if (imgElement) {
             gsap.to(imgElement, {
                 opacity: 1,
@@ -46,7 +44,6 @@ export default function Drop() {
 
     const mouseLeave = (index) => {
         const imgElement = imgRefs.current[index]
-
         if (imgElement) {
             gsap.to(imgElement, {
                 opacity: 0,
@@ -81,13 +78,15 @@ export default function Drop() {
     useEffect(() => {
         const handlers = []
 
-        boxRefs.current.forEach((box, index) => {
-            if (box) {
-                const handler = (event) => mouseMove(index, event)
-                box.addEventListener('mousemove', handler)
-                handlers.push({ box, handler })
-            }
-        })
+        if (isMenuOpen) {
+            boxRefs.current.forEach((box, index) => {
+                if (box) {
+                    const handler = (event) => mouseMove(index, event)
+                    box.addEventListener('mousemove', handler)
+                    handlers.push({ box, handler })
+                }
+            })
+        }
 
         return () => {
             handlers.forEach(({ box, handler }) => {
@@ -96,15 +95,15 @@ export default function Drop() {
                 }
             })
         }
-    }, [mouseMove])
+    }, [mouseMove, isMenuOpen])
 
     return (
         <section className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}>
-            <div className='btn_menu_drop' onClick={closeMenu}>
+            <button className='btn_menu_drop' onClick={closeMenu} aria-label="Fechar menu">
                 <span className={isMenuOpen ? 'open' : ''}></span>
                 <span className={isMenuOpen ? 'open' : ''}></span>
                 <span className={isMenuOpen ? 'open' : ''}></span>
-            </div>
+            </button>
 
             <ul>
                 {['início', 'sobre', 'suítes', 'serviços', 'dúvidas', 'contatos'].map((item, index) => {
@@ -121,7 +120,9 @@ export default function Drop() {
                             <li><Link to={paths[index]} onClick={closeMenu}>{item}</Link></li>
 
                             <section ref={(el) => (imgRefs.current[index] = el)}>
-                                <img src={images[index]} alt={item} />
+                                {isMenuOpen && (
+                                    <img src={images[index]} alt={item} loading="lazy" />
+                                )}
                             </section>
                         </div>
                     )
@@ -130,10 +131,13 @@ export default function Drop() {
 
             <div className='social'>
                 <a>&copy; 2025 Recanto Belle Vue</a>
-                <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>facebook / instagram</a>
-                <a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'>&copy; By Emerson Elias</a>
+                <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>
+                    facebook / instagram
+                </a>
+                <a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'>
+                    &copy; By Emerson Elias
+                </a>
             </div>
-
         </section>
     )
 }

@@ -35,9 +35,9 @@ function Home() {
             <Services />
             <Experience />
             <Reviews />
+            <Others />
             <Differences />
             <Summary />
-            {/*  <Others /> */}
             <Footer picture={picture} />
         </>
     )

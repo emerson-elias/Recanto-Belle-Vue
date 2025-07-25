@@ -1,40 +1,28 @@
-import { useEffect, useRef } from 'react'
-
+import { useEffect, useState } from 'react'
 import styles from './topo.module.scss'
 
 export default function Topo() {
-    const topoRef = useRef(null)
+    const [visible, setVisible] = useState(false)
 
     useEffect(() => {
-        const topo = topoRef.current
-
-        const scroll = () => {
-            const scrollY = window.scrollY
-
-            if (scrollY > 200) {
-                topo.style.opacity = '1'
-                topo.style.pointerEvents = 'auto'
-            } else {
-                topo.style.opacity = '0'
-                topo.style.pointerEvents = 'none'
-            }
+        const handleScroll = () => {
+            setVisible(window.scrollY > 200)
         }
 
-        const click = () => {
-            window.scrollTo({ top: 0, behavior: 'auto' })
-        }
-
-        window.addEventListener("scroll", scroll)
-        topo.addEventListener('click', click)
-
-        return () => {
-            window.removeEventListener("scroll", scroll)
-            topo.removeEventListener('click', click)
-        }
+        window.addEventListener("scroll", handleScroll)
+        return () => window.removeEventListener("scroll", handleScroll)
     }, [])
 
+    const scrollToTop = () => {
+        window.scrollTo({ top: 0, behavior: 'smooth' })
+    }
+
     return (
-        <section className={styles.button_top} title="Volte ao topo" ref={topoRef}>
+        <section
+            className={`${styles.button_top} ${visible ? styles.visible : ''}`}
+            title="Volte ao topo"
+            onClick={scrollToTop}
+        >
             <a><i className="fa-solid fa-caret-up"></i></a>
         </section>
     )
