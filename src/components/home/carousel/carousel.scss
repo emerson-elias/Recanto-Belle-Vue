@@ -26,6 +26,7 @@
             @include responsive.screen_small() {
                 opacity: 0;
                 user-select: none;
+                pointer-events: none;
             }
         }
 

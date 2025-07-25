@@ -3,12 +3,10 @@ import { useNavigate } from 'react-router-dom'
 import styles from './gallery.module.scss'
 import Title from '../../global/title/title'
 
-// Gallery.jsx
 function Gallery({ suite }) {
     const navigate = useNavigate()
 
     const select = () => {
-        onSelect && onSelect(suite)
         navigate(`/suites/${suite.id}`)
     }
 

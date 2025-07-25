@@ -6,9 +6,9 @@ import './drop.scss'
 
 import img1 from '/assets/img/pexels-1.jpg'
 import img2 from '/assets/img/pexels-2.jpg'
-import img3 from '/assets/img/royale.jpg'
+import img3 from '/assets/img/pexels-7.jpg'
 import img4 from '/assets/img/services.jpg'
-import img5 from '/assets/img/faq_banner.jpg'
+import img5 from '/assets/img/pexels-8.jpg'
 import img6 from '/assets/img/contato.jpg'
 
 export default function Drop() {

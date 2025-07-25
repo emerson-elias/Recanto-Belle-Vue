@@ -5,7 +5,7 @@
 
 .reviews_container {
     @include mixins.flexbox(relative, flex, center, center);
-    @include mixins.letter_large(2%, 'reviwes', 70%);
+    @include mixins.letter_large(3%, 'reviwes', 73%);
     flex-direction: column;
     width: 100vw;
     padding: 0 5vw;

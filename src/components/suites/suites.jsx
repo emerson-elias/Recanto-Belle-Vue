@@ -49,7 +49,7 @@ function Suites({ suite }) {
                     ))}
                 </ul>
 
-                <Button link={''} icon={' '} name={suite.price}/>
+                <Button link={''} icon={' '} name={'Reserve agora'}/>
             </div>
 
         </section>
