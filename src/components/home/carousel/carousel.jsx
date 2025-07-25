@@ -57,7 +57,7 @@ function Carousel() {
                     <SwiperSlide key={item.id}>
                         <div className='slide_item'>
                             <img
-                                src={item.image}
+                                src={item.image} loading="lazy"
                                 alt={`Slide ${item.id} do banner`}
                             />
                         </div>

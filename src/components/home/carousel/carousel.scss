@@ -73,7 +73,8 @@
             @include mixins.smoke();
             position: relative;
             width: 100vw;
-            height: 100vh; // corrigido
+            height: 100vh;
+            will-change: transform, opacity;
 
             img {
                 position: relative;

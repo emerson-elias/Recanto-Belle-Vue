@@ -8,7 +8,6 @@ import Reviews from '../components/home/reviews/reviews'
 import Summary from '../components/home/summary/summary'
 import Differences from '../components/home/differences/differences'
 import Footer from '../components/global/footer/footer'
-
 import Others from '../components/home/others/others'
 
 const picture = '/assets/img/pexels-1.jpg'
@@ -19,7 +18,7 @@ const text = 'Envolva-se em uma experiência onde o encanto encontra o aconchego
 function Home() {
     return (
         <>
-            
+            <Carousel />
 
             <Bio
                 title={title}
