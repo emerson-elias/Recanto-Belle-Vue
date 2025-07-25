@@ -4,189 +4,194 @@
 @use '/src/sass/variables' as var;
 
 .reviews_container {
-    @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.flexbox(relative, flex, center, center);
     @include mixins.letter_large(2%, 'reviwes', 70%);
+    flex-direction: column;
     width: 100vw;
-    height: 112vh;
+    padding: 0 5vw;
     margin: 10vmax 0;
-    overflow: hidden;
 
-    @include responsive.screen_laptop() {
-        flex-direction: column;
-        padding: 0 5vw;
+    @include responsive.screen_small () {
+        @include mixins.letter_large('', 'reviwes', 95%);
+        margin: 0 0 100px 0;
     }
 
-    @include responsive.screen_laptop () {
-        height: auto;
-        margin: 0;
-    }
-
-    .boxOne {
-        @include mixins.flexbox(relative, flex, center, center);
-        @include mixins.background(auto);
-        flex-direction: column;
-        width: 25vw;
-        transform: translateX(12.5vmax);
-        background-color: var.$secondary_color;
-        z-index: 9;
-
-        @include responsive.screen_large() {
-            width: 30vw;
-        }
+    .box {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        height: 112vh;
+        margin-top: 2vmax;
 
         @include responsive.screen_laptop() {
-            transform: none;
-            width: 90%;
-            align-items: baseline;
+            flex-direction: column;
+            justify-content: space-evenly;
         }
 
-        @include responsive.screen_small () {
-            width: 100%;
-            margin: 20px 0;
+        @include responsive.screen_small() {
+            height: auto;
         }
 
-        h1 {
-            text-align: center;
-            padding-top: 5vmax;
-            font-family: var.$font_one;
-            color: var.$primary_color;
-            text-transform: uppercase;
+        .boxOne {
+            @include mixins.flexbox(relative, flex, center, center);
+            @include mixins.background(auto);
+            flex-direction: column;
+            width: 25vw;
+            transform: translateX(12.5vmax);
+            background-color: var.$secondary_color;
+            z-index: 9;
+
+            @include responsive.screen_large() {
+                width: 30vw;
+            }
 
             @include responsive.screen_laptop() {
-                text-align: start;
+                transform: none;
+                width: 100%;
+                align-items: baseline;
+            }
+
+            @include responsive.screen_small () {
+                width: 100%;
+                margin: 20px 0;
+            }
+
+            h1 {
+                text-align: center;
+                padding-top: 5vmax;
+                font-family: var.$font_one;
+                color: var.$primary_color;
+                text-transform: uppercase;
+
+                @include responsive.screen_laptop() {
+                    text-align: start;
+                    margin: 0;
+                }
+            }
+
+            .controls_swiper {
+                @include mixins.flexbox(relative, flex, space-around, center);
+                width: 100%;
+                margin: 1vmax 2vmax;
+                padding: 0 2vmax;
+
+                @include responsive.screen_laptop () {
+                    display: none;
+                    pointer-events: none;
+                }
+
+                button {
+                    color: var.$black_gray;
+                    background-color: transparent;
+                    border: none;
+                    cursor: pointer;
+
+                    &:nth-child(1) {
+                        transform: rotateY(180deg);
+                    }
+
+                    svg {
+                        transition: var.$smooth;
+
+                        &:hover {
+                            color: var.$primary_color;
+                            transform: scale(1.1);
+                            transition: var.$smooth;
+                        }
+                    }
+                }
             }
         }
 
-        .controls_swiper {
-            @include mixins.flexbox(relative, flex, space-around, center);
-            width: 100%;
-            margin: 1vmax 2vmax;
-            padding: 0 2vmax;
+        .boxTwo {
+            position: relative;
+            width: 75vw;
+            height: 100%;
+
+            @include responsive.screen_large() {
+                width: 70vw;
+            }
 
             @include responsive.screen_laptop () {
+                width: 90vw;
+                height: auto;
+            }
+
+            .swiper-button-prev,
+            .swiper-button-next {
                 display: none;
                 pointer-events: none;
             }
 
-            button {
-                color: var.$black_gray;
-                background-color: transparent;
-                border: none;
-                cursor: pointer;
-
-                &:nth-child(1) {
-                    transform: rotateY(180deg);
-                }
-
-                svg {
-                    transition: var.$smooth;
-
-                    &:hover {
-                        color: var.$primary_color;
-                        transform: scale(1.1);
-                        transition: var.$smooth;
-                    }
-                }
-            }
-        }
-    }
-
-    .boxTwo {
-        position: relative;
-        width: 75vw;
-        height: 100%;
-
-        @include responsive.screen_large() {
-            width: 70vw;
-        }
-
-        @include responsive.screen_laptop () {
-            width: 100%;
-            height: 70vh;
-        }
-
-        @include responsive.screen_small () {
-            height: auto;
-        }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            display: none;
-            pointer-events: none;
-        }
-
-        .swiper {
-            position: relative;
-            width: 100%;
-            height: 100%;
-            border-left: 0.1vw solid var.$primary_color;
-
-            @include responsive.screen_laptop () {
-                border: none;
-            }
-
-            .swiper-slide {
-                width: 90%;
-                padding: 15vmax;
-                user-select: none;
+            .swiper {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                border-left: 0.1vw solid var.$primary_color;
 
                 @include responsive.screen_laptop () {
-                    padding: 50px;
-                    height: 500px;
+                    border: none;
                 }
 
-                @include responsive.screen_small () {
-                    height: 600px;
-                    padding: 10px;
-                }
-
-                span {
-                    position: absolute;
-                    top: 25%;
-                    left: 80%;
-                    text-align: center;
-                    font-size: 3vmax;
-                    font-weight: 400;
-                    color: var.$black_gray;
-                    font-family: var.$font_one;
-                    z-index: 1;
+                .swiper-slide {
+                    width: 90%;
+                    padding: 15vmax;
+                    user-select: none;
 
                     @include responsive.screen_laptop () {
-                        display: none;
+                        padding: 50px;
                     }
-                }
-
-                h2 {
-                    font-size: 4vmax;
-                    width: inherit;
-                    font-family: var.$font_one;
-                    text-transform: capitalize;
-                    color: var.$black_gray;
 
                     @include responsive.screen_small () {
-                        font-size: 30px;
+                        padding: 10px;
                     }
-                }
 
-                p {
-                    font-style: italic;
-                    line-height: 1.5;
-                    letter-spacing: 1px;
-                    margin: 2vmax 0;
-                    font-family: var.$font_dwo;
-                }
+                    span {
+                        position: absolute;
+                        top: 25%;
+                        left: 80%;
+                        text-align: center;
+                        font-size: 3vmax;
+                        font-weight: 400;
+                        color: var.$black_gray;
+                        font-family: var.$font_one;
+                        z-index: 1;
 
-                h3 {
-                    width: 100%;
-                    text-align: end;
-                    font-size: 1.5vmax;
-                    margin-top: 5vmax;
-                    font-family: var.$font_one;
-                    text-transform: uppercase;
-                    color: var.$black_gray;
+                        @include responsive.screen_laptop () {
+                            display: none;
+                        }
+                    }
 
-                    @include responsive.screen_small () {
-                        font-size: 20px;
+                    h2 {
+                        font-size: 4vmax;
+                        width: inherit;
+                        font-family: var.$font_one;
+                        text-transform: capitalize;
+                        color: var.$black_gray;
+
+                        @include responsive.screen_small () {
+                            font-size: 30px;
+                        }
+                    }
+
+                    p {
+                        font-style: italic;
+                        line-height: 1.5;
+                        letter-spacing: 1px;
+                        margin: 2vmax 0;
+                        font-family: var.$font_dwo;
+                    }
+
+                    h3 {
+                        width: 100%;
+                        text-align: end;
+                        font-size: 1.5vmax;
+                        margin-top: 5vmax;
+                        font-family: var.$font_one;
+                        text-transform: uppercase;
+                        color: var.$black_gray;
+
+                        @include responsive.screen_small () {
+                            font-size: 20px;
+                        }
                     }
                 }
             }

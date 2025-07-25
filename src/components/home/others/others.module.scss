@@ -23,5 +23,9 @@
         pointer-events: none;
         user-select: none;
         border-radius: 1vmax;
+
+        @include responsive.screen_laptop() {
+            height: 80vh;
+        }
     }
 }

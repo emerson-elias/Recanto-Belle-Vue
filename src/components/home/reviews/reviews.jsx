@@ -7,6 +7,7 @@ import 'swiper/css/navigation'
 import { Navigation, Autoplay } from 'swiper/modules'
 
 import './reviews.scss'
+import Title from '../../global/title/title'
 
 const feedbacks = [
     {
@@ -81,46 +82,54 @@ function Reviews() {
     return (
         <section className='reviews_container'>
 
-            <section className='boxOne'>
-                <h1>Nossos Hóspedes</h1>
+            <Title
+                title={'O que dizem sobre nós'}
+                text={'Vivências autênticas que marcaram nossos hóspedes – descubra experiências'}
+                row={'row'}
+            />
 
-                <div className="controls_swiper">
-                    <button onClick={() => swiperRef.current?.slidePrev()}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width='100' height='100' viewBox='0 0 48 48'>
-                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
-                        </svg>
-                    </button>
+            <div className='box'>
+                <section className='boxOne'>
+                    <h1>Nossos Hóspedes</h1>
 
-                    <button onClick={() => swiperRef.current?.slideNext()}>
-                        <svg xmlns="http://www.w3.org/2000/svg" width='100' height='100' viewBox='0 0 48 48'>
-                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
-                        </svg>
-                    </button>
-                </div>
-            </section>
+                    <div className="controls_swiper">
+                        <button onClick={() => swiperRef.current?.slidePrev()}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width='100' height='100' viewBox='0 0 48 48'>
+                                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
+                            </svg>
+                        </button>
 
-            <section className='boxTwo'>
-                <Swiper
-                    navigation={true}
-                    loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false
-                    }}
-                    modules={[Navigation, Autoplay]}
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                >
-                    {feedbacks.map(({ id, name, review, extra, date }, index) => (
-                        <SwiperSlide key={index}>
-                            <span>{id}</span>
-                            <h2>{name}</h2>
-                            <p>{review}</p>
-                            <p>{extra}</p>
-                            <h3>{date}</h3>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </section>
+                        <button onClick={() => swiperRef.current?.slideNext()}>
+                            <svg xmlns="http://www.w3.org/2000/svg" width='100' height='100' viewBox='0 0 48 48'>
+                                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
+                            </svg>
+                        </button>
+                    </div>
+                </section>
+
+                <section className='boxTwo'>
+                    <Swiper
+                        navigation={true}
+                        loop={true}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false
+                        }}
+                        modules={[Navigation, Autoplay]}
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                    >
+                        {feedbacks.map(({ id, name, review, extra, date }, index) => (
+                            <SwiperSlide key={index}>
+                                <span>{id}</span>
+                                <h2>{name}</h2>
+                                <p>{review}</p>
+                                <p>{extra}</p>
+                                <h3>{date}</h3>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </section>
+            </div>
 
         </section>
     )
