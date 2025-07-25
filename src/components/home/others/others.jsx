@@ -3,6 +3,7 @@ import { useLoading } from '../../../context/loadingContext'
 
 import styles from './others.module.scss'
 import video from '/assets/video/screen.mp4'
+import Title from '../../global/title/title'
 
 function Others() {
     const videoRef = useRef(null)
@@ -38,11 +39,12 @@ function Others() {
 
     return (
         <section className={styles.others_container}>
-            <div className={styles.boxOne}>
-                <span>❝ Deixe o peso cair,</span>
-                <span>abrace o instante como ele é.</span>
-                <span>Respire, você estará onde precisa...❞</span>
-            </div>
+
+            <Title
+                title={'Mergulhos Inesquecíveis'}
+                text={'Explore as profundezas cristalinas e descubra a magia da vida marinha em praias paradisíacas'}
+                row={''}
+            />
 
             <video
                 ref={videoRef}

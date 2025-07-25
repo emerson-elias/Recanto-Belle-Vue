@@ -41,11 +41,15 @@ function Carousel() {
 
     return (
         <section className='banner_container'>
-            <Logo letter={'r'} title={'Recanto Belle Vue'} subTitle={'Requinte e Beleza'} />
+            <Logo
+                letter={'r'}
+                title={'Recanto Belle Vue'}
+                subTitle={'Requinte e Beleza'}
+            />
 
             <Swiper
                 modules={[Navigation, Pagination, Autoplay, EffectFade]}
-                
+                effect="fade"
                 fadeEffect={{ crossFade: false }}
                 slidesPerView={1}
                 pagination={{ type: 'progressbar' }}

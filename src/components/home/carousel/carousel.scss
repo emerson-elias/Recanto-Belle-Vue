@@ -6,7 +6,7 @@
 .banner_container {
     @include mixins.flexbox(relative, flex, center, center);
     width: 100vw;
-    height: 100vh;
+    height: 100lvh;
     user-select: none;
     overflow: hidden;
 
@@ -17,21 +17,15 @@
         .swiper-button-prev,
         .swiper-button-next {
             top: 2vw;
-            width: 40px;
-            height: 40px;
-            pointer-events: none;
+            width: 45vw;
+            height: 100%;
+            pointer-events: all;
             opacity: 0;
             z-index: 10;
-            transition: opacity 0.3s ease;
-
-            &:hover,
-            &:focus {
-                opacity: 1;
-                pointer-events: auto;
-            }
 
             @include responsive.screen_small() {
-                display: none;
+                opacity: 0;
+                user-select: none;
             }
         }
 
@@ -43,6 +37,7 @@
         .swiper-pagination-bullet {
             background-color: var.$secondary_color;
         }
+
 
         .swiper-pagination {
             position: absolute;
@@ -73,8 +68,7 @@
             @include mixins.smoke();
             position: relative;
             width: 100vw;
-            height: 100vh;
-            will-change: transform, opacity;
+            height: 100lvh;
 
             img {
                 position: relative;
