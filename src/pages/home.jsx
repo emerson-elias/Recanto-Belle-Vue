@@ -19,7 +19,7 @@ const text = 'Envolva-se em uma experiência onde o encanto encontra o aconchego
 function Home() {
     return (
         <>
-            <Carousel />
+            
 
             <Bio
                 title={title}
