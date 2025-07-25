@@ -7,7 +7,7 @@ const title = 'Perguntas Frequentes'
 const caption = 'Ficou com alguma dúvida? Não se preocupe'
 const text = 'Selecionamos as dúvidas mais comuns para te ajudar a planejar sua estadia com tranquilidade. Aqui você encontra respostas sobre horários, serviços, alimentação e muito mais. Se ainda restar alguma pergunta, nossa equipe está pronta para te atender.'
 
-const picture = '/assets/img/faq_banner.jpg'
+const picture = '/assets/img/pexels-8.jpg'
 
 function DoubtsPage() {
     return (
