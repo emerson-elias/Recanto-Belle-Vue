@@ -19,7 +19,7 @@ function Cards({ suites, onSelect }) {
     return (
         <section className='suites_cards'>
             <div className='cards_title'>
-                <h1>Para todos:<br /> estilos de requinte</h1>
+                <h1>Para todos:<br />outros requintes</h1>
                 <p>Nossas suítes combinam conforto e sofisticação para todos os gostos. Escolha a sua e desfrute de um merecido descanso.</p>
             </div>
 

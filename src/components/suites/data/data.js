@@ -125,7 +125,7 @@ export const suites = [
         price: 'R$ 400 / noite',
         icons: [
             { name: 'Wi-Fi', src: '/assets/svg/wifi.svg' },
-            { name: 'Ar Livre', src: '/assets/svg/air.svg' },
+            { name: 'Climatizado', src: '/assets/svg/cold.svg' },
             { name: 'TV (LCD)', src: '/assets/svg/tv.svg' },
             { name: 'Vista pro mar', src: '/assets/svg/balcony.svg' },
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },

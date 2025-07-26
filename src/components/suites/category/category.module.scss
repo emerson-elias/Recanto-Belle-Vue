@@ -72,7 +72,7 @@
             }
 
             span {
-                width: 60%;
+                width: 90%;
                 font-family: var.$font_one;
                 font-size: 1.5vmax;
                 margin: 1.2vmax 0 0 0;
@@ -84,6 +84,7 @@
                 @include responsive.screen_laptop () {
                     width: 100%;
                     font-size: 20px;
+                    padding: 0 10px;
                 }
             }
 
@@ -92,20 +93,35 @@
                 margin: 3vmax 0 4vmax 0;
                 flex-wrap: wrap;
 
+                @include responsive.screen_small() {
+                    margin: 20px 10px;
+                    justify-content: space-evenly;
+                }
+
                 li {
                     @include mixins.flexbox(relative, flex, center, center);
+                    flex-direction: column;
                     margin: 0 1vmax 0 0;
+                    text-align: center;
 
                     @include responsive.screen_laptop () {
                         margin: 10px;
                     }
 
                     @include responsive.screen_small() {
-                        margin: 20px 20px 20px 0;
+                        width: 110px;
+                        height: 100px;
+                        margin: 0;
+                    }
+
+                    &:nth-child(2) {
+                        img{
+                            animation: girar_right 20s linear infinite;
+                        }
                     }
 
                     i {
-                        margin: 0 0.5vmax;
+                        margin: 0.7vmax 0.5vmax;
                         font-size: 0.9vmax;
                         font-style: normal;
                         color: var.$black_gray;

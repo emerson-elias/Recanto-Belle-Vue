@@ -30,7 +30,7 @@ function CategoryStart({ suites }) {
                         <span>{el.subTitle}</span>
 
                         <ul>
-                            {el.icons.slice(0, 3).map((icon) => (
+                            {el.icons.slice(0, 4).map((icon) => (
                                 <li key={icon.name} className="icon-item">
                                     <img src={icon.src} alt={icon.name} loading="lazy" />
                                     <i>{icon.name}</i>
