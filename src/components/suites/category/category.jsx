@@ -38,7 +38,7 @@ function CategoryStart({ suites }) {
                             ))}
                         </ul>
 
-                        <Button link={''} name={el.price} />
+                        <Button link={''} icon={'fa-regular fa-bookmark'} name={el.price} />
                     </div>
                 ))}
             </div>

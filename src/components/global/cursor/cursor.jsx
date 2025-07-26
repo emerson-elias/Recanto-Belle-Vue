@@ -17,7 +17,7 @@ function Cursor() {
             ease: 'power2.out'
         })
     }, [location])
-
+    
     useEffect(() => {
         const cursor = cursorRef.current
 
@@ -48,20 +48,20 @@ function Cursor() {
 
         document.addEventListener('mousemove', Move_Cursor)
 
-        document.querySelectorAll('a').forEach(anchor => {
+        const anchors = document.querySelectorAll('a')
+        anchors.forEach(anchor => {
             anchor.addEventListener('mouseover', Cursor_Element_Enter)
             anchor.addEventListener('mouseout', Cursor_Element_Out)
         })
 
         return () => {
             document.removeEventListener('mousemove', Move_Cursor)
-
-            document.querySelectorAll('a').forEach(anchor => {
+            anchors.forEach(anchor => {
                 anchor.removeEventListener('mouseover', Cursor_Element_Enter)
                 anchor.removeEventListener('mouseout', Cursor_Element_Out)
             })
         }
-    }, [])
+    }, [location])
 
     return (
         <section className="cursor" ref={cursorRef}></section>

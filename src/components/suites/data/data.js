@@ -14,7 +14,7 @@ export const suites = [
         ],
         categoria: 'Royale',
         description: 'A Suíte Royale oferece uma experiência premium com vista panorâmica para o mar, varanda privativa e decoração sofisticada. Ideal para casais ou famílias que buscam conforto, exclusividade e uma estadia inesquecível à beira-mar.',
-        price: 'R$ 400 / Por Pessoa',
+        price: 'R$ 700 / Diária',
         icons: [
             { name: 'Wi-Fi', src: '/assets/svg/wifi.svg' },
             { name: 'Climatizado', src: '/assets/svg/cold.svg' },
@@ -122,7 +122,7 @@ export const suites = [
         gallery: ['/assets/img/brisa.jpg', '/assets/img/brisa-1.jpg', '/assets/img/brisa-2.jpg', '/assets/img/brisa-3.jpg', '/assets/img/brisa-4.jpg'],
         categoria: 'Brisa do Mar',
         description: 'A Suíte Brisa do Mar é ideal para casais em busca de um refúgio romântico. Com ventilação natural e vista para o litoral, proporciona uma atmosfera leve, acolhedora e conectada com a natureza ao som das ondas do mar.',
-        price: 'R$ 400 / noite',
+        price: 'R$ 350 / noite',
         icons: [
             { name: 'Wi-Fi', src: '/assets/svg/wifi.svg' },
             { name: 'Climatizado', src: '/assets/svg/cold.svg' },
@@ -178,7 +178,7 @@ export const suites = [
         ],
         categoria: 'Terraço Dourado',
         description: 'A Suíte Terraço Dourado encanta com sua ampla varanda iluminada pelo sol da manhã. Um espaço perfeito para relaxar com uma vista privilegiada e ambiente elegante, ideal para quem busca momentos únicos e inesquecíveis.',
-        price: 'R$ 400 / noite',
+        price: 'R$ 300 / noite',
         icons: [
             { name: 'Wi-Fi', src: '/assets/svg/wifi.svg' },
             { name: 'Climatizado', src: '/assets/svg/cold.svg' },
@@ -234,7 +234,7 @@ export const suites = [
         ],
         categoria: 'Aurora',
         description: 'Inspirada nas cores suaves do nascer do sol, a Suíte Aurora proporciona uma estadia tranquila e relaxante. Com decoração clean e elegante, é o refúgio ideal para casais em busca de paz e conexão com a natureza.',
-        price: 'R$ 400 / noite',
+        price: 'R$ 470 / noite',
         icons: [
             { name: 'Wi-Fi', src: '/assets/svg/wifi.svg' },
             { name: 'Climatizado', src: '/assets/svg/cold.svg' },
@@ -290,7 +290,7 @@ export const suites = [
         ],
         categoria: 'Monte Sereno',
         description: 'Com vista para o jardim e decoração rústica-chique, a Suíte Monte Sereno é perfeita para quem deseja se desconectar da rotina. Oferece tranquilidade, contato com o verde e total conforto em um ambiente acolhedor.',
-        price: 'R$ 400 / noite',
+        price: 'R$ 520 / noite',
         icons: [
             { name: 'Wi-Fi', src: '/assets/svg/wifi.svg' },
             { name: 'Climatizado', src: '/assets/svg/cold.svg' },

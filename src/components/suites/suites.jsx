@@ -49,7 +49,7 @@ function Suites({ suite }) {
                     ))}
                 </ul>
 
-                <Button link={''} icon={' '} name={'Reserve agora'}/>
+                <Button link={''} icon={'fa-regular fa-bookmark'} name={'Reserve agora'}/>
             </div>
 
         </section>
