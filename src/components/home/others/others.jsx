@@ -11,7 +11,7 @@ function Others() {
 
     // IDs personalizados para rastrear esse vídeo no contexto
     const videoLoadingIdRef = useRef(Symbol('video-loading'))
-/*
+
     useEffect(() => {
         const videoElement = videoRef.current
         const loadingId = videoLoadingIdRef.current
@@ -36,7 +36,7 @@ function Others() {
             videoElement.removeEventListener('error', error)
         }
     }, [addLoadingTask, removeLoadingTask])
-*/
+
     return (
         <section className={styles.others_container}>
 

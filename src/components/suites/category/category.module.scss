@@ -8,7 +8,7 @@
     flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
-    margin: 0 0 12vmax 0;
+    margin: 0 0 10vmax 0;
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, start);
