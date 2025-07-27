@@ -11,7 +11,7 @@ function Others() {
 
     // IDs personalizados para rastrear esse vídeo no contexto
     const videoLoadingIdRef = useRef(Symbol('video-loading'))
-
+/*
     useEffect(() => {
         const videoElement = videoRef.current
         const loadingId = videoLoadingIdRef.current
@@ -36,7 +36,7 @@ function Others() {
             videoElement.removeEventListener('error', error)
         }
     }, [addLoadingTask, removeLoadingTask])
-
+*/
     return (
         <section className={styles.others_container}>
 
@@ -45,6 +45,10 @@ function Others() {
                 text={'Explore as profundezas cristalinas e descubra a magia da vida marinha em praias paradisíacas'}
                 row={''}
             />
+
+            <div className={styles.box}>
+                <p>Entre as experiências oferecidas pelo nosso resort, está um mergulho inesquecível para explorar a rica vida marinha e os belíssimos corais da região.</p>
+            </div>
 
             <video
                 ref={videoRef}
