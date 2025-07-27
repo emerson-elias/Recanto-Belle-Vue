@@ -30,7 +30,6 @@ function ServicesCard({
             </div>
 
             <div className={styles.boxTwo} >
-                {/* SVG decorativo pode ser adicionado aqui futuramente */}
 
                 <video
                     autoPlay

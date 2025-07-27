@@ -11,6 +11,7 @@ import 'swiper/css/navigation'
 import './roons.scss'
 
 import Button from '../../global/button/button'
+import Title from '../../global/title/title'
 
 const cards = [
     {
@@ -34,7 +35,7 @@ const cards = [
         categoria: 'Terraço Dourado'
     },
     {
-        id:'Aurora',
+        id: 'Aurora',
         image: '/assets/img/aurora.jpg',
         categoria: 'Aurora'
     },
@@ -50,75 +51,85 @@ export default function Roons() {
 
     return (
         <section className='roons_container'>
-            <div className='infor'>
-                <h1>Escolha seu conforto</h1>
-                <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
 
-                <Button link={'/suites'} icon={'fa-regular fa-chess-rook'} name={'Visite a essência'} />
+            <Title
+                title={'suítes sofisticadas'}
+                text={'Do simples ao sofisticado, temos uma suíte para cada momento'}
+                row={''}
+            />
 
-                <div className="controls_swiper">
-                    <button onClick={() => swiperRef.current?.slidePrev()}>
+            <div className='boxOmega'>
+                <div className='infor'>
+                    <h1>Escolha seu conforto</h1>
+                    <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
 
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            width='100'
-                            height='100'
-                            viewBox='0 0 48 48'
-                        >
-                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
-                        </svg>
+                    <Button link={'/suites'} icon={'fa-regular fa-chess-rook'} name={'Visite a essência'} />
 
-                    </button>
+                    <div className="controls_swiper">
+                        <button onClick={() => swiperRef.current?.slidePrev()}>
 
-                    <button onClick={() => swiperRef.current?.slideNext()}>
-                        <svg xmlns="http://www.w3.org/2000/svg"
-                            width='100'
-                            height='100'
-                            viewBox='0 0 48 48'
-                        >
-                            <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
-                        </svg>
-                    </button>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width='100'
+                                height='100'
+                                viewBox='0 0 48 48'
+                            >
+                                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
+                            </svg>
+
+                        </button>
+
+                        <button onClick={() => swiperRef.current?.slideNext()}>
+                            <svg xmlns="http://www.w3.org/2000/svg"
+                                width='100'
+                                height='100'
+                                viewBox='0 0 48 48'
+                            >
+                                <path fill="none" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1" d="m22 6l8 10l-8 10m8-10H2" />
+                            </svg>
+                        </button>
+                    </div>
+
                 </div>
 
+                <div className='swiper_container'>
+                    <Swiper
+                        onSwiper={(swiper) => (swiperRef.current = swiper)}
+                        slidesPerView={2}
+                        breakpoints={{
+                            0: {
+                                slidesPerView: 1,
+                            },
+                            700: {
+                                slidesPerView: 2,
+                            }
+                        }}
+                        centeredSlides={false}
+                        spaceBetween={50}
+                        loop={true}
+                        autoplay={{
+                            delay: 3000,
+                            disableOnInteraction: false
+                        }}
+                        modules={[Navigation, Autoplay]}
+                        className='swiper'
+                    >
+                        {cards.map((elements) => (
+                            <SwiperSlide key={elements.id}>
+                                <div className='card_box'>
+                                    <Link to={`/suites/${elements.id}`}>
+                                        {elements.categoria}
+                                    </Link>
+                                    <img
+                                        src={elements.image}
+                                        alt={`Slide ${elements.id} do Card`}
+                                    />
+                                </div>
+                            </SwiperSlide>
+                        ))}
+                    </Swiper>
+                </div>
             </div>
 
-            <div className='swiper_container'>
-                <Swiper
-                    onSwiper={(swiper) => (swiperRef.current = swiper)}
-                    slidesPerView={2}
-                    breakpoints={{
-                        0: {
-                            slidesPerView: 1,
-                        },
-                        700: {
-                            slidesPerView: 2,
-                        }
-                    }}
-                    centeredSlides={false}
-                    spaceBetween={50}
-                    loop={true}
-                    autoplay={{
-                        delay: 3000,
-                        disableOnInteraction: false
-                    }}
-                    modules={[Navigation, Autoplay]}
-                    className='swiper'
-                >
-                    {cards.map((elements) => (
-                        <SwiperSlide key={elements.id}>
-                            <div className='card_box'>
-                                <Link to={`/suites/${elements.id}`}>
-                                    {elements.categoria}
-                                </Link>
-                                <img
-                                    src={elements.image}
-                                    alt={`Slide ${elements.id} do Card`}
-                                />
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
         </section>
     )
 }

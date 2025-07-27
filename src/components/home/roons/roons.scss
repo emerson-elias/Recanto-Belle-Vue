@@ -4,167 +4,171 @@
 @use '/src/sass/variables' as var;
 
 .roons_container {
-    @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(1%, 'suites', 70%);
+    @include mixins.flexbox(relative, flex, center, center);
+    @include mixins.letter_large(2%, 'Luxos', 73%);
+    flex-direction: column;
     width: 100vw;
-    height: 115vh;
-    padding: 0 5vmax;
-    margin: 15vmax 0 12vmax 0;
+    padding: 0 5vw;
+    margin: 12vmax 0;
     overflow: hidden;
 
     @include responsive.screen_laptop() {
-        flex-direction: column;
-        height: auto;
-        padding: 0;
-        margin-top: 5vmax;
+        margin-top: 3vmax;
     }
 
     @include responsive.screen_small() {
-        margin-top: 100px;
+        margin-top: 30px;
     }
 
-    .infor {
-        @include mixins.flexbox(relative, flex, center, normal);
-        flex-direction: column;
+    .boxOmega {
+        @include mixins.flexbox(relative, flex, space-between, center);
         width: 100%;
         height: 100%;
-        padding: 5vmax 0 0 0;
 
-        @include responsive.screen_laptop () {
-            align-items: center;
-            padding: 0;
-            margin-bottom: 10vmax;
+        @include responsive.screen_laptop() {
+            flex-direction: column;
+            margin-top: 5vmax;
         }
 
-        @include responsive.screen_small () {
-            height: auto;
-            margin-bottom: 100px;
+        @include responsive.screen_small() {
+            margin-top: 40px;
         }
 
-        h1 {
-            width: inherit;
-            font-family: var.$font_one;
-            text-transform: uppercase;
-            color: var.$primary_color;
-
-            @include responsive.screen_laptop () {
-                width: 90%;
-            }
-
-            @include responsive.screen_small () {
-                width: 85%;
-            }
-        }
-
-        p {
-            width: 70%;
-            margin: 2vmax 0 3vmax 0;
-            font-family: var.$font_dwo;
-            color: var.$black_gray;
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.5;
-
-            @include responsive.screen_laptop () {
-                width: 80%;
-                margin: 50px 0 70px 0;
-            }
-
-            @include responsive.screen_small () {
-                width: 80%;
-            }
-        }
-
-        .controls_swiper {
-            @include mixins.flexbox(relative, flex, center, center);
-            margin: 5vmax 0 0 0;
-            z-index: 2;
-
-            @include responsive.screen_laptop () {
-                display: none;
-                pointer-events: none;
-            }
-
-            button {
-                color: var.$black_gray;
-                background-color: transparent;
-                margin: 0 2vmax;
-                cursor: pointer;
-                border: none;
-                pointer-events: all;
-
-                &:nth-child(1) {
-                    transform: rotateY(180deg);
-                }
-
-                @include responsive.screen_laptop () {
-                    color: var.$secondary_color;
-                    padding: 0;
-                }
-
-                svg {
-                    transition: var.$smooth;
-
-                    &:hover {
-                        color: var.$primary_color;
-                        transform: scale(1.1);
-                        transition: var.$smooth;
-                    }
-                }
-            }
-        }
-    }
-
-    .swiper_container {
-        @include mixins.flexbox(relative, flex, center, center);
-        width: 58vw;
-        height: 110vh;
-
-        @include responsive.screen_laptop () {
-            width: 90%;
-            height: 80vh;
-        }
-
-        .swiper {
+        .infor {
+            @include mixins.flexbox(relative, flex, center, normal);
+            flex-direction: column;
             width: 100%;
             height: 100%;
+            padding: 5vmax 0 0 0;
 
-            .swiper-slide {
-                @include mixins.smoke();
-                border-radius: 1vmax;
-                overflow: hidden;
+            @include responsive.screen_laptop () {
+                align-items: center;
+                padding: 0;
+                margin-bottom: 10vmax;
+            }
 
-                .card_box {
-                    width: 100%;
-                    height: 100%;
+            @include responsive.screen_small () {
+                height: auto;
+                margin-bottom: 100px;
+            }
 
-                    a {
-                        @include mixins.flexbox(absolute, flex, center, center);
-                        width: 100%;
-                        height: 100%;
-                        font-size: 4vmax;
-                        text-align: center;
-                        font-weight: 400;
-                        font-family: var.$font_one;
-                        text-transform: uppercase;
-                        color: var.$secondary_color;
-                        z-index: 2;
+            h1 {
+                width: inherit;
+                font-family: var.$font_one;
+                text-transform: uppercase;
+                color: var.$primary_color;
+            }
 
-                        @include responsive.screen_laptop () {
-                            font-size: 50px;
-                        }
+            p {
+                width: 70%;
+                margin: 2vmax 0 3vmax 0;
+                font-family: var.$font_dwo;
+                color: var.$black_gray;
+                font-weight: 400;
+                font-style: italic;
+                line-height: 1.5;
 
-                        @include responsive.screen_small () {
-                            font-size: 75px;
-                        }
+                @include responsive.screen_laptop () {
+                    width: 80%;
+                    margin: 50px 0 70px 0;
+                }
+
+                @include responsive.screen_small () {
+                    width: 80%;
+                }
+            }
+
+            .controls_swiper {
+                @include mixins.flexbox(relative, flex, center, center);
+                margin: 5vmax 0 0 0;
+                z-index: 2;
+
+                @include responsive.screen_laptop () {
+                    display: none;
+                    pointer-events: none;
+                }
+
+                button {
+                    color: var.$black_gray;
+                    background-color: transparent;
+                    margin: 0 2vmax;
+                    cursor: pointer;
+                    border: none;
+                    pointer-events: all;
+
+                    &:nth-child(1) {
+                        transform: rotateY(180deg);
                     }
 
-                    img {
+                    @include responsive.screen_laptop () {
+                        color: var.$secondary_color;
+                        padding: 0;
+                    }
+
+                    svg {
+                        transition: var.$smooth;
+
+                        &:hover {
+                            color: var.$primary_color;
+                            transform: scale(1.1);
+                            transition: var.$smooth;
+                        }
+                    }
+                }
+            }
+        }
+
+        .swiper_container {
+            @include mixins.flexbox(relative, flex, center, center);
+            width: 58vw;
+            height: 110vh;
+
+            @include responsive.screen_laptop () {
+                width: 100%;
+                height: 80vh;
+            }
+
+            .swiper {
+                width: 100%;
+                height: 100%;
+
+                .swiper-slide {
+                    @include mixins.smoke();
+                    border-radius: 1vmax;
+                    overflow: hidden;
+
+                    .card_box {
                         width: 100%;
                         height: 100%;
-                        object-fit: cover;
-                        user-select: none;
-                        pointer-events: none;
+
+                        a {
+                            @include mixins.flexbox(absolute, flex, center, center);
+                            width: 100%;
+                            height: 100%;
+                            font-size: 4vmax;
+                            text-align: center;
+                            font-weight: 400;
+                            font-family: var.$font_one;
+                            text-transform: uppercase;
+                            color: var.$secondary_color;
+                            z-index: 2;
+
+                            @include responsive.screen_laptop () {
+                                font-size: 50px;
+                            }
+
+                            @include responsive.screen_small () {
+                                font-size: 75px;
+                            }
+                        }
+
+                        img {
+                            width: 100%;
+                            height: 100%;
+                            object-fit: cover;
+                            user-select: none;
+                            pointer-events: none;
+                        }
                     }
                 }
             }

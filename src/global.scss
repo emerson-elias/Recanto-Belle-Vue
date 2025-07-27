@@ -20,7 +20,7 @@ body {
     @include mixins.background(100lvh);
 }
 
-h1{
+h1 {
     font-size: 4vmax;
 
     @include responsive.screen_laptop () {
@@ -54,4 +54,9 @@ p {
     @include responsive.screen_small () {
         font-size: 17px;
     }
+}
+
+li,
+a {
+    will-change: transform;
 }
