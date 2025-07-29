@@ -2,21 +2,6 @@
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
-li {
-    list-style: none;
-    font-size: 1.2vmax;
-    text-transform: uppercase;
-    font-family: var.$font_dwo;
-    font-weight: 500;
-    color: var.$secondary_color;
-    letter-spacing: 2px;
-    cursor: pointer;
-}
-
-a{
-    text-decoration: none;
-}
-
 .nav_container {
     position: absolute;
     top: 0;
@@ -24,6 +9,17 @@ a{
     width: 100vw;
     height: auto;
     z-index: 10;
+
+    li {
+        list-style: none;
+        font-size: 1.2vmax;
+        text-transform: uppercase;
+        font-family: var.$font_dwo;
+        font-weight: 500;
+        color: var.$secondary_color;
+        letter-spacing: 2px;
+        cursor: pointer;
+    }
 
     .navbar {
         @include mixins.flexbox(relative, flex, space-between, center);
@@ -72,6 +68,6 @@ a{
                 @include mixins.btn_closer();
                 border: none;
             }
-        }       
+        }
     }
 }

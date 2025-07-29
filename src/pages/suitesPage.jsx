@@ -9,6 +9,8 @@ import Suites from '../components/suites/suites'
 import Gallery from '../components/suites/gallery/gallery'
 import Footer from '../components/global/footer/footer'
 import Extras from '../components/suites/extras/extras'
+import Description from '../components/suites/description/description'
+import Icons from '../components/suites/bar/icons'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -39,6 +41,8 @@ function SuitesPage() {
             />
 
             <Suites suite={activeSuite} />
+            <Description suite={activeSuite} />
+            <Icons suite={activeSuite} />
             <Gallery suite={activeSuite} />
             <Extras suites={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />

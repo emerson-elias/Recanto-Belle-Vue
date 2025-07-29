@@ -1,0 +1,94 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.description_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5vw;
+
+    .boxOne{
+        background-color: rgba(188, 143, 143, 0)
+    }
+
+    .icons {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        flex-wrap: wrap;
+        width: 100%;
+        height: auto;
+        margin-bottom: 3vmax;
+        user-select: none;
+
+        @include responsive.screen_laptop () {
+            justify-content: space-evenly;
+            margin-bottom: 50px;
+            padding-bottom: 30px;
+        }
+
+        .icon-item {
+            @include mixins.flexbox(relative, flex, space-evenly, center);
+            flex-direction: column;
+            width: 10vmax;
+            height: 6vmax;
+            border: 0.1vw solid var.$black_gray;
+
+            @include responsive.screen_laptop () {
+                width: 180px;
+                height: 120px;
+                border: none;
+            }
+
+            @include responsive.screen_small() {
+                width: 110px;
+            }
+
+            @for $i from 1 through 8 {
+                &:nth-child(#{$i}) {
+                    // Remove bordas comuns
+                    border-top: none;
+                    border-left: none;
+
+                    // Regras específicas
+                    @if $i ==4 {
+                        border-right: none;
+                    }
+
+                    @if $i ==5 or $i ==6 or $i ==7 {
+                        border-bottom: none;
+                    }
+
+                    @if $i ==8 {
+                        border: none;
+                    }
+                }
+            }
+
+            .icon-img {
+                width: 1.8vmax;
+
+                @include responsive.screen_laptop () {
+                    width: 40px;
+                }
+
+                @include responsive.screen_small() {
+                    width: 35px;
+                }
+            }
+
+            .icon-name {
+                font-family: var.$font_dwo;
+                font-size: 0.7vmax;
+                color: var.$black_gray;
+                font-weight: 500;
+                font-style: normal;
+                text-align: center;
+
+                @include responsive.screen_laptop () {
+                    font-size: 12px;
+                }
+            }
+        }
+    }
+}

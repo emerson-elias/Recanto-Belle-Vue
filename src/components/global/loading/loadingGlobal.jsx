@@ -53,7 +53,7 @@ export const LoadingGlobal = () => {
 
     return (
         <section className={`${styles.loading_container} ${hide ? styles.hide : ''}`}>
-            <h1>Carregando...</h1>
+            <h1>Carregando</h1>
             <div className={styles.hourglass}></div>
         </section>
     )

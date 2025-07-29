@@ -44,7 +44,6 @@
             @include mixins.flexbox(relative, flex, space-between, start);
             flex-wrap: wrap;
             width: 50%;
-            margin-bottom: 5vmax;
 
             @include responsive.screen_laptop() {
                 width: 95%;

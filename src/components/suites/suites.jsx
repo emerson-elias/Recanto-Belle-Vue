@@ -5,9 +5,18 @@ import 'swiper/css'
 import './suites.scss'
 
 import Button from '../global/button/button'
+import meters from '/assets/svg/meters.svg'
+import people from '/assets/svg/people.svg'
+import pet from '/assets/svg/pet.svg'
 
 function Suites({ suite }) {
     if (!suite) return null
+
+    const details = [
+        { icon: people, label: "QUANTIDADE DE PESSOAS", value: suite.people },
+        { icon: meters, label: "METROS QUADRADOS", value: suite.meters },
+        { icon: pet, label: "QUANTIDADE DE PETS", value: suite.pet },
+    ]
 
     return (
         <section className='suites_container'>
@@ -40,16 +49,16 @@ function Suites({ suite }) {
                 <span>{suite.subTitle}</span>
                 <p>{suite.description}</p>
 
-                <ul className="icons">
-                    {suite.icons.map((icon) => (
-                        <li key={icon.name} className="icon-item">
-                            <img src={icon.src} alt={icon.name} className="icon-img" loading="lazy" />
-                            <i className="icon-name">{icon.name}</i>
-                        </li>
+                <div className='icons'>
+                    {details.map((detail, index) => (
+                        <div key={index} className='icon-item'>
+                            <img src={detail.icon} alt={detail.label} />
+                            <i className='name-icon'>{detail.value}</i>
+                        </div>
                     ))}
-                </ul>
+                </div>
 
-                <Button link={''} icon={'fa-regular fa-bookmark'} name={'Reserve agora'}/>
+                <Button link={''} icon={'fa-regular fa-bookmark'} name={suite.price} />
             </div>
 
         </section>

@@ -8,7 +8,7 @@
     width: 100vw;
     height: 120vh;
     padding: 0 5vw;
-    margin: 0 0 12vmax 0;
+    margin: 0 0 5vmax 0;
 
     @include responsive.screen_laptop () {
         flex-direction: column-reverse;
@@ -78,7 +78,7 @@
         @include mixins.flexbox(relative, flex, center, end);
         flex-direction: column;
         width: 40vw;
-        padding-top: 5vmax;
+        padding-top: 2vmax;
 
         @include responsive.screen_laptop () {
             width: 90%;
@@ -103,12 +103,12 @@
         span {
             width: 90%;
             font-family: var.$font_one;
-            font-size: 1.5vmax;
+            font-size: 1.7vmax;
             margin: 1.2vmax 0 0 0;
             text-align: end;
             color: var.$black_gray;
             font-weight: 600;
-            word-spacing: 2px;
+            word-spacing: 3px;
             text-transform: uppercase;
 
             @include responsive.screen_laptop () {
@@ -142,11 +142,9 @@
         }
 
         .icons {
-            @include mixins.flexbox(relative, flex, space-between, center);
-            flex-wrap: wrap;
+            @include mixins.flexbox(relative, flex, end, center);
             width: 100%;
-            height: auto;
-            margin-bottom: 3vmax;
+            margin: 1vmax 0 5vmax 0;
             user-select: none;
 
             @include responsive.screen_laptop () {
@@ -156,65 +154,43 @@
             }
 
             .icon-item {
-                @include mixins.flexbox(relative, flex, space-evenly, center);
+                @include mixins.flexbox(relative, flex, space-between, center);
                 flex-direction: column;
-                width: 10vmax;
+                width: 12vmax;
+                padding: 0.5vmax 1vmax;
                 height: 6vmax;
-                border: 0.1vw solid var.$black_gray;
+
+                &:nth-child(2) {
+                    border-right: 0.1vw solid var.$black_gray;
+                    border-left: 0.1vw solid var.$black_gray;
+                }
 
                 @include responsive.screen_laptop () {
                     width: 180px;
-                    height: 120px;
+                    height: 100px;
                     border: none;
                 }
 
                 @include responsive.screen_small() {
-                    width: 110px;
+                    padding: 2% 3%;
                 }
 
-                @for $i from 1 through 8 {
-                    &:nth-child(#{$i}) {
-                        // Remove bordas comuns
-                        border-top: none;
-                        border-left: none;
-
-                        // Regras específicas
-                        @if $i ==4 {
-                            border-right: none;
-                        }
-
-                        @if $i ==5 or $i ==6 or $i ==7 {
-                            border-bottom: none;
-                        }
-
-                        @if $i ==8 {
-                            border: none;
-                        }
-                    }
-                }
-
-                .icon-img {
-                    width: 1.8vmax;
-
-                    @include responsive.screen_laptop () {
-                        width: 40px;
-                    }
-
-                    @include responsive.screen_small() {
-                        width: 35px;
-                    }
-                }
-
-                .icon-name {
-                    font-family: var.$font_dwo;
-                    font-size: 0.7vmax;
+                .name-icon {
+                    font-family: var.$font_one;
+                    font-size: 1.3vmax;
                     color: var.$black_gray;
-                    font-weight: 500;
+                    font-weight: 600;
                     font-style: normal;
+                    letter-spacing: 1px;
+                    text-transform: capitalize;
                     text-align: center;
 
                     @include responsive.screen_laptop () {
-                        font-size: 12px;
+                        font-size: 18px;
+                    }
+
+                    @include responsive.screen_small() {
+                        font-size: 20px;
                     }
                 }
             }
