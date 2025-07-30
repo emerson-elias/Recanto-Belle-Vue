@@ -90,7 +90,7 @@ function Reviews() {
 
             <div className='box'>
                 <section className='boxOne'>
-                    <h1>Nossos Hóspedes</h1>
+                    <h1>Quem descançou</h1>
 
                     <div className="controls_swiper">
                         <button onClick={() => swiperRef.current?.slidePrev()}>
