@@ -8,18 +8,17 @@ export default function Icons({ suite }) {
     return (
         <section className={styles.icons_container}>
 
-            <div className={styles.box}>
+            <h1>Equipada</h1>
+            <p>Para oferecer o máximo conforto e descanço</p>
 
-                <ul className={styles.icons}>
-                    {suite.icons.map((icon) => (
-                        <li key={icon.name} className="icon-item">
-                            <img src={icon.src} alt={icon.name} className="icon-img" loading="lazy" />
-                            <i className="icon-name">{icon.name}</i>
-                        </li>
-                    ))}
-                </ul>
-
-            </div>
+            <ul className={styles.icons}>
+                {suite.icons.map((icon) => (
+                    <li key={icon.name} className={styles.item}>
+                        <img src={icon.src} alt={icon.name} className={styles.icon_img} loading="lazy" />
+                        <i className={styles.icon_name}>{icon.name}</i>
+                    </li>
+                ))}
+            </ul>
 
         </section>
     )

@@ -28,7 +28,9 @@ export const suites = [
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
-            { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
+            { name: 'Aquecedor', src: '/assets/svg/heater.svg' },
+            { name: 'Proteção', src: '/assets/svg/grid.svg' },
+            { name: 'Banho quente', src: '/assets/svg/bath.svg' }
         ],
 
         /* INFORMAÇÕES PARA DESCRIÇÃO*/
@@ -106,7 +108,9 @@ export const suites = [
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
-            { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
+            { name: 'Aquecedor', src: '/assets/svg/heater.svg' },
+            { name: 'Proteção', src: '/assets/svg/grid.svg' },
+            { name: 'Banho quente', src: '/assets/svg/bath.svg' }
         ],
 
         /* INFORMAÇÕES PARA DESCRIÇÃO*/
@@ -184,7 +188,9 @@ export const suites = [
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
-            { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
+            { name: 'Aquecedor', src: '/assets/svg/heater.svg' },
+            { name: 'Proteção', src: '/assets/svg/grid.svg' },
+            { name: 'Banho quente', src: '/assets/svg/bath.svg' }
         ],
 
         /* INFORMAÇÕES PARA DESCRIÇÃO*/
@@ -261,7 +267,9 @@ export const suites = [
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
-            { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
+            { name: 'Aquecedor', src: '/assets/svg/heater.svg' },
+            { name: 'Proteção', src: '/assets/svg/grid.svg' },
+            { name: 'Banho quente', src: '/assets/svg/bath.svg' }
         ],
 
         /* INFORMAÇÕES PARA DESCRIÇÃO*/
@@ -337,7 +345,9 @@ export const suites = [
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
-            { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
+            { name: 'Aquecedor', src: '/assets/svg/heater.svg' },
+            { name: 'Proteção', src: '/assets/svg/grid.svg' },
+            { name: 'Banho quente', src: '/assets/svg/bath.svg' }
         ],
 
         /* INFORMAÇÕES PARA DESCRIÇÃO*/
@@ -413,7 +423,9 @@ export const suites = [
             { name: 'Acesso à praia', src: '/assets/svg/beach.svg' },
             { name: 'Refeições', src: '/assets/svg/buffet.svg' },
             { name: 'Lavanderia', src: '/assets/svg/washer.svg' },
-            { name: 'Aquecedor', src: '/assets/svg/heater.svg' }
+            { name: 'Aquecedor', src: '/assets/svg/heater.svg' },
+            { name: 'Proteção', src: '/assets/svg/grid.svg' },
+            { name: 'Banho quente', src: '/assets/svg/bath.svg' }
         ],
 
         /* INFORMAÇÕES PARA DESCRIÇÃO*/
