@@ -85,7 +85,7 @@ function Reviews() {
             <Title
                 title={'O que dizem sobre nós'}
                 text={'Vivências autênticas que marcaram nossos hóspedes – descubra experiências'}
-                row={'row'}
+                row={''}
             />
 
             <div className='box'>

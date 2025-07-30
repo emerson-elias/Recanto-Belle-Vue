@@ -9,7 +9,7 @@
     flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
-    margin: 10vmax 0;
+    margin: 10vmax 0 4vmax 0;
 
     @include responsive.screen_small () {
         @include mixins.letter_large('', 'reviwes', 95%);
@@ -18,7 +18,7 @@
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, center);
-        height: 112vh;
+        height: 100vh;
         margin-top: 2vmax;
 
         @include responsive.screen_laptop() {
@@ -133,7 +133,7 @@
 
                 .swiper-slide {
                     width: 90%;
-                    padding: 15vmax;
+                    padding: 10vmax 15vmax;
                     user-select: none;
 
                     @include responsive.screen_laptop () {
