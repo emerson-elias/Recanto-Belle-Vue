@@ -28,6 +28,25 @@
         pointer-events: none;
     }
 
+    &::after {
+        position: absolute;
+        content: 'r';
+        top: 50%;
+        left: 70%;
+        transform: translate(-50%, -50%);
+        color: var.$primary_color;
+        opacity: .04;
+        font-size: 30vmax;
+        pointer-events: none;
+        user-select: none;
+        font-family: var.$new_icon;
+        z-index: -2;
+
+        @include responsive.screen_small() {
+            top: 65%;
+        }
+    }
+
     .btn_menu_drop {
         @include mixins.flexbox(absolute, flex, center, center);
         @include mixins.btn_closer();

@@ -42,7 +42,7 @@ function SuitesPage() {
 
             <Suites suite={activeSuite} />
             <Description suite={activeSuite} />
-            <Icons suite={activeSuite} />
+            {/*  <Icons suite={activeSuite} /> */}
             <Gallery suite={activeSuite} />
             <Extras suites={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />

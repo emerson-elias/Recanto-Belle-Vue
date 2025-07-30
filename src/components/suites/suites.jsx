@@ -58,7 +58,7 @@ function Suites({ suite }) {
                     ))}
                 </div>
 
-                <Button link={''} icon={'fa-regular fa-bookmark'} name={suite.price} />
+                <Button link={''} icon={'fa-regular fa-bookmark'} name={'Book'} />
             </div>
 
         </section>
