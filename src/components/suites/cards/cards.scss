@@ -1,107 +1,108 @@
-@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
 
 .suites_cards {
-    @include mixins.flexbox(relative, flex, space-between, center);
+    @include mixins.flexbox(relative, flex, center, center);
     @include mixins.letter_large(2%, 'Outras', 60%);
+    flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
     margin-bottom: 15vmax;
     overflow: hidden;
 
-    @include responsive.screen_laptop () {
-        flex-direction: column;
-        padding: 0;
-    }
-
-    .cards_title {
-        @include mixins.flexbox(relative, flex, center, start);
-        flex-direction: column;
-        width: 40vw;
-        height: 100%;
+    .row {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
 
         @include responsive.screen_laptop () {
-            align-items: center;
-            width: 90%;
-            padding: 0 0 8vmax 0;
+            flex-direction: column;
         }
 
-        h1 {
-            width: 100%;
-            font-family: var.$font_one;
-            text-transform: uppercase;
-            color: var.$primary_color;
-        }
-
-        p {
-            width: 70%;
-            margin: 2vmax 0 3vmax 0;
-            font-family: var.$font_dwo;
-            color: var.$black_gray;
-            font-weight: 400;
-            font-style: italic;
-            line-height: 1.5;
+        .boxOne {
+            @include mixins.flexbox(relative, flex, center, start);
+            flex-direction: column;
+            width: 40vw;
+            height: 100%;
 
             @include responsive.screen_laptop () {
-                width: 90%;
-                margin: 50px 0 10px 0;
+                align-items: center;
+                width: 100%;
+                padding: 5vmax 0 8vmax 0;
+            }
+
+            h1 {
+                width: 100%;
+                font-family: var.$font_one;
+                text-transform: uppercase;
+                color: var.$primary_color;
+            }
+
+            p {
+                width: 70%;
+                margin: 2vmax 0 3vmax 0;
+                font-family: var.$font_dwo;
+                color: var.$black_gray;
+                font-weight: 400;
+                font-style: italic;
+                line-height: 1.5;
+
+                @include responsive.screen_laptop () {
+                    width: 90%;
+                    margin: 50px 0 10px 0;
+                }
             }
         }
-    }
 
-    .boxSwiper {
-        position: relative;
-        width: 58vw;
-        height: 110vh;
+        .boxTwo {
+            position: relative;
+            width: 58vw;
+            height: 110vh;
 
-        @include responsive.screen_laptop () {
-            height: 80vh;
-        }
+            @include responsive.screen_laptop () {
+                width: 100%;
+                height: 80vh;
+            }
 
-        @include responsive.screen_laptop () {
-            width: 90%;
-        }
-
-        .swiper {
-            width: 100%;
-            height: 100%;
-            border-radius: 1vmax;
-
-            .card {
-                @include mixins.flexbox(relative, flex, center, center);
-                @include mixins.smoke();
+            .swiper {
                 width: 100%;
                 height: 100%;
-                cursor: pointer;
                 border-radius: 1vmax;
-                overflow: hidden;
 
-                h1 {
-                    text-align: center;
-                    font-family: var.$font_one;
-                    text-transform: uppercase;
-                    font-weight: 500;
-                    color: var.$secondary_color;
-                    user-select: none;
-                    pointer-events: none;
-                    z-index: 2;
-
-                    @include responsive.screen_small () {
-                        font-size: 55px;
-                    }
-                }
-
-                img {
-                    position: absolute;
-                    inset: 0;
+                .card {
+                    @include mixins.flexbox(relative, flex, center, center);
+                    @include mixins.smoke();
                     width: 100%;
                     height: 100%;
-                    object-fit: cover;
-                    user-select: none;
-                    pointer-events: none;
-                    z-index: -1;
+                    cursor: pointer;
+                    border-radius: 1vmax;
+                    overflow: hidden;
+
+                    h1 {
+                        text-align: center;
+                        font-family: var.$font_one;
+                        text-transform: uppercase;
+                        font-weight: 500;
+                        color: var.$secondary_color;
+                        user-select: none;
+                        pointer-events: none;
+                        z-index: 2;
+
+                        @include responsive.screen_small () {
+                            font-size: 55px;
+                        }
+                    }
+
+                    img {
+                        position: absolute;
+                        inset: 0;
+                        width: 100%;
+                        height: 100%;
+                        object-fit: cover;
+                        user-select: none;
+                        pointer-events: none;
+                        z-index: -1;
+                    }
                 }
             }
         }
