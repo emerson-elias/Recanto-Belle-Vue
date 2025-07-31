@@ -28,7 +28,7 @@ function Suites({ suite }) {
                     autoplay={{ delay: 2500, disableOnInteraction: false }}
                     loop={true}
                     slidesPerView={1}
-                    spaceBetween={0}
+                    spaceBetween={10}
                 >
                     {suite.gallery.map((img, index) => (
 
