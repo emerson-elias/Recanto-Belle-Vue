@@ -11,6 +11,7 @@ import Footer from '../components/global/footer/footer'
 import Extras from '../components/suites/extras/extras'
 import Description from '../components/suites/description/description'
 import Icons from '../components/suites/bar/icons'
+import Reviews from '../components/global/reviews/reviews'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -45,6 +46,7 @@ function SuitesPage() {
             <Icons suite={activeSuite} />
             <Gallery suite={activeSuite} />
             <Extras suites={activeSuite} />
+            <Reviews name={activeSuite.categoria}/>
             <Cards suites={suites} onSelect={setActiveSuite} />
             <Footer picture={activeSuite.banner} />
         </>

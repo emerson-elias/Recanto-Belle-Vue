@@ -4,7 +4,7 @@ import Video from '../components/home/video/video'
 import Roons from '../components/home/roons/roons'
 import Experience from '../components/home/experience/experience'
 import Services from '../components/home/services/services'
-import Reviews from '../components/home/reviews/reviews'
+import Reviews from '../components/global/reviews/reviews'
 import Summary from '../components/home/summary/summary'
 import Differences from '../components/home/differences/differences'
 import Footer from '../components/global/footer/footer'
@@ -33,7 +33,7 @@ function Home() {
             <Roons />
             <Services />
             <Experience />
-            <Reviews />
+            <Reviews name={'O resort'} />
             <Others />
             <Differences />
             <Summary />
