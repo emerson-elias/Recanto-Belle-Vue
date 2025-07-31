@@ -19,7 +19,7 @@ const service = [
         id: 2,
         layer: 'layerTwo',
         title: 'Buffet: La Vue Gastronomia',
-        content: 'Sushi',
+        content: 'Manjares',
         description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
         link: '',
         icon: 'fa-solid fa-utensils',
