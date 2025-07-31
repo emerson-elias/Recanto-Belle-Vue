@@ -8,30 +8,27 @@
     @include mixins.letter_large(1%, 'refúgio', 75%);
     flex-direction: column;
     width: 100vw;
-    height: auto;
-    padding: 0 5vmax;
+    padding: 0 5vw;
     margin-top: 5vmax;
     overflow: hidden;
 
     @include responsive.screen_laptop {
         margin: 50px 0;
     }
-    
-    @include responsive.screen_small {
-        padding: 0 20px;
-    }
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
 
         @include responsive.screen_laptop {
             flex-direction: column;
+            margin-top: 70px;
         }
 
         .boxOne {
             @include mixins.flexbox(relative, flex, center, start);
             flex-direction: column;
-            width: 35vw;
+            width: 40vw;
             height: 100%;
             padding-bottom: 5vmax;
 
@@ -45,19 +42,12 @@
             }
 
             h1 {
-                width: 75%;
-                margin: 6vmax 0 0 0;
                 font-family: var.$font_one;
                 text-transform: uppercase;
                 color: var.$primary_color;
-
-                @include responsive.screen_laptop () {
-                    width: 90%;
-                }
             }
 
             p {
-                width: 75%;
                 margin: 2.5vmax 0;
                 font-family: var.$font_dwo;
                 color: var.$black_gray;
@@ -66,7 +56,6 @@
                 line-height: 1.5;
 
                 @include responsive.screen_laptop () {
-                    width: 80%;
                     margin: 50px 0 70px 0;
                 }
 
@@ -78,11 +67,7 @@
             .cat_experince {
                 @include mixins.flexbox(relative, flex, space-around, stretch);
                 flex-direction: column;
-                width: 75%;
-
-                @include responsive.screen_laptop () {
-                    width: 80%;
-                }
+                width: 100%;
 
                 @include responsive.screen_small () {
                     margin-top: 20px;
@@ -134,8 +119,8 @@
         .boxTwo {
             @include mixins.smoke();
             position: relative;
-            width: 55vw;
-            height: 115vh;
+            width: 40vw;
+            height: 120vh;
             border-radius: 1vmax;
             background-color: var.$secondary_color;
             user-select: none;
@@ -166,7 +151,6 @@
                 padding: 0 4vmax;
 
                 p {
-                    width: 50%;
                     text-align: end;
                     font-family: var.$font_dwo;
                     color: var.$secondary_color;

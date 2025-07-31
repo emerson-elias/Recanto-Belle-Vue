@@ -3,30 +3,24 @@ import styles from './servicesCard.module.scss'
 
 function ServicesCard({
     title,
+    content,
     description,
     link,
     icon,
     btnName,
     videoOne,
-    videoTwo,
     row
 }) {
     return (
         <section className={`${styles.servicesCard_container} ${row && styles[row]}`}>
+            <span>{content}</span>
+
             <div className={styles.boxOne}>
                 <h1>{title}</h1>
                 <p>{description}</p>
 
                 <Button link={link} icon={icon} name={btnName} />
 
-                <video
-                    autoPlay
-                    loop
-                    muted
-                    playsInline
-                >
-                    <source src={videoTwo} type='video/mp4' />
-                </video>
             </div>
 
             <div className={styles.boxTwo} >

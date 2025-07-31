@@ -5,7 +5,7 @@
 
 .differences_container {
     @include mixins.flexbox(relative, flex, center, center);
-    @include mixins.letter_large(50%, 'único', 65%);
+    @include mixins.letter_large(50%, 'único', 70%);
     flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
@@ -53,7 +53,7 @@
 
                     .slide_caption {
                         position: absolute;
-                        top: 15%;
+                        top: 17%;
                         left: 0;
                         padding: 0 3vmax;
                         font-family: var.$font_dwo;
@@ -81,7 +81,7 @@
             flex-direction: column;
             width: 40vw;
             padding: 0 2vmax 0 0;
-            margin-bottom: 10vmax;
+            margin-bottom: 5vmax;
 
             @include responsive.screen_laptop () {
                 width: 100%;
