@@ -33,7 +33,12 @@ function Home() {
             <Roons />
             <Services />
             <Experience />
-            <Reviews name={'O resort'} />
+
+            <Reviews
+                name={'O resort'}
+                text={'Cada hóspede leva consigo uma história única vivida aqui. Conheça as experiências reais de quem encontrou descanso, aconchego e conexão em nosso refúgio natural.'}
+            />
+            
             <Others />
             <Differences />
             <Summary />

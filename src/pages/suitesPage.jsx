@@ -46,7 +46,12 @@ function SuitesPage() {
             <Icons suite={activeSuite} />
             <Gallery suite={activeSuite} />
             <Extras suites={activeSuite} />
-            <Reviews name={activeSuite.categoria}/>
+
+            <Reviews
+                name={activeSuite.categoria}
+                text={activeSuite.description}
+            />
+
             <Cards suites={suites} onSelect={setActiveSuite} />
             <Footer picture={activeSuite.banner} />
         </>

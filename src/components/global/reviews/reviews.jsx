@@ -77,7 +77,7 @@ const feedbacks = [
     },
 ]
 
-function Reviews({ name }) {
+function Reviews({ name, text}) {
     const swiperRef = useRef(null)
 
     return (
@@ -93,7 +93,7 @@ function Reviews({ name }) {
                 <section className='boxOne'>
 
                     <h1>O que dizem sobre<br/>{name}</h1>
-                    <p>Cada hóspede leva consigo uma história única vivida aqui. Conheça as experiências reais de quem encontrou descanso, aconchego e conexão em nosso refúgio natural.</p>
+                    <p>{text}</p>
 
                     <div className="controls_swiper">
                         <button onClick={() => swiperRef.current?.slidePrev()}>
