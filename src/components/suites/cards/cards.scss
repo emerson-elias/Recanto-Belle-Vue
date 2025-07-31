@@ -4,7 +4,7 @@
 
 .suites_cards {
     @include mixins.flexbox(relative, flex, center, center);
-    @include mixins.letter_large(2%, 'Outras', 60%);
+    @include mixins.letter_large(3%, 'Refina', 65%);
     flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
@@ -24,6 +24,7 @@
             flex-direction: column;
             width: 40vw;
             height: 100%;
+            padding-bottom: 8vmax;
 
             @include responsive.screen_laptop () {
                 align-items: center;
