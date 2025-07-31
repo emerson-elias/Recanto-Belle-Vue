@@ -45,7 +45,7 @@ function Differences() {
             <Title
                 title={'Diferênciais únicos'}
                 text={'Em nosso resort temos o carinho e atenção para deixar tudo o mais inesquecível.'}
-                row={'row'}
+                row={' '}
             />
 
             <div className='box'>
@@ -57,7 +57,7 @@ function Differences() {
                         autoplay={{ delay: 2500, disableOnInteraction: false }}
                         loop={true}
                         slidesPerView={1}
-                        spaceBetween={0}
+                        spaceBetween={10}
                     >
                         {slides.map((slide, index) => (
                             <SwiperSlide key={index}>

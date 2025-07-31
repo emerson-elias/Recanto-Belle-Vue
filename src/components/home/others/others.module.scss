@@ -22,13 +22,14 @@
         z-index: 1;
 
         @include responsive.screen_small() {
-           top: 45%;
+            top: 45%;
         }
 
         p {
             width: 70%;
             font-style: italic;
             line-height: 1.5;
+            font-weight: 600;
             letter-spacing: 1px;
             font-size: 1.5vmax;
             color: var.$secondary_color;
@@ -37,7 +38,6 @@
             @include responsive.screen_laptop() {
                 width: 90%;
                 font-size: 20px;
-                font-weight: 600;
             }
         }
     }

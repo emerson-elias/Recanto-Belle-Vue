@@ -92,7 +92,7 @@ function Reviews() {
             <div className='box'>
                 <section className='boxOne'>
 
-                    <h1>O que dizem<br/> sobre nós</h1>
+                    <h1>O que dizem sobre<br/> nós</h1>
                     <p>Cada hóspede leva consigo uma história única vivida aqui. Conheça as experiências reais de quem encontrou descanso, aconchego e conexão em nosso refúgio natural.</p>
 
                     <div className="controls_swiper">

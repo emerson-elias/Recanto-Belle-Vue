@@ -5,7 +5,7 @@
 
 .differences_container {
     @include mixins.flexbox(relative, flex, center, center);
-    @include mixins.letter_large(50%, 'único', 70%);
+    @include mixins.letter_large(5%, 'único', 70%);
     flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
@@ -13,6 +13,7 @@
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, center);
+        flex-direction: row-reverse;
         width: 100%;
         height: 120vh;
 
@@ -77,7 +78,7 @@
         }
 
         .boxTwo {
-            @include mixins.flexbox(relative, flex, center, end);
+            @include mixins.flexbox(relative, flex, center, start);
             flex-direction: column;
             width: 40vw;
             padding: 0 2vmax 0 0;
@@ -93,18 +94,11 @@
             h1 {
                 width: 100%;
                 font-family: var.$font_one;
-                text-align: end;
                 color: var.$primary_color;
                 text-transform: uppercase;
-
-                @include responsive.screen_laptop () {
-                    text-align: start;
-                    text-wrap: normal;
-                }
             }
 
             p {
-                text-align: end;
                 font-family: var.$font_dwo;
                 color: var.$black_gray;
                 font-weight: 400;
@@ -113,7 +107,6 @@
 
                 @include responsive.screen_laptop () {
                     margin: 50px 0 70px 0;
-                    text-align: start;
                     width: 90%;
                 }
 
