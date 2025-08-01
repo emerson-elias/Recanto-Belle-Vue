@@ -1,19 +1,18 @@
 import React from 'react'
-
 import ReactDOM from 'react-dom/client'
 import { BrowserRouter } from 'react-router-dom'
 
 import { MenuProvider } from './context/menuContext.jsx'
 import { LoadingProvider } from './context/loadingContext.jsx'
 
-import App from './App'
+import AppRoutes from './App'
 
 ReactDOM.createRoot(document.getElementById('root')).render(
     <React.StrictMode>
         <BrowserRouter>
             <LoadingProvider>
                 <MenuProvider>
-                    <App />
+                    <AppRoutes />
                 </MenuProvider>
             </LoadingProvider>
         </BrowserRouter>
