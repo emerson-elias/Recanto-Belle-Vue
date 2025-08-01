@@ -7,11 +7,12 @@ export function LoadingProvider({ children }) {
     const [forceOverflowHidden, setForceOverflowHidden] = useState(false)
     const scrollYRef = useRef(0)
 
+    // Identificador exclusivo para rotas
     const routeTaskRef = useRef(Symbol('route-loading'))
 
     const addLoadingTask = useCallback((taskId = Symbol()) => {
         setLoadingTasks(prev => new Set(prev).add(taskId))
-        return taskId
+        return taskId // retorna o ID caso queira guardar depois
     }, [])
 
     const removeLoadingTask = useCallback((taskId) => {
@@ -35,9 +36,11 @@ export function LoadingProvider({ children }) {
             document.body.style.cssText = ''
             window.scrollTo(0, scrollYRef.current)
         }
+
         setForceOverflowHidden(hidden)
     }, [])
 
+    // Funções específicas para rotas
     const startRouteLoading = useCallback(() => {
         addLoadingTask(routeTaskRef.current)
     }, [addLoadingTask])
