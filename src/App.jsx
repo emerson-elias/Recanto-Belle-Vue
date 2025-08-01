@@ -9,6 +9,7 @@ import DoubtsPage from './pages/doubtsPage'
 import ContactPage from './pages/contactPage'
 import SuitesPage from './pages/suitesPage'
 import SuitesStart from './pages/suitesStart'
+import ServicesPage from './pages/servicesPage'
 
 function AppRoutes() {
     return (
@@ -16,10 +17,11 @@ function AppRoutes() {
             <Route element={<MainLayout />}>
                 <Route path="/" element={<Home />} />
                 <Route path="/sobre" element={<AboutPage />} />
-                <Route path="/duvidas" element={<DoubtsPage />} />
-                <Route path="/contatos" element={<ContactPage />} />
                 <Route path="/suites" element={<SuitesStart />} />  {/* ROTA PADRÃO PARA PODER SER USADO COM ANCORA */}
                 <Route path="/suites/:id" element={<SuitesPage />} />
+                <Route path="/services/:id" element={<ServicesPage />} />
+                <Route path="/duvidas" element={<DoubtsPage />} />
+                <Route path="/contatos" element={<ContactPage />} />
             </Route>
         </Routes>
     )

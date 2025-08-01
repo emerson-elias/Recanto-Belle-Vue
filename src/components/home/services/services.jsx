@@ -1,7 +1,9 @@
-import styles from './services.module.scss'
-
 import Title from '../../global/title/title'
 import ServicesCard from './container/servicesCard'
+
+import styles from './services.module.scss'
+
+import { services as servicesLinks } from '../../services/data/data'
 
 const service = [
     {
@@ -10,7 +12,6 @@ const service = [
         title: 'Tinto & branco: adega do valle',
         content: 'Morgado',
         description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
-        link: '',
         icon: 'fa-solid fa-wine-bottle',
         videoOne: '/assets/video/vinho.mp4',
         btnName: 'Visite a essência'
@@ -21,7 +22,6 @@ const service = [
         title: 'Buffet: La Vue Gastronomia',
         content: 'Manjares',
         description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
-        link: '',
         icon: 'fa-solid fa-utensils',
         videoOne: '/assets/video/buffet.mp4',
         btnName: 'Visite a essência'
@@ -32,7 +32,6 @@ const service = [
         title: 'Serviço de quarto: Refúgio à Mesa',
         content: 'Conforto',
         description: 'Do atendimento personalizado às atividades de lazer, nossa pousada oferece serviços que transformam sua estadia em momentos inesquecíveis.',
-        link: '',
         icon: 'fa-solid fa-bell-concierge',
         videoOne: '/assets/video/service.mp4',
         btnName: 'Visite a essência'
@@ -49,32 +48,36 @@ function Services() {
                 row={'row'}
             />
 
-            {service.map(({ id,
+            {service.map(({
+                id,
                 layer,
                 title,
                 content,
                 description,
-                link,
                 icon,
                 btnName,
                 videoOne
-            }) => (
-                <div key={id} className={styles[layer]}>
+            }, index) => {
+                const linkId = servicesLinks[index]?.id
 
-                    <div className={styles.context}>
-                        <ServicesCard
-                            title={title}
-                            content={content}
-                            description={description}
-                            link={link}
-                            icon={icon}
-                            btnName={btnName}
-                            videoOne={videoOne}
-                            row={layer === 'layerTwo' ? 'row_reverse' : ''}
-                        />
+                return (
+                    <div key={id} className={styles[layer]}>
+                        <div className={styles.context}>
+                            <ServicesCard
+                                title={title}
+                                content={content}
+                                description={description}
+                                link={`/services/${linkId}`}
+                                icon={icon}
+                                btnName={btnName}
+                                videoOne={videoOne}
+                                row={layer === 'layerTwo' ? 'row_reverse' : ''}
+                            />
+                        </div>
                     </div>
-                </div>
-            ))}
+                )
+            })}
+
         </section>
     )
 }

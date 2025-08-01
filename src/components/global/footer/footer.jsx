@@ -2,7 +2,7 @@ import { Link } from 'react-router-dom'
 
 import styles from './footer.module.scss'
 
-function Footer({ picture }) {
+export default function Footer({ picture }) {
 
     const Call = () => {
         const phoneNumber = '+5598988239695'
@@ -84,5 +84,3 @@ function Footer({ picture }) {
         </footer>
     )
 }
-
-export default Footer
