@@ -1,24 +1,30 @@
-import { useEffect, useRef, useCallback } from 'react'
+import { useEffect, useRef } from 'react'
 import { Link } from 'react-router-dom'
 import { gsap } from 'gsap'
 import { useMenu } from '../../../../context/menuContext'
+
 import './drop.scss'
 
-import img1 from '/assets/img/pexels-1.jpg'
-import img2 from '/assets/img/pexels-2.jpg'
-import img3 from '/assets/img/pexels-7.jpg'
-import img4 from '/assets/img/services.jpg'
-import img5 from '/assets/img/pexels-8.jpg'
-import img6 from '/assets/img/contato.jpg'
+const itensMenu = [
+    { title: 'Suítes', img: '/assets/img/pexels-7.jpg', link: '/suites' },
+    { title: 'Adega', img: '/assets/img/pexels-4.jpg', link: '/services/Adega-do-Valle' },
+    { title: 'Buffet', img: '/assets/img/pexels-3.jpg', link: '/services/La-Vue-Gastronomia' },
+    { title: 'Serviços', img: '/assets/img/services.jpg', link: '/services/Refugio-a-Mesa' },
+    { title: 'Início', img: '/assets/img/pexels-1.jpg', link: '/' },
+    { title: 'Sobre', img: '/assets/img/pexels-2.jpg', link: '/sobre' },
+    { title: 'Experiências', img: '/assets/img/pexels-1.jpg', link: '/experiencias' },
+    { title: 'Dúvidas', img: '/assets/img/pexels-8.jpg', link: '/duvidas' },
+    { title: 'Contatos', img: '/assets/img/contato.jpg', link: '/contatos' }
+]
 
 export default function Drop() {
     const { isMenuOpen, closeMenu } = useMenu()
-    const images = [img1, img2, img3, img4, img5, img6]
     const imgRefs = useRef([])
-    const boxRefs = useRef([])
+
+    const containerRef = useRef(null)
+    const tl = useRef(null)
 
     useEffect(() => {
-        const target = document.querySelector('.menu_drop')
         if (isMenuOpen) {
             document.body.style.overflow = 'hidden'
         } else {
@@ -29,114 +35,116 @@ export default function Drop() {
         }
     }, [isMenuOpen])
 
-    const mouseEnter = (index) => {
-        if (!isMenuOpen) return
-        const imgElement = imgRefs.current[index]
-        if (imgElement) {
-            gsap.to(imgElement, {
-                opacity: 1,
-                scale: 1,
-                duration: 0.3,
-                ease: 'power2.out',
-            })
-        }
+    useEffect(() => {
+        gsap.set(imgRefs.current, {
+            opacity: 0,
+            scale: 0.8
+        })
+    }, [])
+
+    const enter = (index) => {
+        gsap.to(imgRefs.current, {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.4
+        })
+
+        gsap.to(imgRefs.current[index], {
+            opacity: 1,
+            scale: 1,
+            duration: 0.4,
+            ease: 'power2.out'
+        })
     }
 
-    const mouseLeave = (index) => {
-        const imgElement = imgRefs.current[index]
-        if (imgElement) {
-            gsap.to(imgElement, {
-                opacity: 0,
-                scale: 0.8,
-                duration: 0.3,
-                ease: 'power2.out',
-            })
-        }
+    const leave = () => {
+        gsap.to(imgRefs.current, {
+            opacity: 0,
+            scale: 0.8,
+            duration: 0.4,
+            ease: 'power2.out'
+        })
     }
 
-    const mouseMove = useCallback((index, event) => {
-        const imgElement = imgRefs.current[index]
-        const boxElement = boxRefs.current[index]
+    useEffect(() => {
+        tl.current = gsap.timeline({ paused: true })
 
-        if (imgElement && boxElement) {
-            const rect = boxElement.getBoundingClientRect()
-            const mouseX = event.clientX - rect.left
-            const mouseY = event.clientY - rect.top
-
-            const moveX = (mouseX - rect.width / 2) / 10
-            const moveY = (mouseY - rect.height / 2) / 10
-
-            gsap.to(imgElement, {
-                x: moveX,
-                y: moveY,
-                duration: 0.3,
-                ease: 'power2.out',
-            })
-        }
+        tl.current.to(containerRef.current, {
+            clipPath: 'inset(0% 0% 0% 0%)',
+            duration: 0.8,
+            ease: 'power3.out'
+        })
     }, [])
 
     useEffect(() => {
-        const handlers = []
-
         if (isMenuOpen) {
-            boxRefs.current.forEach((box, index) => {
-                if (box) {
-                    const handler = (event) => mouseMove(index, event)
-                    box.addEventListener('mousemove', handler)
-                    handlers.push({ box, handler })
-                }
+            gsap.set(containerRef.current, {
+                clipPath: 'inset(0% 0% 100% 0%)'
             })
+            tl.current.play()
+        } else {
+            tl.current.reverse()
         }
-
-        return () => {
-            handlers.forEach(({ box, handler }) => {
-                if (box) {
-                    box.removeEventListener('mousemove', handler)
-                }
-            })
-        }
-    }, [mouseMove, isMenuOpen])
+    }, [isMenuOpen])
 
     return (
-        <section className={`menu_drop ${isMenuOpen ? 'open' : 'closed'}`}>
-            <button className='btn_menu_drop' onClick={closeMenu} aria-label="Fechar menu">
-                <span className={isMenuOpen ? 'open' : ''}></span>
-                <span className={isMenuOpen ? 'open' : ''}></span>
-                <span className={isMenuOpen ? 'open' : ''}></span>
-            </button>
+        <section className={`menu_container ${isMenuOpen ? 'open' : 'closed'}`}
+            ref={containerRef}
+            style={{ clipPath: 'inset(0% 0% 100% 0%)' }}
+        >
+            <div className='menu'>
+                <Link to={'/'} onClick={closeMenu}>r</Link>
+                <button className='btn_menu_drop' onClick={closeMenu} aria-label="Fechar menu">
+                    <span className={isMenuOpen ? 'open' : ''}></span>
+                    <span className={isMenuOpen ? 'open' : ''}></span>
+                    <span className={isMenuOpen ? 'open' : ''}></span>
+                </button>
+            </div>
 
-            <ul>
-                {['início', 'sobre', 'suítes', 'serviços', 'dúvidas', 'contatos'].map((item, index) => {
-                    const paths = ['/', '/sobre', '/suites', '', '/duvidas', '/contatos']
-
-                    return (
-                        <div
-                            key={index}
-                            className='box_li'
-                            ref={(el) => (boxRefs.current[index] = el)}
-                            onMouseEnter={() => mouseEnter(index)}
-                            onMouseLeave={() => mouseLeave(index)}
+            <ul className='box'>
+                <div className='boxOne'>
+                    {itensMenu.slice(0, 4).map((item, index) => (
+                        <li
+                            key={item.title}
+                            onMouseEnter={() => enter(index)}
+                            onMouseLeave={leave}
                         >
-                            <li><Link to={paths[index]} onClick={closeMenu}>{item}</Link></li>
+                            <Link to={item.link} onClick={closeMenu}>{item.title}</Link>
+                        </li>
+                    ))}
+                </div>
 
-                            <section ref={(el) => (imgRefs.current[index] = el)}>
-                                {isMenuOpen && (
-                                    <img src={images[index]} alt={item} loading="lazy" />
-                                )}
-                            </section>
-                        </div>
-                    )
-                })}
+                <div className='boxTwo'>
+                    {itensMenu.slice(4).map((item, index) => (
+                        <li
+                            key={item.title}
+                            onMouseEnter={() => enter(index + 4)}
+                            onMouseLeave={leave}
+                        >
+                            <Link to={item.link} onClick={closeMenu}>{item.title}</Link>
+                        </li>
+                    ))}
+                </div>
             </ul>
 
-            <div className='social'>
-                <a>&copy; 2025 Recanto Belle Vue</a>
-                <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>
-                    facebook / instagram
-                </a>
-                <a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'>
-                    &copy; By Emerson Elias
-                </a>
+            <div className='row'>
+                <Link to={'/suites'} onClick={closeMenu}>Book</Link>
+                <div className='social'>
+                    <li><a href='https://github.com/emerson-elias' target='_blank' rel='noopener noreferrer'><i className="fa-brands fa-github-alt"></i></a></li>
+                    <li><a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'><i className="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'><i className="fa-solid fa-user"></i></a></li>
+                    <li><a href='https://www.linkedin.com/in/emerson-elias-9b2894228/' target='_blank' rel='noopener noreferrer'><i className="fa-brands fa-linkedin-in"></i></a></li>
+                </div>
+            </div>
+
+            <div className='boxImg'>
+                {itensMenu.map((item, index) => (
+                    <img
+                        key={index}
+                        ref={el => imgRefs.current[index] = el}
+                        src={item.img}
+                    />
+                ))}
             </div>
         </section>
     )
