@@ -7,12 +7,12 @@ import './drop.scss'
 
 const itensMenu = [
     { title: 'Suítes', img: '/assets/img/pexels-7.jpg', link: '/suites' },
-    { title: 'Adega', img: '/assets/img/pexels-4.jpg', link: '/services/Adega-do-Valle' },
+    { title: 'Adega', img: '/assets/img/pexels-4.jpg', link: '/services/Valle-dos-Vinhos' },
     { title: 'Buffet', img: '/assets/img/pexels-3.jpg', link: '/services/La-Vue-Gastronomia' },
     { title: 'Serviços', img: '/assets/img/services.jpg', link: '/services/Refugio-a-Mesa' },
     { title: 'Início', img: '/assets/img/pexels-1.jpg', link: '/' },
     { title: 'Sobre', img: '/assets/img/pexels-2.jpg', link: '/sobre' },
-    { title: 'Experiências', img: '/assets/img/pexels-1.jpg', link: '/experiencias' },
+    { title: 'Experiências', img: '/assets/img/praia.jpg', link: '/experiencias' },
     { title: 'Dúvidas', img: '/assets/img/pexels-8.jpg', link: '/duvidas' },
     { title: 'Contatos', img: '/assets/img/contato.jpg', link: '/contatos' }
 ]

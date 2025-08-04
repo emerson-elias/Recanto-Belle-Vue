@@ -53,6 +53,7 @@
 
         @include responsive.screen_small() {
             top: 3%;
+            padding: 0 15px 0 20px;
         }
 
         a {
@@ -171,7 +172,7 @@
 
     .row {
         @include mixins.flexbox(absolute, flex, space-between, end);
-        top: 80%;
+        top: 78%;
         left: 0;
         padding: 0 4% 0 1%;
         width: 100%;

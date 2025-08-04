@@ -15,6 +15,8 @@ export default function MainLayout() {
     const { startRouteLoading, endRouteLoading } = useLoading()
 
     useEffect(() => {
+        window.scrollTo(0, 0)
+        
         startRouteLoading()
         const timeout = setTimeout(() => {
             endRouteLoading()

@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { services } from '../components/services/data/data'
 
 import Footer from "../components/global/footer/footer"
+import BannerVideo from '../components/global/bannerVideo/bannerVideo'
 
 function ServicesPage({ }) {
 
@@ -14,11 +15,19 @@ function ServicesPage({ }) {
         setActiveService(found || services[0])
     }, [id])
 
-    if (!activeService) return
-    
+    if (!activeService) return null
+
     return (
         <>
-            <Footer />
+            <BannerVideo
+                key={id}
+                letter={activeService.letter}
+                title={activeService.titleBanner}
+                subTitle={activeService.subTitleBanner}
+                video={activeService.videoTwo}
+            />
+            
+            <Footer picture={activeService.image}/>
         </>
     )
 }

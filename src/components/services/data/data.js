@@ -1,23 +1,66 @@
+
 export const services = [
     {
-        id: 'Adega-do-Valle',
+        //INFORMAÇÕES PARA O BANNER
+        id: 'Valle-dos-Vinhos',
+        letter: 'v',
+        titleBanner: 'Valle dos Vinhos',
+        subTitleBanner: 'para paladares refinados',
+
+        //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Tinto & branco: adega do valle',
         content: 'Morgado',
-        description: 'Nossa adega oferece um ambiente sofisticado...',
-        videoOne: '/assets/video/service.mp4',
+        descriptionTitle: 'Nossa adega oferece um ambiente sofisticado...',
+        videoOne: '/assets/video/vinho.mp4',
+        videoTwo: '/assets/video/banner-1.mp4',
+        layer: 'layerOne',
+        description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
+        icon: 'fa-solid fa-wine-bottle',
+        btnName: 'Visite a essência',
+
+        //INFORMAÇÕES PARA FOOTER
+        image: '/assets/img/pexels-4.jpg',
     },
     {
+        //INFORMAÇÕES PARA O BANNER
         id: 'La-Vue-Gastronomia',
+        letter: 'l',
+        titleBanner: 'La Vue Gastronomia',
+        subTitleBanner: 'desguste a essência',
+
+        //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Buffet: La Vue Gastronomia',
         content: 'Manjares',
-        description: 'Sabores únicos preparados com ingredientes frescos...',
-        videoOne: '/assets/video/service.mp4',
+        descriptionTitle: 'Sabores únicos preparados com ingredientes frescos...',
+        videoOne: '/assets/video/buffet.mp4',
+        videoTwo: '/assets/video/banner-2.mp4',
+        layer: 'layerTwo',
+        description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
+        icon: 'fa-solid fa-utensils',
+        btnName: 'Visite a essência',
+
+        //INFORMAÇÕES PARA FOOTER
+        image: '/assets/img/pexels-3.jpg',
     },
     {
-        id: 'Refugio-A-Mesa',
+        //INFORMAÇÕES PARA O BANNER
+        id: 'Refugio-a-Mesa',
+        letter: 's',
+        titleBanner: 'Refúgio à Mesa',
+        subTitleBanner: 'Conforto a cama',
+
+        //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Serviço de quarto: Refúgio à Mesa',
         content: 'Conforto',
-        description: 'Do atendimento personalizado às atividades...',
+        descriptionTitle: 'Do atendimento personalizado às atividades...',
         videoOne: '/assets/video/service.mp4',
+        videoTwo: '/assets/video/banner-3.mp4',
+        layer: 'layerThere',
+        description: 'Do atendimento personalizado às atividades de lazer, nossa pousada oferece serviços que transformam sua estadia em momentos inesquecíveis.',
+        icon: 'fa-solid fa-bell-concierge',
+        btnName: 'Visite a essência',
+
+         //INFORMAÇÕES PARA FOOTER
+          image: '/assets/img/services.jpg',
     }
 ]

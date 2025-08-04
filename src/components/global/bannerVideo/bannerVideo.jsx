@@ -2,13 +2,14 @@ import Logo from '../logo/logo'
 
 import styles from './bannerVideo.module.scss'
 
-function bannerVideo({ letter, title, subTitle, video}) {
+function BannerVideo({ letter, title, subTitle, video }) {
     return (
         <section className={styles.bannerVideo_container}>
 
             <Logo letter={letter} title={title} subTitle={subTitle} />
 
             <video
+                key={video}
                 autoPlay
                 loop
                 muted
@@ -20,4 +21,4 @@ function bannerVideo({ letter, title, subTitle, video}) {
     )
 }
 
-export default bannerVideo
+export default BannerVideo
