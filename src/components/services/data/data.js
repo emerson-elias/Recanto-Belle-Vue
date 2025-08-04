@@ -7,6 +7,12 @@ export const services = [
         titleBanner: 'Valle dos Vinhos',
         subTitleBanner: 'para paladares refinados',
 
+        //INFORMAÇÕES PARA BIO
+        titleBio: 'Entre rótulos, aromas e tradição',
+        caption: 'um convite ao refino',
+        textBio: 'No Valle dos Vinhos, cada garrafa conta uma história. Explore nossa adega exclusiva repleta de seleções nacionais e importadas que despertam os sentidos e traduzem o verdadeiro prazer de degustar.',
+        link: '/suites',
+
         //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Tinto & branco: adega do valle',
         content: 'Morgado',
@@ -27,6 +33,12 @@ export const services = [
         letter: 'l',
         titleBanner: 'La Vue Gastronomia',
         subTitleBanner: 'desguste a essência',
+
+        //INFORMAÇÕES PARA BIO
+        titleBio: 'Sabores que contam histórias',
+        caption: 'a arte de transformar ingredientes',
+        textBio: 'Na La Vue Gastronomia, a culinária ganha poesia. Descubra pratos que exaltam ingredientes frescos, regionais e técnicas que unem tradição e sofisticação em cada mordida.',
+        link: '/suites',
 
         //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Buffet: La Vue Gastronomia',
@@ -49,6 +61,12 @@ export const services = [
         titleBanner: 'Refúgio à Mesa',
         subTitleBanner: 'Conforto a cama',
 
+        //INFORMAÇÕES PARA BIO
+        titleBio: 'O conforto servido com carinho',
+        caption: 'experiência além da hospedagem',
+        textBio: 'Refúgio à Mesa foi pensado para que cada detalhe da sua estadia seja memorável. Com atendimento acolhedor, serviços exclusivos e aconchego em cada canto, oferecemos hospitalidade que abraça.',
+        link: '/suites',
+
         //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Serviço de quarto: Refúgio à Mesa',
         content: 'Conforto',
@@ -60,7 +78,7 @@ export const services = [
         icon: 'fa-solid fa-bell-concierge',
         btnName: 'Visite a essência',
 
-         //INFORMAÇÕES PARA FOOTER
-          image: '/assets/img/services.jpg',
+        //INFORMAÇÕES PARA FOOTER
+        image: '/assets/img/services.jpg',
     }
 ]

@@ -57,8 +57,8 @@ export default function Footer({ picture }) {
                             <div className={styles.links}>
                                 <Link to={'/sobre'} > Sobre</Link>
                                 <Link to={'/suites'} > Suítes</Link>
-                                <Link to={' '} > Serviços</Link>
                                 <Link to={'/duvidas'} > Dúvidas</Link>
+                                <Link to={'/contatos'} > Contatos</Link>
                                 <Link to={' '} > Experiências</Link>
                             </div>
                         </div>
