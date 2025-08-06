@@ -7,7 +7,7 @@ function Bio({ title, caption, text, link, icon, name}) {
         <section className={styles.bio_container}>
 
             <div className={styles.title}>
-                <h1>{title}:</h1>
+                <h1>{title}</h1>
                 <h2>{caption}</h2>
             </div>
 

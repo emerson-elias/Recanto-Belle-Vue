@@ -1,0 +1,133 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.main_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5vw;
+    margin: 0 0 15vmax 0;
+
+    background-color: rgba(188, 143, 143, 0);
+
+    .layerOne,
+    .layerTwo,
+    .layerThere,
+    .layerFour {
+        @include mixins.flexbox(relative, flex, space-between, normal);
+        width: 100%;
+        height: 100%;
+        margin: 2vmax 0;
+
+        background-color: rgba(0, 128, 0, 0);
+
+        .boxOne {
+            @include mixins.smoke();
+            position: relative;
+            background-position: center center;
+            background-repeat: no-repeat;
+            background-size: cover;
+            animation: pan-y 35s both infinite;
+            will-change: transform;
+            border-radius: 1vmax;
+            width: 40vw;
+            height: 120vh;
+            overflow: hidden;
+
+            @include responsive.screen_small() {
+                height: 60vh;
+            }
+        }
+
+        .boxTwo {
+            position: relative;
+            width: 40vw;
+            height: 100%;
+
+            .infor {
+
+                h1 {
+                    font-family: var.$font_one;
+                    color: var.$primary_color;
+                    text-transform: uppercase;
+                }
+
+                p {
+                    font-family: var.$font_dwo;
+                    color: var.$black_gray;
+                    font-weight: 400;
+                    line-height: 1.5;
+                    margin: 2vmax 0 3vmax 0;
+
+                    @include responsive.screen_laptop () {
+                        margin: 50px 0 70px 0;
+                        width: 90%;
+                    }
+
+                    @include responsive.screen_small () {
+                        margin: 50px 0;
+                    }
+                }
+            }
+
+            .twoImg {
+                @include mixins.smoke();
+                position: relative;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation: pan-y 50s both infinite;
+                will-change: transform;
+                border-radius: 1vmax;
+                width: 40vw;
+                height: 90vh;
+                overflow: hidden;
+
+                @include responsive.screen_small() {
+                    height: 60vh;
+                }
+            }
+        }
+    }
+
+    .layerOne {
+        flex-direction: row-reverse;
+
+        .boxTwo {
+            .infor {
+                margin: 0 0 10vmax 0;
+            }
+        }
+    }
+
+    .layerTwo {
+        flex-direction: row-reverse;
+        align-items: center;
+    }
+
+    .layerThere {
+        @include mixins.letter_large(5%, 'Refino', 76%);
+    }
+
+    .layerFour {
+        @include mixins.letter_large(5%, 'Luxos', 76%);
+    }
+
+    .layerThere,
+    .layerFour {
+
+        .boxTwo {
+            .infor {
+                margin: 5vmax 0 10vmax 0;
+
+                h1,
+                p {
+                    text-align: end;
+                }
+            }
+        }
+    }
+
+}

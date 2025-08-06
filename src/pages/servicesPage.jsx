@@ -5,6 +5,7 @@ import { services } from '../components/services/data/data'
 import Footer from "../components/global/footer/footer"
 import BannerVideo from '../components/global/bannerVideo/bannerVideo'
 import Bio from '../components/global/bio/bio'
+import Container from '../components/services/container/container'
 
 function ServicesPage({ }) {
 
@@ -25,11 +26,11 @@ function ServicesPage({ }) {
                 letter={activeService.letter}
                 title={activeService.titleBanner}
                 subTitle={activeService.subTitleBanner}
-                video={activeService.videoTwo}
+                video={activeService.videoOne}
             />
 
             <Bio
-                title={activeService.titleBio}
+                title={activeService.title}
                 caption={activeService.caption}
                 text={activeService.textBio}
                 link={activeService.link}
@@ -37,7 +38,8 @@ function ServicesPage({ }) {
                 name={activeService.btnName}
             />
 
-            <Footer picture={activeService.image} />
+            <Container services={activeService} />
+            <Footer picture={activeService.footerImage} />
         </>
     )
 }
