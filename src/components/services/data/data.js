@@ -44,6 +44,37 @@ export const services = [
         descriptionBoxFour: 'Ao som envolvente do jazz, nossos chefs preparam frutos do mar com frescor e delicadeza, enquanto nossos sommeliers harmonizam cada prato com vinhos perfeitos. Aos finais de semana, você é convidado a viver noites que despertam todos os sentidos, com promoções especiais e drinks exclusivos.',
         pictureOneBoxFour: '/assets/img/adega-6.jpg',
         pictureTwoBoxFour: '/assets/img/adega-7.jpg',
+
+
+        // INFORMAÇÕES PARA PACOTES DE SERVIÇOS
+        namePackOne: 'Carta de vinhos / pacote premium',
+        packImgOne: '/assets/img/packAdegaOne.jpg',
+        descriptionPackOne: 'Explore os sabores de vinhos selecionados das vinícolas mais renomadas da América do Sul, com harmonizações pensadas para surpreender o paladar. Ideal para apreciadores que buscam uma experiência sofisticada e inesquecível.',
+        includePackOne: [
+            'Seleção de 4 rótulos premium (tintos e brancos)',
+            'Harmonização com tábua de queijos e frios artesanais',
+            'Taças de cristal exclusivas',
+            'Brinde de boas-vindas com espumante',
+            'Acesso à área VIP da adega',
+            'Desconto de 15% em compras na loja da adega'
+        ],
+        pricePackOne: 'R$ 500',
+        durationPackOne: 'Durante toda hospedagem',
+
+
+        namePackTwo: 'Experiência sensorial / pacote romântico',
+        packImgTwo: '/assets/img/packAdegaTwo.jpg',
+        descriptionPackTwo: 'Uma imersão romântica entre aromas, sabores e emoções. Esta experiência oferece um ambiente reservado e encantador, perfeito para casais que desejam celebrar momentos especiais com elegância e intimidade.',
+        includePackTwo: [
+            'Degustação guiada com 3 rótulos selecionados',
+            'Ambiente decorado com velas e pétalas de rosas',
+            'Tábua especial com chocolates finos e frutas frescas',
+            'Brinde personalizado ao casal',
+            'Playlist exclusiva e iluminação suave',
+            'Foto polaroid de recordação'
+        ],
+        pricePackTwo: 'R$ 350',
+        durationPackTwo: 'Durante toda hospedagem'
     },
     {
         //INFORMAÇÕES PARA O BANNER
@@ -89,6 +120,32 @@ export const services = [
         descriptionBoxFour: 'O espaço da La Vue une elegância e conforto, criando o cenário perfeito para almoços, jantares ou celebrações especiais. Aqui, você saboreia o melhor da gastronomia em clima leve, afetuoso e inesquecível.',
         pictureOneBoxFour: '/assets/img/buffet-6.jpg',
         pictureTwoBoxFour: '/assets/img/buffet-7.jpg',
+
+        // INFORMAÇÕES PARA PACOTES DE SERVIÇOS
+        namePackOne: 'La Vue Gastronomia / pacote gourmet',
+        packImgOne: '/assets/img/packBuffetOne.jpg',
+        descriptionPackOne: 'Desperte seus sentidos com uma jornada gastronômica exclusiva no restaurante La Vue. Pratos autorais, técnicas refinadas e ingredientes frescos criam uma experiência que vai além da refeição.',
+        includePackOne: [
+            'Menu degustação de 5 etapas com harmonização de vinhos',
+            'Mesa reservada com vista panorâmica',
+            'Drink de boas-vindas personalizado',
+            'Sobremesa exclusiva do chef',
+            'Cortesia de uma garrafa de vinho nacional'
+        ],
+        pricePackOne: 'R$ 420 por casal',
+        durationPackOne: 'Disponível para uma noite durante a hospedagem',
+
+        namePackTwo: 'La Vue Gastronomia / pacote essencial',
+        packImgTwo: '/assets/img/packBuffetTwo.jpg',
+        descriptionPackTwo: 'Sabores autênticos e pratos cuidadosamente elaborados em uma refeição especial no La Vue. Ideal para quem deseja uma experiência diferenciada sem abrir mão do conforto.',
+        includePackTwo: [
+            'Jantar completo com entrada, prato principal e sobremesa',
+            'Mesa com decoração especial',
+            'Taça de vinho ou drink incluso',
+            'Atendimento preferencial'
+        ],
+        pricePackTwo: 'R$ 260 por casal',
+        durationPackTwo: 'Disponível para uma noite durante a hospedagem'
     },
     {
         //INFORMAÇÕES PARA O BANNER
@@ -134,5 +191,31 @@ export const services = [
         descriptionBoxFour: 'No Refúgio à Mesa, unimos conforto, lazer e gastronomia em um só lugar. Ideal para casais ou famílias que desejam viver dias tranquilos, repletos de sensações e memórias inesquecíveis.',
         pictureOneBoxFour: '/assets/img/services-6.jpg',
         pictureTwoBoxFour: '/assets/img/services-7.jpg',
+
+        // INFORMAÇÕES PARA PACOTES DE SERVIÇOS
+        namePackOne: 'Serviço de Quarto / pacote exclusivo VIP',
+        packImgOne: '/assets/img/packServicesOne.jpg',
+        descriptionPackOne: 'Para quem busca o máximo de conforto, o Pacote VIP oferece atendimento diferenciado e mimos exclusivos direto no seu quarto. Uma experiência personalizada e sem sair da suíte.',
+        includePackOne: [
+            'Café da manhã gourmet servido no quarto',
+            'Setup romântico com flores e velas aromáticas',
+            'Menu exclusivo com pratos quentes',
+            'Atendimento de mordomo sob agendamento',
+            'Roupas de cama premium e travesseiros extras'
+        ],
+        pricePackOne: 'R$ 290 por diária',
+        durationPackOne: 'Disponível por diária durante a hospedagem',
+
+        namePackTwo: 'Serviço de Quarto / pacote conforto',
+        packImgTwo: '/assets/img/packServicesTwo.jpg',
+        descriptionPackTwo: 'Comodidade e praticidade para tornar sua estadia ainda mais agradável. Ideal para quem prefere refeições privativas e um toque de aconchego extra no quarto.',
+        includePackTwo: [
+            'Café da manhã padrão servido no quarto',
+            'Mini menu com snacks e bebidas',
+            'Montagem simples com flores secas decorativas',
+            'Troca extra de enxoval sob solicitação'
+        ],
+        pricePackTwo: 'R$ 180 por diária',
+        durationPackTwo: 'Disponível por diária durante a hospedagem'
     }
 ]

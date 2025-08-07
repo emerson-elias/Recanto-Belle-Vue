@@ -6,6 +6,7 @@ import Footer from "../components/global/footer/footer"
 import BannerVideo from '../components/global/bannerVideo/bannerVideo'
 import Bio from '../components/global/bio/bio'
 import Container from '../components/services/container/container'
+import Package from '../components/services/package/package'
 
 function ServicesPage({ }) {
 
@@ -39,6 +40,7 @@ function ServicesPage({ }) {
             />
 
             <Container services={activeService} />
+            <Package information={activeService} />
             <Footer picture={activeService.footerImage} />
         </>
     )

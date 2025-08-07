@@ -1,0 +1,105 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.package_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5vw;
+    margin-bottom: 10vmax;
+    overflow: hidden;
+
+    .row {
+        @include mixins.flexbox(relative, flex, space-between, start);
+        width: 100%;
+        height: 100%;
+
+        @include responsive.screen_small () {
+            flex-direction: column;
+        }
+
+        .boxOne,
+        .boxTwo {
+            position: relative;
+            width: 48%;
+            height: 100%;
+
+            @include responsive.screen_small () {
+                width: 100%;
+            }
+
+            .boxImg {
+                @include mixins.smoke();
+                position: relative;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation: pan-x 75s both infinite;
+                will-change: transform;
+                border-radius: 1vmax;
+                width: 100%;
+                height: 70vh;
+                overflow: hidden;
+            }
+
+            .boxInfor {
+                position: relative;
+                margin: 3.5vmax 0 0 0;
+
+                @include responsive.screen_small () {
+                    margin: 70px 0;
+                }
+
+                h2 {
+                    font-family: var.$font_one;
+                    font-size: 2vmax;
+                    color: var.$black_gray;
+                    font-weight: 700;
+                    word-spacing: 3px;
+                    text-transform: uppercase;
+
+                    @include responsive.screen_laptop () {
+                        font-size: 30px;
+                    }
+                }
+
+                p {
+                    margin: 2.5vmax 0;
+                    font-family: var.$font_dwo;
+                    color: var.$black_gray;
+                    font-weight: 400;
+                    line-height: 1.5;
+
+                    @include responsive.screen_small () {
+                        font-size: 20px;
+                    }
+                }
+
+                ul {
+                    padding-left: 2vmax;
+                    margin-bottom: 3vmax;
+
+                    @include responsive.screen_small () {
+                        margin: 50px 0;
+                    }
+
+                    li {
+                        font-family: var.$font_dwo;
+                        color: var.$black_gray;
+                        font-weight: 400;
+                        font-size: 1.1vmax;
+                        margin: 1.2vmax 0;
+                        list-style: circle;
+
+                        @include responsive.screen_laptop () {
+                            margin: 15px 0;
+                            font-size: 17px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
