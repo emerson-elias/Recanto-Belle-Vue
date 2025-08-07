@@ -38,8 +38,7 @@ function Home() {
                 name={'O resort'}
                 text={'Cada hóspede leva consigo uma história única vivida aqui. Conheça as experiências reais de quem encontrou descanso, aconchego e conexão em nosso refúgio natural.'}
             />
-            
-            <Others />
+      
             <Differences />
             <Summary />
             <Footer picture={picture} />
