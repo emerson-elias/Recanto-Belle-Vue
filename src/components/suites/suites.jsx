@@ -25,10 +25,21 @@ function Suites({ suite }) {
                 <Swiper
                     direction='vertical'
                     modules={[Autoplay]}
-                    autoplay={{ delay: 2500, disableOnInteraction: false }}
+                    autoplay={{
+                        delay: 2500,
+                        disableOnInteraction: false
+                    }}
                     loop={true}
                     slidesPerView={1}
                     spaceBetween={10}
+                    breakpoints={{
+                        0: {
+                            loop: false,
+                        },
+                        600: {
+                            loop: true,
+                        },
+                    }}
                 >
                     {suite.gallery.map((img, index) => (
 
