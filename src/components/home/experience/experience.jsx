@@ -1,5 +1,6 @@
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+
 import styles from './experience.module.scss'
 import Title from '../../global/title/title'
 
@@ -37,64 +38,31 @@ export default function Roons() {
 
     const imageRef = useRef(null)
     const descriptionRef = useRef(null)
-    const animationTimelineRef = useRef(null)
-
-    useEffect(() => {
-        if (imageRef.current && descriptionRef.current) {
-            animationTimelineRef.current = gsap.timeline({ paused: true })
-
-            gsap.fromTo([imageRef.current, descriptionRef.current],
-                {
-                    opacity: 0,
-                    y: 20
-                }, {
-                opacity: 1,
-                y: 0,
-                duration: 0.8,
-                ease: 'power2.out'
-            }
-            )
-        }
-
-        return () => {
-            if (animationTimelineRef.current) {
-                animationTimelineRef.current.kill()
-            }
-            gsap.killTweensOf([imageRef.current, descriptionRef.current])
-        }
-    }, [])
 
     const mouseEnter = (newImageSrc, newDescription) => {
         if (newImageSrc === currentImage) return
-
-        if (animationTimelineRef.current) {
-            animationTimelineRef.current.kill()
-            animationTimelineRef.current = null
-        }
-
         setCurrentImage(newImageSrc)
         setCurrentDescription(newDescription)
-
-        animationTimelineRef.current = gsap.timeline()
-
-        animationTimelineRef.current.fromTo(
-            [imageRef.current, descriptionRef.current],
-            {
-                opacity: 0,
-                y: 20
-            },
-            {
-                opacity: 1,
-                y: 0,
-                duration: 0.5,
-                ease: 'power2.out'
-            }
-        )
     }
+
+    useEffect(() => {
+        if (imageRef.current && descriptionRef.current) {
+            gsap.fromTo(
+                [imageRef.current, descriptionRef.current],
+                { opacity: 0, y: 20 },
+                {
+                    opacity: 1,
+                    y: 0,
+                    duration: 0.5,
+                    ease: 'power2.out',
+                    clearProps: 'all'
+                }
+            )
+        }
+    }, [currentImage, currentDescription])
 
     return (
         <section className={styles.experince_container}>
-
             <Title
                 title={'Experiências infinitas'}
                 text={'Presencie a essência de um lugar que jamais você irá esquecer'}
@@ -103,7 +71,7 @@ export default function Roons() {
 
             <div className={styles.box}>
                 <div className={styles.boxOne}>
-                    <h1>Vivencie: <br/> O Inesplicável</h1>
+                    <h1>Vivencie: <br /> O Inesplicável</h1>
 
                     <p>Cada detalhe te convida ao descanso, à contemplação e à conexão com a natureza.</p>
 
@@ -126,7 +94,6 @@ export default function Roons() {
                     </div>
                 </div>
             </div>
-
         </section>
     )
 }
