@@ -10,8 +10,6 @@
     padding: 0 5vw;
     margin: 0 0 15vmax 0;
 
-    background-color: rgba(188, 143, 143, 0);
-
     .layerOne,
     .layerTwo,
     .layerThere,
@@ -21,9 +19,12 @@
         height: 100%;
         margin: 2vmax 0;
 
-        background-color: rgba(0, 128, 0, 0);
+        @include responsive.screen_laptop() {
+            flex-direction: column !important;
+        }
 
-        .boxOne {
+        .boxOne,
+        .twoImg {
             @include mixins.smoke();
             position: relative;
             background-position: center center;
@@ -36,6 +37,12 @@
             height: 120vh;
             overflow: hidden;
 
+            @include responsive.screen_laptop() {
+                width: 100%;
+                height: 80vh;
+                animation: pan-y 120s both infinite;
+            }
+
             @include responsive.screen_small() {
                 height: 60vh;
             }
@@ -46,7 +53,14 @@
             width: 40vw;
             height: 100%;
 
+            @include responsive.screen_laptop() {
+                width: 100%;
+            }
+
             .infor {
+                @include responsive.screen_laptop() {
+                    margin-top: 80px !important;
+                }
 
                 h1 {
                     font-family: var.$font_one;
@@ -63,30 +77,13 @@
 
                     @include responsive.screen_laptop () {
                         margin: 50px 0 70px 0;
-                        width: 90%;
+                        width: 100%;
+                        padding: 0 5vw;
                     }
 
                     @include responsive.screen_small () {
                         margin: 50px 0;
                     }
-                }
-            }
-
-            .twoImg {
-                @include mixins.smoke();
-                position: relative;
-                background-position: center center;
-                background-repeat: no-repeat;
-                background-size: cover;
-                animation: pan-y 50s both infinite;
-                will-change: transform;
-                border-radius: 1vmax;
-                width: 40vw;
-                height: 90vh;
-                overflow: hidden;
-
-                @include responsive.screen_small() {
-                    height: 60vh;
                 }
             }
         }
@@ -122,12 +119,21 @@
             .infor {
                 margin: 5vmax 0 10vmax 0;
 
+                h1 {
+                    @include responsive.screen_laptop () {
+                        width: 80%;
+                    }
+                }
+
                 h1,
                 p {
                     text-align: end;
+
+                    @include responsive.screen_laptop () {
+                        text-align: start;
+                    }
                 }
             }
         }
     }
-
 }

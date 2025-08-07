@@ -35,31 +35,31 @@ export default function Container({ services }) {
     return (
         <section className={styles.main_container}>
 
-        
-                {sections.map((section, index) => (
-                    <div key={index} className={section.layerClass}>
-                        <div
-                            className={styles.boxOne}
-                            style={{ backgroundImage: `url(${section.img1})` }}
-                        ></div>
-
-                        <div className={styles.boxTwo}>
-                            <div className={styles.infor}>
-                                <h1>{section.title}</h1>
-                                <p>{section.description}</p>
-                            </div>
-
-                            {section.img2 && (
-                                <div
-                                    className={styles.twoImg}
-                                    style={{ backgroundImage: `url(${section.img2})` }}
-                                ></div>
-                            )}
-                        </div>
+            {sections.map((section, index) => (
+                <div key={index} className={section.layerClass}>
+                    <div
+                        className={styles.boxOne}
+                        style={{ backgroundImage: `url(${section.img1})` }}
+                    >
+                        
                     </div>
-                ))}
-       
 
+                    <div className={styles.boxTwo}>
+                        <div className={styles.infor}>
+                            <h1>{section.title}</h1>
+                            <p>{section.description}</p>
+                        </div>
+
+                        {section.img2 && (
+                            <div
+                                className={styles.twoImg}
+                                style={{ backgroundImage: `url(${section.img2})` }}
+                            ></div>
+                        )}
+                    </div>
+                </div>
+            ))}
+            
         </section>
     )
 }
