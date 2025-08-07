@@ -1,75 +1,59 @@
-
 import Button from '../../global/button/button'
 import Title from '../../global/title/title'
+
 import styles from './package.module.scss'
 
 export default function Package({ information }) {
+    
+    const packs = [
+        {
+            name: information.namePackOne,
+            img: information.packImgOne,
+            description: information.descriptionPackOne,
+            includes: information.includePackOne,
+            icon: 'fa-regular fa-gem',
+        },
+        {
+            name: information.namePackTwo,
+            img: information.packImgTwo,
+            description: information.descriptionPackTwo,
+            includes: information.includePackTwo,
+            icon: 'fa-regular fa-heart',
+        }
+    ]
+
     return (
         <section className={styles.package_container}>
 
             <Title
-                title={'Pacotes exclusivos'}
-                text={'Temos opções únicas de pacotes para deixar sua experiência ainda melhor'}
+                title="Pacotes exclusivos"
+                text="Temos opções únicas de pacotes para deixar sua experiência ainda melhor"
             />
 
             <div className={styles.row}>
+                {packs.map((pack, index) => (
+                    <div key={index} className={index === 0 ? styles.boxOne : styles.boxTwo}>
+                        <div className={styles.boxImg} style={{ backgroundImage: `url(${pack.img})` }} />
 
-                <div className={styles.boxOne}>
+                        <div className={styles.boxInfor}>
+                            <h2>{pack.name}</h2>
+                            <p>{pack.description}</p>
 
-                    <div className={styles.boxImg}
-                        style={{ backgroundImage: `url(${information.packImgOne})` }}
-                    >
+                            <ul>
+                                {pack.includes.map((item, i) => (
+                                    <li key={i}>{item}</li>
+                                ))}
+                            </ul>
+
+                            <Button
+                                link="#"
+                                icon={pack.icon}
+                                name="escolher este"
+                            />
+                        </div>
                     </div>
-
-                    <div className={styles.boxInfor}>
-                        <h2>{information.namePackOne}</h2>
-                        <p>{information.descriptionPackOne}</p>
-
-                        <ul>
-                            {information.includePackOne.map((item, index) => (
-                                <li key={index}>{item}</li>
-                            ))}
-                        </ul>
-
-                        <Button
-                            link={'#'}
-                            icon={'fa-regular fa-gem'}
-                            name={'escolher este'}
-                        />
-                    </div>
-
-                </div>
-
-                <div className={styles.boxTwo}>
-
-                    <div className={styles.boxImg}
-
-                        style={{ backgroundImage: `url(${information.packImgTwo})` }}
-                    >
-
-
-                    </div>
-
-                    <div className={styles.boxInfor}>
-                        <h2>{information.namePackTwo}</h2>
-                        <p>{information.descriptionPackTwo}</p>
-
-                        <ul>
-                            {information.includePackTwo.map((item, index) => (
-                                <li key={index}>{item}</li>
-                            ))}
-                        </ul>
-
-                        <Button
-                            link={'#'}
-                            icon={'fa-regular fa-heart'}
-                            name={'escolher este'}
-                        />
-                    </div>
-                </div>
-
+                ))}
             </div>
-
         </section>
     )
 }

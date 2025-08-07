@@ -130,7 +130,8 @@ export const services = [
             'Mesa reservada com vista panorâmica',
             'Drink de boas-vindas personalizado',
             'Sobremesa exclusiva do chef',
-            'Cortesia de uma garrafa de vinho nacional'
+            'Cortesia de uma garrafa de vinho nacional',
+            'Refeições livres durante todo dia'
         ],
         pricePackOne: 'R$ 420 por casal',
         durationPackOne: 'Disponível para uma noite durante a hospedagem',
@@ -142,7 +143,9 @@ export const services = [
             'Jantar completo com entrada, prato principal e sobremesa',
             'Mesa com decoração especial',
             'Taça de vinho ou drink incluso',
-            'Atendimento preferencial'
+            'Atendimento preferencial',
+            'Cortesia da casa',
+            'Músicas para relaxar'
         ],
         pricePackTwo: 'R$ 260 por casal',
         durationPackTwo: 'Disponível para uma noite durante a hospedagem'
@@ -199,7 +202,6 @@ export const services = [
         includePackOne: [
             'Café da manhã gourmet servido no quarto',
             'Setup romântico com flores e velas aromáticas',
-            'Menu exclusivo com pratos quentes',
             'Atendimento de mordomo sob agendamento',
             'Roupas de cama premium e travesseiros extras'
         ],

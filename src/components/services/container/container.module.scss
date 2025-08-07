@@ -119,12 +119,6 @@
             .infor {
                 margin: 5vmax 0 10vmax 0;
 
-                h1 {
-                    @include responsive.screen_laptop () {
-                        width: 80%;
-                    }
-                }
-
                 h1,
                 p {
                     text-align: end;
