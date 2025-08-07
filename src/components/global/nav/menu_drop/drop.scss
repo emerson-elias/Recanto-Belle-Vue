@@ -73,9 +73,9 @@
         }
 
         .btn_menu_drop {
+            border: none;
             @include mixins.flexbox(relative, flex, center, center);
             @include mixins.btn_closer();
-            border: none;
         }
     }
 
