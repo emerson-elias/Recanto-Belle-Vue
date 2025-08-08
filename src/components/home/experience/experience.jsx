@@ -46,6 +46,13 @@ export default function Roons() {
     }
 
     useEffect(() => {
+        experinceCategories.forEach(item => {
+            const img = new Image()
+            img.src = item.image
+        })
+    }, [])
+
+    useEffect(() => {
         if (imageRef.current && descriptionRef.current) {
             gsap.fromTo(
                 [imageRef.current, descriptionRef.current],
