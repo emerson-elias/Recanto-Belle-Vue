@@ -45,6 +45,20 @@ export default function Roons() {
         setCurrentDescription(newDescription)
     }
 
+    const imageLoad = () => {
+        gsap.fromTo(
+            [imageRef.current, descriptionRef.current],
+            { opacity: 0, y: 20 },
+            {
+                opacity: 1,
+                y: 0,
+                duration: 0.5,
+                ease: 'power2.out',
+                clearProps: 'all'
+            }
+        )
+    }
+
     useEffect(() => {
         experinceCategories.forEach(item => {
             const img = new Image()
@@ -95,7 +109,13 @@ export default function Roons() {
                 </div>
 
                 <div className={styles.boxTwo}>
-                    <img ref={imageRef} src={currentImage} alt="Quartos" />
+                    <img
+                        ref={imageRef}
+                        src={currentImage}
+                        alt="Quartos"
+                        onLoad={imageLoad}
+                    />
+
                     <div ref={descriptionRef} className={styles.description}>
                         <p>{currentDescription}</p>
                     </div>
