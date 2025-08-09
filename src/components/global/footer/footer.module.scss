@@ -33,7 +33,7 @@
 
             @include responsive.screen_laptop() {
                 flex-direction: column;
-                justify-content: center;
+                justify-content: space-evenly;
             }
 
             .boxOne {
@@ -106,10 +106,6 @@
                         font-size: 15px;
                         width: 100%;
                     }
-
-                    @include responsive.screen_small() {
-                        text-align: center;
-                    }
                 }
 
                 .small {
@@ -166,7 +162,6 @@
 
                 @include responsive.screen_small() {
                     height: auto;
-                    margin-top: 50px;
                 }
 
                 .row {
@@ -186,7 +181,7 @@
                         width: 50%;
 
                         @include responsive.screen_small() {
-                            margin-bottom: 20px;
+                            margin: 50px 0;
                         }
 
                         a {
@@ -206,7 +201,7 @@
                             }
 
                             @include responsive.screen_small() {
-                                font-size: 16px
+                                font-size: 16px;
                             }
                         }
                     }
@@ -286,9 +281,10 @@
                 color: var.$primary_color;
                 line-height: 1.5;
                 letter-spacing: 1px;
-                text-transform: capitalize;
-                text-decoration: none;
+                white-space: nowrap;
+                text-overflow: ellipsis;
                 cursor: pointer;
+                overflow: hidden;
 
                 @include responsive.screen_laptop() {
                     font-size: 15px;
@@ -297,7 +293,7 @@
 
                 @include responsive.screen_small() {
                     font-size: 14px;
-                    width: 100%;
+                    width: 200px;
                 }
             }
         }

@@ -77,7 +77,7 @@ export default function Footer({ picture }) {
                 </div>
 
                 <div className={styles.rodape}>
-                    <a href='https://github.com/emerson-elias' target='_blank' rel='noopener noreferrer'>&copy; 2025 emerson elias - projeto pessoal para fins de exibição</a>
+                    <a href='https://github.com/emerson-elias' target='_blank' rel='noopener noreferrer'>&copy; 2025 EMERSON ELIAS - Projeto pessoal para fins de exibição</a>
                     <a href="">Créditos</a>
                 </div>
             </div>
