@@ -1,3 +1,5 @@
+import React from 'react'
+
 import './carousel.scss'
 
 import { Swiper, SwiperSlide } from 'swiper/react'
@@ -61,7 +63,7 @@ function Carousel() {
                     <SwiperSlide key={item.id}>
                         <div className='slide_item'>
                             <img
-                                src={item.image} loading="lazy"
+                                src={item.image}
                                 alt={`Slide ${item.id} do banner`}
                             />
                         </div>
@@ -72,4 +74,4 @@ function Carousel() {
     )
 }
 
-export default Carousel
+export default React.memo(Carousel)
