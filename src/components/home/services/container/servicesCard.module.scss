@@ -108,7 +108,7 @@
 
         &:hover {
             &::before {
-                width: 90%;
+                width: 50%;
                 transition: var.$smooth;
             }
         }

@@ -159,13 +159,14 @@
 
                         h2 {
                             font-size: 4vmax;
-                            width: inherit;
+                            width: initial;
                             font-family: var.$font_one;
                             text-transform: capitalize;
                             color: var.$secondary_color;
 
                             @include responsive.screen_small () {
-                                font-size: 30px;
+                                font-size: 40px;
+                                margin-bottom: 30px;
                             }
                         }
 
@@ -176,6 +177,10 @@
                             margin: 2vmax 0;
                             font-family: var.$font_dwo;
                             color: var.$secondary_color;
+
+                            @include responsive.screen_small () {
+                                line-height: 1.3;
+                            }
                         }
 
                         h3 {
