@@ -2,7 +2,7 @@
 export const services = [
     {
         //INFORMAÇÕES PARA O BANNER
-        id: 'Valle-dos-Vinhos',
+        id: 'valle-dos-vinhos',
         letter: 'v',
         titleBanner: 'Valle dos Vinhos',
         subTitleBanner: 'paladares refinados',
@@ -20,7 +20,7 @@ export const services = [
         layer: 'layerOne',
         description: 'Nossa adega oferece um ambiente sofisticado, com uma seleção especial de vinhos nacionais e importados. É o espaço ideal para quem deseja desfrutar de uma boa taça.',
         icon: 'fa-solid fa-wine-bottle',
-        btnName: 'Visite a essência',
+        btnName: 'Visite adega',
 
         //INFORMAÇÕES PARA FOOTER
         footerImage: '/assets/img/pexels-4.jpg',
@@ -78,9 +78,9 @@ export const services = [
     },
     {
         //INFORMAÇÕES PARA O BANNER
-        id: 'La-Vue-Gastronomia',
-        letter: 'l',
-        titleBanner: 'La Vue Gastronomia',
+        id: 'la-vue-gastronomia',
+        letter: 'e',
+        titleBanner: 'Espaço Gourmet',
         subTitleBanner: 'desguste a essência',
 
         //INFORMAÇÕES PARA BIO
@@ -96,7 +96,7 @@ export const services = [
         layer: 'layerTwo',
         description: 'Sabores únicos preparados com ingredientes frescos e regionais. Nosso buffet oferece uma verdadeira experiência gastronômica em um ambiente acolhedor.',
         icon: 'fa-solid fa-utensils',
-        btnName: 'Visite a essência',
+        btnName: 'Visite buffet',
 
         //INFORMAÇÕES PARA FOOTER
         footerImage: '/assets/img/pexels-3.jpg',
@@ -152,9 +152,9 @@ export const services = [
     },
     {
         //INFORMAÇÕES PARA O BANNER
-        id: 'Refugio-a-Mesa',
+        id: 'refugio-a-mesa',
         letter: 's',
-        titleBanner: 'Refúgio à Mesa',
+        titleBanner: 'Vue Serviços',
         subTitleBanner: 'Conforto a cama',
 
         //INFORMAÇÕES PARA BIO
@@ -170,7 +170,7 @@ export const services = [
         layer: 'layerThere',
         description: 'Do atendimento personalizado às atividades de lazer, nossa pousada oferece serviços que transformam sua estadia em momentos inesquecíveis.',
         icon: 'fa-solid fa-bell-concierge',
-        btnName: 'Visite a essência',
+        btnName: 'Visite serviços',
 
         //INFORMAÇÕES PARA FOOTER
         footerImage: '/assets/img/services.jpg',

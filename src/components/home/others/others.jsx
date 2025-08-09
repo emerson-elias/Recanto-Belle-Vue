@@ -11,32 +11,32 @@ function Others() {
 
     // IDs personalizados para rastrear esse vídeo no contexto
     const videoLoadingIdRef = useRef(Symbol('video-loading'))
-
-    useEffect(() => {
-        const videoElement = videoRef.current
-        const loadingId = videoLoadingIdRef.current
-
-        if (!videoElement) return
-
-        addLoadingTask(loadingId)
-
-        const canPlayThrough = () => {
-            removeLoadingTask(loadingId)
-        }
-
-        const error = () => {
-            removeLoadingTask(loadingId)
-        }
-
-        videoElement.addEventListener('canplaythrough', canPlayThrough)
-        videoElement.addEventListener('error', error)
-
-        return () => {
-            videoElement.removeEventListener('canplaythrough', canPlayThrough)
-            videoElement.removeEventListener('error', error)
-        }
-    }, [addLoadingTask, removeLoadingTask])
-
+    /*
+        useEffect(() => {
+            const videoElement = videoRef.current
+            const loadingId = videoLoadingIdRef.current
+    
+            if (!videoElement) return
+    
+            addLoadingTask(loadingId)
+    
+            const canPlayThrough = () => {
+                removeLoadingTask(loadingId)
+            }
+    
+            const error = () => {
+                removeLoadingTask(loadingId)
+            }
+    
+            videoElement.addEventListener('canplaythrough', canPlayThrough)
+            videoElement.addEventListener('error', error)
+    
+            return () => {
+                videoElement.removeEventListener('canplaythrough', canPlayThrough)
+                videoElement.removeEventListener('error', error)
+            }
+        }, [addLoadingTask, removeLoadingTask])
+    */
     return (
         <section className={styles.others_container}>
 
@@ -50,15 +50,17 @@ function Others() {
                 <p>Entre as experiências oferecidas pelo nosso resort, está um mergulho inesquecível para explorar a rica vida marinha e os belíssimos corais da região.</p>
             </div>
 
-            <video
-                ref={videoRef}
-                src={video}
-                autoPlay
-                muted
-                loop
-                playsInline
-                className={styles.videoBox}
-            />
+            <div className={styles.videoBox}>
+                <video
+                    ref={videoRef}
+                    src={video}
+                    autoPlay
+                    muted
+                    loop
+                    playsInline
+                />
+            </div>
+
         </section>
     )
 }

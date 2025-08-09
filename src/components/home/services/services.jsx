@@ -23,7 +23,8 @@ function Services() {
                 description,
                 icon,
                 btnName,
-                videoOne
+                videoOne,
+                titleBanner
             }, index) => {
                 const linkId = services[index]?.id
 
@@ -39,6 +40,7 @@ function Services() {
                                 btnName={btnName}
                                 videoOne={videoOne}
                                 row={layer === 'layerTwo' ? 'row_reverse' : ''}
+                                titleBanner={titleBanner}
                             />
                         </div>
                     </div>

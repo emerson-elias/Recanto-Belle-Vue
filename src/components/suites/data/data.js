@@ -2,7 +2,7 @@ export const suites = [
 
     {
         // INFORMAÇÕES PARA ROONS.JSX
-        id: 'Royale',
+        id: 'royale',
         title: 'Suíte Royale',
         subTitle: 'Vista frontal para o mar com varanda privativa',
         gallery: [
@@ -82,7 +82,7 @@ export const suites = [
 
     {
         // INFORMAÇÕES PARA ROONS.JSX
-        id: 'Villa-Real',
+        id: 'villa-real',
         title: 'Suíte Villa Real',
         subTitle: 'Vista para o jardim e varanda com vista lateral do mar',
         gallery: [
@@ -162,7 +162,7 @@ export const suites = [
 
     {
         // INFORMAÇÕES PARA ROONS.JSX
-        id: 'Brisa-do-Mar',
+        id: 'brisa-do-mar',
         title: 'Suíte Brisa do Mar',
         subTitle: 'Ventilação natural e vista lateral do mar',
         gallery: [
@@ -241,7 +241,7 @@ export const suites = [
 
     {
         // INFORMAÇÕES PARA ROONS.JSX
-        id: 'Terraço-Dourado',
+        id: 'terraço-dourado',
         title: 'Suíte Terraço Dourado',
         subTitle: 'Varanda ensolarada com vista parcial para o mar',
         gallery: [
@@ -319,7 +319,7 @@ export const suites = [
 
     {
         // INFORMAÇÕES PARA ROONS.JSX
-        id: 'Aurora',
+        id: 'aurora',
         title: 'Suíte Aurora',
         subTitle: 'Ambiente minimalista com vista para o jardim',
         gallery: [
@@ -397,7 +397,7 @@ export const suites = [
 
     {
         // INFORMAÇÕES PARA ROONS.JSX
-        id: 'Monte-Sereno',
+        id: 'monte-sereno',
         title: 'Suíte Monte Sereno',
         subTitle: 'Ideal para casais | 21m² | Vista para o jardim com varanda tranquila',
         gallery: [

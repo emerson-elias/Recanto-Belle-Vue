@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import Button from '../../../global/button/button'
 import styles from './servicesCard.module.scss'
 
@@ -9,7 +10,8 @@ function ServicesCard({
     icon,
     btnName,
     videoOne,
-    row
+    row,
+    titleBanner
 }) {
     return (
         <section className={`${styles.servicesCard_container} ${row && styles[row]}`}>
@@ -24,6 +26,8 @@ function ServicesCard({
             </div>
 
             <div className={styles.boxTwo} >
+
+                <Link to={link}>{titleBanner}</Link>
 
                 <video
                     autoPlay

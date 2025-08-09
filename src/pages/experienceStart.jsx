@@ -12,7 +12,7 @@ function ExperienceStart({ }) {
                 letter={'e'}
                 title={'Experiências'}
                 subTitle={'Permita-se vivenciá-las'}
-                video={'/public/assets/video/banner-4.mp4'}
+                video={'/assets/video/banner-4.mp4'}
             />
             <Bio
                 title={'Experiências Inesquecíveis'}
