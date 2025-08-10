@@ -1,0 +1,52 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.experiences_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    width: 100vw;
+    padding: 0 5vw;
+
+    background-color: rgba(188, 143, 143, 0.603);
+
+    .box {
+        @include mixins.flexbox(relative, flex, space-between, start);
+        flex-wrap: wrap;
+        width: 100%;
+        height: 100%;
+
+        .boxOne {
+            position: relative;
+            width: 40vw;
+            height: 100%;
+
+            background-color: green;
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
+        }
+
+        .boxTwo {
+            position: relative;
+            width: 30vw;
+            height: 60%;
+
+
+            background-color: chocolate;
+
+            img {
+                position: relative;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+            }
+        }
+    }
+}

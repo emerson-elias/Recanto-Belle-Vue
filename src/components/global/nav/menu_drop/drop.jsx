@@ -7,9 +7,9 @@ import './drop.scss'
 
 const itensMenu = [
     { title: 'Suítes', img: '/assets/img/pexels-7.jpg', link: '/suites' },
-    { title: 'Adega', img: '/assets/img/pexels-4.jpg', link: '/services/Valle-dos-Vinhos' },
-    { title: 'Buffet', img: '/assets/img/pexels-3.jpg', link: '/services/La-Vue-Gastronomia' },
-    { title: 'Serviços', img: '/assets/img/services.jpg', link: '/services/Refugio-a-Mesa' },
+    { title: 'Adega', img: '/assets/img/pexels-4.jpg', link: '/services/valle-dos-vinhos' },
+    { title: 'Buffet', img: '/assets/img/pexels-3.jpg', link: '/services/la-vue-gastronomia' },
+    { title: 'Serviços', img: '/assets/img/services.jpg', link: '/services/refugio-a-mesa' },
     { title: 'Início', img: '/assets/img/pexels-1.jpg', link: '/' },
     { title: 'Resort', img: '/assets/img/praia.jpg', link: '/sobre' },
     { title: 'Experiências', img: '/assets/img/pexels-2.jpg', link: '/experiencias' },

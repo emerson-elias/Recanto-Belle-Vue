@@ -1,10 +1,11 @@
-import { experiences } from '../components/experience/data/data'
-
+import Experiences from '../components/experience/container/experiences'
 import BannerVideo from "../components/global/bannerVideo/bannerVideo"
 import Bio from '../components/global/bio/bio'
 import Footer from '../components/global/footer/footer'
 
-function ExperienceStart({ }) {
+import { experiences } from '../components/experience/data/data'
+
+function ExperienceStart() {
 
     return (
         <>
@@ -14,6 +15,7 @@ function ExperienceStart({ }) {
                 subTitle={'Permita-se vivenciá-las'}
                 video={'/assets/video/banner-4.mp4'}
             />
+
             <Bio
                 title={'Experiências Inesquecíveis'}
                 caption={'Momentos que vão além do descanso'}
@@ -23,7 +25,8 @@ function ExperienceStart({ }) {
                 name={'reserve agora'}
             />
 
-            <Footer picture={'/assets/img/praia.jpg'} />
+            {/*  <Experiences experiences={experiences}/> */}
+            <Footer picture={'/assets/img/pexels-2.jpg'} />
         </>
     )
 }
