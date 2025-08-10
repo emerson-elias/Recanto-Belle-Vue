@@ -5,6 +5,7 @@
 
 .footer_container {
     @include mixins.flexbox(relative, flex, center, center);
+    @include mixins.smoke();
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
@@ -21,6 +22,7 @@
         height: 100%;
         border-radius: 1vmax;
         overflow: hidden;
+        z-index: 1;
 
         @include responsive.screen_laptop() {
             padding: 30px;

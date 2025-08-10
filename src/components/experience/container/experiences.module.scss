@@ -5,23 +5,29 @@
 
 .experiences_container {
     @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
     width: 100vw;
     padding: 0 5vw;
 
-    background-color: rgba(188, 143, 143, 0.603);
+    background-color: rgba(188, 143, 143, 0);
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, start);
         flex-wrap: wrap;
         width: 100%;
-        height: 100%;
+        height: 120vh;
+        margin-bottom: 10vmax;
+
+        background-color: rgba(102, 51, 153, 0);
 
         .boxOne {
             position: relative;
-            width: 40vw;
+            width: 55vw;
             height: 100%;
+            border-radius: 1vmax;
+            overflow: hidden;
 
-            background-color: green;
+            background-color: rgba(0, 128, 0, 0);
 
             img {
                 position: relative;
@@ -35,10 +41,11 @@
         .boxTwo {
             position: relative;
             width: 30vw;
-            height: 60%;
+            height: 70%;
+            border-radius: 1vmax;
+            overflow: hidden;
 
-
-            background-color: chocolate;
+            background-color: rgba(210, 105, 30, 0);
 
             img {
                 position: relative;
@@ -49,4 +56,8 @@
             }
         }
     }
+}
+
+.row_reverse {
+    flex-direction: row-reverse;
 }

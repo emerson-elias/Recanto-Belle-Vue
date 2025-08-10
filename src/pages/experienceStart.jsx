@@ -25,7 +25,7 @@ function ExperienceStart() {
                 name={'reserve agora'}
             />
 
-            {/*  <Experiences experiences={experiences}/> */}
+            <Experiences experiences={experiences} />
             <Footer picture={'/assets/img/pexels-2.jpg'} />
         </>
     )

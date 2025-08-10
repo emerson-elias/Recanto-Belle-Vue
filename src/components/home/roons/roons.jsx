@@ -15,32 +15,32 @@ import Title from '../../global/title/title'
 
 const cards = [
     {
-        id: 'Royale',
+        id: 'royale',
         image: '/assets/img/royale.jpg',
         categoria: 'Royale'
     },
     {
-        id: 'Villa-Real',
+        id: 'villa-real',
         image: '/assets/img/villa-real.jpg',
         categoria: 'Villa Real'
     },
     {
-        id: 'Brisa-do-Mar',
+        id: 'brisa-do-mar',
         image: '/assets/img/brisa.jpg',
         categoria: 'Brisa do Mar'
     },
     {
-        id: 'Terraço-Dourado',
+        id: 'terraço-dourado',
         image: '/assets/img/terraço-dourado.jpg',
         categoria: 'Terraço Dourado'
     },
     {
-        id: 'Aurora',
+        id: 'aurora',
         image: '/assets/img/aurora.jpg',
         categoria: 'Aurora'
     },
     {
-        id: 'Monte-Sereno',
+        id: 'monte-sereno',
         image: '/assets/img/monte-sereno.jpg',
         categoria: 'Monte Sereno'
     },

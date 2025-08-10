@@ -1,35 +1,41 @@
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
+import { Link } from 'react-router-dom'
 
 import styles from './experience.module.scss'
 import Title from '../../global/title/title'
 
 const experinceCategories = [
     {
-        name: 'Brisa do Mar',
+        name: 'Vida Marinha',
         image: '/assets/img/brisa-do-mar.jpg',
-        description: 'A brisa atravessa as janelas trazendo o perfume do mar'
+        description: 'Mergulhe no encanto das águas e descubra a riqueza da vida oceânica',
+        link: '/vida-marinha',
     },
     {
         name: 'Sol Nascente',
         image: '/assets/img/sol-nascente.jpg',
-        description: 'A magia dos primeiros raios dourados no horizonte'
+        description: 'Deixe-se envolver pela energia suave dos primeiros raios do dia',
+        link: '/sol-nascente',
     },
     {
-        name: 'Areia Dourada',
+        name: 'Trilha Ecológica',
         image: '/assets/img/areia-dourada.jpg',
-        description: 'Pés descalços tocam o chão com a mesma leveza que caminham pela areia'
+        description: 'Caminhe entre aromas, sons e paisagens que revelam a alma da natureza',
+        link: '/trilha-ecologica',
     },
     {
-        name: 'Ondas Crescente',
+        name: 'Caminho das Ondas',
         image: '/assets/img/ondas-crescente.jpg',
-        description: 'Cada detalhe remete ao movimento constante das marés'
+        description: 'Siga o compasso do mar e sinta a brisa guiando cada passo',
+        link: '/caminho-das-ondas',
     },
     {
         name: 'Refúgio do Pescador',
         image: '/assets/img/refugio-pescador.jpg',
-        description: 'Um abrigo onde o tempo parece desacelerar'
-    },
+        description: 'Encontre paz no simples, onde histórias e mar se encontram',
+        link: '/refugio-do-pescador',
+    }
 ]
 
 export default function Roons() {
@@ -98,12 +104,13 @@ export default function Roons() {
 
                     <div className={styles.cat_experince}>
                         {experinceCategories.map((experince, index) => (
-                            <span
+                            <Link
                                 key={index}
+                                to={experince.link}
                                 onMouseEnter={() => mouseEnter(experince.image, experince.description)}
                             >
                                 {experince.name}
-                            </span>
+                            </Link>
                         ))}
                     </div>
                 </div>
