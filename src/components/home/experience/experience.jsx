@@ -8,31 +8,31 @@ import Title from '../../global/title/title'
 const experinceCategories = [
     {
         name: 'Vida Marinha',
-        image: '/assets/img/brisa-do-mar.jpg',
+        image: '/assets/img/m-1.jpg',
         description: 'Mergulhe no encanto das águas e descubra a riqueza da vida oceânica',
         link: '/vida-marinha',
     },
     {
         name: 'Sol Nascente',
-        image: '/assets/img/sol-nascente.jpg',
+        image: '/assets/img/s-1.jpg',
         description: 'Deixe-se envolver pela energia suave dos primeiros raios do dia',
         link: '/sol-nascente',
     },
     {
         name: 'Trilha Ecológica',
-        image: '/assets/img/areia-dourada.jpg',
+        image: '/assets/img/t-1.jpg',
         description: 'Caminhe entre aromas, sons e paisagens que revelam a alma da natureza',
         link: '/trilha-ecologica',
     },
     {
         name: 'Caminho das Ondas',
-        image: '/assets/img/ondas-crescente.jpg',
+        image: '/assets/img/sr-1.jpg',
         description: 'Siga o compasso do mar e sinta a brisa guiando cada passo',
         link: '/caminho-das-ondas',
     },
     {
         name: 'Refúgio do Pescador',
-        image: '/assets/img/refugio-pescador.jpg',
+        image: '/assets/img/ds-1.jpg',
         description: 'Encontre paz no simples, onde histórias e mar se encontram',
         link: '/refugio-do-pescador',
     }

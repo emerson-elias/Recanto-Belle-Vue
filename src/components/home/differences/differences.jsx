@@ -21,7 +21,7 @@ const slides = [
         description: 'Parque exclusivo para crianças e com áreas de lazer'
     },
     {
-        src: '/assets/img/trilha.jpg',
+        src: '/assets/img/t-2.jpg',
         description: 'Trilhas ecológicas em meio à natureza'
     },
     {
@@ -33,7 +33,7 @@ const slides = [
         description: 'Acesso direto à praias públicas e privativa'
     },
     {
-        src: '/assets/img/sol-nascente.jpg',
+        src: '/assets/img/s-1.jpg',
         description: 'Aprecie o nascer do sol com conforto'
     }
 ]

@@ -12,7 +12,7 @@
     background-color: transparent;
     transition: var.$smooth;
     pointer-events: none;
-    z-index: 1;
+    z-index: 99;
 
     @include responsive.screen_small {
         margin-right: 15px;

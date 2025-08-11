@@ -6,11 +6,14 @@
 .banners_container {
     @include mixins.flexbox(relative, flex, center, center);
     @include mixins.smoke();
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
     width: 100vw;
-    height: 100lvh;
+    height: 100vh;
     user-select: none;
     overflow: hidden;
-    animation: pan-x 120s both infinite;
+    animation: pan-y 120s both infinite;
     will-change: transform;
 
     @include responsive.screen_laptop () {
