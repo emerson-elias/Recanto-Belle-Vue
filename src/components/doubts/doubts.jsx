@@ -20,7 +20,7 @@ const doubtsList = [
     },
     {
         id: 3,
-        picture: '/assets/img/refugio-pescador.jpg',
+        picture: '/assets/img/ds-1.jpg',
         title: 'O que está incluso nas diárias?',
         subTitle: 'Conheça nossos serviços',
         text: 'Nossas diárias incluem café da manhã, acesso às áreas de lazer como piscina, academia e praia privativa. Alguns serviços como spa e passeios são cobrados à parte.'
