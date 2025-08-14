@@ -3,21 +3,39 @@
 @use '/src/sass/variables' as var;
 
 .cardOne_container {
-    @include mixins.flexbox(relative, flex, center, center);
-    flex-direction: column;
+    position: relative;
     width: 100%;
-
-    background-color: rgba(102, 51, 153, 0);
 
     .box {
         display: grid;
-        place-content: center;
-        grid-template-columns: 44vw 22vw 22vw;
-        grid-template-rows: 50vh 50vh;
         gap: 1rem;
-        overflow: hidden;
+        grid-template-columns: calc((100% - 1rem) / 2) calc((100% - 1rem) / 2);
+        grid-template-rows: 50vh 50vh;
+        grid-template-areas:
+            "cardOne_1 col2_top"
+            "cardOne_1 col2_bottom";
 
-        background-color: rgba(188, 143, 143, 0);
+        .cadOne_1 {
+            grid-area: cardOne_1;
+            height: 100%;
+        }
+
+        .col2_top {
+            display: grid;
+            grid-template-columns: calc((100% - 1rem) / 2) calc((100% - 1rem) / 2);
+            gap: 1rem;
+
+            .cadOne_2,
+            .cadOne_3 {
+                height: 50vh;
+            }
+        }
+
+        .col2_bottom {
+            .cadOne_4 {
+                height: 50vh;
+            }
+        }
 
         .layer {
             @include mixins.smoke();
@@ -29,6 +47,7 @@
                 width: 100%;
                 height: 100%;
                 object-fit: cover;
+                display: block;
                 transition: transform 0.3s ease;
 
                 &:hover {
@@ -38,82 +57,43 @@
         }
     }
 
-    .cadOne_1 {
-        grid-column: 1 / 2;
-        grid-row: 1 / 3;
-        height: 100vh;
-    }
-
-    .cadOne_2 {
-        grid-column: 2 / 3;
-        grid-row: 1 / 2;
-        height: 50vh;
-    }
-
-    .cadOne_3 {
-        grid-column: 3 / 4;
-        grid-row: 1 / 2;
-        height: 50vh;
-    }
-
-    .cadOne_4 {
-        grid-column: 2 / 4;
-        grid-row: 2 / 3;
-        height: 47.7vh;
-    }
-}
-
-@include responsive.screen_laptop() {
-    .cardOne_container {
+    @include responsive.screen_laptop() {
         .box {
-            grid-template-columns: 50% 50%;
-            grid-template-rows: auto auto auto;
-            height: auto;
-            margin-top: 20px;
-        }
-
-        .cadOne_1 {
-            grid-column: 1 / 2;
-            grid-row: 1 / 3;
-            height: auto;
-            min-height: 50vh;
-        }
-
-        .cadOne_2 {
-            grid-column: 2 / 3;
-            grid-row: 1 / 2;
-            min-height: 25vh;
-        }
-
-        .cadOne_3 {
-            grid-column: 2 / 3;
-            grid-row: 2 / 3;
-            min-height: 25vh;
-        }
-
-        .cadOne_4 {
-            grid-column: 1 / 3;
-            grid-row: 3 / 4;
-            min-height: 40vh;
-        }
-    }
-}
-
-@include responsive.screen_small() {
-    .cardOne_container {
-        .box {
-            grid-template-columns: 100%;
+            grid-template-columns: calc((100% - 1rem) / 2) calc((100% - 1rem) / 2);
             grid-template-rows: auto;
-            height: auto;
-        }
+            grid-template-areas: none;
 
-        .cadOne_1,
-        .cadOne_2,
-        .cadOne_3,
-        .cadOne_4 {
-            grid-column: 1 / 2 !important;
-            grid-row: auto !important;
-            min-height: 30vh;
+            .cadOne_1,
+            .cadOne_2,
+            .cadOne_3,
+            .cadOne_4 {
+                height: 50vh;
+                grid-area: auto;
+            }
+
+            .col2_top,
+            .col2_bottom {
+                display: contents;
+            }
+        }
+    }
+
+    @include responsive.screen_small() {
+        .box {
+            grid-template-columns: 1fr;
+            grid-template-areas: none;
+
+            .cadOne_1,
+            .cadOne_2,
+            .cadOne_3,
+            .cadOne_4 {
+                height: 30vh;
+            }
+
+            .col2_top,
+            .col2_bottom {
+                display: contents;
+            }
         }
     }
 }

@@ -1,0 +1,24 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.cardFour_container {
+    position: relative;
+    width: 100%;
+    margin-bottom: 10vmax;
+
+    .box_video {
+        @include mixins.smoke();
+        position: relative;
+        height: 90vh;
+        border-radius: 1vmax;
+        overflow: hidden;
+
+        video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            pointer-events: none;
+        }
+    }
+}

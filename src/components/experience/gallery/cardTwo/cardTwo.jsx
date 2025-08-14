@@ -14,7 +14,7 @@ export default function CardTwo({ gallery }) {
             />
 
             <div className={styles.box}>
-                {gallery.cardTwo.map((el, index) => (
+                {gallery.cardTwo.slice(0, 4).map((el, index) => (
                     <div className={`${styles.layer} ${styles[classNames[index]]}`} key={index}>
                         <img src={el} alt={gallery.id} />
                     </div>
