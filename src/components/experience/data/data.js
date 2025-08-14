@@ -129,7 +129,7 @@ export const experiences = [
         title: 'Caminhos da Natureza',
         subTile: 'Explore trilhas encantadoras onde a natureza revela seus segredos através de paisagens exuberantes.',
         nameOne: 'Trilha Ecologica',
-        link: '/trilha-ecologica',
+        nameTwo: 'Descubra natureza',
         imgOne: '/assets/img/t-1.jpg',
         imgTwo: '/assets/img/t-2.jpg',
 
@@ -198,13 +198,12 @@ export const experiences = [
         //========INFORMAÇÕES PARA PAGE EM HOME ===============
         image: '/assets/img/sr-1.jpg',
         description: 'Siga o compasso do mar e sinta a brisa guiando cada passo',
-        link: '/caminho-das-ondas',
 
         //========INFORMAÇÕES PARA PAGE ===============
 
         //BANNER
         letter: 'c',
-        bannerVideo:'/assets/video/banner-10.mp4',
+        bannerVideo: '/assets/video/banner-10.mp4',
         bannerTitle: 'Caminho das Ondas',
         bannerSubTitle: 'Viva aventuras que marcam',
 
