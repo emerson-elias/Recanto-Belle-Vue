@@ -1,0 +1,13 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.galleryExp_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5vw;
+
+    background-color: rgba(188, 143, 143, 0);
+}

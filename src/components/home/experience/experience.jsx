@@ -1,46 +1,14 @@
 import { useState, useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { Link } from 'react-router-dom'
+import { experiences } from '../../experience/data/data'
 
 import styles from './experience.module.scss'
 import Title from '../../global/title/title'
 
-const experinceCategories = [
-    {
-        name: 'Vida Marinha',
-        image: '/assets/img/m-1.jpg',
-        description: 'Mergulhe no encanto das águas e descubra a riqueza da vida oceânica',
-        link: '/vida-marinha',
-    },
-    {
-        name: 'Sol Nascente',
-        image: '/assets/img/s-1.jpg',
-        description: 'Deixe-se envolver pela energia suave dos primeiros raios do dia',
-        link: '/sol-nascente',
-    },
-    {
-        name: 'Trilha Ecológica',
-        image: '/assets/img/t-1.jpg',
-        description: 'Caminhe entre aromas, sons e paisagens que revelam a alma da natureza',
-        link: '/trilha-ecologica',
-    },
-    {
-        name: 'Caminho das Ondas',
-        image: '/assets/img/sr-1.jpg',
-        description: 'Siga o compasso do mar e sinta a brisa guiando cada passo',
-        link: '/caminho-das-ondas',
-    },
-    {
-        name: 'Refúgio do Pescador',
-        image: '/assets/img/ds-1.jpg',
-        description: 'Encontre paz no simples, onde histórias e mar se encontram',
-        link: '/refugio-do-pescador',
-    }
-]
-
 export default function Roons() {
-    const [currentImage, setCurrentImage] = useState(experinceCategories[0].image)
-    const [currentDescription, setCurrentDescription] = useState(experinceCategories[0].description)
+    const [currentImage, setCurrentImage] = useState(experiences[0].image)
+    const [currentDescription, setCurrentDescription] = useState(experiences[0].description)
 
     const imageRef = useRef(null)
     const descriptionRef = useRef(null)
@@ -66,7 +34,7 @@ export default function Roons() {
     }
 
     useEffect(() => {
-        experinceCategories.forEach(item => {
+        experiences.forEach(item => {
             const img = new Image()
             img.src = item.image
         })
@@ -103,13 +71,13 @@ export default function Roons() {
                     <p>Cada detalhe te convida ao descanso, à contemplação e à conexão com a natureza.</p>
 
                     <div className={styles.cat_experince}>
-                        {experinceCategories.map((experince, index) => (
+                        {experiences.map((experince, index) => (
                             <Link
                                 key={index}
-                                to={experince.link}
+                                to={`/experiencias/${experince.id}`}
                                 onMouseEnter={() => mouseEnter(experince.image, experince.description)}
                             >
-                                {experince.name}
+                                {experince.nameOne}
                             </Link>
                         ))}
                     </div>

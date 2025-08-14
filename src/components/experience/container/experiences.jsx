@@ -27,13 +27,13 @@ export default function Experiences({ experiences }) {
                         <div className={styles.boxOne}
                             style={{ backgroundImage: `url(${element.imgOne})` }}
                         >
-                            <Link to={element.link}>{element.nameOne}</Link>
+                            <Link to={element.id}>{element.nameOne}</Link>
                         </div>
 
                         <div className={styles.boxTwo}
                             style={{ backgroundImage: `url(${element.imgTwo})` }}
                         >
-                            <Link to={element.link}>{element.nameTwo}</Link>
+                            <Link to={element.id}>{element.nameTwo}</Link>
                         </div>
                     </div>
 

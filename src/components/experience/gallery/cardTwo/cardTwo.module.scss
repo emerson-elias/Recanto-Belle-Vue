@@ -1,0 +1,112 @@
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.cardTwo_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100%;
+    margin: 10vmax 0;
+
+    background-color: rosybrown;
+
+    .box {
+        display: grid;
+        grid-template-columns: 20vw 20vw 48vw; // total 75vw
+        grid-template-rows: 50vh 50vh;
+        gap: 1rem;
+
+        background-color: rebeccapurple;
+
+        .layer {
+            position: relative;
+            border-radius: 1vmax;
+            overflow: hidden;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                transition: transform 0.3s ease;
+
+                &:hover {
+                    transform: scale(1.05);
+                }
+            }
+        }
+
+        .cardTwo_1 {
+            grid-column: 1 / span 2;
+            grid-row: 1;
+            height: 50vh;
+        }
+
+        .cardTwo_2 {
+            grid-column: 3;
+            grid-row: 1;
+            height: 50vh;
+        }
+
+        .cardTwo_3 {
+            grid-column: 1;
+            grid-row: 2;
+            height: 50vh;
+        }
+
+        .cardTwo_4 {
+            grid-column: 2 / span 2;
+            grid-row: 2;
+            height: 50vh;
+        }
+    }
+
+    // --- Responsivo para Laptop ---
+    @include responsive.screen_laptop() {
+        .box {
+            grid-template-columns: 1fr 1fr;
+            grid-template-rows: auto auto auto;
+           
+
+            .cardTwo_1 {
+                grid-column: 1;
+                grid-row: 1;
+                height: 45vh;
+            }
+
+            .cardTwo_2 {
+                grid-column: 2;
+                grid-row: 1;
+                height: 45vh;
+            }
+
+            .cardTwo_3 {
+                grid-column: 1;
+                grid-row: 2;
+                height: 45vh;
+            }
+
+            .cardTwo_4 {
+                grid-column: 2;
+                grid-row: 2;
+                height: 45vh;
+            }
+        }
+    }
+
+    // --- Responsivo para Mobile (Small) ---
+    @include responsive.screen_small() {
+        .box {
+            grid-template-columns: 1fr;
+            grid-template-rows: auto;
+            gap: 0.6rem;
+
+            .cardTwo_1,
+            .cardTwo_2,
+            .cardTwo_3,
+            .cardTwo_4 {
+                grid-column: 1;
+                height: 40vh;
+            }
+        }
+    }
+}
