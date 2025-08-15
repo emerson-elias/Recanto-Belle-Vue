@@ -18,6 +18,7 @@ function DoubtsPage() {
                 title={'tire suas dúvidas'}
                 subTitle={'estamos aqui para ajudar'}
             />
+            
             <Bio
                 title={title}
                 caption={caption}

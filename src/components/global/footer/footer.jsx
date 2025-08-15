@@ -59,7 +59,7 @@ export default function Footer({ picture }) {
                                 <Link to={'/suites'} > Suítes</Link>
                                 <Link to={'/duvidas'} > Dúvidas</Link>
                                 <Link to={'/contatos'} > Contatos</Link>
-                                <Link to={' '} > Experiências</Link>
+                                <Link to={'/experiencias'} > Experiências</Link>
                             </div>
                         </div>
 
