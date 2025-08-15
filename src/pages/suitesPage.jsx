@@ -5,13 +5,14 @@ import { suites } from '../components/suites/data/data'
 import Banners from '../components/global/banners/banners'
 import Bio from '../components/global/bio/bio'
 import Cards from '../components/suites/cards/cards'
-import Suites from '../components/suites/suites'
+import Suites from '../components/suites/container/suites'
 import Gallery from '../components/suites/gallery/gallery'
 import Footer from '../components/global/footer/footer'
 import Extras from '../components/suites/extras/extras'
 import Description from '../components/suites/description/description'
 import Icons from '../components/suites/bar/icons'
 import Reviews from '../components/global/reviews/reviews'
+import CalendarSuites from '../components/suites/calendar/calendar'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -44,6 +45,7 @@ function SuitesPage() {
             <Suites suite={activeSuite} />
             <Description suite={activeSuite} />
             <Icons suite={activeSuite} />
+            <CalendarSuites suites={activeSuite}/>
             <Gallery suite={activeSuite} />
             <Extras suites={activeSuite} />
 

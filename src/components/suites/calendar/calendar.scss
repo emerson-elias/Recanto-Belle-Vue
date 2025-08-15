@@ -1,0 +1,81 @@
+@use '/src/sass/animate';
+@use '/src/sass/mixins';
+@use '/src/sass/responsive';
+@use '/src/sass/variables' as var;
+
+.calendar_container {
+    @include mixins.flexbox(relative, flex, center, center);
+    flex-direction: column;
+    width: 100vw;
+    padding: 0 5vw;
+    margin: 5vmax 0 10vmax 0;
+
+    .row {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
+
+        .boxOne {
+            position: relative;
+            width: 65%;
+            height: 65vh;
+
+            background-color: rosybrown;
+
+            .react-calendar {
+                @include mixins.flexbox(relative, flex, center, center);
+                flex-direction: column;
+                width: 100%;
+                height: 100%;
+                //  background-color: #e0f7fa;
+                /* tom claro de azul mar */
+                //  border-radius: ;
+                //   padding: 15px;
+                // box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+            }
+
+            .react-calendar__month-view{
+                background-color: rosybrown;
+            }
+            .react-calendar__month-view__weekdays {
+                background-color: red;
+            }
+
+            .react-calendar__month-view__weekdays__weekday {
+                background-color: goldenrod;
+            }
+
+            .react-calendar__tile {
+                background-color: royalblue;
+            }
+
+            .react-calendar__navigation{
+                background-color: firebrick;
+            }
+        }
+
+        .boxTwo {
+            position: relative;
+            width: 35%;
+            height: 100%;
+
+            background-color: goldenrod;
+        }
+    }
+}
+
+
+.react-calendar__tile {
+    border-radius: 0.5vmax;
+    transition: all 0.3s;
+}
+
+.react-calendar__tile--active {
+    background-color: var.$primary_color;
+    color: var.$secondary_color;
+}
+
+.evento {
+    background-color: var.$event;
+    color: var.$secondary_color;
+    font-weight: bold;
+}

@@ -4,7 +4,7 @@ import 'swiper/css'
 
 import './suites.scss'
 
-import Button from '../global/button/button'
+import Button from '../../global/button/button'
 import meters from '/assets/svg/meters.svg'
 import people from '/assets/svg/people.svg'
 import pet from '/assets/svg/pet.svg'
