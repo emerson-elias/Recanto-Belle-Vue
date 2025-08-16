@@ -1,12 +1,29 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import Calendar from 'react-calendar'
-import Title from '../../global/title/title'
 
 import 'react-calendar/dist/Calendar.css'
 import './calendar.scss'
 
+import Title from '../../global/title/title'
+import Extras from './extras/extras'
+
 export default function CalendarSuites({ suites }) {
     const [dataSelecionada, setDataSelecionada] = useState(new Date())
+    const [showDouble, setShowDouble] = useState(true)
+
+    useEffect(() => {
+        const resize = () => {
+            if (window.innerWidth < 768) {
+                setShowDouble(false)
+            } else {
+                setShowDouble(true)
+            }
+        }
+
+        resize()
+        window.addEventListener('resize', resize)
+        return () => window.removeEventListener('resize', resize)
+    }, [])
 
     const datasEspeciais = [
         new Date(2025, 7, 20),
@@ -39,33 +56,33 @@ export default function CalendarSuites({ suites }) {
                         onChange={change}
                         value={dataSelecionada}
                         tileClassName={tileClassName}
-                        showDoubleView={true}
+                        showDoubleView={showDouble}
                     />
 
-                    <p>Data escolhida: {dataSelecionada.toDateString()}</p>
+                    <p>
+                        Data escolhida: {dataSelecionada.toLocaleDateString('pt-BR', {
+                            weekday: 'long',
+                            day: '2-digit',
+                            month: 'long',
+                            year: 'numeric'
+                        })}
+                    </p>
+
+                    <div className="legend">
+                        <div className="legend-item">
+                            <span className="legend-color active"></span>
+                            Data selecionada
+                        </div>
+
+                        <div className="legend-item">
+                            <span className="legend-color evento"></span>
+                            Data Disponível
+                        </div>
+                    </div>
                 </div>
 
                 <div className='boxTwo'>
-                    <h2>{suites.title}</h2>
-
-                    <details>
-                        <summary>Descrição da suite</summary>
-                        <p>{suites.description}</p>
-                    </details>
-
-
-                    <div className='select'>
-
-                    </div>
-
-                    <div className='input'>
-                        <h3>Escolha seu plano de serviços:</h3>
-                        <label htmlFor="">Com serviços incluso</label>
-                        <input type="radio" />
-
-                        <label htmlFor="">Livre</label>
-                        <input type="radio" />
-                    </div>
+                    <Extras suites={suites} />
                 </div>
 
             </div>
