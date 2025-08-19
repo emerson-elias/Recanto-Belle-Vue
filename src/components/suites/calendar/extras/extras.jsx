@@ -33,12 +33,12 @@ export default function Extras({ suites }) {
 
                 <label>
                     <input type="radio" name="plano" />
-                    Alto / Todos incluso
+                    Premium / Todos incluso
                 </label>
 
                 <label>
                     <input type="radio" name="plano" />
-                    Médio / Café da manhã
+                    Golden / Café da manhã
                 </label>
 
                 <label>

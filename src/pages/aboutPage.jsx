@@ -1,4 +1,5 @@
 import History from "../components/about/history/history"
+import Values from "../components/about/values/values"
 import Banners from "../components/global/banners/banners"
 import Bio from "../components/global/bio/bio"
 import Footer from "../components/global/footer/footer"
@@ -27,6 +28,7 @@ function AboutPage() {
             />
 
             <History />
+            <Values />
             <Footer picture={'/assets/img/praia.jpg'} />
         </>
     )

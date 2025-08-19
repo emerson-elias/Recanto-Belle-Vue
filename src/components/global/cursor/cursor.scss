@@ -7,14 +7,13 @@
     left: 0;
     width: 3vw;
     height: 3vw;
+    display: grid;
     border-radius: 50%;
     background-color: transparent;
     border: 0.1vw solid var.$primary_color;
     pointer-events: none;
     user-select: none;
     z-index: 9999;
-    display: grid;
-    place-content: center;
 
     @include responsive.screen_tablet {
         display: none;

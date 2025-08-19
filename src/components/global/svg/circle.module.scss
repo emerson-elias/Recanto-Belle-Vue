@@ -5,26 +5,29 @@
 
 .svg {
     position: absolute;
-    top: 38%;
-    margin: 10vmax;
+    top: -10%;
+    left: 80%;
     user-select: none;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+    z-index: 3;
+    transform: scale(2);
 
     @include responsive.screen_laptop {
         display: none !important;
     }
 
     svg {
-     //   animation: girar_right 30s linear infinite;
+        animation: girar_right 30s linear infinite;
+        animation-play-state: paused;
         will-change: transform;
-        color: var.$primary_color;
+        color: var.$secondary_color;
         pointer-events: none;
 
         textPath {
             font-size: 2.1vmax;
             font-weight: bold;
             text-transform: uppercase;
-            word-spacing: 7px;
-            opacity: .37;
+            word-spacing: 0.5vmax;
             font-family: var.$font_one;
 
             @include responsive.screen_large {
