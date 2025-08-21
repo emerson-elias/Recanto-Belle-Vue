@@ -2,7 +2,7 @@ import { useEffect, useRef, useState } from 'react'
 import { useLoading } from '../../../context/loadingContext'
 
 import styles from './others.module.scss'
-import video from '/assets/video/screen.mp4'
+import video from '/assets/video/banner-14.mp4'
 import Title from '../../global/title/title'
 
 function Others() {
@@ -50,14 +50,14 @@ function Others() {
         <section className={styles.others_container}>
 
             <Title
-                title={'Mergulhos Inesquecíveis'}
-                text={'Explore as profundezas cristalinas e descubra a magia da vida marinha em praias paradisíacas'}
+                title={'Espaço Kids'}
+                text={'Oferecemos uma área de lazer para as crianças brincarem e se divertir'}
                 row={''}
             />
 
             <div className={styles.box}>
                 <p>
-                    Entre as experiências oferecidas pelo nosso resort, está um mergulho inesquecível para explorar a rica vida marinha e os belíssimos corais da região.
+                    Entre as experiências oferecidas pelo nosso resort, as crianças não poderiam ficar de fora.
                 </p>
             </div>
 
