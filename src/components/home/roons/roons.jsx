@@ -13,41 +13,16 @@ import './roons.scss'
 import Button from '../../global/button/button'
 import Title from '../../global/title/title'
 
-const cards = [
-    {
-        id: 'royale',
-        image: '/assets/img/royale.jpg',
-        categoria: 'Royale'
-    },
-    {
-        id: 'villa-real',
-        image: '/assets/img/villa-real.jpg',
-        categoria: 'Villa Real'
-    },
-    {
-        id: 'brisa-do-mar',
-        image: '/assets/img/brisa.jpg',
-        categoria: 'Brisa do Mar'
-    },
-    {
-        id: 'terraço-dourado',
-        image: '/assets/img/terraço-dourado.jpg',
-        categoria: 'Terraço Dourado'
-    },
-    {
-        id: 'aurora',
-        image: '/assets/img/aurora.jpg',
-        categoria: 'Aurora'
-    },
-    {
-        id: 'monte-sereno',
-        image: '/assets/img/monte-sereno.jpg',
-        categoria: 'Monte Sereno'
-    },
-]
-
-export default function Roons() {
+export default function Roons({ suites }) {
     const swiperRef = useRef(null)
+
+    if (!suites || suites.length === 0) return null;
+
+    const cards = suites.map((element) => ({
+        id: element.id,
+        image: element.banner,
+        categoria: element.categoria
+    }))
 
     return (
         <section className='roons_container'>
@@ -60,7 +35,7 @@ export default function Roons() {
 
             <div className='boxOmega'>
                 <div className='infor'>
-                    <h1>Escolha: <br/> seu conforto</h1>
+                    <h1>Escolha: <br /> seu conforto</h1>
                     <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
 
                     <Button link={'/suites'} icon={'fa-regular fa-chess-rook'} name={'Visite Suites'} />

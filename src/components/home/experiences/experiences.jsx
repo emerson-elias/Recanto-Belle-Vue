@@ -12,7 +12,7 @@ import './experiences.scss'
 import Title from '../../global/title/title'
 
 export default function Experiences({ experiences }) {
-    if (!experiences || experiences.length === 0) return null;
+    if (!experiences || experiences.length === 0) return null
 
     const carrousel = experiences.map(exp => ({
         id: exp.id,
@@ -60,7 +60,7 @@ export default function Experiences({ experiences }) {
                             </div>
 
                             <div className='title'>
-                                <Link to={`/experiences/${item.id}`}>{item.title}</Link>
+                                <Link to={`/experiencias/${item.id}`}>{item.title}</Link>
                             </div>
 
                             <div className='boxTwo'>
@@ -71,7 +71,7 @@ export default function Experiences({ experiences }) {
                                 <div className='colunmTwo'>
                                     <div className='colunmText'>
                                         <p>{item.description}</p>
-                                        <Link to={`/experiences/${item.id}`}>Visite a Essência</Link>
+                                        <Link to={`/experiencias/${item.id}`}>Visite a Essência</Link>
                                     </div>
 
                                     <div className='colunmImg'>

@@ -6,9 +6,13 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin-bottom: 10vmax;
     overflow: hidden;
+
+    @include responsive.screen_small() {
+        padding: 0 5vw;
+    }
 
     .row {
         position: relative;
@@ -99,18 +103,6 @@
                     opacity: 1;
                     transition: var.$smooth;
                 }
-
-                svg {
-                    opacity: 1;
-                    animation-play-state: running;
-                    transition: var.$smooth;
-                }
-            }
-
-            svg {
-                opacity: 0;
-                animation-play-state: paused;
-                transition: var.$smooth;
             }
         }
     }

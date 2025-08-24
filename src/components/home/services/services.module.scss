@@ -1,10 +1,67 @@
+@use '/src/sass/responsive';
 @use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
 
 .services_container {
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
-    width: 100vw;
-    height: auto;
-    padding: 0 5vw;
-    overflow: hidden;
+    background-color: var.$primary_color;
+    padding: 12vmax 0;
+
+    .title {
+        @include mixins.flexbox(relative, flex, center, center);
+        flex-direction: column;
+        width: 100%;
+        margin: 0 0 5vmax 0;
+        text-align: center;
+        opacity: 0.9;
+
+        h1 {
+            font-family: var.$font_one;
+            color: var.$secondary_color;
+            text-transform: uppercase;
+        }
+
+        p {
+            width: 60%;
+            font-family: var.$font_dwo;
+            color: var.$secondary_color;
+            font-weight: 400;
+            font-style: italic;
+            line-height: 1.5;
+            margin: 2vmax 0;
+
+            @include responsive.screen_laptop () {
+                width: 90%;
+                margin: 50px 0 70px 0;
+                text-align: start;
+            }
+
+            @include responsive.screen_small () {
+                margin: 50px 0;
+            }
+        }
+
+        &::after {
+            position: absolute;
+            content: 's';
+            top: 50%;
+            left: 82%;
+            transform: translate(-50%, -50%);
+            color: transparent;
+            -webkit-text-stroke: 0.1vw var.$secondary_color;
+            opacity: .1;
+            font-size: 40vmax;
+            pointer-events: none;
+            user-select: none;
+            font-family: var.$new_icon;
+            z-index: 2;
+
+            @include responsive.screen_small() {
+                top: 55%;
+                left: 72%;
+                -webkit-text-stroke: 3px var.$secondary_color;
+            }
+        }
+    }
 }

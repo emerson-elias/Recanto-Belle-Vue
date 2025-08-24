@@ -2,18 +2,22 @@ import { services } from '../../services/data/data'
 
 import styles from './services.module.scss'
 
-import Title from '../../global/title/title'
 import ServicesCard from './container/servicesCard'
 
 function Services() {
     return (
         <section className={styles.services_container}>
 
-            <Title
-                title={'Serviços de Alimentos e Bebidas'}
-                text={'Nosso resort oferece uma estrutura completa com restaurantes, adega e serviço de quarto.'}
-                row={'row'}
-            />
+            <div className={styles.title}>
+                <h1>Instalações inclusas: <br/>Serviçõs, alimentos e Bebidas</h1>
+                <p>
+                    Nosso resort oferece uma experiência gastronômica completa,
+                    com restaurantes que unem sabores regionais e internacionais,
+                    uma adega selecionada com rótulos exclusivos e um serviço de
+                    quarto disponível para levar conforto e requinte diretamente até você.
+                    Cada detalhe foi pensado para transformar cada refeição em um momento especial.
+                </p>
+            </div>
 
             {services.map(({
                 id,
@@ -21,8 +25,6 @@ function Services() {
                 title,
                 content,
                 description,
-                icon,
-                btnName,
                 videoOne,
                 titleBanner
             }, index) => {
@@ -36,8 +38,6 @@ function Services() {
                                 content={content}
                                 description={description}
                                 link={`/services/${linkId}`}
-                                icon={icon}
-                                btnName={btnName}
                                 videoOne={videoOne}
                                 row={layer === 'layerTwo' ? 'row_reverse' : ''}
                                 titleBanner={titleBanner}

@@ -6,8 +6,9 @@
 .servicesCard_container {
     @include mixins.flexbox(relative, flex, space-between, center);
     flex-direction: row-reverse;
-    width: 90vw;
+    width: 100vw;
     height: 100%;
+    padding: 0 3vw;
     margin: 5vmax 0;
     overflow: hidden;
 
@@ -15,18 +16,26 @@
         flex-direction: column !important;
     }
 
+    @include responsive.screen_small () {
+        padding: 0 5vw;
+    }
+
     span {
         position: absolute;
-        top: 68%;
+        top: 60%;
         left: 47%;
-        color: var.$primary_color;
-        opacity: .07;
+        color: var.$secondary_color;
+        opacity: .2;
         font-size: 15vmax;
         pointer-events: none;
         user-select: none;
         font-family: var.$font_one;
         text-transform: capitalize;
-        z-index: -2;
+        z-index: 1;
+
+        @include responsive.screen_laptop () {
+            display: none;
+        }
     }
 
     .boxOne {
@@ -34,18 +43,22 @@
         flex-direction: column;
         width: 40vw;
         height: 100%;
-        padding-bottom: 5vmax;
+        padding-bottom: 10vmax;
 
         @include responsive.screen_laptop () {
             width: 100%;
             align-items: center !important;
         }
 
+        @include responsive.screen_small () {
+            padding: 0;
+        }
+
         h1 {
             width: 100%;
             font-family: var.$font_one;
             text-align: end;
-            color: var.$primary_color;
+            color: var.$secondary_color;
             text-transform: uppercase;
 
             @include responsive.screen_laptop () {
@@ -56,7 +69,7 @@
         p {
             text-align: end;
             font-family: var.$font_dwo;
-            color: var.$black_gray;
+            color: var.$secondary_color;
             font-weight: 400;
             line-height: 1.5;
             margin: 2vmax 0 3vmax 0;
@@ -71,13 +84,40 @@
                 margin: 50px 0;
             }
         }
+
+        a {
+            position: relative;
+            width: 15vmax;
+            height: 5vmax;
+            animation: left 3s linear infinite;
+            z-index: 1;
+            opacity: 0.7;
+
+            @include responsive.screen_laptop () {
+                width: 200px;
+                height: 100px;
+            }
+
+            @include responsive.screen_laptop () {
+                width: 150px;
+            }
+
+            svg {
+                width: 10vmax;
+                color: var.$secondary_color;
+
+                @include responsive.screen_laptop () {
+                    width: 100%;
+                }
+            }
+        }
     }
 
     .boxTwo {
         @include mixins.flexbox(relative, flex, center, center);
         @include mixins.smoke();
         width: 40vw;
-        height: 120vh;
+        height: 90vh;
         border-radius: 1vmax;
         user-select: none;
         overflow: hidden;
@@ -149,7 +189,7 @@
     flex-direction: row;
 
     span {
-        left: 0;
+        left: 2%;
     }
 
     .boxOne {

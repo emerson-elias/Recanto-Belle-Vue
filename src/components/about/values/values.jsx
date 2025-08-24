@@ -1,4 +1,3 @@
-import Circle from '../../global/svg/circle'
 import Title from '../../global/title/title'
 
 import styles from './values.module.scss'
@@ -48,8 +47,6 @@ export default function Values() {
                             <h1>{box.title}</h1>
                             <p>{box.text}</p>
                         </div>
-
-                        <Circle name={'Recanto belle vue'}/>
                     </div>
                 ))}
             </div>

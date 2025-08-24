@@ -1,4 +1,5 @@
 import { experiences } from '../components/experience/data/data'
+import { suites } from '../components/suites/data/data'
 
 import Carousel from '../components/home/carousel/carousel'
 import Bio from '../components/global/bio/bio'
@@ -29,7 +30,7 @@ function Home() {
             />
 
             <Video />
-            <Roons />
+            <Roons suites={suites}/>
             <Experiences experiences={experiences} />
             <Services />
 
