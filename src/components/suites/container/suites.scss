@@ -6,8 +6,8 @@
 .suites_container {
     @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
-    height: 120vh;
-    padding: 0 5vw;
+    height: 90vh;
+    padding: 0 3vw;
     margin: 0 0 5vmax 0;
 
     @include responsive.screen_laptop () {

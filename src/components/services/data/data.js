@@ -8,9 +8,11 @@ export const services = [
         subTitleBanner: 'paladares refinados',
 
         //INFORMAÇÕES PARA BIO
-        caption: 'um convite ao refino',
+        caption: 'um convite ao refino para paladares refinados',
         textBio: 'No Valle dos Vinhos, cada garrafa conta uma história. Explore nossa adega exclusiva repleta de seleções nacionais e importadas que despertam os sentidos e traduzem o verdadeiro prazer de degustar.',
         link: '/suites',
+        imgOne: '/assets/img/adega-6.jpg',
+        imgTwo: '/assets/img/adega-7.jpg',
 
         //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Tinto & branco: adega do valle',
@@ -84,9 +86,11 @@ export const services = [
         subTitleBanner: 'desguste a essência',
 
         //INFORMAÇÕES PARA BIO
-        caption: 'a arte de transformar ingredientes',
+        caption: 'a arte de transformar ingredientes em sentimentos',
         textBio: 'Na La Vue Gastronomia, a culinária ganha poesia. Descubra pratos que exaltam ingredientes frescos, regionais e técnicas que unem tradição e sofisticação em cada mordida.',
         link: '/suites',
+        imgOne: '/assets/img/buffet-5.jpg',
+        imgTwo: '/assets/img/buffet-6.jpg',
 
         //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Buffet: La Vue Gastronomia',
@@ -158,9 +162,11 @@ export const services = [
         subTitleBanner: 'Conforto a cama',
 
         //INFORMAÇÕES PARA BIO
-        caption: 'experiência além da hospedagem',
+        caption: 'experiência além da hospedagem, um compromisso',
         textBio: 'Refúgio à Mesa foi pensado para que cada detalhe da sua estadia seja memorável. Com atendimento acolhedor, serviços exclusivos e aconchego em cada canto, oferecemos hospitalidade que abraça.',
         link: '/suites',
+        imgOne: '/assets/img/services-5.jpg',
+        imgTwo: '/assets/img/services-6.jpg',
 
         //INFORMAÇÕES PARA CONTAINER EM HOME
         title: 'Serviço de quarto: Refúgio à Mesa',

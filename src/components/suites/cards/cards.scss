@@ -7,9 +7,13 @@
     @include mixins.letter_large(3%, 'Refina', 65%);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin-bottom: 15vmax;
     overflow: hidden;
+
+    @include responsive.screen_laptop () {
+        padding: 0 5vw;
+    }
 
     .row {
         @include mixins.flexbox(relative, flex, space-between, center);
@@ -58,7 +62,7 @@
         .boxTwo {
             position: relative;
             width: 58vw;
-            height: 110vh;
+            height: 90vh;
 
             @include responsive.screen_laptop () {
                 width: 100%;

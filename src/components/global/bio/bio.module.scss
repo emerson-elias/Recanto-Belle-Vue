@@ -1,3 +1,4 @@
+@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 @use '/src/sass/variables' as var;
@@ -6,62 +7,112 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    height: 110vh;
-    margin: 5vmax 0;
+    margin: 15vmax 0;
+
+    @include responsive.screen_laptop() {
+        padding: 0 5vw;
+    }
 
     @include responsive.screen_small() {
-        height: auto;
-        margin-top: 130px;
+        margin: 130px 0 50px 0;
     }
 
     .title {
-        @include mixins.flexbox(relative, flex, center, center);
-        flex-direction: column;
-        width: 70%;
-        padding: 0 3vmax;
-        border-left: 0.1vw solid var.$bar;
+        padding: 0 30vmax 0 10vmax;
 
         @include responsive.screen_laptop() {
-            width: 80%;
-        }
-
-        @include responsive.screen_small() {
-            width: 90%;
+            padding: 0;
         }
 
         h1 {
-            width: 100%;
             color: var.$primary_color;
-            text-align: start;
             font-family: var.$font_one;
             text-transform: uppercase;
         }
-
-        h2 {
-            width: 70%;
-            margin: 2vmax 0;
-            opacity: 0.5;
-            text-align: start;
-            color: var.$primary_color;
-            font-weight: 300;
-            line-height: 1.1;
-            font-family: var.$font_dwo;
-        }
     }
 
-    p {
-        margin: 1vmax 0 3vmax 0;
-        font-family: var.$font_dwo;
-        font-weight: 400;
-        color: var.$black_gray;
-        width: 45%;
-        text-align: start;
-        line-height: 1.5;
-        font-style: italic;
+    .row {
+        @include mixins.flexbox(relative, flex, space-between, center);
+        width: 100%;
 
         @include responsive.screen_laptop() {
-            width: 80%;
-            margin: 50px 0 70px 0;
+            flex-direction: column;
+        }
+
+        .boxOne {
+            @include mixins.flexbox(relative, flex, center, start);
+            flex-direction: column;
+            width: 50%;
+            padding-left: 12vmax;
+
+            @include responsive.screen_laptop() {
+                width: 100%;
+                align-items: center;
+                padding: 0;
+            }
+
+            p {
+                font-family: var.$font_dwo;
+                font-weight: 400;
+                color: var.$black_gray;
+                width: 75%;
+                margin-bottom: 3vmax;
+                line-height: 1.5;
+                font-style: italic;
+
+                @include responsive.screen_laptop() {
+                    width: 80%;
+                    margin: 50px 0 70px 0;
+                }
+            }
+        }
+
+        .boxTwo {
+            @include mixins.flexbox(relative, flex, start, center);
+            width: 50%;
+
+            @include responsive.screen_laptop() {
+                width: 100%;
+                margin-top: 150px;
+                justify-content: center;
+            }
+
+            .imgOne,
+            .imgTwo {
+                @include mixins.smoke();
+                position: relative;
+                background-position: center center;
+                background-repeat: no-repeat;
+                background-size: cover;
+                animation: pan-x 240s both infinite;
+                will-change: transform;
+                border-radius: 1vmax;
+                width: 20vw;
+                height: 60vh;
+                pointer-events: none;
+                overflow: hidden;
+
+                @include responsive.screen_laptop() {
+                    width: 40%;
+                    margin: 0 5vmax !important;
+                }
+
+                @include responsive.screen_small() {
+                    width: 50%;
+                    height: 30vh;
+                    margin: 0 10px !important;
+                }
+
+                &:nth-child(1) {
+                    transform: translateY(-7vh);
+                    margin-left: 2vmax;
+                    margin-right: 5vmax;
+                }
+
+                &:nth-child(2) {
+                    transform: translateY(7vh);
+                }
+            }
         }
     }
 }

@@ -60,7 +60,7 @@ export default function Roons() {
 
             <div className='boxOmega'>
                 <div className='infor'>
-                    <h1>Escolha seu conforto</h1>
+                    <h1>Escolha: <br/> seu conforto</h1>
                     <p>Nossas suítes atendem a todos os gostos. Escolha o seu nível de conforto e desfrute de um merecido descanso.</p>
 
                     <Button link={'/suites'} icon={'fa-regular fa-chess-rook'} name={'Visite Suites'} />

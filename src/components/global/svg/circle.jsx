@@ -1,7 +1,7 @@
 import styles from './circle.module.scss'
 
 function Circle({ name }) {
-    const repeatedText = Array(4).fill(`${name} º`).join(' ')
+    const repeatedText = Array(10).fill(`${name} º`).join(' ')
 
     return (
         <div className={styles.svg}>

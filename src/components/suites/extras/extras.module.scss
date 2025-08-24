@@ -5,12 +5,16 @@
 
 .extras_container {
     @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(1%, 'beneficios', 74%);
+    @include mixins.letter_large(3%, 'Refúgios', 70%);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin: 10vmax 0 7vmax 0;
     overflow: hidden;
+
+    @include responsive.screen_small () {
+        padding: 0 5vw;
+    }
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, center);
@@ -26,7 +30,7 @@
             @include mixins.flexbox(relative, flex, center, center);
             @include mixins.smoke();
             width: 45%;
-            height: 120vh;
+            height: 90vh;
             user-select: none;
             overflow: hidden;
             border-radius: 1vmax;

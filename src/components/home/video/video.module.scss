@@ -5,11 +5,11 @@
 .video_container {
     @include mixins.flexbox(relative, flex, space-between, center);
     width: 100vw;
-    height: 115vh;
-    padding: 0 5vw;
+    height: 90vh;
+    padding: 0 3vw;
 
     @include responsive.screen_laptop() {
-        flex-direction: column;
+        flex-direction: column-reverse;
         height: auto;
         padding: 0;
     }
@@ -30,7 +30,7 @@
 
         svg {
             position: absolute;
-            width: 10vw;
+            width: 8vw;
             height: auto;
             top: 50%;
             left: 50%;
@@ -54,7 +54,7 @@
             }
 
             @include responsive.screen_small() {
-                height: 80vh;
+                height: 70vh;
             }
         }
     }

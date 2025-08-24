@@ -6,8 +6,12 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin-bottom: 2vmax;
+
+    @include responsive.screen_small () {
+        padding: 0 5vw;
+    }
 
     .row {
         @include mixins.flexbox(relative, flex, space-between, start);

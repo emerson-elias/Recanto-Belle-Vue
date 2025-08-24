@@ -7,7 +7,7 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
 
     @include responsive.screen_laptop() {
         margin: 80px 0 150px 0;
@@ -15,6 +15,7 @@
 
     @include responsive.screen_small() {
         margin: 0;
+        padding: 0 5vw;
     }
 
     .box_gallery {

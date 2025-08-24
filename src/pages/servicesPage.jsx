@@ -37,6 +37,8 @@ function ServicesPage({ }) {
                 link={activeService.link}
                 icon={activeService.icon}
                 name={activeService.btnName}
+                imgOne={activeService.imgOne}
+                imgTwo={activeService.imgTwo}
             />
 
             <Container services={activeService} />

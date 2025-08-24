@@ -33,6 +33,7 @@ function SuitesPage() {
                 title={activeSuite.categoria}
                 subTitle={activeSuite.bannerSubtitle}
             />
+            
             <Bio
                 title={activeSuite.bioTitle}
                 caption={activeSuite.bioCaption}
@@ -40,6 +41,8 @@ function SuitesPage() {
                 link={'#'}
                 icon={'fa-regular fa-chess-rook'}
                 name={'Reserve agora'}
+                imgOne={activeSuite.bioImgOne}
+                imgTwo={activeSuite.bioImgTwo}
             />
 
             <Suites suite={activeSuite} />

@@ -5,20 +5,27 @@
 
 .svg {
     position: absolute;
-    top: -10%;
-    left: 80%;
+    top: 85%;
+    left: 52%;
+    transform: translate(-50%, -50%);
     user-select: none;
     transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
-    z-index: 3;
-    transform: scale(2);
+    z-index: -1;
+    opacity: 0.8;
 
     @include responsive.screen_laptop {
-        display: none !important;
+        top: 40%;
+        left: 85%;
+    }
+
+    @include responsive.screen_small {
+        top: 54%;
+        left: 50%;
+        transform: scale(0.7);
     }
 
     svg {
         animation: girar_right 30s linear infinite;
-        animation-play-state: paused;
         will-change: transform;
         color: var.$secondary_color;
         pointer-events: none;
@@ -27,8 +34,9 @@
             font-size: 2.1vmax;
             font-weight: bold;
             text-transform: uppercase;
-            word-spacing: 0.5vmax;
+            word-spacing: 1vmax;
             font-family: var.$font_one;
+            color: var.$black_gray;
 
             @include responsive.screen_large {
                 font-size: 25px;

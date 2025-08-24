@@ -10,7 +10,7 @@ export const experiences = [
         imgTwo: '/assets/img/m-2.jpg',
 
         //========INFORMAÇÕES PARA PAGE EM HOME ===============
-        image: '/assets/img/m-1.jpg',
+        image: '/assets/img/m-14.jpg',
         description: 'Mergulhe no encanto das águas e descubra a riqueza da vida oceânica',
 
         //========INFORMAÇÕES PARA PAGE ===============
@@ -72,7 +72,7 @@ export const experiences = [
         imgTwo: '/assets/img/s-2.jpg',
 
         //========INFORMAÇÕES PARA PAGE EM HOME ===============
-        image: '/assets/img/s-1.jpg',
+        image: '/assets/img/s-14.jpg',
         description: 'Deixe-se envolver pela energia suave dos primeiros raios do dia',
 
         //========INFORMAÇÕES PARA PAGE ===============
@@ -134,7 +134,7 @@ export const experiences = [
         imgTwo: '/assets/img/t-2.jpg',
 
         //========INFORMAÇÕES PARA PAGE EM HOME ===============
-        image: '/assets/img/t-1.jpg',
+        image: '/assets/img/t-8.jpg',
         description: 'Caminhe entre aromas, sons e paisagens que revelam a alma da natureza',
 
         //========INFORMAÇÕES PARA PAGE ===============
@@ -196,7 +196,7 @@ export const experiences = [
         imgTwo: '/assets/img/sr-2.jpg',
 
         //========INFORMAÇÕES PARA PAGE EM HOME ===============
-        image: '/assets/img/sr-1.jpg',
+        image: '/assets/img/sr-14.jpg',
         description: 'Siga o compasso do mar e sinta a brisa guiando cada passo',
 
         //========INFORMAÇÕES PARA PAGE ===============
@@ -258,7 +258,7 @@ export const experiences = [
         imgTwo: '/assets/img/ds-2.jpg',
 
         //========INFORMAÇÕES PARA PAGE EM HOME ===============
-        image: '/assets/img/ds-1.jpg',
+        image: '/assets/img/ds-12.jpg',
         description: 'Encontre paz no simples, onde histórias e mar se encontram',
 
         //========INFORMAÇÕES PARA PAGE ===============

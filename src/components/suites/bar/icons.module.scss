@@ -6,11 +6,15 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin-bottom: 2vmax;
 
     @include responsive.screen_laptop () {
         margin: 80px 0 50px 0;
+    }
+
+    @include responsive.screen_small () {
+        padding: 0 5vw;
     }
 
     h1 {
@@ -51,7 +55,7 @@
         .item {
             @include mixins.flexbox(relative, flex, space-evenly, center);
             flex-direction: column;
-            width: 18vmax;
+            width: 18.8vmax;
             height: 10vmax;
             border: 0.1vw solid var.$black_gray;
 

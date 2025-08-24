@@ -56,8 +56,10 @@ export const suites = [
 
         // INFORMAÇÕES PARA BIO.JSX
         bioTitle: 'Viva o luxo da Suíte Royale',
-        bioCaption: 'Uma experiência premium à beira-mar',
+        bioCaption: 'Uma experiência premium e elegante à beira-mar',
         bioText: 'Com vista frontal para o oceano, varanda exclusiva e serviços de alto padrão, a Suíte Royale proporciona uma estadia memorável com todo o requinte que você merece.',
+        bioImgOne: '/assets/img/royale-1.jpg',
+        bioImgTwo: '/assets/img/royale-2.jpg',
 
         //INFORMAÇÕES PARA EXTRAS
         emphasis: [
@@ -138,6 +140,8 @@ export const suites = [
         bioTitle: 'Encante-se com a Villa Real',
         bioCaption: 'Charme mediterrâneo e conforto contemporâneo',
         bioText: 'Perfeita para momentos de descanso, a Suíte Villa Real oferece um ambiente espaçoso com vista para o jardim tropical e inspiração clássica para sua estadia.',
+        bioImgOne: '/assets/img/villa-1.jpg',
+        bioImgTwo: '/assets/img/villa-2.jpg',
 
         //INFORMAÇÕES PARA EXTRAS
         emphasis: [
@@ -213,10 +217,13 @@ export const suites = [
         banner: '/assets/img/brisa.jpg',
         bannerSubtitle: 'Conforto à beira-mar',
         letter: 'b',
+
         // INFORMAÇÕES PARA BIO.JSX
         bioTitle: 'Sinta a brisa do litoral',
         bioCaption: 'Um refúgio romântico com toque natural',
         bioText: 'Com ventilação cruzada e atmosfera leve, a Suíte Brisa do Mar é ideal para casais que buscam tranquilidade, conexão com a natureza e conforto à beira-mar.',
+        bioImgOne: '/assets/img/brisa-1.jpg',
+        bioImgTwo: '/assets/img/brisa-2.jpg',
 
         //INFORMAÇÕES PARA EXTRAS
         emphasis: [
@@ -291,10 +298,13 @@ export const suites = [
         banner: '/assets/img/terraço-dourado.jpg',
         bannerSubtitle: 'Vista privilegiada',
         letter: 't',
+
         // INFORMAÇÕES PARA BIO.JSX
         bioTitle: 'Aprecie o sol da manhã',
         bioCaption: 'Vista ensolarada e momentos inesquecíveis',
         bioText: 'A Suíte Terraço Dourado encanta com sua ampla varanda e iluminação natural, sendo perfeita para relaxar com estilo e sofisticação.',
+        bioImgOne: '/assets/img/terraço-1.jpg',
+        bioImgTwo: '/assets/img/terraço-2.jpg',
 
         //INFORMAÇÕES PARA EXTRAS
         emphasis: [
@@ -369,10 +379,13 @@ export const suites = [
         banner: '/assets/img/aurora.jpg',
         bannerSubtitle: 'Noites Estreladas',
         letter: 'a',
+
         // INFORMAÇÕES PARA BIO.JSX
         bioTitle: 'Desperte com leveza na Aurora',
         bioCaption: 'A beleza do nascer do sol em cada detalhe',
         bioText: 'Com decoração clean e atmosfera tranquila, a Suíte Aurora oferece um espaço acolhedor para quem busca paz e conforto em meio à natureza.',
+        bioImgOne: '/assets/img/aurora-1.jpg',
+        bioImgTwo: '/assets/img/aurora-2.jpg',
 
         //INFORMAÇÕES PARA EXTRAS
         emphasis: [
@@ -448,10 +461,13 @@ export const suites = [
         banner: '/assets/img/monte-sereno.jpg',
         bannerSubtitle: 'Vistas dos Montes',
         letter: 'm',
+
         // INFORMAÇÕES PARA BIO.JSX
         bioTitle: 'Encontre paz no Monte Sereno',
-        bioCaption: 'Tranquilidade e charme em meio ao verde',
+        bioCaption: 'Tranquilidade, liberdade e charme em meio ao verde',
         bioText: 'Com varanda voltada para o jardim e estilo rústico-chique, a Suíte Monte Sereno proporciona aconchego e desconexão com a rotina em um cenário encantador.',
+        bioImgOne: '/assets/img/monte-1.jpg',
+        bioImgTwo: '/assets/img/monte-2.jpg',
 
         //INFORMAÇÕES PARA EXTRAS
         emphasis: [

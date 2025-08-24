@@ -16,12 +16,14 @@ function SuitesStart() {
             />
 
             <Bio
-                title={'Escolha sua categoria'}
-                caption={'Suítes pensadas para todos os estilos'}
-                text={'Cada suíte oferece uma experiência única para você aproveitar ao máximo.'}
+                title={'Escolha sua categoria:'}
+                caption={'Suítes pensadas para todos os estilos e requinte'}
+                text={'Cada suíte foi projetada com atenção aos detalhes para criar uma experiência única, combinando conforto, estilo e privacidade para que você aproveite cada instante da sua estadia ao máximo'}
                 link={'#'}
                 icon={'fa-regular fa-chess-rook'}
                 name={'Reserve agora'}
+                imgOne={'/assets/img/royale.jpg'}
+                imgTwo={'/assets/img/villa-real.jpg'}
             />
 
             <Category suites={suites} />

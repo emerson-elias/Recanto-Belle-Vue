@@ -6,8 +6,12 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
-    margin: 5vmax 0 7vmax 0;
+    padding: 0 3vw;
+    margin: 5vmax 0;
+
+    @include responsive.screen_small () {
+        padding: 0 5vw;
+    }
 
     .row {
         @include mixins.flexbox(relative, flex, space-between, start);
@@ -28,8 +32,8 @@
             }
 
             @include responsive.screen_tablet() {
-               height: 60vh;
-               margin-top: 0;
+                height: 60vh;
+                margin-top: 0;
             }
 
             .react-calendar {

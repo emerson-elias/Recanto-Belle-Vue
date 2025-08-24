@@ -7,9 +7,13 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin-bottom: 10vmax;
     overflow: hidden;
+
+    @include responsive.screen_small() {
+        padding: 0 5vw;
+    }
 
     .row {
         @include mixins.flexbox(relative, flex, space-between, start);
@@ -24,7 +28,8 @@
         .boxOne,
         .boxTwo {
             position: relative;
-            width: 40vw;
+            width: 45vw;
+            
             height: 100%;
 
             @include responsive.screen_small () {
