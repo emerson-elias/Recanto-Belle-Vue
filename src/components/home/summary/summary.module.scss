@@ -5,10 +5,10 @@
 
 .summary_container {
     @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(1%, 'Dúvidas', 70%);
+    @include mixins.letter_large(2%, 'Dúvidas', 70%);
     width: 100vw;
     height: 120vh;
-    padding: 0 5vw;
+    padding: 0 3vw;
     margin: 0 0 5vmax 0;
     overflow: hidden;
 
@@ -20,7 +20,7 @@
 
     @include responsive.screen_small () {
         margin: 50px 0 170px 0;
-        padding: 0 20px;
+        padding: 0 5vw;
     }
 
     @include responsive.screen_small() {

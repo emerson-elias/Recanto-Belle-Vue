@@ -13,16 +13,18 @@ function ExperienceStart() {
                 letter={'e'}
                 title={'Experiências'}
                 subTitle={'Permita-se vivenciá-las'}
-                video={'/assets/video/banner-4.mp4'}
+                video={'/assets/video/banner-12.mp4'}
             />
 
             <Bio
                 title={'Experiências Inesquecíveis'}
-                caption={'Momentos que vão além do descanso'}
+                caption={'Momentos que vão muito além do descanso'}
                 text={'Cada canto do nosso resort foi pensado para despertar sentidos, criar memórias e oferecer experiências únicas. Do nascer ao pôr do sol, você encontra refúgio, aventura, sabores e momentos que marcam a alma. Permita-se viver tudo isso intensamente.'}
                 link={'/suites'}
                 icon={'fa-regular fa-chess-rook'}
                 name={'reserve agora'}
+                imgOne={'/assets/img/ds-1.jpg'}
+                imgTwo={'/assets/img/brisa.jpg'}
             />
 
             <Experiences experiences={experiences} />

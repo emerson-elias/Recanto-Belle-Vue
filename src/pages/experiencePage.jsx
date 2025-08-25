@@ -35,6 +35,8 @@ function ExperiencePage({ }) {
                 link={''}
                 icon={'fa-regular fa-bookmark'}
                 name={'Reserve agora'}
+                imgOne={activeExperience.imgOne}
+                imgTwo={activeExperience.imgTwo}
             />
             
             <GalleryExp gallery={activeExperience} />

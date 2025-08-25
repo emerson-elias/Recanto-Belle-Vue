@@ -10,8 +10,8 @@ import Reviews from '../components/global/reviews/reviews'
 import Summary from '../components/home/summary/summary'
 import Differences from '../components/home/differences/differences'
 import Footer from '../components/global/footer/footer'
-import Others from '../components/home/others/others'
 import Experiences from '../components/home/experiences/experiences'
+import Offers from '../components/home/offers/offers'
 
 function Home() {
     return (
@@ -30,7 +30,7 @@ function Home() {
             />
 
             <Video />
-            <Roons suites={suites}/>
+            <Roons suites={suites} />
             <Experiences experiences={experiences} />
             <Services />
 
@@ -39,7 +39,7 @@ function Home() {
                 text={'Cada hóspede leva consigo uma história única vivida aqui. Conheça as experiências reais de quem encontrou descanso, aconchego e conexão em nosso refúgio natural.'}
             />
 
-            <Others />
+            <Offers />
             <Differences />
             <Summary />
             <Footer picture={'/assets/img/pexels-1.jpg'} />

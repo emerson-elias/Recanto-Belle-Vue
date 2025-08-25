@@ -98,7 +98,7 @@
                 height: 100px;
             }
 
-            @include responsive.screen_laptop () {
+            @include responsive.screen_small () {
                 width: 150px;
             }
 
