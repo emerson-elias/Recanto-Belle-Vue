@@ -20,6 +20,12 @@ body {
     @include mixins.background(100lvh);
 }
 
+body.loading-global section {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+}
+
 h1 {
     font-size: 3.5vmax;
 

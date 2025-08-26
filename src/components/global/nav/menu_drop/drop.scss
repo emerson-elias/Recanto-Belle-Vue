@@ -50,6 +50,7 @@
         width: 100%;
         padding: 0 3%;
         z-index: 2;
+        pointer-events: none;
 
         @include responsive.screen_small() {
             top: 3%;
@@ -62,6 +63,7 @@
             color: var.$primary_color;
             line-height: 0;
             cursor: pointer;
+            pointer-events: all;
 
             @include responsive.screen_laptop() {
                 font-size: 80px;
@@ -74,6 +76,7 @@
 
         .btn_menu_drop {
             border: none;
+            pointer-events: all;
             @include mixins.flexbox(relative, flex, center, center);
             @include mixins.btn_closer();
         }

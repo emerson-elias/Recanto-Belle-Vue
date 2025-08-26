@@ -8,25 +8,26 @@ export const LoadingGlobal = () => {
     const [shouldRender, setShouldRender] = useState(false)
     const [hide, setHide] = useState(false)
 
+    // Gerenciar overflow e classe global do body
     useEffect(() => {
-        const applyOverflow = () => {
-            if (isLoading || forceOverflowHidden) {
-                document.body.style.overflow = 'hidden'
-                document.documentElement.style.overflow = 'hidden'
-            } else {
-                document.body.style.overflow = ''
-                document.documentElement.style.overflow = ''
-            }
+        if (isLoading || forceOverflowHidden) {
+            document.body.style.overflow = 'hidden'
+            document.documentElement.style.overflow = 'hidden'
+            document.body.classList.add('loading-global')
+        } else {
+            document.body.style.overflow = ''
+            document.documentElement.style.overflow = ''
+            document.body.classList.remove('loading-global')
         }
-
-        applyOverflow()
 
         return () => {
             document.body.style.overflow = ''
             document.documentElement.style.overflow = ''
+            document.body.classList.remove('loading-global')
         }
     }, [isLoading, forceOverflowHidden])
 
+    // Controlar montagem e animação de saída do loader
     useEffect(() => {
         let timeoutId
 
@@ -38,7 +39,7 @@ export const LoadingGlobal = () => {
                 setHide(true)
                 timeoutId = setTimeout(() => {
                     setShouldRender(false)
-                }, 2500)
+                }, 2500) // deve casar com a animação do CSS
             }
         }
 
@@ -52,9 +53,9 @@ export const LoadingGlobal = () => {
     if (!shouldRender) return null
 
     return (
-        <section className={`${styles.loading_container} ${hide ? styles.hide : ''}`}>
+        <main className={`${styles.loading_container} ${hide ? styles.hide : ''}`}>
             <h1>Carregando</h1>
             <div className={styles.hourglass}></div>
-        </section>
+        </main>
     )
 }

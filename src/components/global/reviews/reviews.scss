@@ -82,7 +82,9 @@
                 button {
                     color: var.$black_gray;
                     border: none;
+                    background-color: transparent;
                     cursor: pointer;
+
 
                     &:nth-child(1) {
                         transform: rotateY(180deg);
