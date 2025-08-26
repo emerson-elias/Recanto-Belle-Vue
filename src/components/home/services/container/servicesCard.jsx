@@ -8,6 +8,7 @@ function ServicesCard({
     description,
     link,
     videoOne,
+    imgOne,
     row,
     titleBanner
 }) {
@@ -43,6 +44,11 @@ function ServicesCard({
                 </video>
 
             </div>
+
+            <div className={styles.boxThere}
+                style={{ backgroundImage: `url(${imgOne})` }}
+            ></div>
+
         </section>
     )
 }

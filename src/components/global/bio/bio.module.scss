@@ -13,10 +13,6 @@
         padding: 0 5vw;
     }
 
-    @include responsive.screen_small() {
-        margin: 130px 0 50px 0;
-    }
-
     .title {
         padding: 0 30vmax 0 10vmax;
 

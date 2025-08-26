@@ -34,7 +34,6 @@
             @include responsive.screen_laptop () {
                 width: 90%;
                 margin: 50px 0 70px 0;
-                text-align: start;
             }
 
             @include responsive.screen_small () {

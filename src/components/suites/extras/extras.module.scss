@@ -42,6 +42,10 @@
                 height: 80vh;
                 animation: pan-y 240s both infinite;
             }
+
+            @include responsive.screen_small() {
+                height: 70vh;
+            }
         }
 
         .boxTwo {

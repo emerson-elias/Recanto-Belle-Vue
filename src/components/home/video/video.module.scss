@@ -72,7 +72,7 @@
 
         @include responsive.screen_small() {
             height: auto;
-            margin: 40px 0;
+            margin-bottom: 40px;
             padding: 0;
         }
 

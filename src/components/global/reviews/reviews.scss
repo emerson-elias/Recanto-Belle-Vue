@@ -54,6 +54,7 @@
             }
 
             p {
+                font-style: italic;
                 text-align: end;
                 font-family: var.$font_dwo;
                 color: var.$black_gray;
@@ -115,7 +116,7 @@
             }
 
             @include responsive.screen_small () {
-                height: 80vh;
+                height: 70vh;
             }
 
             .swiper-button-prev,

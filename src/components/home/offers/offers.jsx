@@ -47,6 +47,8 @@ export default function Offers() {
                 <h1>Aproveite <br /> nossas ofertas</h1>
                 <p>Aproveite descontos imperdíveis e transforme cada momento em uma experiência única, com muito mais economia e benefícios especiais feitos para você</p>
             </div>
+            
+            <span>Promoções</span>
 
             <div className={styles.row}>
                 {offers.map((offer, index) => (

@@ -26,6 +26,7 @@ function Services() {
                 content,
                 description,
                 videoOne,
+                imgOne,
                 titleBanner
             }, index) => {
                 const linkId = services[index]?.id
@@ -39,6 +40,7 @@ function Services() {
                                 description={description}
                                 link={`/services/${linkId}`}
                                 videoOne={videoOne}
+                                imgOne={imgOne}
                                 row={layer === 'layerTwo' ? 'row_reverse' : ''}
                                 titleBanner={titleBanner}
                             />
