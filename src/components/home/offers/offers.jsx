@@ -44,11 +44,11 @@ export default function Offers() {
     return (
         <section className={styles.offers_container}>
             <div className={styles.title}>
-                <h1>Aproveite <br /> nossas ofertas</h1>
+                <h1>Aproveite <br /> nossas promoções</h1>
                 <p>Aproveite descontos imperdíveis e transforme cada momento em uma experiência única, com muito mais economia e benefícios especiais feitos para você</p>
             </div>
             
-            <span>Promoções</span>
+            <span>Ofertas</span>
 
             <div className={styles.row}>
                 {offers.map((offer, index) => (
