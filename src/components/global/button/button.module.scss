@@ -6,7 +6,6 @@
     @include mixins.flexbox(relative, flex, center, center);
     border: 0.1vw solid var.$primary_color;
     width: 15vmax;
-    height: auto;
     cursor: pointer;
     overflow: hidden;
 
@@ -16,7 +15,7 @@
 
     @include responsive.screen_small() {
         width: 200px;
-        height: 45px;
+        padding: 5px 0;
     }
 
     a {

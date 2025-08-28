@@ -1,11 +1,8 @@
-import { Swiper, SwiperSlide } from 'swiper/react'
-import { Autoplay } from 'swiper/modules'
-import 'swiper/css'
-
-import './differences.scss'
-
 import Button from '../../global/button/button'
 import Title from '../../global/title/title'
+import SlidesUp from '../../global/slidesUp/slidesUp'
+
+import './differences.scss'
 
 const slides = [
     {
@@ -33,8 +30,8 @@ const slides = [
         description: 'Acesso direto à praias públicas e privativa'
     },
     {
-        src: '/assets/img/s-1.jpg',
-        description: 'Aprecie o nascer do sol com conforto'
+        src: '/assets/img/transporte.jpg',
+        description: 'transportes exclusivos para aventuras e lazer'
     }
 ]
 
@@ -51,32 +48,7 @@ function Differences() {
             <div className='box'>
 
                 <div className='boxOne'>
-                    <Swiper
-                        direction='vertical'
-                        modules={[Autoplay]}
-                        autoplay={{
-                            delay: 2500,
-                            disableOnInteraction: false
-                        }}
-                        loop={true}
-                        slidesPerView={1}
-                        spaceBetween={10}
-                        breakpoints={{
-                            0: {
-                                loop: false,
-                            },
-                            600: {
-                                loop: true,
-                            },
-                        }}
-                    >
-                        {slides.map((slide, index) => (
-                            <SwiperSlide key={index}>
-                                <img src={slide.src} alt={`Slide ${index + 1}`} className='slide_img' />
-                                <p className='slide_caption'>{slide.description}</p>
-                            </SwiperSlide>
-                        ))}
-                    </Swiper>
+                    <SlidesUp slides={slides} />
                 </div>
 
                 <div className='boxTwo'>

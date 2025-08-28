@@ -11,6 +11,7 @@ import pet from '/assets/svg/pet.svg'
 
 function Suites({ suite }) {
     if (!suite) return null
+    const isMobile = window.innerWidth < 600
 
     const details = [
         { icon: people, label: "QUANTIDADE DE PESSOAS", value: suite.people },
@@ -29,17 +30,9 @@ function Suites({ suite }) {
                         delay: 2500,
                         disableOnInteraction: false
                     }}
-                    loop={true}
+                    loop={!isMobile}
                     slidesPerView={1}
-                    spaceBetween={10}
-                    breakpoints={{
-                        0: {
-                            loop: false,
-                        },
-                        600: {
-                            loop: true,
-                        },
-                    }}
+                    spaceBetween={0}
                 >
                     {suite.gallery.map((img, index) => (
 

@@ -5,37 +5,37 @@ const offers = [
         title: 'Suítes',
         titleTwo: 'Conforto',
         description: 'Reserve agora e aproveite 25% de desconto em todas as suítes',
-        image: '/public/assets/img/pexels-7.jpg'
+        image: '/assets/img/pexels-7.jpg'
     },
     {
         title: 'Vida Marinha',
         titleTwo: 'Mergulhos Livres',
         description: 'Pacotes de mergulho com até 20% OFF neste mês',
-        image: '/public/assets/img/m-2.jpg'
+        image: '/assets/img/m-2.jpg'
     },
     {
         title: 'Acorde com o Sol',
         titleTwo: 'Sol Nascente',
         description: 'Desconto especial para quem reserva o amanhecer antecipadamente',
-        image: '/public/assets/img/s-5.jpg'
+        image: '/assets/img/s-5.jpg'
     },
     {
         title: 'Caminhos da Natureza',
         titleTwo: 'Trilha Ecologica',
         description: 'Trilhas guiadas com 15% de desconto no final de semana',
-        image: '/public/assets/img/t-7.jpg'
+        image: '/assets/img/t-7.jpg'
     },
     {
         title: 'Entre Marés',
         titleTwo: 'Caminho das Ondas',
         description: 'Aulas de surf com valores promocionais para hóspedes',
-        image: '/public/assets/img/sr-13.jpg'
+        image: '/assets/img/sr-13.jpg'
     },
     {
         title: 'Refúgio do Pescador',
         titleTwo: 'Sossego do Mar',
         description: 'Relaxe à beira-mar com pacotes exclusivos neste feriado',
-        image: '/public/assets/img/ds-4.jpg'
+        image: '/assets/img/ds-4.jpg'
     }
 ]
 

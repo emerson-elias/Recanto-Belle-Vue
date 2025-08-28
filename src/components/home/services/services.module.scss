@@ -6,7 +6,7 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     background-color: var.$primary_color;
-    padding: 12vmax 0;
+    padding: 12vmax 0 7vmax 0;
 
     .title {
         @include mixins.flexbox(relative, flex, center, center);

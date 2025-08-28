@@ -10,6 +10,7 @@ function Extras({ suites }) {
             <Title
                 title={`Destaques ${suites.categoria}`}
                 text={'Descubra os destaques desta acomodação que descobrimos para você.'}
+                row={'row'}
             />
 
             <div className={styles.box}>

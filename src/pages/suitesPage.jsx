@@ -33,7 +33,7 @@ function SuitesPage() {
                 title={activeSuite.categoria}
                 subTitle={activeSuite.bannerSubtitle}
             />
-            
+
             <Bio
                 title={activeSuite.bioTitle}
                 caption={activeSuite.bioCaption}
@@ -48,15 +48,15 @@ function SuitesPage() {
             <Suites suite={activeSuite} />
             <Description suite={activeSuite} />
             <Icons suite={activeSuite} />
-            <CalendarSuites suites={activeSuite}/>
+            <CalendarSuites suites={activeSuite} />
             <Gallery suite={activeSuite} />
-            <Extras suites={activeSuite} />
 
             <Reviews
                 name={activeSuite.categoria}
                 text={activeSuite.description}
             />
-
+            
+            <Extras suites={activeSuite} />
             <Cards suites={suites} onSelect={setActiveSuite} />
             <Footer picture={activeSuite.banner} />
         </>

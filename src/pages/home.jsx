@@ -12,6 +12,7 @@ import Differences from '../components/home/differences/differences'
 import Footer from '../components/global/footer/footer'
 import Experiences from '../components/home/experiences/experiences'
 import Offers from '../components/home/offers/offers'
+import Sustainability from '../components/home/sustainability/sustainability'
 
 function Home() {
     return (
@@ -38,7 +39,8 @@ function Home() {
                 name={'O resort'}
                 text={'Cada hóspede leva consigo uma história única vivida aqui. Conheça as experiências reais de quem encontrou descanso, aconchego e conexão em nosso refúgio natural.'}
             />
-
+            
+            <Sustainability />
             <Offers />
             <Differences />
             <Summary />

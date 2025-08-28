@@ -1,0 +1,50 @@
+@use '/src/sass/mixins';
+@use '/src/sass/variables' as var;
+
+.slidesUp_container {
+    position: relative;
+    width: 100%;
+    height: 100%;
+
+    .swiper {
+        width: 100%;
+        height: 100%;
+
+        .swiper-slide {
+            @include mixins.smoke();
+            border-radius: 1vmax;
+            overflow: hidden;
+
+            .slide_img {
+                transition: transform 0.8s ease, opacity 0.8s ease;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                pointer-events: none;
+                border-radius: 1vmax;
+            }
+
+            .slide_caption {
+                position: absolute;
+                top: 10%;
+                left: 0;
+                padding: 0 3vmax;
+                font-family: var.$font_dwo;
+                color: var.$secondary_color;
+                text-transform: uppercase;
+                z-index: 2;
+            }
+        }
+
+        .swiper-slide-active .slide_img {
+            opacity: 1;
+            transform: scale(1);
+        }
+
+        .swiper-slide-prev .slide_img,
+        .swiper-slide-next .slide_img {
+            opacity: 0.5;
+            transform: scale(0.95);
+        }
+    }
+}

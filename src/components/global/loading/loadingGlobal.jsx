@@ -13,17 +13,14 @@ export const LoadingGlobal = () => {
         if (isLoading || forceOverflowHidden) {
             document.body.style.overflow = 'hidden'
             document.documentElement.style.overflow = 'hidden'
-            document.body.classList.add('loading-global')
         } else {
             document.body.style.overflow = ''
             document.documentElement.style.overflow = ''
-            document.body.classList.remove('loading-global')
         }
 
         return () => {
             document.body.style.overflow = ''
             document.documentElement.style.overflow = ''
-            document.body.classList.remove('loading-global')
         }
     }, [isLoading, forceOverflowHidden])
 

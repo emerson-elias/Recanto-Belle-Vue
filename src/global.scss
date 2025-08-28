@@ -17,12 +17,7 @@
 }
 
 body {
-    @include mixins.background(100lvh);
-}
-
-body.loading-global section {
-    opacity: 0;
-    pointer-events: none;
+    @include mixins.background(100vh);
 }
 
 h1 {

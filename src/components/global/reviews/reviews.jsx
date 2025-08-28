@@ -86,7 +86,7 @@ function Reviews({ name, text}) {
             <Title
                 title={'Depoimentos que inspiram'}
                 text={'Vivências autênticas que marcaram nossos hóspedes – descubra experiências'}
-                row={'row'}
+                row={' '}
             />
 
             <div className='box'>

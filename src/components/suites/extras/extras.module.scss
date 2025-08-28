@@ -5,11 +5,11 @@
 
 .extras_container {
     @include mixins.flexbox(relative, flex, space-between, center);
-    @include mixins.letter_large(3%, 'Refúgios', 70%);
+    @include mixins.letter_large(49%, 'Refúgios', 70%);
     flex-direction: column;
     width: 100vw;
     padding: 0 3vw;
-    margin: 10vmax 0 7vmax 0;
+    margin: 10vmax 0;
     overflow: hidden;
 
     @include responsive.screen_small () {
@@ -18,7 +18,6 @@
 
     .box {
         @include mixins.flexbox(relative, flex, space-between, center);
-        flex-direction: row-reverse;
         width: 100%;
         height: 100%;
 
@@ -52,9 +51,11 @@
             @include mixins.flexbox(relative, flex, space-between, start);
             flex-wrap: wrap;
             width: 50%;
+            height: 90vh;
 
             @include responsive.screen_laptop() {
                 width: 95%;
+                height: auto;
                 margin: 50px 0;
             }
 
@@ -63,8 +64,8 @@
             }
 
             .layer {
-                width: 20vw;
-                margin: 1vmax 1vmax 4vmax 0;
+                width: 21.7vw;
+                margin: 2vmax 1vmax 0 0;
 
                 @include responsive.screen_laptop() {
                     width: 45%;
@@ -78,6 +79,7 @@
                 h2 {
                     margin-bottom: 1vmax;
                     font-size: 2.2vmax;
+                    text-align: end;
                     color: var.$primary_color;
                     font-family: var.$font_one;
                     word-spacing: 2px;
@@ -85,6 +87,7 @@
 
                     @include responsive.screen_laptop () {
                         font-size: 25px;
+                        text-align: start;
                     }
 
                     @include responsive.screen_small() {
@@ -96,7 +99,12 @@
                     font-family: var.$font_dwo;
                     color: var.$black_gray;
                     font-weight: 400;
+                    text-align: end;
                     line-height: 1.5;
+
+                    @include responsive.screen_laptop () {
+                        text-align: start;
+                    }
 
                     @include responsive.screen_small() {
                         margin-top: 15px;
