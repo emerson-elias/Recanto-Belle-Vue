@@ -1,5 +1,7 @@
 /*============================================================================*/
 
+/* ANIMAÇÃO SPIN DE CARREGAMENTO EM LOADING */
+
 @-webkit-keyframes hourglass-spin {
 
     0%,
@@ -78,6 +80,8 @@
 
 /*============================================================================*/
 
+/* ANIMAÇÃO DE SAÍDA DO LOADING */
+
 @keyframes wipe-out-right {
     from {
         clip-path: inset(0 0 0 0);
@@ -90,33 +94,21 @@
 
 /*==============================================================================================*/
 
+/* ANIMAÇÃO DO SVG EM BIO */
+
 @keyframes girar_right {
     from {
         transform: rotate(0deg);
-        /* rotação inicial */
     }
 
     to {
         transform: rotate(-360deg);
-        /* rotação final */
-    }
-}
-
-/* SLIDE DOS TEXTOS LINEARES */
-
-@keyframes slider_linear {
-    0% {
-        transform: translateX(0%);
-    }
-
-    100% {
-        transform: translateX(-100%);
     }
 }
 
 /*==============================================================================================*/
 
-/* ANIMAÇÃO DO BANNERS */
+/* ANIMAÇÃO DOS BANNERS. UP E LEFT */
 
 @keyframes pan-y {
     0% {
@@ -152,16 +144,34 @@
     }
 }
 
+/*==============================================================================================*/
+
+/* ANIMAÇÃO PARA SETAS ANCORAS */
+
 @keyframes left {
-    0%{
+    0% {
         transform: translateX(0%);
     }
 
-    50%{
+    50% {
         transform: translateX(20%);
     }
 
-    100%{
+    100% {
         transform: translateX(0%);
+    }
+}
+
+/*==============================================================================================*/
+
+/* ANIMAÇÃO PARA TODAS AS SECTIONS */
+
+@keyframes fade {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
     }
 }

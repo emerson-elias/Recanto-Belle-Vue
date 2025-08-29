@@ -5,7 +5,6 @@
 
 .loading_container {
     @include mixins.flexbox(fixed, flex, center, center);
-    flex-direction: column;
     inset: 0;
     width: 100vw;
     height: 100vh;
@@ -20,58 +19,64 @@
         z-index: 1000;
     }
 
-    h1 {
-        margin: 2vmax 0;
-        font-size: 6vmax;
-        font-family: var.$font_one;
-        text-transform: uppercase;
-        color: var.$primary_color;
+    .box {
+        @include mixins.flexbox(fixed, flex, center, center);
+        flex-direction: column;
+        animation: fade .1s ease-in-out;
 
-        @include responsive.screen_small() {
-            font-size: 50px;
-            margin: 40px 0;
-        }
-    }
-
-    .hourglass {
-        @include mixins.flexbox(relative, flex, center, center);
-        width: 10vw;
-        height: 10vw;
-        animation: hourglass-container-spin 4s infinite;
-
-        &:after,
-        &:before {
-            position: absolute;
-            content: '';
-            border-radius: 100%;
-            border: 0.3vw solid var.$primary_color;
-            width: 3vmax;
-            height: 3vmax;
-            animation: hourglass-spin 4s infinite ease-in-out;
-            background-image: linear-gradient(0deg, transparent, transparent 50%, var.$primary_color 50%);
-            background-size: 100% 300%;
+        h1 {
+            margin: 2vmax 0;
+            font-size: 6vmax;
+            font-family: var.$font_one;
+            text-transform: uppercase;
+            color: var.$primary_color;
 
             @include responsive.screen_small() {
-                width: 40px;
-                height: 40px;
+                font-size: 50px;
+                margin: 40px 0;
             }
         }
 
-        &:after {
-            transform: translateY(-1.3vmax);
+        .hourglass {
+            @include mixins.flexbox(relative, flex, center, center);
+            width: 10vw;
+            height: 10vw;
+            animation: hourglass-container-spin 4s infinite;
 
-            @include responsive.screen_small() {
-                transform: translateY(-20px);
+            &:after,
+            &:before {
+                position: absolute;
+                content: '';
+                border-radius: 100%;
+                border: 0.3vw solid var.$primary_color;
+                width: 3vmax;
+                height: 3vmax;
+                animation: hourglass-spin 4s infinite ease-in-out;
+                background-image: linear-gradient(0deg, transparent, transparent 50%, var.$primary_color 50%);
+                background-size: 100% 300%;
+
+                @include responsive.screen_small() {
+                    width: 40px;
+                    height: 40px;
+                }
             }
-        }
 
-        &:before {
-            animation-delay: -2s;
-            animation-direction: reverse;
-            transform: translateY(2vmax);
+            &:after {
+                transform: translateY(-1.3vmax);
 
-            @include responsive.screen_small() {
-                transform: translateY(20px);
+                @include responsive.screen_small() {
+                    transform: translateY(-20px);
+                }
+            }
+
+            &:before {
+                animation-delay: -2s;
+                animation-direction: reverse;
+                transform: translateY(2vmax);
+
+                @include responsive.screen_small() {
+                    transform: translateY(20px);
+                }
             }
         }
     }

@@ -1,3 +1,4 @@
+@use '/src/sass/animate';
 @use '/src/sass/mixins';
 @use '/src/sass/responsive';
 
@@ -60,4 +61,8 @@ li,
 a {
     will-change: transform;
     text-decoration: none;
+}
+
+section {
+    animation: fade 2.5s ease-in-out;
 }

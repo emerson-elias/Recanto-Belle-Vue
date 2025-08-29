@@ -8,7 +8,6 @@ export const LoadingGlobal = () => {
     const [shouldRender, setShouldRender] = useState(false)
     const [hide, setHide] = useState(false)
 
-    // Gerenciar overflow e classe global do body
     useEffect(() => {
         if (isLoading || forceOverflowHidden) {
             document.body.style.overflow = 'hidden'
@@ -24,7 +23,6 @@ export const LoadingGlobal = () => {
         }
     }, [isLoading, forceOverflowHidden])
 
-    // Controlar montagem e animação de saída do loader
     useEffect(() => {
         let timeoutId
 
@@ -36,7 +34,7 @@ export const LoadingGlobal = () => {
                 setHide(true)
                 timeoutId = setTimeout(() => {
                     setShouldRender(false)
-                }, 2500) // deve casar com a animação do CSS
+                }, 2500)
             }
         }
 
@@ -51,8 +49,10 @@ export const LoadingGlobal = () => {
 
     return (
         <main className={`${styles.loading_container} ${hide ? styles.hide : ''}`}>
-            <h1>Carregando</h1>
-            <div className={styles.hourglass}></div>
+            <div className={styles.box}>
+                <h1>Carregando</h1>
+                <div className={styles.hourglass}></div>
+            </div>
         </main>
     )
 }

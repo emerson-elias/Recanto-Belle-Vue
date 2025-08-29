@@ -27,7 +27,7 @@ export default function VideoModal({ show, onClose, videoSrc }) {
     if (!show) return null
 
     return (
-        <section className={`${styles.modal_container} ${show ? styles.show : ''}`}>
+        <main className={`${styles.modal_container} ${show ? styles.show : ''}`}>
             <div className={styles.modal_overlay} onClick={onClose}></div>
 
             <div className={styles.modal_content}>
@@ -43,6 +43,6 @@ export default function VideoModal({ show, onClose, videoSrc }) {
             <button className={styles.close_button} onClick={onClose}>
                 <i className='fa-solid fa-xmark'></i>
             </button>
-        </section>
+        </main>
     )
 }
