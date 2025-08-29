@@ -20,6 +20,17 @@ body {
     @include mixins.background(100vh);
 }
 
+/* estado inicial (antes de carregar) */
+section.loading * {
+    opacity: 0;
+}
+
+/* quando carregar, volta para normal */
+section.loaded * {
+    opacity: 1;
+    transition: opacity 0.4s ease;
+}
+
 h1 {
     font-size: 3.5vmax;
 
