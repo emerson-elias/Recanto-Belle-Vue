@@ -24,17 +24,6 @@ export const LoadingGlobal = () => {
         }
     }, [isLoading, forceOverflowHidden])
 
-    useEffect(() => {
-        if (isLoading) {
-            document.body.classList.add('loading')
-            document.body.classList.remove('loaded')
-        } else {
-            document.body.classList.remove('loading')
-            document.body.classList.add('loaded')
-        }
-    }, [isLoading])
-
-
     // Controlar montagem e animação de saída do loader
     useEffect(() => {
         let timeoutId
