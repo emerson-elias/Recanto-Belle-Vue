@@ -1,4 +1,5 @@
 import History from "../components/about/history/history"
+import AboutOther from "../components/about/others/aboutOther"
 import Values from "../components/about/values/values"
 import Banners from "../components/global/banners/banners"
 import Bio from "../components/global/bio/bio"
@@ -11,7 +12,7 @@ function AboutPage() {
                 letter={'s'}
                 title={'Sobre o Resort'}
                 subTitle={'Um pouco sobre nós'}
-                picture={'/assets/img/praia.jpg'}
+                picture={'/assets/img/pexels-6.jpg'}
             />
 
             <Bio
@@ -26,8 +27,9 @@ function AboutPage() {
             />
 
             <History />
+            <AboutOther />
             <Values />
-            <Footer picture={'/assets/img/praia.jpg'} />
+            <Footer picture={'/assets/img/pexels-6.jpg'} />
         </>
     )
 }

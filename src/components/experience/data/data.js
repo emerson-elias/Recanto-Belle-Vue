@@ -265,7 +265,7 @@ export const experiences = [
 
         //BANNER
         letter: 'r',
-        bannerVideo: '/assets/video/banner-12.mp4',
+        bannerVideo: '/assets/video/banner-14.mp4',
         bannerTitle: 'Refúgio do Pescador',
         bannerSubTitle: 'Onde o tempo desacelera.',
 

@@ -11,7 +11,7 @@ const itensMenu = [
     { title: 'Buffet', img: '/assets/img/pexels-3.jpg', link: '/services/la-vue-gastronomia' },
     { title: 'Serviços', img: '/assets/img/services.jpg', link: '/services/refugio-a-mesa' },
     { title: 'Início', img: '/assets/img/pexels-1.jpg', link: '/' },
-    { title: 'Resort', img: '/assets/img/praia.jpg', link: '/sobre' },
+    { title: 'Resort', img: '/assets/img/pexels-6.jpg', link: '/sobre' },
     { title: 'Experiências', img: '/assets/img/pexels-2.jpg', link: '/experiencias' },
     { title: 'Dúvidas', img: '/assets/img/pexels-8.jpg', link: '/duvidas' },
     { title: 'Contatos', img: '/assets/img/contato.jpg', link: '/contatos' }

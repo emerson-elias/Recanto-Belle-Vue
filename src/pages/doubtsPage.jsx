@@ -21,7 +21,7 @@ function DoubtsPage() {
                 icon={'fa-regular fa-bookmark'}
                 name={' Reserve agora '} 
                 imgOne={'/assets/img/piscina.jpg'}
-                imgTwo={'/assets/img/praia.jpg'}
+                imgTwo={'/assets/img/pexels-6.jpg'}
             />
 
             <Doubts />

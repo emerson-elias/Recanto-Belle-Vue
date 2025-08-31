@@ -26,7 +26,7 @@ const slides = [
         description: 'Piscinas para adultos e crianças'
     },
     {
-        src: '/assets/img/praia.jpg',
+        src: '/assets/img/s-4.jpg',
         description: 'Acesso direto à praias públicas e privativa'
     },
     {

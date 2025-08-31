@@ -6,7 +6,7 @@ const boxes = [
     {
         id: 1,
         className: 'box1',
-        image: '/assets/img/s-12.jpg',
+        image: '/assets/img/pexels-1.jpg',
         title: 'Missão',
         text: 'Oferecer experiências únicas de lazer e conforto, proporcionando momentos inesquecíveis aos nossos hóspedes, com atendimento de excelência e respeito ao meio ambiente.'
     },
@@ -20,7 +20,7 @@ const boxes = [
     {
         id: 3,
         className: 'box3',
-        image: '/assets/img/sr-7.jpg',
+        image: '/assets/img/pexels-6.jpg',
         title: 'Valores',
         text: 'Compromisso com a satisfação do hóspede, ética, transparência, sustentabilidade, cuidado com a equipe e promoção de experiências memoráveis.'
     },
@@ -33,7 +33,7 @@ export default function Values() {
             <Title
                 title={'Nossos valores nos definem'}
                 text={'Assim como princípios definem o ser humano, com as empresas não são diferentes'}
-                row={'row'}
+                row={''}
             />
 
             <div className={styles.row}>
