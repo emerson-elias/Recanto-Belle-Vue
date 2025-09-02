@@ -9,10 +9,12 @@
     flex-direction: column;
     width: 100vw;
     padding: 0 3vw;
+    margin: 0 0 15vmax 0;;
     overflow: hidden;
 
     @include responsive.screen_small () {
-        padding: 0 5vw
+        padding: 0 5vw;
+        margin: 0 0 10px 0;
     }
 
     .box {

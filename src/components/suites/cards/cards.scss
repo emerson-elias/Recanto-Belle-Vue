@@ -8,7 +8,7 @@
     flex-direction: column;
     width: 100vw;
     padding: 0 3vw;
-    margin-bottom: 15vmax;
+    margin: 10vmax 0 15vmax 0;
     overflow: hidden;
 
     @include responsive.screen_laptop () {

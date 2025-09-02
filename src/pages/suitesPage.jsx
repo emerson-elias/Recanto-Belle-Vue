@@ -13,6 +13,7 @@ import Description from '../components/suites/description/description'
 import Icons from '../components/suites/bar/icons'
 import Reviews from '../components/global/reviews/reviews'
 import CalendarSuites from '../components/suites/calendar/calendar'
+import BgPiture from '../components/global/bgPicture/bgPicure'
 
 function SuitesPage() {
     const { id } = useParams()
@@ -57,6 +58,7 @@ function SuitesPage() {
             />
             
             <Extras suites={activeSuite} />
+            <BgPiture picture={activeSuite.gallery[1]} />
             <Cards suites={suites} onSelect={setActiveSuite} />
             <Footer picture={activeSuite.banner} />
         </>

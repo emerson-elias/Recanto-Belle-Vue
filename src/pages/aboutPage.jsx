@@ -1,9 +1,12 @@
+import BgPiture from "../components/global/bgPicture/bgPicure"
 import History from "../components/about/history/history"
 import AboutOther from "../components/about/others/aboutOther"
+import Today from "../components/about/today/today"
 import Values from "../components/about/values/values"
 import Banners from "../components/global/banners/banners"
 import Bio from "../components/global/bio/bio"
 import Footer from "../components/global/footer/footer"
+import Summary from "../components/home/summary/summary"
 
 function AboutPage() {
     return (
@@ -28,7 +31,10 @@ function AboutPage() {
 
             <History />
             <AboutOther />
+            <Today />
+            <BgPiture picture={'/assets/img/ds-1.jpg'}/>
             <Values />
+            <Summary />
             <Footer picture={'/assets/img/pexels-6.jpg'} />
         </>
     )

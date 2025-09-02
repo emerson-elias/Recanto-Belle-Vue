@@ -1,0 +1,25 @@
+@use '/src/sass/animate';
+
+.bgPicture_container {
+    position: relative;
+    width: 100%;
+    height: 120vh;
+    background: center/cover no-repeat;
+    animation: pan-y 140s both infinite;
+    will-change: transform;
+    mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+    -webkit-mask-image: linear-gradient(to bottom,
+            transparent 0%,
+            black 20%,
+            black 80%,
+            transparent 100%);
+    mask-repeat: no-repeat;
+    mask-size: cover;
+    -webkit-mask-repeat: no-repeat;
+    -webkit-mask-size: cover;
+    overflow: hidden;
+}

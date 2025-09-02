@@ -13,6 +13,7 @@ import Footer from '../components/global/footer/footer'
 import Experiences from '../components/home/experiences/experiences'
 import Offers from '../components/home/offers/offers'
 import Sustainability from '../components/home/sustainability/sustainability'
+import BgPiture from '../components/global/bgPicture/bgPicure'
 
 function Home() {
     return (
@@ -43,6 +44,7 @@ function Home() {
             <Sustainability />
             <Offers />
             <Differences />
+            <BgPiture picture={'/assets/img/sr-12.jpg'} />
             <Summary />
             <Footer picture={'/assets/img/pexels-1.jpg'} />
         </>

@@ -7,14 +7,17 @@
     @include mixins.flexbox(relative, flex, center, center);
     flex-direction: column;
     width: 100vw;
-    margin: 15vmax 0;
+    padding: 0 3vw;
+    margin: 12vmax 0 15vmax 0;
 
     @include responsive.screen_laptop() {
         padding: 0 5vw;
     }
 
     .title {
-        padding: 0 30vmax 0 10vmax;
+        position: relative;
+        width: 100%;
+        padding: 0 35vmax 0 0;
 
         @include responsive.screen_laptop() {
             padding: 0;
@@ -39,19 +42,17 @@
             @include mixins.flexbox(relative, flex, center, start);
             flex-direction: column;
             width: 50%;
-            padding-left: 12vmax;
 
             @include responsive.screen_laptop() {
                 width: 100%;
                 align-items: center;
-                padding: 0;
             }
 
             p {
                 font-family: var.$font_dwo;
                 font-weight: 400;
                 color: var.$black_gray;
-                width: 75%;
+                width: 80%;
                 margin-bottom: 3vmax;
                 line-height: 1.5;
                 font-style: italic;
