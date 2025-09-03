@@ -2,7 +2,7 @@
 
 Bem-vindo ao repositório do site do Recanto Belle Vue. Este projeto é uma vitrine digital moderna e elegante, desenvolvida para apresentar a beleza e os serviços do local, com foco em uma experiência de usuário imersiva e animações de alta performance.
 
-**[➡️ Visite o site ao vivo!](https://recanto-belle-vue.vercel.app/)** *(substitua pelo link correto se for diferente)*
+**[➡️ Visite o site ao vivo!](https://recanto-belle-vue.vercel.app/)**
 
 ---
 
