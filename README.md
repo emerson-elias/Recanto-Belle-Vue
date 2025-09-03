@@ -29,6 +29,23 @@ O site do Recanto Belle Vue foi criado para proporcionar uma experiência de usu
 
 ---
 
+## 📂 Estrutura de Pastas
+
+O código-fonte do projeto está organizado na pasta `src`, seguindo uma arquitetura modular que visa a clareza e a facilidade de manutenção. Os componentes reutilizáveis, como o cabeçalho (`Header`), rodapé (`Footer`) e os cards de depoimentos, ficam em `src/components`. As páginas principais da aplicação, como a `Home`, estão localizadas em `src/pages`. Todos os ativos estáticos, como imagens e ícones, são armazenados em `public/assets`, garantindo que a lógica e os recursos visuais do projeto permaneçam bem-organizados e desacoplados.
+
+```
+Recanto-Belle-Vue/
+├── public/               # Arquivos estáticos e o favicon
+|   ├── assets/           # Imagens, ícones e fontes
+├── src/
+│   ├── components/       # Componentes reutilizáveis (Header, Footer, Card, etc.)
+│   ├── pages/            # Páginas principais da aplicação (Home, Sobre, etc.)
+│   └── main.jsx          # Ponto de entrada da aplicação React
+└── package.json          # Dependências e scripts do projeto
+```
+
+---
+
 ## 🛠️ Tecnologias Utilizadas
 
 Este projeto foi construído com as seguintes tecnologias:
@@ -40,6 +57,41 @@ Este projeto foi construído com as seguintes tecnologias:
 *   **[Swiper.js](https://swiperjs.com/)**: Para a criação de carrosséis de imagens modernos e responsivos.
 *   **[SASS/SCSS](https://sass-lang.com/)**: Ferramenta que ajuda a escrever e organizar o código de design (CSS) de forma mais eficiente.
 *   **[ESLint](https://eslint.org/)**: Ferramenta que garante a qualidade e a consistência do código, facilitando a manutenção.
+
+---
+
+## 🚀 Começando
+
+Siga estas instruções para obter uma cópia do projeto em execução na sua máquina local para fins de desenvolvimento e teste.
+
+### Pré-requisitos
+
+Você precisa ter o [Node.js](https://nodejs.org/en/) e o [npm](https://www.npmjs.com/) (ou [Yarn](https://yarnpkg.com/)) instalados.
+
+### Instalação
+
+1.  Clone o repositório:
+    ```sh
+    git clone https://github.com/seu-usuario/Recanto-Belle-Vue.git
+    ```
+2.  Navegue até o diretório do projeto:
+    ```sh
+    cd Recanto-Belle-Vue
+    ```
+3.  Instale as dependências:
+    ```sh
+    npm install
+    ```
+
+### Executando o Projeto
+
+Para iniciar o servidor de desenvolvimento:
+
+```sh
+npm run dev
+```
+
+Abra [http://localhost:3000](http://localhost:3000) (ou a porta indicada no seu terminal) no seu navegador para ver o resultado.
 
 ---
 
