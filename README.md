@@ -23,11 +23,9 @@ O site do Recanto Belle Vue foi criado para proporcionar uma experiência de usu
 
 ## 📸 Screenshots
 
-*Dica: Grave um GIF da animação da página inicial para impressionar ainda mais!*
-
 | Desktop | Mobile |
 | :---: | :---: |
-| ![Screenshot Desktop](https://via.placeholder.com/800x450.png/000000/FFFFFF?text=Screenshot+Desktop) | ![Screenshot Mobile](https://via.placeholder.com/300x600.png/000000/FFFFFF?text=Screenshot+Mobile) |
+| ![Screenshot Desktop](https://recanto-belle-vue.vercel.app/assets/img/dasktop.png) | ![Screenshot Mobile](https://recanto-belle-vue.vercel.app/assets/img/mobile.png) |
 
 ---
 
