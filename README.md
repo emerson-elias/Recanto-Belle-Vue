@@ -72,7 +72,7 @@ Você precisa ter o [Node.js](https://nodejs.org/en/) e o [npm](https://www.npmj
 
 1.  Clone o repositório:
     ```sh
-    git clone https://github.com/seu-usuario/Recanto-Belle-Vue.git
+    git clone https://github.com/emerson-elias/Recanto-Belle-Vue.git
     ```
 2.  Navegue até o diretório do projeto:
     ```sh
