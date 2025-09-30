@@ -51,7 +51,7 @@ export default function Footer({ picture }) {
                                 <a onClick={redirectToWhatsApp}>WhatsApp</a>
                                 <a onClick={Call}>Telefone</a>
                                 <a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'>Instagram</a>
-                                <a href='https://www.google.com/maps?q=Marabá,+PA' target='_blank' rel='noopener noreferrer'>Localização</a>
+                                <a href='https://www.google.com/maps?q=São-Paulo,+São-Paulo' target='_blank' rel='noopener noreferrer'>Localização</a>
                             </div>
 
                             <div className={styles.links}>
