@@ -8,7 +8,7 @@ Bem-vindo ao repositório do site do Recanto Belle Vue. Este projeto é uma vitr
 
 ## 📜 Sobre o Projeto
 
-O site do Recanto Belle Vue foi criado para proporcionar uma experiência de usuário agradável, refletindo a tranquilidade e a beleza do local. A interface é limpa, com animações sutis e um design totalmente responsivo, garantindo uma navegação perfeita em qualquer dispositivo.
+O site do Recanto Belle Vue foi desenvolvido para oferecer uma experiência de usuário agradável, refletindo a tranquilidade e a beleza do local. Com uma interface limpa, animações sutis e design totalmente responsivo, garante uma navegação perfeita em qualquer dispositivo. O site conta com 14 páginas, sendo que em 7 delas as informações são carregadas dinamicamente, proporcionando maior flexibilidade e facilidade de atualização.
 
 ### ✨ Funcionalidades
 
@@ -72,7 +72,7 @@ Você precisa ter o [Node.js](https://nodejs.org/en/) e o [npm](https://www.npmj
 
 1.  Clone o repositório:
     ```sh
-    git clone https://github.com/seu-usuario/Recanto-Belle-Vue.git
+    git clone https://github.com/emerson-elias/Recanto-Belle-Vue.git
     ```
 2.  Navegue até o diretório do projeto:
     ```sh
