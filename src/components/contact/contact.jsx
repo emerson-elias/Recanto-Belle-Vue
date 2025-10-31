@@ -9,7 +9,7 @@ const contact = [
     },
     {
         id: 2,
-        title: 'Portifólio',
+        title: 'Portfólio',
         contact: 'Emerson Moraes',
     },
     {

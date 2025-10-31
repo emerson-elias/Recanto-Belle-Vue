@@ -131,7 +131,7 @@ export default function Drop() {
                 <Link to={'/suites'} onClick={closeMenu}>Book</Link>
                 <div className='social'>
                     <li><a href='https://github.com/emerson-elias' target='_blank' rel='noopener noreferrer'><i className="fa-brands fa-github-alt"></i></a></li>
-                    <li><a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'><i className="fa-brands fa-facebook-f"></i></a></li>
+                    <li><a href='https://www.instagram.com/emersoneliass_/' target='_blank' rel='noopener noreferrer'><i class="fa-brands fa-instagram"></i></a></li>
                     <li><a href='https://emerson-elias.vercel.app/' target='_blank' rel='noopener noreferrer'><i className="fa-solid fa-user"></i></a></li>
                     <li><a href='https://www.linkedin.com/in/emerson-elias-9b2894228/' target='_blank' rel='noopener noreferrer'><i className="fa-brands fa-linkedin-in"></i></a></li>
                 </div>
